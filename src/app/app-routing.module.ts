@@ -10,6 +10,15 @@ import { ScreenOneLevelOneComponent } from './components/levels/one/screen-one-l
 import { ScreenTwoLevelOneComponent } from './components/levels/one/screen-two-level-one/screen-two-level-one.component';
 import { ScreenThreeLevelOneComponent } from './components/levels/one/screen-three-level-one/screen-three-level-one.component';
 import { ScreenFourLevelOneComponent } from './components/levels/one/screen-four-level-one/screen-four-level-one.component';
+import { ScreenFiveLevelOneComponent } from './components/levels/one/screen-five-level-one/screen-five-level-one.component';
+import { ScreenSixLevelOneComponent } from './components/levels/one/screen-six-level-one/screen-six-level-one.component';
+import { ScreenSevenLevelOneComponent } from './components/levels/one/screen-seven-level-one/screen-seven-level-one.component';
+import { ScreenEightLevelOneComponent } from './components/levels/one/screen-eight-level-one/screen-eight-level-one.component';
+import { ScreenNineLevelOneComponent } from './components/levels/one/screen-nine-level-one/screen-nine-level-one.component';
+import { ScreenTenLevelOneComponent } from './components/levels/one/screen-ten-level-one/screen-ten-level-one.component';
+import { ScreenElevenLevelOneComponent } from './components/levels/one/screen-eleven-level-one/screen-eleven-level-one.component';
+import { ScreenTwelveLevelOneComponent } from './components/levels/one/screen-twelve-level-one/screen-twelve-level-one.component';
+import { ScreenThirteenLevelOneComponent } from './components/levels/one/screen-thirteen-level-one/screen-thirteen-level-one.component';
 import { ScreenFourLevelThreeComponent } from './components/levels/three/screen-four-level-three/screen-four-level-three.component';
 import { ScreenOneLevelThreeComponent } from './components/levels/three/screen-one-level-three/screen-one-level-three.component';
 import { ScreenThreeLevelThreeComponent } from './components/levels/three/screen-three-level-three/screen-three-level-three.component';
@@ -26,6 +35,15 @@ const routes: Routes = [
   {path: 'fase-1-2', component: ScreenTwoLevelOneComponent},
   {path: 'fase-1-3', component: ScreenThreeLevelOneComponent},
   {path: 'fase-1-4', component: ScreenFourLevelOneComponent},
+  {path: 'fase-1-5', component: ScreenFiveLevelOneComponent},
+  {path: 'fase-1-6', component: ScreenSixLevelOneComponent},
+  {path: 'fase-1-7', component: ScreenSevenLevelOneComponent},
+  {path: 'fase-1-8', component: ScreenEightLevelOneComponent},
+  {path: 'fase-1-9', component: ScreenNineLevelOneComponent},
+  {path: 'fase-1-10', component: ScreenTenLevelOneComponent},
+  {path: 'fase-1-11', component: ScreenElevenLevelOneComponent},
+  {path: 'fase-1-12', component: ScreenTwelveLevelOneComponent},
+  {path: 'fase-1-13', component: ScreenThirteenLevelOneComponent},
   {path: 'fase-2-1', component: ScreenOneLevelTwoComponent},
   {path: 'fase-2-2', component: ScreenTwoLevelTwoComponent},
   {path: 'fase-2-3', component: ScreenThreeLevelTwoComponent},

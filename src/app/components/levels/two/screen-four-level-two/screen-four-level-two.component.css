@@ -1,5 +1,5 @@
 body {
-  background-color: #90CCFF;
+  background-color: #A6F3D6;
 }
 
 .content {
@@ -31,12 +31,12 @@ h3 {
 }
 
 h2,h3 {
-  color: var(--dark-blue);
+  color: #073d7c;
   margin: 1rem;
 }
 
 span {
-  color: var(--dark-blue);
+  color: #073d7c;
   font-size: 1.4rem;
   margin: 0;
   padding: 0;
@@ -52,7 +52,7 @@ span {
 
 .nav-btn {
   border-radius: 50%;
-  background-color: var(--dark-blue);
+  background-color: #073d7c;
   width: 40px;
   height: 40px;
   text-align: center;
