@@ -25,6 +25,15 @@ import { ScreenOneLevelFourComponent } from './components/levels/four/screen-one
 import { ScreenTwoLevelFourComponent } from './components/levels/four/screen-two-level-four/screen-two-level-four.component';
 import { ScreenThreeLevelFourComponent } from './components/levels/four/screen-three-level-four/screen-three-level-four.component';
 import { ScreenFourLevelFourComponent } from './components/levels/four/screen-four-level-four/screen-four-level-four.component';
+import { ScreenFiveLevelOneComponent } from './components/levels/one/screen-five-level-one/screen-five-level-one.component';
+import { ScreenSixLevelOneComponent } from './components/levels/one/screen-six-level-one/screen-six-level-one.component';
+import { ScreenSevenLevelOneComponent } from './components/levels/one/screen-seven-level-one/screen-seven-level-one.component';
+import { ScreenEightLevelOneComponent } from './components/levels/one/screen-eight-level-one/screen-eight-level-one.component';
+import { ScreenNineLevelOneComponent } from './components/levels/one/screen-nine-level-one/screen-nine-level-one.component';
+import { ScreenTenLevelOneComponent } from './components/levels/one/screen-ten-level-one/screen-ten-level-one.component';
+import { ScreenElevenLevelOneComponent } from './components/levels/one/screen-eleven-level-one/screen-eleven-level-one.component';
+import { ScreenTwelveLevelOneComponent } from './components/levels/one/screen-twelve-level-one/screen-twelve-level-one.component';
+import { ScreenThirteenLevelOneComponent } from './components/levels/one/screen-thirteen-level-one/screen-thirteen-level-one.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +57,15 @@ import { ScreenFourLevelFourComponent } from './components/levels/four/screen-fo
     ScreenTwoLevelFourComponent,
     ScreenThreeLevelFourComponent,
     ScreenFourLevelFourComponent,
+    ScreenFiveLevelOneComponent,
+    ScreenSixLevelOneComponent,
+    ScreenSevenLevelOneComponent,
+    ScreenEightLevelOneComponent,
+    ScreenNineLevelOneComponent,
+    ScreenTenLevelOneComponent,
+    ScreenElevenLevelOneComponent,
+    ScreenTwelveLevelOneComponent,
+    ScreenThirteenLevelOneComponent,
   ],
   imports: [
     BrowserModule,
