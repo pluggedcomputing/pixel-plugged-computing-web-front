@@ -24,6 +24,8 @@ import { ScreenOneLevelThreeComponent } from './components/levels/three/screen-o
 import { ScreenThreeLevelThreeComponent } from './components/levels/three/screen-three-level-three/screen-three-level-three.component';
 import { ScreenTwoLevelThreeComponent } from './components/levels/three/screen-two-level-three/screen-two-level-three.component';
 import { ScreenFourLevelTwoComponent } from './components/levels/two/screen-four-level-two/screen-four-level-two.component';
+import { ScreenFiveLevelTwoComponent } from './components/levels/two/screen-five-level-two/screen-five-level-two.component';
+import { ScreenSixLevelTwoComponent } from './components/levels/two/screen-six-level-two/screen-six-level-two.component';
 import { ScreenOneLevelTwoComponent } from './components/levels/two/screen-one-level-two/screen-one-level-two.component';
 import { ScreenThreeLevelTwoComponent } from './components/levels/two/screen-three-level-two/screen-three-level-two.component';
 import { ScreenTwoLevelTwoComponent } from './components/levels/two/screen-two-level-two/screen-two-level-two.component';
@@ -48,6 +50,8 @@ const routes: Routes = [
   {path: 'fase-2-2', component: ScreenTwoLevelTwoComponent},
   {path: 'fase-2-3', component: ScreenThreeLevelTwoComponent},
   {path: 'fase-2-4', component: ScreenFourLevelTwoComponent},
+  {path: 'fase-2-5', component: ScreenFiveLevelTwoComponent},
+  {path: 'fase-2-6', component: ScreenSixLevelTwoComponent},
   {path: 'fase-3-1', component: ScreenOneLevelThreeComponent},
   {path: 'fase-3-2', component: ScreenTwoLevelThreeComponent},
   {path: 'fase-3-3', component: ScreenThreeLevelThreeComponent},
