@@ -23,12 +23,26 @@ import { ScreenFourLevelThreeComponent } from './components/levels/three/screen-
 import { ScreenOneLevelThreeComponent } from './components/levels/three/screen-one-level-three/screen-one-level-three.component';
 import { ScreenThreeLevelThreeComponent } from './components/levels/three/screen-three-level-three/screen-three-level-three.component';
 import { ScreenTwoLevelThreeComponent } from './components/levels/three/screen-two-level-three/screen-two-level-three.component';
+import { ScreenFiveLevelThreeComponent } from './components/levels/three/screen-five-level-three/screen-five-level-three.component';
+import { ScreenSixLevelThreeComponent } from './components/levels/three/screen-six-level-three/screen-six-level-three.component';
+import { ScreenSevenLevelThreeComponent } from './components/levels/three/screen-seven-level-three/screen-seven-level-three.component';
+import { ScreenEightLevelThreeComponent } from './components/levels/three/screen-eight-level-three/screen-eight-level-three.component';
+import { ScreenNineLevelThreeComponent } from './components/levels/three/screen-nine-level-three/screen-nine-level-three.component';
+import { ScreenTenLevelThreeComponent } from './components/levels/three/screen-ten-level-three/screen-ten-level-three.component';
+import { ScreenElevenLevelThreeComponent } from './components/levels/three/screen-eleven-level-three/screen-eleven-level-three.component';
 import { ScreenFourLevelTwoComponent } from './components/levels/two/screen-four-level-two/screen-four-level-two.component';
 import { ScreenFiveLevelTwoComponent } from './components/levels/two/screen-five-level-two/screen-five-level-two.component';
 import { ScreenSixLevelTwoComponent } from './components/levels/two/screen-six-level-two/screen-six-level-two.component';
 import { ScreenOneLevelTwoComponent } from './components/levels/two/screen-one-level-two/screen-one-level-two.component';
 import { ScreenThreeLevelTwoComponent } from './components/levels/two/screen-three-level-two/screen-three-level-two.component';
 import { ScreenTwoLevelTwoComponent } from './components/levels/two/screen-two-level-two/screen-two-level-two.component';
+import { ScreenFiveLevelFourComponent } from './components/levels/four/screen-five-level-four/screen-five-level-four.component';
+import { ScreenSixLevelFourComponent } from './components/levels/four/screen-six-level-four/screen-six-level-four.component';
+import { ScreenSevenLevelFourComponent } from './components/levels/four/screen-seven-level-four/screen-seven-level-four.component';
+import { ScreenEightLevelFourComponent } from './components/levels/four/screen-eight-level-four/screen-eight-level-four.component';
+import { ScreenNineLevelFourComponent } from './components/levels/four/screen-nine-level-four/screen-nine-level-four.component';
+import { ScreenTenLevelFourComponent } from './components/levels/four/screen-ten-level-four/screen-ten-level-four.component';
+import { ScreenElevenLevelFourComponent } from './components/levels/four/screen-eleven-level-four/screen-eleven-level-four.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: HomeComponent},
@@ -56,10 +70,25 @@ const routes: Routes = [
   {path: 'fase-3-2', component: ScreenTwoLevelThreeComponent},
   {path: 'fase-3-3', component: ScreenThreeLevelThreeComponent},
   {path: 'fase-3-4', component: ScreenFourLevelThreeComponent},
+  {path: 'fase-3-5', component: ScreenFiveLevelThreeComponent},
+  {path: 'fase-3-6', component: ScreenSixLevelThreeComponent},
+  {path: 'fase-3-7', component: ScreenSevenLevelThreeComponent},
+  {path: 'fase-3-8', component: ScreenEightLevelThreeComponent},
+  {path: 'fase-3-9', component: ScreenNineLevelThreeComponent},
+  {path: 'fase-3-10', component: ScreenTenLevelThreeComponent},
+  {path: 'fase-3-11', component: ScreenElevenLevelThreeComponent},
   {path: 'fase-4-1', component: ScreenOneLevelFourComponent},
   {path: 'fase-4-2', component: ScreenTwoLevelFourComponent},
   {path: 'fase-4-3', component: ScreenThreeLevelFourComponent},
   {path: 'fase-4-4', component: ScreenFourLevelFourComponent},
+  { path: 'fase-4-5', component: ScreenFiveLevelFourComponent },
+  { path: 'fase-4-6', component: ScreenSixLevelFourComponent },
+  { path: 'fase-4-7', component: ScreenSevenLevelFourComponent },
+  { path: 'fase-4-8', component: ScreenEightLevelFourComponent },
+  { path: 'fase-4-9', component: ScreenNineLevelFourComponent },
+  { path: 'fase-4-10', component: ScreenTenLevelFourComponent },
+  { path: 'fase-4-11', component: ScreenElevenLevelFourComponent },
+
 ];
 
 @NgModule({
