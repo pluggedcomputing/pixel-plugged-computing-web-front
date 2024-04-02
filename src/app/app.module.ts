@@ -46,7 +46,6 @@ import { ScreenElevenLevelThreeComponent } from './components/levels/three/scree
 import { ScreenFiveLevelFourComponent } from './components/levels/four/screen-five-level-four/screen-five-level-four.component';
 import { ScreenSixLevelFourComponent } from './components/levels/four/screen-six-level-four/screen-six-level-four.component';
 import { ScreenSevenLevelFourComponent } from './components/levels/four/screen-seven-level-four/screen-seven-level-four.component';
-import { ScreenEigthLevelFourComponent } from './components/levels/four/screen-eigth-level-four/screen-eigth-level-four.component';
 import { ScreenNineLevelFourComponent } from './components/levels/four/screen-nine-level-four/screen-nine-level-four.component';
 import { ScreenTenLevelFourComponent } from './components/levels/four/screen-ten-level-four/screen-ten-level-four.component';
 import { ScreenElevenLevelFourComponent } from './components/levels/four/screen-eleven-level-four/screen-eleven-level-four.component';
@@ -95,7 +94,6 @@ import { ScreenEightLevelFourComponent } from './components/levels/four/screen-e
     ScreenFiveLevelFourComponent,
     ScreenSixLevelFourComponent,
     ScreenSevenLevelFourComponent,
-    ScreenEigthLevelFourComponent,
     ScreenNineLevelFourComponent,
     ScreenTenLevelFourComponent,
     ScreenElevenLevelFourComponent,
