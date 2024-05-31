@@ -1,0 +1,99 @@
+body {
+  background-color:#A6F3D6;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+  }
+  
+  .content {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  h3 {
+    color: #073d7c;
+    margin: 1rem 0 2rem 0;
+  }
+  
+  p {
+    color: #073d7c;
+    width: 35%;
+    height: 100px;
+    text-align: justify;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  .bi {
+    color: #073d7c;
+    font-size: 3rem;
+  }
+  
+  @media(max-width: 991px) {
+    p {
+      width: 40%;
+      font-size: 1.2rem;
+    }
+    .bi {
+      font-size: 2rem;
+    }
+  }
+  
+  @media(max-width: 767px) {
+
+    p {
+      width: 60%;
+      font-size: 1rem;
+    }
+    .bi {
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media(max-width: 484px) {
+    p {
+      width: 70%;
+      font-size: 0.8rem;
+    }
+    .bi {
+      font-size: 1.5rem;
+    }
+  }
+
+  .rectangles {
+    display: flex;
+  }
+
+  .rectangle-container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+  }
+  
+  .rectangle {
+    width: 50px;
+    height: 100px;
+    margin: 5px;
+    background-color: white;
+    border: 2px solid #073d7c;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    cursor: pointer;
+  }
+  
+  .rectangle.black {
+    background-color: black;
+  }
+  
+  .number {
+    color: #073d7c;
+  }
