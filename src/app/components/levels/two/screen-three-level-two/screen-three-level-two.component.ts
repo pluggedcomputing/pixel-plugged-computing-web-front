@@ -31,9 +31,12 @@ export class ScreenThreeLevelTwoComponent implements OnInit {
 
   attempts: number = 0;
 
-  question: string = "Como você acha que eram codificadas as mensagens enviadas através de uma máquina de fax?";
+  question: string = "Agora vamos praticar? pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. lembre-se de que o 1 é branco e o 0 é preto.";
 
-  answers: string[] = ["Como representação que economize a quantidade de dados enviada","Usando pontos pretos como 0 e brancos como 1"];
+  answers: string[] = ["P","T","L","C"];
+
+  rectangleStatus: boolean[][] = Array.from({ length: 5 }, () => Array(5).fill(false));
+
 
   constructor(private router: Router, public toastService: ToastService) {
 
@@ -43,20 +46,66 @@ export class ScreenThreeLevelTwoComponent implements OnInit {
     this.answers.sort(() => Math.random() - 0.5);
   }
 
+  toggleFlip(card: number): void {
+    if(card == 1) {
+      this.flip1 = (this.flip1 == 'inactive') ? 'active' : 'inactive';
+    } else if(card == 2) {
+      this.flip2 = (this.flip2 == 'inactive') ? 'active' : 'inactive';
+    } else if(card == 4) {
+      this.flip4 = (this.flip4 == 'inactive') ? 'active' : 'inactive';
+    } else if(card == 8) {
+      this.flip8 = (this.flip8 == 'inactive') ? 'active' : 'inactive';
+    } else if(card == 16) {
+      this.flip16 = (this.flip16 == 'inactive') ? 'active' : 'inactive';
+    }
+    this.toggleBynaries();
+  }
+
   changeAnswers(value: string, btn: number): void {
-    if(value === "Como representação que economize a quantidade de dados enviada") {
+    if(value === "P") {
         this.buttonClass(btn, true);
-        this.toastService.show('Você acertou!');
         setTimeout(() => {
-          this.router.navigate(['fase-1-11']);
+          this.router.navigate(['fase-2-4']);
         },1000);
     } else {
         this.buttonClass(btn, false);
     }
   }
 
+  toggleBynaries():void {
+    if(this.flip1 === 'active') {
+      setTimeout(()=> {this.byn1 = 0;},400);
+    } else {
+      setTimeout(()=> {this.byn1 = 1;},400);
+    }
+
+    if(this.flip2 === 'active') {
+      setTimeout(()=> {this.byn2 = 0;},400);
+    } else {
+      setTimeout(()=> {this.byn2 = 1;},400);
+    }
+
+    if(this.flip4 === 'active') {
+      setTimeout(()=> {this.byn4 = 0;},400);
+    } else {
+      setTimeout(()=> {this.byn4 = 1;},400);
+    }
+
+    if(this.flip8 === 'active') {
+      setTimeout(()=> {this.byn8 = 0;},400);
+    } else {
+      setTimeout(()=> {this.byn8 = 1;},400);
+    }
+
+    if(this.flip16 === 'active') {
+      setTimeout(()=> {this.byn16 = 0;},400);
+    } else {
+      setTimeout(()=> {this.byn16 = 1;},400);
+    }
+  }
+
   pickAnswer(answer: string): void {
-    if(answer !== "Como representação que economize a quantidade de dados enviada") {
+    if(answer !== "p") {
       this.toastService.show('Tente outra vez.');
       this.attempts += 1;
       console.log(this.attempts);
@@ -81,6 +130,10 @@ export class ScreenThreeLevelTwoComponent implements OnInit {
       setTimeout(() => {this.btnClass4 = "";},1000);
     }
 
+  }
+
+  toggleRectangle(row: number, col: number): void {
+    this.rectangleStatus[row][col] = !this.rectangleStatus[row][col];
   }
 
 }

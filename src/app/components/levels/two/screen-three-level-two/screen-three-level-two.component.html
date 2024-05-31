@@ -8,23 +8,118 @@
 </head>
 <body>
 <div class="container">
-  <div><a routerLink="/fase-1-9"><i class="bi bi-chevron-left"></i></a></div>
+  <div><a routerLink="/fase-1-4"><i class="bi bi-chevron-left"></i></a></div> 
   <div class="content">
     <h3><strong>FASE 1</strong></h3>
-    <img src="assets/level1/bin-9.png" alt="1 em binário">
+    <div class="rectangles">
+      <!-- Linha 1 -->
+      <div class="rectangle-row">
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(1, 1)" [ngClass]="{'black': rectangleStatus[0][0]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(1, 2)" [ngClass]="{'black': rectangleStatus[0][1]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(1, 3)" [ngClass]="{'black': rectangleStatus[0][2]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(1, 4)" [ngClass]="{'black': rectangleStatus[0][3]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(1, 5)" [ngClass]="{'black': rectangleStatus[0][4]}"></div>
+        </div>
+      </div>
+      <!-- Linha 2 -->
+      <div class="rectangle-row">
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(2, 1)" [ngClass]="{'black': rectangleStatus[1][0]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(2, 2)" [ngClass]="{'black': rectangleStatus[1][1]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(2, 3)" [ngClass]="{'black': rectangleStatus[1][2]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(2, 4)" [ngClass]="{'black': rectangleStatus[1][3]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(2, 5)" [ngClass]="{'black': rectangleStatus[1][4]}"></div>
+        </div>
+      </div>
+      <!-- Linha 3 -->
+      <div class="rectangle-row">
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(3, 1)" [ngClass]="{'black': rectangleStatus[2][0]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(3, 2)" [ngClass]="{'black': rectangleStatus[2][1]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(3, 3)" [ngClass]="{'black': rectangleStatus[2][2]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(3, 4)" [ngClass]="{'black': rectangleStatus[2][3]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(3, 5)" [ngClass]="{'black': rectangleStatus[2][4]}"></div>
+        </div>
+      </div>
+      <!-- Linha 4 -->
+      <div class="rectangle-row">
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(4, 1)" [ngClass]="{'black': rectangleStatus[3][0]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(4, 2)" [ngClass]="{'black': rectangleStatus[3][1]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(4, 3)" [ngClass]="{'black': rectangleStatus[3][2]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(4, 4)" [ngClass]="{'black': rectangleStatus[3][3]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(4, 5)" [ngClass]="{'black': rectangleStatus[3][4]}"></div>
+        </div>      
+      </div>
+      <!-- Linha 5 -->
+      <div class="rectangle-row">
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(5, 1)" [ngClass]="{'black': rectangleStatus[4][0]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(5, 2)" [ngClass]="{'black': rectangleStatus[4][1]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(5, 3)" [ngClass]="{'black': rectangleStatus[4][2]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(5, 4)" [ngClass]="{'black': rectangleStatus[4][3]}"></div>
+        </div>
+        <div class="rectangle-container">
+          <div class="rectangle" (click)="toggleRectangle(5, 5)" [ngClass]="{'black': rectangleStatus[4][4]}"></div>
+        </div>      
+      </div>
+    </div>
     <p>
-      Como você acha que eram codificadas
-      as mensagens enviadas através de uma
-      máquina de fax?
+      Agora vamos praticar? pinte a imagem
+      representada pelos códigos acima e 
+      escolha a letra representada pelo código.
+      lembre-se de que o 1 é branco e o 0 é preto.
     </p>
     <div class="answer-table row justify-content-center w-100">
-        <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass1]" (click)="changeAnswers(answers[0], 1)" (click)="pickAnswer(answers[0])">{{answers[0]}}</button>
-        <div class="w-100"></div>
-        <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass2]" (click)="changeAnswers(answers[1], 2)" (click)="pickAnswer(answers[1])">{{answers[1]}}</button>
-        <div class="w-100"></div>
-      </div>
+      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass1]" (click)="changeAnswers(answers[0], 1)" (click)="pickAnswer(answers[0])">{{answers[0]}}</button>
+      <div class="w-100"></div>
+      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass2]" (click)="changeAnswers(answers[1], 2)" (click)="pickAnswer(answers[1])">{{answers[1]}}</button>
+      <div class="w-100"></div>
+      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass3]" (click)="changeAnswers(answers[2], 3)" (click)="pickAnswer(answers[2])">{{answers[2]}}</button>
+      <div class="w-100"></div>
+      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass4]" (click)="changeAnswers(answers[3], 4)" (click)="pickAnswer(answers[3])">{{answers[3]}}</button>
   </div>
-  <div><a routerLink="/fase-1-11"><i class="bi bi-chevron-right"></i></a></div>
+  </div>
+  <div><a routerLink="/fase-1-6"><i class="bi bi-chevron-right"></i></a></div>
 </div>
 </body>
 </html>
