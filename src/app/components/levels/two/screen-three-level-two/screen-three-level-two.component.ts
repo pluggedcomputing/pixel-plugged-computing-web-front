@@ -36,7 +36,14 @@ export class ScreenThreeLevelTwoComponent implements OnInit {
   answers: string[] = ["P","T","L","C"];
 
   rectangleStatus: boolean[][] = Array.from({ length: 5 }, () => Array(5).fill(false));
+  
+  //novo
+  grid: boolean[][] = Array.from({ length: 5 }, () => Array(5).fill(false));
+  rowWords: string[] = ["1,0,0,0,0", "1,0,1,1,0", "1,0,0,0,0", "1,0,1,1,1", "1,0,1,1,1"];
 
+  toggleCell(rowIndex: number, cellIndex: number): void {
+    this.grid[rowIndex][cellIndex] = !this.grid[rowIndex][cellIndex];
+  }
 
   constructor(private router: Router, public toastService: ToastService) {
 
@@ -135,5 +142,4 @@ export class ScreenThreeLevelTwoComponent implements OnInit {
   toggleRectangle(row: number, col: number): void {
     this.rectangleStatus[row][col] = !this.rectangleStatus[row][col];
   }
-
 }

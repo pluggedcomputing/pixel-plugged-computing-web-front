@@ -81,12 +81,10 @@ body {
   .rectangle {
     width: 40px;
     height: 60px;
-    margin: 5px;
+    margin: 2px;
     background-color: white;
     border: 2px solid #073d7c;
-    display: flex;
     justify-content: center;
-    align-items: flex-end;
     cursor: pointer;
   }
   
@@ -151,4 +149,28 @@ body {
       top: 40%;
     }
   }
+
+    
+  .grid-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
   
+  .cell {
+    width: 40px;
+    height: 60px;
+    border: 2px solid #073d7c;
+    background-color: white;
+    box-sizing: border-box; /* Ensure borders don't affect the size */
+    margin-right: 5px; /* Add spacing between cells */
+  }
+  
+  .cell.black {
+    background-color: black;
+  }
+  
+  .word {
+    margin-left: 10px;
+    font-weight: bold;
+  }

@@ -1,0 +1,176 @@
+body {
+    background-color:#A6F3D6;
+  }
+  
+  .container {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+    
+    .content {
+      display: flex;
+      width: 100%;
+      height: 100%;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    
+    h3 {
+      color: #073d7c;
+      margin: 1rem 0 2rem 0;
+    }
+    
+    p {
+      color: #073d7c;
+      width: 35%;
+      height: 150px;
+      text-align: justify;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+    
+    .bi {
+      color: #073d7c;
+      font-size: 3rem;
+    }
+    
+    @media(max-width: 991px) {
+      p {
+        width: 40%;
+        font-size: 1.2rem;
+      }
+      .bi {
+        font-size: 2rem;
+      }
+    }
+    
+    @media(max-width: 767px) {
+  
+      p {
+        width: 60%;
+        font-size: 1rem;
+      }
+      .bi {
+        font-size: 1.8rem;
+      }
+    }
+    
+    @media(max-width: 484px) {
+      p {
+        width: 70%;
+        font-size: 0.8rem;
+      }
+      .bi {
+        font-size: 1.5rem;
+      }
+    }
+  
+    .rectangles {
+      display: flex;
+    }
+  
+    .rectangle-container {
+      display: flex;
+      flex-direction: column; /* Organiza os itens verticalmente */
+      align-items: center; /* Centraliza os itens horizontalmente */
+    }
+    
+    .rectangle {
+      width: 40px;
+      height: 60px;
+      margin: 2px;
+      background-color: white;
+      border: 2px solid #073d7c;
+      justify-content: center;
+      cursor: pointer;
+    }
+    
+    .rectangle.black {
+      background-color: black;
+    }
+    
+    .number {
+      color: #073d7c;
+    }
+    
+    .answer-table {
+      margin-top: 0.8rem;
+    }
+    
+    .btn {
+      background-color: var(--dark-blue);
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
+      padding-inline: 10px;
+      padding-block: 10px;
+      border-radius: 4px !important;
+    }
+    
+    .btn:hover, .btn:active, .btn:focus {
+      background-color: var(--dark-blue);
+    }
+    
+    .byn-number {
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: var(--dark-blue);
+    }
+    
+    .correct {
+      background-color: var(--answer-green);
+    }
+    
+    .correct:hover, .correct:focus {
+      background-color: var(--answer-green);
+    }
+    
+    .incorrect {
+      background-color: var(--answer-red);
+    }
+    
+    .incorrect:hover, .incorrect:focus {
+      background-color: var(--answer-red);
+    }
+    
+    .btn {
+      font-size: 1rem;
+    }
+    
+    @media only screen and (max-width: 515px) {
+      p {
+        font-size: 1rem;
+      }
+    
+      .bi {
+        font-size: 1.5rem;
+        top: 40%;
+      }
+    }
+  
+    .grid-row {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    
+    .cell {
+      width: 40px;
+      height: 60px;
+      border: 2px solid #073d7c;
+      background-color: white;
+      box-sizing: border-box; /* Ensure borders don't affect the size */
+      margin-right: 5px; /* Add spacing between cells */
+    }
+    
+    .cell.black {
+      background-color: black;
+    }
+    
+    .word {
+      margin-left: 10px;
+      font-weight: bold;
+    }
+    

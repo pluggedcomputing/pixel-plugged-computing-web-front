@@ -4,105 +4,22 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fase 1</title>
+  <title>Fase 2</title>
 </head>
 <body>
 <div class="container">
-  <div><a routerLink="/fase-1-4"><i class="bi bi-chevron-left"></i></a></div> 
+  <div><a routerLink="/fase-2-2"><i class="bi bi-chevron-left"></i></a></div> 
   <div class="content">
-    <h3><strong>FASE 1</strong></h3>
-    <div class="rectangles">
-      <!-- Linha 1 -->
-      <div class="rectangle-row">
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(1, 1)" [ngClass]="{'black': rectangleStatus[0][0]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(1, 2)" [ngClass]="{'black': rectangleStatus[0][1]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(1, 3)" [ngClass]="{'black': rectangleStatus[0][2]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(1, 4)" [ngClass]="{'black': rectangleStatus[0][3]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(1, 5)" [ngClass]="{'black': rectangleStatus[0][4]}"></div>
-        </div>
-      </div>
-      <!-- Linha 2 -->
-      <div class="rectangle-row">
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(2, 1)" [ngClass]="{'black': rectangleStatus[1][0]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(2, 2)" [ngClass]="{'black': rectangleStatus[1][1]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(2, 3)" [ngClass]="{'black': rectangleStatus[1][2]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(2, 4)" [ngClass]="{'black': rectangleStatus[1][3]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(2, 5)" [ngClass]="{'black': rectangleStatus[1][4]}"></div>
-        </div>
-      </div>
-      <!-- Linha 3 -->
-      <div class="rectangle-row">
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(3, 1)" [ngClass]="{'black': rectangleStatus[2][0]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(3, 2)" [ngClass]="{'black': rectangleStatus[2][1]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(3, 3)" [ngClass]="{'black': rectangleStatus[2][2]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(3, 4)" [ngClass]="{'black': rectangleStatus[2][3]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(3, 5)" [ngClass]="{'black': rectangleStatus[2][4]}"></div>
-        </div>
-      </div>
-      <!-- Linha 4 -->
-      <div class="rectangle-row">
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(4, 1)" [ngClass]="{'black': rectangleStatus[3][0]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(4, 2)" [ngClass]="{'black': rectangleStatus[3][1]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(4, 3)" [ngClass]="{'black': rectangleStatus[3][2]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(4, 4)" [ngClass]="{'black': rectangleStatus[3][3]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(4, 5)" [ngClass]="{'black': rectangleStatus[3][4]}"></div>
-        </div>      
-      </div>
-      <!-- Linha 5 -->
-      <div class="rectangle-row">
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(5, 1)" [ngClass]="{'black': rectangleStatus[4][0]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(5, 2)" [ngClass]="{'black': rectangleStatus[4][1]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(5, 3)" [ngClass]="{'black': rectangleStatus[4][2]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(5, 4)" [ngClass]="{'black': rectangleStatus[4][3]}"></div>
-        </div>
-        <div class="rectangle-container">
-          <div class="rectangle" (click)="toggleRectangle(5, 5)" [ngClass]="{'black': rectangleStatus[4][4]}"></div>
-        </div>      
-      </div>
-    </div>
+    <h3><strong>FASE 2</strong></h3>
+    <div *ngFor="let row of grid; let rowIndex = index" class="grid-row">
+      <div
+        *ngFor="let cell of row; let cellIndex = index"
+        class="cell"
+        [ngClass]="{ 'black': cell }"
+        (click)="toggleCell(rowIndex, cellIndex)"
+      ></div>
+      <span class="word">{{ rowWords[rowIndex] }}</span>
+    </div>        
     <p>
       Agora vamos praticar? pinte a imagem
       representada pelos códigos acima e 
@@ -119,7 +36,7 @@
       <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass4]" (click)="changeAnswers(answers[3], 4)" (click)="pickAnswer(answers[3])">{{answers[3]}}</button>
   </div>
   </div>
-  <div><a routerLink="/fase-1-6"><i class="bi bi-chevron-right"></i></a></div>
+  <div><a routerLink="/fase-2-4"><i class="bi bi-chevron-right"></i></a></div>
 </div>
 </body>
 </html>
