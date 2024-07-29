@@ -51,7 +51,7 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
     [0, 1, 1, 1, 0]
   ];
 
-  rowWords: string[] = ["0,1,1,1,0", "0,1,1,1,0", "0,1,0,1,0", "0,0,1,0,0"];
+  rowWords: string[] = ["0,1,1,1,0", "0,1,1,1,0", "0,1,0,1,0", "0,0,1,0,0","?,?,?,?,?"];
 
   constructor(private router: Router, public toastService: ToastService) {
     this.grid = this.initialCoordinates.map(row => row.map(value => value === 0));

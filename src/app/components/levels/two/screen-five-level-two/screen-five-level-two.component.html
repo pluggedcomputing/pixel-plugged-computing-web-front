@@ -11,6 +11,7 @@
   <div><a routerLink="/fase-2-4"><i class="bi bi-chevron-left"></i></a></div> 
   <div class="content">
     <h3><strong>FASE 2</strong></h3>
+    <div class="matriz">
     <div *ngFor="let row of grid; let rowIndex = index" class="grid-row">
       <div
         *ngFor="let cell of row; let cellIndex = index"
@@ -18,7 +19,9 @@
         [ngClass]="{ 'black': cell }"
       ></div>
       <span class="word">{{ rowWords[rowIndex] }}</span>
-    </div>           
+    </div>    
+    </div>
+             
     <p>
       Agora tente descobrir qual o código
       correspondente à última linha e que está

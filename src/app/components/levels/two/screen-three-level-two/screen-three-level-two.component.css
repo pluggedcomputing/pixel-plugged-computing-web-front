@@ -150,7 +150,6 @@ body {
     }
   }
 
-    
   .grid-row {
     display: flex;
     align-items: center;
@@ -174,3 +173,5 @@ body {
     margin-left: 10px;
     font-weight: bold;
   }
+  
+  

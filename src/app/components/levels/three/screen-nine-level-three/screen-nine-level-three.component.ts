@@ -51,7 +51,7 @@ export class ScreenNineLevelThreeComponent implements OnInit {
     [0, 0, 0, 1, 1]
   ];
 
-  rowWords: string[] = ["0,3,1", "2,1,2", "2,1,2", "0,1,1,1,2"];
+  rowWords: string[] = ["0,3,1", "2,1,2", "2,1,2", "0,1,1,1,2","?,?,?,?,?"];
 
   constructor(private router: Router, public toastService: ToastService) {
     this.grid = this.initialCoordinates.map(row => row.map(value => value === 0));
