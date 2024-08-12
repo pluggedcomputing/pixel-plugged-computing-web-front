@@ -93,7 +93,7 @@ export class ScreenTenLevelFourComponent implements OnInit {
     if(value === "P") {
         this.buttonClass(btn, true);
         setTimeout(() => {
-          this.router.navigate(['fase-2-4']);
+          this.router.navigate(['fase-4-11']);
         },1000);
     } else {
         this.buttonClass(btn, false);

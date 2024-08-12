@@ -81,7 +81,7 @@ export class ScreenSixLevelFourComponent implements OnInit {
     if(value === "D") {
         this.buttonClass(btn, true);
         setTimeout(() => {
-          this.router.navigate(['fase-3-8']);
+          this.router.navigate(['fase-4-7']);
         },1000);
     } else {
         this.buttonClass(btn, false);
