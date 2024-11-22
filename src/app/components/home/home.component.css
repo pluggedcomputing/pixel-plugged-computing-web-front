@@ -1,5 +1,5 @@
 body {
-  background-color:#A6F3D6;
+  background-color:#a6f3d6;
 }
 
 .container {
@@ -20,7 +20,7 @@ body {
 }
 
 h2 {
-  color: #073d7c;
+  color: #07377a;
   padding: 0.5rem;
   font-weight: 700;
   margin: 1rem 0 0 0;
@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-  color: #073d7c;
+  color: #07377a;
   font-size: 1.4rem;
   margin: 0 0 2rem 0;
 }
@@ -36,9 +36,9 @@ h3 {
 .btn {
   width: 350px;
   height: 50px;
-  background-color: #073d7c;
+  background-color: #07377a;
   margin: 1.5rem 0;
-  box-shadow: 0 8px 5px #76a0d0;
+  box-shadow: 0 8px 5px #508ea4;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0;
