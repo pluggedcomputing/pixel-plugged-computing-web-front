@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 interface Notification {
   message: string;
   type: 'success' | 'error' | 'info';
+  icon: string;
 }
 
 @Component({
@@ -12,11 +13,22 @@ interface Notification {
 })
 export class NotificationComponent {
   notifications: Notification[] = [];
-// lança a notifação dependendo do tipo, e define duração
+
+  // Lança a notificação dependendo do tipo e define a duração
   show(message: string, type: 'success' | 'error' | 'info', duration: number = 3000): void {
-    const notification = { message, type };
+    let icon: string;
+
+    // Define o ícone baseado no tipo de notificação
+    if (type === 'success') {
+      icon = '✔'; 
+    } else {
+      icon = '✖' 
+    }
+
+    const notification: Notification = { message, type, icon };
     this.notifications.push(notification);
 
+    // Remove a notificação após a duração especificada
     setTimeout(() => this.remove(notification), duration);
   }
 

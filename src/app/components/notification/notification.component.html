@@ -4,8 +4,12 @@
       class="notification"
       [ngClass]="notification.type"
     >
-      {{ notification.message }}
+
+        {{ notification.icon }}
+        {{ notification.message }}
+
       <button class="close-btn" (click)="remove(notification)"></button>
+
     </div>
   </div>
   
