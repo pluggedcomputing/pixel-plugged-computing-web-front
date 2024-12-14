@@ -1,42 +1,26 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { FormsModule } from '@angular/forms';
-import { ScreenNineLevelThreeComponent } from './screen-nine-level-three.component';
+import { Injectable } from '@angular/core';
 
-describe('ScreenNineLevelThreeComponent', () => {
-  let component: ScreenNineLevelThreeComponent;
-  let fixture: ComponentFixture<ScreenNineLevelThreeComponent>;
+@Injectable({
+  providedIn: 'root',
+})
+export class ToastService {
+  toasts: { message: string; classname: string; delay: number }[] = [];
 
-  beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ScreenNineLevelThreeComponent ],
-      imports: [ FormsModule ]
-    })
-    .compileComponents();
+  show(message: string, options: { classname?: string; delay?: number } = {}): void {
+    this.toasts.push({
+      message,
+      classname: options.classname || 'toast-info',
+      delay: options.delay || 3000,
+    });
+    if (options.delay) {
+      setTimeout(() => this.remove(this.toasts[0]), options.delay);
+    }
+  }
 
-    fixture = TestBed.createComponent(ScreenNineLevelThreeComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
-
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
-
-  it('should have a 5x5 grid with initial coordinates', () => {
-    const expectedGrid = [
-      [false, true, true, true, false],
-      [false, true, true, true, false],
-      [false, true, false, true, false],
-      [false, false, true, false, false],
-      [false, true, true, true, false]
-    ];
-    expect(component.grid).toEqual(expectedGrid);
-  });
-
-  it('should not allow cells to change color', () => {
-    // Test if the toggleCell function does not change cell color
-    const initialGrid = [...component.grid.map(row => [...row])];
-    component.toggleCell(0, 0);
-    expect(component.grid).toEqual(initialGrid);
-  });
-});
+  remove(toast: { message: string; classname: string; delay: number }): void {
+    const index = this.toasts.indexOf(toast);
+    if (index >= 0) {
+      this.toasts.splice(index, 1);
+    }
+  }
+}

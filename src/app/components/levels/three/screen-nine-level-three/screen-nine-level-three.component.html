@@ -8,35 +8,63 @@
 </head>
 <body>
 <div class="container">
-  <div><a routerLink="/fase-3-8"><i class="bi bi-chevron-left"></i></a></div> 
+  
+  <div class="toast-container">
+    <div
+      *ngFor="let toast of toastService.toasts"
+      class="toast"
+      [ngClass]="toast.classname"
+      (click)="toastService.remove(toast)"
+    >
+      {{ toast.message }}
+    </div>
+  </div>  
+  
+  <!-- Navegação para a fase anterior -->
+  <div>
+    <a routerLink="/fase-3-8">
+      <i class="bi bi-chevron-left"></i>
+    </a>
+  </div> 
+  <!-- Conteúdo principal -->
   <div class="content">
     <h3><strong>FASE 3</strong></h3>
+
+    <!-- Grade da matriz -->
     <div class="matriz">
       <div *ngFor="let row of grid; let rowIndex = index" class="grid-row">
-      <div
-        *ngFor="let cell of row; let cellIndex = index"
-        class="cell"
-        [ngClass]="{ 'black': cell }"
-      ></div>
-      <span class="word">{{ rowWords[rowIndex] }}</span>
-    </div>   
+        <div
+          *ngFor="let cell of row; let cellIndex = index"
+          class="cell"
+          [ngClass]="{ 'black': cell, 'white': !cell }"
+          (click)="toggleCell(rowIndex, cellIndex)"
+        ></div>
+        <span class="word">{{ rowWords[rowIndex] }}</span>
+      </div>   
     </div>
-            
+
+    <!-- Pergunta -->
     <p>
-      Como você representaria a última linha da
-      imagem acima?
+      Como você representaria a última linha da imagem acima?
     </p>
+
+    <!-- Opções de resposta -->
     <div class="answer-table row justify-content-center w-100">
-      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass1]" (click)="changeAnswers(answers[0], 1)" (click)="pickAnswer(answers[0])">{{answers[0]}}</button>
-      <div class="w-100"></div>
-      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass2]" (click)="changeAnswers(answers[1], 2)" (click)="pickAnswer(answers[1])">{{answers[1]}}</button>
-      <div class="w-100"></div>
-      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass3]" (click)="changeAnswers(answers[2], 3)" (click)="pickAnswer(answers[2])">{{answers[2]}}</button>
-      <div class="w-100"></div>
-      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass4]" (click)="changeAnswers(answers[3], 4)" (click)="pickAnswer(answers[3])">{{answers[3]}}</button>
+      <button 
+        *ngFor="let answer of answers; let btnIndex = index" 
+        [ngClass]="buttonClasses[btnIndex + 1]"
+        (click)="changeAnswers(answer, btnIndex + 1)">
+        {{ answer }}
+      </button>
+    </div>
   </div>
+
+  <!-- Navegação para a próxima fase -->
+  <div>
+    <a routerLink="/fase-3-9">
+      <i class="bi bi-chevron-right"></i>
+    </a>
   </div>
-  <div><a routerLink="/fase-3-9"><i class="bi bi-chevron-right"></i></a></div>
 </div>
 </body>
 </html>
