@@ -23,7 +23,6 @@ h3 {
   margin: 1rem 0 2rem 0;
 }
 
-
 p {
   color: #073d7c;
   width: 35%;
@@ -66,13 +65,13 @@ p {
     font-size: 1.5rem;
   }
 }
-
+/* matriz de quadrados */
 .grid-row {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
-
+/* quadrado branco */
 .cell {
   width: 40px;
   height: 60px;
@@ -82,7 +81,7 @@ p {
   margin-right: 5px;
   transition: background-color 0.3s ease;
 }
-
+/* quadrado preto */
 .cell.black {
   background-color: black;
 }
@@ -92,7 +91,7 @@ p {
   font-weight: bold;
   color: #073d7c;
 }
-
+/* botões */
 .answer-table {
   margin-top: 1.5rem;
   display: flex;
@@ -100,6 +99,7 @@ p {
   flex-wrap: wrap; /* Permite ajuste automático em telas menores */
 }
 
+/* botão */
 button {
   background-color: #073d7c;
   color: white;
@@ -133,44 +133,4 @@ button:focus {
 .incorrect:hover,
 .incorrect:focus {
   background-color: var(--answer-red-hover, #c82333); /* Cor vermelho escuro */
-}
-
-.toast-container {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  z-index: 1050;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.toast {
-  padding: 10px 15px;
-  border-radius: 5px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  color: white;
-  font-size: 14px;
-  cursor: pointer;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.toast-info {
-  background-color: #17a2b8;
-}
-
-.toast-success {
-  background-color: #28a745;
-}
-
-.toast-danger {
-  background-color: #dc3545;
-}
-
-.bg-danger {
-  background-color: #dc3545;
-}
-
-.text-light {
-  color: #ffffff;
 }

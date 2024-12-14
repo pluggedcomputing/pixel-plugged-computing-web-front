@@ -50,6 +50,8 @@ import { ScreenNineLevelFourComponent } from './components/levels/four/screen-ni
 import { ScreenTenLevelFourComponent } from './components/levels/four/screen-ten-level-four/screen-ten-level-four.component';
 import { ScreenElevenLevelFourComponent } from './components/levels/four/screen-eleven-level-four/screen-eleven-level-four.component';
 import { ScreenEightLevelFourComponent } from './components/levels/four/screen-eight-level-four/screen-eight-level-four.component';
+import { NotificationComponent } from './components/notification/notification.component';
+
 
 @NgModule({
   declarations: [
@@ -98,6 +100,7 @@ import { ScreenEightLevelFourComponent } from './components/levels/four/screen-e
     ScreenTenLevelFourComponent,
     ScreenElevenLevelFourComponent,
     ScreenEightLevelFourComponent,
+    NotificationComponent,
   ],
   imports: [
     BrowserModule,

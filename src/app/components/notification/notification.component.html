@@ -1,0 +1,11 @@
+<div class="notification-container" *ngIf="notifications.length > 0">
+    <div
+      *ngFor="let notification of notifications"
+      class="notification"
+      [ngClass]="notification.type"
+    >
+      {{ notification.message }}
+      <button class="close-btn" (click)="remove(notification)"></button>
+    </div>
+  </div>
+  

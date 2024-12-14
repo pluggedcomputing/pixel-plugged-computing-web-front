@@ -1,6 +1,6 @@
-import { ToastService } from '../../toast.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit , ViewChild} from '@angular/core';
 import { Router } from '@angular/router';
+import { NotificationComponent } from '../../../notification/notification.component';
 
 @Component({
   selector: 'app-screen-nine-level-three',
@@ -9,72 +9,26 @@ import { Router } from '@angular/router';
 })
 export class ScreenNineLevelThreeComponent implements OnInit {
 
-  // Estado inicial dos quadrados e variáveis relacionadas
-  rectangles: boolean[] = [true, false, true, false, true];
+  @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
-  byn1: number = 1;
-  byn2: number = 0;
-  byn4: number = 0;
-  byn8: number = 1;
-  byn16: number = 0;
-
-  attempts: number = 0;
-
-  question: string = "Agora vamos praticar? Pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. Lembre-se de que o 1 é branco e o 0 é preto.";
-
+  // alternativas
   answers: string[] = ["1,1,1,2", "0,1,2,1,1", "0,2,1,2", "0,3,2"];
+
+  grid: boolean[][];
 
   rectangleStatus: boolean[][] = Array.from({ length: 5 }, () => Array(5).fill(false));
 
-  // Coordenadas iniciais do grid
+  // matriz inicial
   initialCoordinates: number[][] = [
     [1, 0, 0, 0, 1],
     [1, 1, 0, 1, 1],
     [1, 1, 0, 1, 1],
     [0, 1, 0, 1, 1],
-    [0, 0, 0, 1, 1]
+    [0, 0, 0, 1, 1],
   ];
 
+  // cordenadas das linhas
   rowWords: string[] = ["0,3,1", "2,1,2", "2,1,2", "0,1,1,1,2", "?,?,?,?,?"];
-
-  grid: boolean[][];
-
-  constructor(private router: Router, public toastService: ToastService) {
-    // Inicializa o grid com base nas coordenadas iniciais
-    this.grid = this.initialCoordinates.map(row => row.map(value => value === 0));
-  }
-
-  ngOnInit(): void {
-    // Embaralha as respostas ao iniciar
-    this.answers.sort(() => Math.random() - 0.5);
-  }
-
-  // Alterna o estado de um quadrado no grid
-  toggleCell(rowIndex: number, cellIndex: number): void {
-    this.grid[rowIndex][cellIndex] = !this.grid[rowIndex][cellIndex];
-  }
-
-  // Valida as respostas e navega para a próxima fase se correta
-  changeAnswers(value: string, btn: number): void {
-    if (value === "0,3,2") {
-      this.buttonClass(btn, true);
-      setTimeout(() => {
-        this.router.navigate(['fase-3-10']);
-      }, 1000);
-    } else {
-      this.buttonClass(btn, false);
-    }
-  }
-
-  // Exibe mensagem de erro e incrementa as tentativas
-  pickAnswer(answer: string): void {
-    if (answer !== '0,3,2') {
-      this.toastService.show('Tente outra vez', { classname: 'toast-danger', delay: 3000 });
-      this.attempts += 1;
-    } else {
-      this.toastService.show('Você acertou!', { classname: 'toast-success', delay: 3000 });
-    }
-  }
 
   buttonClasses: { [key: number]: string } = {
     1: "",
@@ -82,7 +36,45 @@ export class ScreenNineLevelThreeComponent implements OnInit {
     3: "",
     4: "",
   };
-  
+
+  constructor(private router: Router) {
+    this.grid = this.initialCoordinates.map((row) => row.map((value) => value === 0));
+  }
+
+  ngOnInit(): void {
+    this.answers.sort(() => Math.random() - 0.5);
+  }
+
+  // mudar cor quadrado
+  toggleCell(rowIndex: number, cellIndex: number): void {
+    this.grid[rowIndex][cellIndex] = !this.grid[rowIndex][cellIndex];
+  }
+
+  // validar resposta
+  changeAnswers(value: string, btn: number): void {
+    if (value === "0,3,2") {
+      this.buttonClass(btn, true);
+      this.onSuccess();
+      setTimeout(() => {
+        this.router.navigate(['fase-3-10']);
+      }, 1000);
+    } else {
+      this.buttonClass(btn, false);
+      this.onError();
+    }
+  }
+
+  // resposta certa
+  onSuccess(): void {
+    this.notification.show('Você acertou!', 'success');
+  }
+
+  // resposta errada
+  onError(): void {
+    this.notification.show('Tente outra vez.', 'error');
+  }
+
+  // botões alternativas
   buttonClass(button: number, status: boolean): void {
     this.buttonClasses[button] = status ? "correct" : "incorrect";
     setTimeout(() => {
@@ -90,9 +82,4 @@ export class ScreenNineLevelThreeComponent implements OnInit {
     }, 1000);
   }
   
-
-  // Alterna o estado de um quadrado específico
-  toggleRectangle(row: number, col: number): void {
-    this.rectangleStatus[row][col] = !this.rectangleStatus[row][col];
-  }
 }
