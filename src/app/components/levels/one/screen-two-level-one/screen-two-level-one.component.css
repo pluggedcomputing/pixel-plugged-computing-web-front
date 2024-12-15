@@ -1,21 +1,25 @@
+body {
+  background-color: #ffffff;
+}
+
 .container {
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
+}
+
+.container div img {
+  width: 30%;
 }
 
 .content {
   display: flex;
   width: 100%;
-  height: 100%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-}
-
-.container div img {
-  width: 30%;
 }
 
 h3 {
@@ -26,7 +30,6 @@ h3 {
 p {
   color: #073d7c;
   width: 35%;
-  height: 300px;
   text-align: justify;
   margin-top: 2rem;
   font-size: 1.2rem;
@@ -34,10 +37,10 @@ p {
 
 .bi {
   color: #073d7c;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
   .container div img {
     width: 35%;
   }
@@ -50,7 +53,7 @@ p {
   }
 }
 
-@media(max-width: 767px) {
+@media (max-width: 767px) {
   .container div img {
     width: 60%;
   }
@@ -63,7 +66,7 @@ p {
   }
 }
 
-@media(max-width: 484px) {
+@media (max-width: 484px) {
   .container div img {
     width: 60%;
   }
