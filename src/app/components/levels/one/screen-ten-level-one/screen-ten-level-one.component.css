@@ -1,131 +1,136 @@
 body {
-    background-color: #A6F3D6;
-  }
-  
-.container {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-  }
-  
-  .content {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-  }
-  
-  .container div img {
-    width: 30%;
-  }
-  
-  h3 {
-    color: #073d7c;
-    margin: 1rem 0 2rem 0;
-  }
-  
-  p {
-    color: #073d7c;
-    width: 35%;
-    height: 100px;
-    text-align: justify;
-    margin-top: 2rem;
-    font-size: 1.2rem;
-  }
-  
-  .bi {
-    color: #073d7c;
-    font-size: 3rem;
-  }
-  
-  @media(max-width: 991px) {
-    .container div img {
-      width: 35%;
-    }
-    p {
-      width: 40%;
-      font-size: 1.2rem;
-    }
-    .bi {
-      font-size: 2rem;
-    }
-  }
-  
-  @media(max-width: 767px) {
-    .container div img {
-      width: 60%;
-    }
-    p {
-      width: 60%;
-      font-size: 1rem;
-    }
-    .bi {
-      font-size: 1.8rem;
-    }
-  }
-  
-  @media(max-width: 484px) {
-    .container div img {
-      width: 60%;
-    }
-    p {
-      width: 70%;
-      font-size: 0.8rem;
-    }
-    .bi {
-      font-size: 1.5rem;
-    }
-  }
+  background-color: #A6F3D6;
+}
 
-  .btn {
-    background-color: var(--dark-blue);
-    margin-top: 0.5rem;
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h3 {
+  color: #073d7c;
+  margin: 1rem 0 2rem 0;
+}
+
+p {
+  color: #073d7c;
+  width: 35%;
+  text-align: justify;
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+.bi {
+  color: #073d7c;
+  font-size: 4rem;
+}
+
+@media (max-width: 991px) {
+  .container div img {
+    width: 35%;
+  }
+  p {
+    width: 40%;
     font-size: 1.2rem;
-    padding-inline: 10px;
-    padding-block: 10px;
-    border-radius: 4px !important;
   }
-  
-  .btn:hover, .btn:active, .btn:focus {
-    background-color: var(--dark-blue);
+  .bi {
+    font-size: 2rem;
   }
-  
-  .byn-number {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: var(--dark-blue);
+}
+
+@media (max-width: 767px) {
+  .container div img {
+    width: 60%;
   }
-  
-  .correct {
-    background-color: var(--answer-green);
-  }
-  
-  .correct:hover, .correct:focus {
-    background-color: var(--answer-green);
-  }
-  
-  .incorrect {
-    background-color: var(--answer-red);
-  }
-  
-  .incorrect:hover, .incorrect:focus {
-    background-color: var(--answer-red);
-  }
-  
-  .btn {
+  p {
+    width: 60%;
     font-size: 1rem;
   }
-  
-  @media only screen and (max-width: 515px) {
-    p {
-      font-size: 1rem;
-    }
-  
-    .bi {
-      font-size: 1.5rem;
-      top: 40%;
-    }
+  .bi {
+    font-size: 1.8rem;
   }
+}
+
+@media (max-width: 484px) {
+  .container div img {
+    width: 60%;
+  }
+  p {
+    width: 70%;
+    font-size: 0.8rem;
+  }
+  .bi {
+    font-size: 1.5rem;
+  }
+}
+
+.container div img {
+  width: 30%;
+}
+
+.word {
+  margin-left: 10px;
+  font-weight: bold;
+  color: #073d7c;
+}
+
+
+/* botões */
+.answer-table {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Espaço uniforme entre os botões */
+  justify-content: center;
+  width: 100px;
+}
+
+/* botão */
+button {
+  background-color: #073d7c;
+  color: white;
+  border: none;
+  margin-top: 0.5rem;
+  font-size: 1.0rem;
+  padding-inline: 10px;
+  padding-block: 10px;
+  border-radius: 4px !important;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:active,
+button:focus {
+  background-color: #052d5a;
+}
+
+.correct {
+  background-color: var(--answer-green, #28a745);
+}
+
+.correct:hover,
+.correct:focus {
+  background-color: var(--answer-green-hover, #218838);
+}
+
+.incorrect {
+  background-color: var(--answer-red, #dc3545);
+}
+
+.incorrect:hover,
+.incorrect:focus {
+  background-color: var(--answer-red-hover, #c82333);
+}

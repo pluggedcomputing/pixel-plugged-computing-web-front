@@ -4,13 +4,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fase 1</title>
+  <title>FASE 1</title>
 </head>
 <body>
+
+<app-notification #notification></app-notification>
+
 <div class="container">
-  <div><a routerLink="/fase-1-4"><i class="bi bi-chevron-left"></i></a></div> 
+
+  <div>
+    <a routerLink="/fase-1-4">
+      <i class="bi bi-chevron-left"></i>
+    </a>
+  </div>
+
   <div class="content">
+    
     <h3><strong>FASE 1</strong></h3>
+
     <div class="rectangles">
       <div class="rectangle-container">
         <div class="rectangle" (click)="toggleRectangle(1)" [ngClass]="{'black': rectangleStatus[0]}"></div>
@@ -33,13 +44,21 @@
         <div class="number">{{ numbers[4] }}</div>
       </div>
     </div>
+
     <p>
       Pinte os pixels acima de preto ou branco
       clicando em cada um deles e veja o código em bits(sequências de 0s e 1s)
       correspondente.
     </p>
+
   </div>
-  <div><a routerLink="/fase-1-6"><i class="bi bi-chevron-right"></i></a></div>
+
+  <div>
+    <a routerLink="/fase-1-6">
+      <i class="bi bi-chevron-right"></i>
+    </a>
+  </div>
+
 </div>
 </body>
 </html>
