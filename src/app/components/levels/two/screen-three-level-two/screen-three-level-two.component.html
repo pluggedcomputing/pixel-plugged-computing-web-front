@@ -7,39 +7,57 @@
   <title>Fase 2</title>
 </head>
 <body>
+
+<app-notification #notification></app-notification>
+
 <div class="container">
-  <div><a routerLink="/fase-2-2"><i class="bi bi-chevron-left"></i></a></div> 
+
+  <div>
+    <a routerLink="/fase-2-2">
+      <i class="bi bi-chevron-left"></i>
+    </a>
+  </div>
+
   <div class="content">
-    <h3><strong>FASE 2</strong></h3>
-    <div  class="matriz">
+    
+    <h3><strong>Fase 2</strong></h3>
+
+    <div class="matriz">
       <div *ngFor="let row of grid; let rowIndex = index" class="grid-row">
         <div
           *ngFor="let cell of row; let cellIndex = index"
           class="cell"
-          [ngClass]="{ 'black': cell }"
+          [ngClass]="{ 'black': cell, 'white': !cell }"
           (click)="toggleCell(rowIndex, cellIndex)"
         ></div>
         <span class="word">{{ rowWords[rowIndex] }}</span>
-      </div> 
+      </div>
     </div>
-           
+
     <p>
       Agora vamos praticar? pinte a imagem
       representada pelos códigos acima e 
       escolha a letra representada pelo código.
       lembre-se de que o 1 é branco e o 0 é preto.
     </p>
-    <div class="answer-table row justify-content-center w-100">
-      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass1]" (click)="changeAnswers(answers[0], 1)" (click)="pickAnswer(answers[0])">{{answers[0]}}</button>
-      <div class="w-100"></div>
-      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass2]" (click)="changeAnswers(answers[1], 2)" (click)="pickAnswer(answers[1])">{{answers[1]}}</button>
-      <div class="w-100"></div>
-      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass3]" (click)="changeAnswers(answers[2], 3)" (click)="pickAnswer(answers[2])">{{answers[2]}}</button>
-      <div class="w-100"></div>
-      <button type="button" class="btn btn-primary col-md-5 col-sm-3 btn-block" [ngClass]="[btnClass4]" (click)="changeAnswers(answers[3], 4)" (click)="pickAnswer(answers[3])">{{answers[3]}}</button>
+
+    <div class="answer-table">
+      <button 
+        *ngFor="let answer of answers; let btnIndex = index" 
+        [ngClass]="buttonClasses[btnIndex + 1]"
+        (click)="changeAnswers(answer, btnIndex + 1)">
+        {{ answer }}
+      </button>
+    </div>
+
   </div>
+
+  <div>
+    <a routerLink="/fase-2-3">
+      <i class="bi bi-chevron-right"></i>
+    </a>
   </div>
-  <div><a routerLink="/fase-2-3"><i class="bi bi-chevron-right"></i></a></div>
+
 </div>
 </body>
 </html>
