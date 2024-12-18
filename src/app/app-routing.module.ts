@@ -43,6 +43,8 @@ import { ScreenEightLevelFourComponent } from './components/levels/four/screen-e
 import { ScreenNineLevelFourComponent } from './components/levels/four/screen-nine-level-four/screen-nine-level-four.component';
 import { ScreenTenLevelFourComponent } from './components/levels/four/screen-ten-level-four/screen-ten-level-four.component';
 import { ScreenElevenLevelFourComponent } from './components/levels/four/screen-eleven-level-four/screen-eleven-level-four.component';
+import { HelpComponent } from './components/help/help.component';
+import { AboutComponent } from './components/about/about.component';
 
 const routes: Routes = [
   {path: '', pathMatch: 'full', component: HomeComponent},
@@ -88,6 +90,8 @@ const routes: Routes = [
   { path: 'fase-4-9', component: ScreenNineLevelFourComponent },
   { path: 'fase-4-10', component: ScreenTenLevelFourComponent },
   { path: 'fase-4-11', component: ScreenElevenLevelFourComponent },
+  { path: 'help', component: HelpComponent },
+  { path: 'about', component: AboutComponent },
 
 ];
 

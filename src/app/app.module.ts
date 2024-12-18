@@ -51,6 +51,8 @@ import { ScreenTenLevelFourComponent } from './components/levels/four/screen-ten
 import { ScreenElevenLevelFourComponent } from './components/levels/four/screen-eleven-level-four/screen-eleven-level-four.component';
 import { ScreenEightLevelFourComponent } from './components/levels/four/screen-eight-level-four/screen-eight-level-four.component';
 import { NotificationComponent } from './components/notification/notification.component';
+import { HelpComponent } from './components/help/help.component';
+import { AboutComponent } from './components/about/about.component';
 
 
 @NgModule({
@@ -101,6 +103,8 @@ import { NotificationComponent } from './components/notification/notification.co
     ScreenElevenLevelFourComponent,
     ScreenEightLevelFourComponent,
     NotificationComponent,
+    HelpComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

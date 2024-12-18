@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,52 +7,69 @@
   <title>Seleção de fase</title>
 </head>
 <body>
-  <div class="container">
-    <div class="header"><strong>Seleção de fase</strong></div>
-    <div class="content">
-      <div class="level-group">
-        <div class="level">
-          <a routerLink="/fase-1-1">
-            <img src="assets/levels/level1.png" alt="Fase 1">
-            <div class="description">
-              <p><strong>FASE 1</strong></p>
-              <p>Imagens e pixels</p>
-            </div>
-            <i class="bi bi-chevron-right"></i>
-          </a>
-        </div>
-        <div class="level">
-          <a routerLink="/fase-2-1">
-            <img src="assets/levels/level2.png" alt="Fase 2">
-            <div class="description">
-              <p><strong>FASE 2</strong></p>
-              <p>Codificar imagens com 1 e 0</p>
-            </div>
-            <i class="bi bi-chevron-right"></i>
-          </a>
-        </div>
-        <div class="level">
-          <a routerLink="/fase-3-1">
-            <img src="assets/levels/level3.png" alt="Fase 3">
-            <div class="description">
-              <p><strong>FASE 3</strong></p>
-              <p>Imagens compactas</p>
-            </div>
-            <i class="bi bi-chevron-right"></i>
-          </a>
-        </div>
-        <div class="level">
-          <a routerLink="/fase-4-1">
-            <img src="assets/levels/level4.png" alt="Fase 4">
-            <div class="description">
-              <p><strong>FASE 4</strong></p>
-              <p>Usando run-length coding</p>
-            </div>
-            <i class="bi bi-chevron-right"></i>
-          </a>
-        </div>
+
+<div class="container">
+
+  <div class="content">
+    
+    <h3><strong>Seleção de fase</strong></h3>
+
+    <div class="level-group">
+      <div class="level">
+        <a routerLink="/fase-1-1">
+          <img src="assets/levels/level1.png" alt="Fase 1">
+          <div class="description">
+            <p><strong>FASE 1</strong></p>
+            <p>Imagens e pixels</p>
+          </div>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </div>
+      <div class="level">
+        <a routerLink="/fase-2-1">
+          <img src="assets/levels/level2.png" alt="Fase 2">
+          <div class="description">
+            <p><strong>FASE 2</strong></p>
+            <p>Codificar imagens com 1 e 0</p>
+          </div>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </div>
+      <div class="level">
+        <a routerLink="/fase-3-1">
+          <img src="assets/levels/level3.png" alt="Fase 3">
+          <div class="description">
+            <p><strong>FASE 3</strong></p>
+            <p>Imagens compactas</p>
+          </div>
+          <i class="bi bi-chevron-right"></i>
+        </a>
+      </div>
+      <div class="level">
+        <a routerLink="/fase-4-1">
+          <img src="assets/levels/level4.png" alt="Fase 4">
+          <div class="description">
+            <p><strong>FASE 4</strong></p>
+            <p>Usando run-length coding</p>
+          </div>
+          <i class="bi bi-chevron-right"></i>
+        </a>
       </div>
     </div>
+
   </div>
+
+  <div class="rodape">
+    <div class="botao-rodape" routerLink="/help">
+      <img class="icone-botao" src="assets/cover/ajuda.png">
+      <p class="text-botao"> Ajuda </p>
+    </div>
+    <div class="botao-rodape" routerLink="/about">
+      <img class="icone-botao" src="assets/cover/sobre.png">
+      <p class="text-botao"> Sobre </p>
+    </div>
+  </div>
+
+</div>
 </body>
 </html>
