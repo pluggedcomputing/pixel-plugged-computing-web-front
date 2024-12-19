@@ -33,10 +33,10 @@ export class ScreenNineLevelFourComponent implements OnInit {
 
   question: string = "Agora vamos praticar? pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. lembre-se de que o 1 é branco e o 0 é preto.";
 
-  answers: string[] = ["Q","G","P","D"];
+  answers: string[] = ["Q", "G", "P", "D"];
 
   rectangleStatus: boolean[][] = Array.from({ length: 5 }, () => Array(5).fill(false));
-  
+
   grid: boolean[][];
 
   // Coordenadas iniciais
@@ -63,65 +63,65 @@ export class ScreenNineLevelFourComponent implements OnInit {
   }
 
   toggleFlip(card: number): void {
-    if(card == 1) {
+    if (card == 1) {
       this.flip1 = (this.flip1 == 'inactive') ? 'active' : 'inactive';
-    } else if(card == 2) {
+    } else if (card == 2) {
       this.flip2 = (this.flip2 == 'inactive') ? 'active' : 'inactive';
-    } else if(card == 4) {
+    } else if (card == 4) {
       this.flip4 = (this.flip4 == 'inactive') ? 'active' : 'inactive';
-    } else if(card == 8) {
+    } else if (card == 8) {
       this.flip8 = (this.flip8 == 'inactive') ? 'active' : 'inactive';
-    } else if(card == 16) {
+    } else if (card == 16) {
       this.flip16 = (this.flip16 == 'inactive') ? 'active' : 'inactive';
     }
     this.toggleBynaries();
   }
 
   changeAnswers(value: string, btn: number): void {
-    if(value === "D") {
-        this.buttonClass(btn, true);
-        setTimeout(() => {
-          this.router.navigate(['fase-4-10']);
-        },1000);
+    if (value === "D") {
+      this.buttonClass(btn, true);
+      setTimeout(() => {
+        this.router.navigate(['fase-4-10']);
+      }, 1000);
     } else {
-        this.buttonClass(btn, false);
+      this.buttonClass(btn, false);
     }
   }
 
-  toggleBynaries():void {
-    if(this.flip1 === 'active') {
-      setTimeout(()=> {this.byn1 = 0;},400);
+  toggleBynaries(): void {
+    if (this.flip1 === 'active') {
+      setTimeout(() => { this.byn1 = 0; }, 400);
     } else {
-      setTimeout(()=> {this.byn1 = 1;},400);
+      setTimeout(() => { this.byn1 = 1; }, 400);
     }
 
-    if(this.flip2 === 'active') {
-      setTimeout(()=> {this.byn2 = 0;},400);
+    if (this.flip2 === 'active') {
+      setTimeout(() => { this.byn2 = 0; }, 400);
     } else {
-      setTimeout(()=> {this.byn2 = 1;},400);
+      setTimeout(() => { this.byn2 = 1; }, 400);
     }
 
-    if(this.flip4 === 'active') {
-      setTimeout(()=> {this.byn4 = 0;},400);
+    if (this.flip4 === 'active') {
+      setTimeout(() => { this.byn4 = 0; }, 400);
     } else {
-      setTimeout(()=> {this.byn4 = 1;},400);
+      setTimeout(() => { this.byn4 = 1; }, 400);
     }
 
-    if(this.flip8 === 'active') {
-      setTimeout(()=> {this.byn8 = 0;},400);
+    if (this.flip8 === 'active') {
+      setTimeout(() => { this.byn8 = 0; }, 400);
     } else {
-      setTimeout(()=> {this.byn8 = 1;},400);
+      setTimeout(() => { this.byn8 = 1; }, 400);
     }
 
-    if(this.flip16 === 'active') {
-      setTimeout(()=> {this.byn16 = 0;},400);
+    if (this.flip16 === 'active') {
+      setTimeout(() => { this.byn16 = 0; }, 400);
     } else {
-      setTimeout(()=> {this.byn16 = 1;},400);
+      setTimeout(() => { this.byn16 = 1; }, 400);
     }
   }
 
   pickAnswer(answer: string): void {
-    if(answer !== "p") {
+    if (answer !== "p") {
       this.toastService.show('Tente outra vez.');
       this.attempts += 1;
       console.log(this.attempts);
@@ -129,21 +129,21 @@ export class ScreenNineLevelFourComponent implements OnInit {
   }
 
   buttonClass(button: number, status: boolean): void {
-    if(button == 1) {
+    if (button == 1) {
       this.btnClass1 = status ? "correct" : "incorrect";
-      setTimeout(() => {this.btnClass1 = "";},1000);
+      setTimeout(() => { this.btnClass1 = ""; }, 1000);
     }
-    if(button == 2) {
+    if (button == 2) {
       this.btnClass2 = status ? "correct" : "incorrect";
-      setTimeout(() => {this.btnClass2 = "";},1000);
+      setTimeout(() => { this.btnClass2 = ""; }, 1000);
     }
-    if(button == 3) {
+    if (button == 3) {
       this.btnClass3 = status ? "correct" : "incorrect";
-      setTimeout(() => {this.btnClass3 = "";},1000);
+      setTimeout(() => { this.btnClass3 = ""; }, 1000);
     }
-    if(button == 4) {
+    if (button == 4) {
       this.btnClass4 = status ? "correct" : "incorrect";
-      setTimeout(() => {this.btnClass4 = "";},1000);
+      setTimeout(() => { this.btnClass4 = ""; }, 1000);
     }
 
   }

@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./screen-five-level-one.component.css']
 })
 export class ScreenFiveLevelOneComponent implements OnInit {
-  
+
   rectangleStatus: boolean[] = [false, false, false, false, false];
   numbers: number[] = [1, 1, 1, 1, 1];
 

@@ -42,6 +42,7 @@ p {
     width: 40%;
     font-size: 1.2rem;
   }
+
   .bi {
     font-size: 2rem;
   }
@@ -52,6 +53,7 @@ p {
     width: 60%;
     font-size: 1rem;
   }
+
   .bi {
     font-size: 1.8rem;
   }
@@ -62,38 +64,40 @@ p {
     width: 70%;
     font-size: 0.8rem;
   }
+
   .bi {
     font-size: 1.5rem;
   }
 }
 
-  .rectangles {
-    display: flex;
-  }
+.rectangles {
+  display: flex;
+}
 
-  .rectangle-container {
-    display: flex;
-    flex-direction: column; /* Organiza os itens verticalmente */
-    align-items: center; /* Centraliza os itens horizontalmente */
-  }
-  
-  .rectangle {
-    width: 50px;
-    height: 100px;
-    margin: 5px;
-    background-color: white;
-    border: 2px solid #073d7c;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    cursor: pointer;
-  }
-  
-  .rectangle.black {
-    background-color: black;
-  }
-  
-  .number {
-    color: #073d7c;
-  }
-  
+.rectangle-container {
+  display: flex;
+  flex-direction: column;
+  /* Organiza os itens verticalmente */
+  align-items: center;
+  /* Centraliza os itens horizontalmente */
+}
+
+.rectangle {
+  width: 50px;
+  height: 100px;
+  margin: 5px;
+  background-color: white;
+  border: 2px solid #073d7c;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.rectangle.black {
+  background-color: black;
+}
+
+.number {
+  color: #073d7c;
+}

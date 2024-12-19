@@ -20,9 +20,9 @@ export class NotificationComponent {
 
     // Define o ícone baseado no tipo de notificação
     if (type === 'success') {
-      icon = '✔'; 
+      icon = '✔';
     } else {
-      icon = '✖' 
+      icon = '✖'
     }
 
     const notification: Notification = { message, type, icon };

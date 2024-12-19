@@ -42,6 +42,7 @@ p {
     width: 40%;
     font-size: 1.2rem;
   }
+
   .bi {
     font-size: 2rem;
   }
@@ -52,6 +53,7 @@ p {
     width: 60%;
     font-size: 1rem;
   }
+
   .bi {
     font-size: 1.8rem;
   }
@@ -62,6 +64,7 @@ p {
     width: 70%;
     font-size: 0.8rem;
   }
+
   .bi {
     font-size: 1.5rem;
   }
@@ -69,14 +72,18 @@ p {
 
 .rectangles {
   display: flex;
-  margin-top: 0.5rem; /* Reduzir a margem superior */
+  margin-top: 0.5rem;
+  /* Reduzir a margem superior */
 }
 
 .rectangle-container {
   display: flex;
-  flex-direction: column; /* Organiza os itens verticalmente */
-  align-items: center; /* Centraliza os itens horizontalmente */
-  margin: 0.5rem; /* Adicionar margem para espaçar os retângulos */
+  flex-direction: column;
+  /* Organiza os itens verticalmente */
+  align-items: center;
+  /* Centraliza os itens horizontalmente */
+  margin: 0.5rem;
+  /* Adicionar margem para espaçar os retângulos */
 }
 
 .rectangle {
@@ -101,7 +108,8 @@ p {
   margin-top: 1.5rem;
   display: flex;
   flex-direction: column;
-  gap: 10px; /* Espaço uniforme entre os botões */
+  gap: 10px;
+  /* Espaço uniforme entre os botões */
 }
 
 /* botão */

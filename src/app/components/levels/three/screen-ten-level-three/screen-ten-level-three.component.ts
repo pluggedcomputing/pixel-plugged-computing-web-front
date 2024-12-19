@@ -1,4 +1,4 @@
-import { Component, OnInit , ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotificationComponent } from '../../../notification/notification.component';
 
@@ -12,7 +12,7 @@ export class ScreenTenLevelThreeComponent implements OnInit {
   @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
   // alternativas
-  answers: string[] = ["I","K","L","J"];
+  answers: string[] = ["I", "K", "L", "J"];
 
   grid: boolean[][];
 
@@ -81,5 +81,5 @@ export class ScreenTenLevelThreeComponent implements OnInit {
       this.buttonClasses[button] = "";
     }, 1000);
   }
-  
+
 }

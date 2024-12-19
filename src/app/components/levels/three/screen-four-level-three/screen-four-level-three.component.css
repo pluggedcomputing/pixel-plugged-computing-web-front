@@ -44,10 +44,12 @@ p {
   .container div img {
     width: 35%;
   }
+
   p {
     width: 40%;
     font-size: 1.2rem;
   }
+
   .bi {
     font-size: 2rem;
   }
@@ -57,10 +59,12 @@ p {
   .container div img {
     width: 60%;
   }
+
   p {
     width: 60%;
     font-size: 1rem;
   }
+
   .bi {
     font-size: 1.8rem;
   }
@@ -70,10 +74,12 @@ p {
   .container div img {
     width: 60%;
   }
+
   p {
     width: 70%;
     font-size: 0.8rem;
   }
+
   .bi {
     font-size: 1.5rem;
   }

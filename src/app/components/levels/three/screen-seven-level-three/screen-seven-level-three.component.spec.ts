@@ -8,9 +8,9 @@ describe('ScreenSevenLevelThreeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScreenSevenLevelThreeComponent ]
+      declarations: [ScreenSevenLevelThreeComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ScreenSevenLevelThreeComponent);
     component = fixture.componentInstance;

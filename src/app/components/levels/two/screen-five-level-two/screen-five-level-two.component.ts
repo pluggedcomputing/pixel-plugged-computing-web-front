@@ -1,4 +1,4 @@
-import { Component, OnInit , ViewChild} from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotificationComponent } from '../../../notification/notification.component';
 
@@ -12,7 +12,7 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
   @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
   // alternativas
-  answers: string[] = ["1,1,1,0,1","1,1,0,1,0","1,1,0,0,1","0,1,1,1,0"];
+  answers: string[] = ["1,1,1,0,1", "1,1,0,1,0", "1,1,0,0,1", "0,1,1,1,0"];
 
   grid: boolean[][];
 
@@ -28,7 +28,7 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
   ];
 
   // cordenadas das linhas
-  rowWords: string[] = ["0,1,1,1,0", "0,1,1,1,0", "0,1,0,1,0", "0,0,1,0,0","?,?,?,?,?"];
+  rowWords: string[] = ["0,1,1,1,0", "0,1,1,1,0", "0,1,0,1,0", "0,0,1,0,0", "?,?,?,?,?"];
 
   buttonClasses: { [key: number]: string } = {
     1: "",
@@ -81,5 +81,5 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
       this.buttonClasses[button] = "";
     }, 1000);
   }
-  
+
 }

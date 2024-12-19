@@ -8,9 +8,9 @@ describe('LevelSelectionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ LevelSelectionComponent ]
+      declarations: [LevelSelectionComponent]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(LevelSelectionComponent);
     component = fixture.componentInstance;

@@ -8,10 +8,10 @@ describe('ScreenFiveLevelFourComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScreenFiveLevelFourComponent ],
-      imports: [ FormsModule ] // Include FormsModule
+      declarations: [ScreenFiveLevelFourComponent],
+      imports: [FormsModule] // Include FormsModule
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ScreenFiveLevelFourComponent);
     component = fixture.componentInstance;

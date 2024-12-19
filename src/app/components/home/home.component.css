@@ -1,5 +1,5 @@
 body {
-  background-color:#a6f3d6;
+  background-color: #a6f3d6;
 }
 
 .container {
@@ -75,6 +75,7 @@ h3 {
   h2 {
     font-size: 1.4rem;
   }
+
   h3 {
     font-size: 1rem;
   }

@@ -23,7 +23,7 @@ export class ScreenSixLevelTwoComponent implements OnInit {
 
   constructor() {
     this.grid = this.initialCoordinates.map(row => row.map(value => value === 0));
-   }
+  }
 
   ngOnInit(): void {
   }
@@ -31,5 +31,5 @@ export class ScreenSixLevelTwoComponent implements OnInit {
   toggleCell(rowIndex: number, cellIndex: number): void {
     // Função agora não altera a cor dos quadrados
   }
-  
+
 }

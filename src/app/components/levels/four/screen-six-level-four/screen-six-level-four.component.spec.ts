@@ -8,10 +8,10 @@ describe('ScreenSixLevelFourComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScreenSixLevelFourComponent ],
-      imports: [ FormsModule ]
+      declarations: [ScreenSixLevelFourComponent],
+      imports: [FormsModule]
     })
-    .compileComponents();
+      .compileComponents();
 
     fixture = TestBed.createComponent(ScreenSixLevelFourComponent);
     component = fixture.componentInstance;
