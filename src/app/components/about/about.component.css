@@ -27,7 +27,7 @@ body {
   /* Opcional: adiciona uma margem */
   padding: 10px;
   /* Espaçamento interno */
-  border-radius: 20%;
+  border-radius: 50%;
   cursor: pointer;
 }
 
