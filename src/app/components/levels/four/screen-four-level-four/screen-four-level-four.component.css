@@ -14,6 +14,30 @@ body {
   width: 30%;
 }
 
+.icone-voltar {
+  background-color: #A6F3D6;
+  position: fixed;
+  width: 4%;
+  top: 0;
+  /* Alinha ao topo da tela */
+  right: 0;
+  /* Alinha à direita da tela */
+  margin: 10px;
+  /* Opcional: adiciona uma margem */
+  padding: 10px;
+  /* Espaçamento interno */
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out; /* Suaviza o efeito de redimensionamento */
+}
+
+.icone-voltar:hover {
+  transform: scale(1.1); /* Amplia o botão ao passar o mouse */
+}
+
+.icone-voltar:active {
+  transform: scale(0.95); /* Reduz o botão ao clicar */
+}
 
 .content {
   display: flex;
