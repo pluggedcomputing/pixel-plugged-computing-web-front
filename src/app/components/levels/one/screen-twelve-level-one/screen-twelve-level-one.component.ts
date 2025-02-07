@@ -22,6 +22,8 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
     4: "",
   };
 
+  primeiraTentativa: boolean = true;
+
   constructor(private router: Router) {
   }
 
@@ -32,6 +34,12 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
   // validar resposta
   changeAnswers(value: string, btn: number): void {
     if (value === "Imprimem pixels") {
+      if(this.primeiraTentativa){
+        this.salvarResultado('acerto'); // Salva o resultado como acerto
+      }else{
+        this.salvarResultado('erro'); // Salva o resultado como erro
+      }
+
       this.buttonClass(btn, true);
       this.onSuccess();
       setTimeout(() => {
@@ -40,6 +48,7 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
     } else {
       this.buttonClass(btn, false);
       this.onError();
+      this.primeiraTentativa = false; // Marca que já houve uma tentativa
     }
   }
 
@@ -60,5 +69,12 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
       this.buttonClasses[button] = "";
     }, 1000);
   }
+
+     // Salvar resultado no localStorage
+     salvarResultado(resultado: string): void {
+      const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
+      resultados.push(resultado);
+      localStorage.setItem('resultados', JSON.stringify(resultados));
+    }
 
 }

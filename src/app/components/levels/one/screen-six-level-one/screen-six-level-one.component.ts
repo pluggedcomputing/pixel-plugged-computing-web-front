@@ -23,6 +23,8 @@ export class ScreenSixLevelOneComponent implements OnInit {
     4: "",
   };
 
+  primeiraTentativa: boolean = true;
+
   constructor(private router: Router) {
   }
 
@@ -33,6 +35,12 @@ export class ScreenSixLevelOneComponent implements OnInit {
   // validar resposta
   changeAnswers(value: string, btn: number): void {
     if (value === "1,0,1,0,1") {
+      if(this.primeiraTentativa){
+        this.salvarResultado('acerto'); // Salva o resultado como acerto
+      }else{
+        this.salvarResultado('erro'); // Salva o resultado como erro
+      }
+      
       this.buttonClass(btn, true);
       this.onSuccess();
       setTimeout(() => {
@@ -41,6 +49,7 @@ export class ScreenSixLevelOneComponent implements OnInit {
     } else {
       this.buttonClass(btn, false);
       this.onError();
+      this.primeiraTentativa = false; // Marca que já houve uma tentativa
     }
   }
 
@@ -60,6 +69,13 @@ export class ScreenSixLevelOneComponent implements OnInit {
     setTimeout(() => {
       this.buttonClasses[button] = "";
     }, 1000);
+  }
+
+   // Salvar resultado no localStorage
+   salvarResultado(resultado: string): void {
+    const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
+    resultados.push(resultado);
+    localStorage.setItem('resultados', JSON.stringify(resultados));
   }
 
 }
