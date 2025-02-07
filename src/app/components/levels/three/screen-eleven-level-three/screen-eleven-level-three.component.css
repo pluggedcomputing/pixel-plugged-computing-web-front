@@ -1,4 +1,3 @@
-
 body {
   background-color: #A6F3D6;
 }
@@ -15,6 +14,18 @@ body {
 
 .image {
   width: 30%;
+}
+
+.stars-container {
+  display: flex;
+  flex-direction: row; 
+  align-items: center; 
+  gap: 10px; 
+}
+
+.imagem-estrela {
+  width: 50px; 
+  height: 50px; 
 }
 
 .content {
@@ -54,15 +65,15 @@ p {
   cursor: pointer;
   justify-content: center;
   align-items: center;
-  transition: transform 0.2s ease-in-out; /* Suaviza o efeito de redimensionamento */
+  transition: transform 0.2s ease-in-out; 
 }
 
 .botao-rodape:hover {
-  transform: scale(1.1); /* Amplia o botão ao passar o mouse */
+  transform: scale(1.1); 
 }
 
 .botao-rodape:active {
-  transform: scale(0.95); /* Reduz o botão ao clicar */
+  transform: scale(0.95); 
 }
 
 .icone {
@@ -93,7 +104,6 @@ p {
     font-size: 1.2rem;
   }
 }
-
 
 @media (max-width: 767px) {
   .container div img {

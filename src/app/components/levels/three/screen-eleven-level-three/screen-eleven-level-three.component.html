@@ -21,6 +21,19 @@
 
       <h3><strong>PARABÉNS</strong></h3>
 
+      <div class="stars-container">
+
+        <!--  (acertos) -->
+        <div *ngFor="let acerto of getArray(acertos)" class="star">
+          <img src="assets/win/estrela.png" alt="Estrela Amarela" class="imagem-estrela">
+        </div>
+      
+        <!--  (erros) -->
+        <div *ngFor="let erro of getArray(erros)" class="star">
+          <img src="assets/win/estrela-branca.png" alt="Estrela Branca" class="imagem-estrela">
+        </div>
+      </div>
+
       <p>
         <strong>Você concluiu a FASE 3 do CP Pixel Web!</strong>
       </p>

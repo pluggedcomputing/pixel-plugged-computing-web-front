@@ -37,6 +37,9 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
     4: "",
   };
 
+  primeiraTentativa: boolean = true;
+
+
   constructor(private router: Router) {
     this.grid = this.initialCoordinates.map((row) => row.map((value) => value === 0));
   }
@@ -53,6 +56,12 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
   // validar resposta
   changeAnswers(value: string, btn: number): void {
     if (value === "0,1,1,1,0") {
+      if(this.primeiraTentativa){
+        this.salvarResultado('acerto'); // Salva o resultado como acerto
+      }else{
+        this.salvarResultado('erro'); // Salva o resultado como erro
+      }
+      
       this.buttonClass(btn, true);
       this.onSuccess();
       setTimeout(() => {
@@ -61,6 +70,7 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
     } else {
       this.buttonClass(btn, false);
       this.onError();
+      this.primeiraTentativa = false; // Marca que já houve uma tentativa
     }
   }
 
@@ -81,5 +91,12 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
       this.buttonClasses[button] = "";
     }, 1000);
   }
+
+     // Salvar resultado no localStorage
+     salvarResultado(resultado: string): void {
+      const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
+      resultados.push(resultado);
+      localStorage.setItem('resultados', JSON.stringify(resultados));
+    }
 
 }

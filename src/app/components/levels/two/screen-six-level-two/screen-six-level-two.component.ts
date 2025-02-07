@@ -7,29 +7,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScreenSixLevelTwoComponent implements OnInit {
 
-  grid: boolean[][];
+  resultados: string[] = [];
+  acertos: number = 0;
+  erros: number = 0;
 
-  // Coordenadas iniciais
-  initialCoordinates: number[][] = [
-    [0, 1, 1, 1, 0],
-    [0, 1, 1, 1, 0],
-    [0, 1, 0, 1, 0],
-    [0, 0, 1, 0, 0],
-    [0, 1, 1, 1, 0]
-  ];
-
-  rowWords: string[] = ["0,1,1,1,0", "0,1,1,1,0", "0,1,0,1,0", "0,0,1,0,0", "0,1,1,1,0"];
-
-
-  constructor() {
-    this.grid = this.initialCoordinates.map(row => row.map(value => value === 0));
-  }
+  constructor() { }
 
   ngOnInit(): void {
+    this.resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
+    this.acertos = this.resultados.filter(resultado => resultado === 'acerto').length;
+    this.erros = this.resultados.filter(resultado => resultado === 'erro').length;
   }
 
-  toggleCell(rowIndex: number, cellIndex: number): void {
-    // Função agora não altera a cor dos quadrados
+   // Array de estrelas
+   getArray(length: number): any[] {
+    return new Array(length);
+  }
+
+  ngOnDestroy(): void {
+    localStorage.removeItem('resultados'); // Remove os resultados do localStorage
   }
 
 }
