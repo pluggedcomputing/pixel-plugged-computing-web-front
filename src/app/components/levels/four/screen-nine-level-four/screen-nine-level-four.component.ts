@@ -23,6 +23,7 @@ export class ScreenNineLevelFourComponent implements OnInit {
   byn4: number = 0;
   byn8: number = 1;
   byn16: number = 0;
+  
 
   btnClass1: string = "";
   btnClass2: string = "";
