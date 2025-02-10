@@ -1,6 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotificationComponent } from '../../../notification/notification.component';
+import { ToastService } from '../../toast.service';
+import { Question } from 'src/app/models/question.model';
+import { QuestionsService } from 'src/app/service/question/questions.service';
+import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
 
 @Component({
   selector: 'app-screen-five-level-two',
@@ -39,12 +43,27 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
 
   primeiraTentativa: boolean = true;
 
+  /// Variáveis para o DB
+  idUser: string = ""
+  idApp: string = "WEB-PIXEL 1.0"
+  phaseActivity: string = "2"
+  numberActivity: string = "3";
+  typeOfQuestion: string = "MULTIPLA ESCOLHA"
+  expectedResponse: string = "0,1,1,1,0"
+  dateResponse: Date;
+  ///
 
-  constructor(private router: Router) {
+  constructor(    private router: Router, 
+    public toastService: ToastService,
+    private questionsService: QuestionsService, 
+    private sessionStorageService: SessionStorageService
+     ) {
+      this.dateResponse = new Date();
     this.grid = this.initialCoordinates.map((row) => row.map((value) => value === 0));
   }
 
   ngOnInit(): void {
+    this.idUser = this.sessionStorageService.getItem('userID') || 'Default Data';
     this.answers.sort(() => Math.random() - 0.5);
   }
 
@@ -58,6 +77,7 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
     if (value === "0,1,1,1,0") {
       if(this.primeiraTentativa){
         this.salvarResultado('acerto'); // Salva o resultado como acerto
+        this.processQuestionResponse(value, true);
       }else{
         this.salvarResultado('erro'); // Salva o resultado como erro
       }
@@ -67,11 +87,27 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
       setTimeout(() => {
         this.router.navigate(['fase-2-6']);
       }, 1000);
+    } else if (this.primeiraTentativa && value != "0,1,1,1,0"){
+      this.processQuestionResponse(value,false);
+      this.primeiraTentativa = false; // Marca que já houve uma tentativa
+      this.buttonClass(btn, false);
+      this.onError();
     } else {
       this.buttonClass(btn, false);
       this.onError();
-      this.primeiraTentativa = false; // Marca que já houve uma tentativa
     }
+  }
+
+  processQuestionResponse(userResponse: string, isCorrect: boolean): void {
+    const question: Question = new Question(this.idUser,this.idApp,this.phaseActivity,this.numberActivity,userResponse,this.expectedResponse,isCorrect,this.dateResponse,this.typeOfQuestion);
+    this.questionsService.saveResponseQuestion(question).subscribe(
+      response => {
+        console.log("Question saved successfully:", response);
+      },
+      error => {
+        console.error("Error saving question:", error);
+      }
+    );
   }
 
   // resposta certa
@@ -92,11 +128,11 @@ export class ScreenFiveLevelTwoComponent implements OnInit {
     }, 1000);
   }
 
-     // Salvar resultado no localStorage
-     salvarResultado(resultado: string): void {
-      const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
-      resultados.push(resultado);
-      localStorage.setItem('resultados', JSON.stringify(resultados));
-    }
+   // Salvar resultado no localStorage
+   salvarResultado(resultado: string): void {
+    const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
+    resultados.push(resultado);
+    localStorage.setItem('resultados', JSON.stringify(resultados));
+  }
 
 }

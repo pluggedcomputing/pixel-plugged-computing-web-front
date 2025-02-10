@@ -45,6 +45,7 @@ import { ScreenTenLevelFourComponent } from './components/levels/four/screen-ten
 import { ScreenElevenLevelFourComponent } from './components/levels/four/screen-eleven-level-four/screen-eleven-level-four.component';
 import { HelpComponent } from './components/help/help.component';
 import { AboutComponent } from './components/about/about.component';
+import { EmailInputComponent } from './components/email-input/email-input.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -92,6 +93,9 @@ const routes: Routes = [
   { path: 'fase-4-11', component: ScreenElevenLevelFourComponent },
   { path: 'help', component: HelpComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'email-input', component: EmailInputComponent },
+
+  
 ];
 
 @NgModule({

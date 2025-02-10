@@ -53,6 +53,9 @@ import { ScreenEightLevelFourComponent } from './components/levels/four/screen-e
 import { NotificationComponent } from './components/notification/notification.component';
 import { HelpComponent } from './components/help/help.component';
 import { AboutComponent } from './components/about/about.component';
+import { EmailInputComponent } from './components/email-input/email-input.component';
+import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -105,6 +108,7 @@ import { AboutComponent } from './components/about/about.component';
     NotificationComponent,
     HelpComponent,
     AboutComponent,
+    EmailInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -112,7 +116,9 @@ import { AboutComponent } from './components/about/about.component';
     BrowserAnimationsModule,
     NgbModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

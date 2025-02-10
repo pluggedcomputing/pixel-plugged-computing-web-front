@@ -1,6 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotificationComponent } from '../../../notification/notification.component';
+import { ToastService } from '../../toast.service';
+import { Question } from 'src/app/models/question.model';
+import { QuestionsService } from 'src/app/service/question/questions.service';
+import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
 
 @Component({
   selector: 'app-screen-six-level-three',
@@ -39,11 +43,27 @@ export class ScreenSixLevelThreeComponent implements OnInit {
 
   primeiraTentativa: boolean = true;
 
-  constructor(private router: Router) {
+  /// Variáveis para o DB
+  idUser: string = ""
+  idApp: string = "WEB-PIXEL 1.0"
+  phaseActivity: string = "3"
+  numberActivity: string = "1";
+  typeOfQuestion: string = "MULTIPLA ESCOLHA"
+  expectedResponse: string = "L"
+  dateResponse: Date;
+  ///
+
+  constructor(    private router: Router, 
+    public toastService: ToastService,
+    private questionsService: QuestionsService, 
+    private sessionStorageService: SessionStorageService
+     ) {
+      this.dateResponse = new Date();
     this.grid = this.initialCoordinates.map((row) => row.map((value) => value === 0));
   }
 
   ngOnInit(): void {
+    this.idUser = this.sessionStorageService.getItem('userID') || 'Default Data';
     this.answers.sort(() => Math.random() - 0.5);
   }
 
@@ -57,19 +77,37 @@ export class ScreenSixLevelThreeComponent implements OnInit {
     if (value === "L") {
       if(this.primeiraTentativa){
         this.salvarResultado('acerto'); // Salva o resultado como acerto
+        this.processQuestionResponse(value, true);
       }else{
         this.salvarResultado('erro'); // Salva o resultado como erro
       }
+      
       this.buttonClass(btn, true);
       this.onSuccess();
       setTimeout(() => {
         this.router.navigate(['fase-3-7']);
       }, 1000);
+    } else if (this.primeiraTentativa && value != "L"){
+      this.processQuestionResponse(value,false);
+      this.primeiraTentativa = false; // Marca que já houve uma tentativa
+      this.buttonClass(btn, false);
+      this.onError();
     } else {
       this.buttonClass(btn, false);
       this.onError();
-      this.primeiraTentativa = false; // Marca que já houve uma tentativa
     }
+  }
+
+  processQuestionResponse(userResponse: string, isCorrect: boolean): void {
+    const question: Question = new Question(this.idUser,this.idApp,this.phaseActivity,this.numberActivity,userResponse,this.expectedResponse,isCorrect,this.dateResponse,this.typeOfQuestion);
+    this.questionsService.saveResponseQuestion(question).subscribe(
+      response => {
+        console.log("Question saved successfully:", response);
+      },
+      error => {
+        console.error("Error saving question:", error);
+      }
+    );
   }
 
   // resposta certa
