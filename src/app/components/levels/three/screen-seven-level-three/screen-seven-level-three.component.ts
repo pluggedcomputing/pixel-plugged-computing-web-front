@@ -44,22 +44,22 @@ export class ScreenSevenLevelThreeComponent implements OnInit {
 
   primeiraTentativa: boolean = true;
 
-   /// Variáveis para o DB
-   idUser: string = ""
-   idApp: string = "WEB-PIXEL 1.0"
-   phaseActivity: string = "3"
-   numberActivity: string = "2";
-   typeOfQuestion: string = "MULTIPLA ESCOLHA"
-   expectedResponse: string = "D"
-   dateResponse: Date;
-   ///
+  /// Variáveis para o DB
+  idUser: string = ""
+  idApp: string = "WEB-PIXEL 1.0"
+  phaseActivity: string = "3"
+  numberActivity: string = "2";
+  typeOfQuestion: string = "MULTIPLA ESCOLHA"
+  expectedResponse: string = "D"
+  dateResponse: Date;
+  ///
 
-  constructor( private router: Router, 
+  constructor(private router: Router,
     public toastService: ToastService,
-    private questionsService: QuestionsService, 
+    private questionsService: QuestionsService,
     private sessionStorageService: SessionStorageService
-     ) {
-      this.dateResponse = new Date();
+  ) {
+    this.dateResponse = new Date();
     this.grid = this.initialCoordinates.map((row) => row.map((value) => value === 0));
   }
 
@@ -73,34 +73,30 @@ export class ScreenSevenLevelThreeComponent implements OnInit {
     this.grid[rowIndex][cellIndex] = !this.grid[rowIndex][cellIndex];
   }
 
-   // validar resposta
-   changeAnswers(value: string, btn: number): void {
+  // validar resposta
+  changeAnswers(value: string, btn: number): void {
     if (value === "D") {
-      if(this.primeiraTentativa){
+      if (this.primeiraTentativa) {
         this.salvarResultado('acerto'); // Salva o resultado como acerto
-        this.processQuestionResponse(value, true);
-      }else{
+      } else {
         this.salvarResultado('erro'); // Salva o resultado como erro
       }
-      
+      this.processQuestionResponse(value, true);
       this.buttonClass(btn, true);
       this.onSuccess();
       setTimeout(() => {
         this.router.navigate(['fase-3-8']);
       }, 1000);
-    } else if (this.primeiraTentativa && value != "D"){
-      this.processQuestionResponse(value,false);
-      this.primeiraTentativa = false; // Marca que já houve uma tentativa
-      this.buttonClass(btn, false);
-      this.onError();
     } else {
+      this.processQuestionResponse(value, false);
+      this.primeiraTentativa = false; // Marca que já houve uma tentativa
       this.buttonClass(btn, false);
       this.onError();
     }
   }
 
   processQuestionResponse(userResponse: string, isCorrect: boolean): void {
-    const question: Question = new Question(this.idUser,this.idApp,this.phaseActivity,this.numberActivity,userResponse,this.expectedResponse,isCorrect,this.dateResponse,this.typeOfQuestion);
+    const question: Question = new Question(this.idUser, this.idApp, this.phaseActivity, this.numberActivity, userResponse, this.expectedResponse, isCorrect, this.dateResponse, this.typeOfQuestion);
     this.questionsService.saveResponseQuestion(question).subscribe(
       response => {
         console.log("Question saved successfully:", response);
@@ -129,8 +125,8 @@ export class ScreenSevenLevelThreeComponent implements OnInit {
     }, 1000);
   }
 
-   // Salvar resultado no localStorage
-   salvarResultado(resultado: string): void {
+  // Salvar resultado no localStorage
+  salvarResultado(resultado: string): void {
     const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
     resultados.push(resultado);
     localStorage.setItem('resultados', JSON.stringify(resultados));

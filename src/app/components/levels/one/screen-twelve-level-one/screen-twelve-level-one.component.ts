@@ -27,7 +27,6 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
   };
 
   primeiraTentativa: boolean = true;
-  primeiraResposta: String = '';
 
   /// Variáveis para o DB
   idUser: string = ""
@@ -40,13 +39,13 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
   ///
 
   constructor(
-    private router: Router, 
+    private router: Router,
     public toastService: ToastService,
-    private questionsService: QuestionsService, 
+    private questionsService: QuestionsService,
     private sessionStorageService: SessionStorageService
-     
-     ) {
-      this.dateResponse = new Date();
+
+  ) {
+    this.dateResponse = new Date();
   }
 
   ngOnInit(): void {
@@ -57,31 +56,27 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
   // validar resposta
   changeAnswers(value: string, btn: number): void {
     if (value === "Imprimem pixels") {
-      if(this.primeiraTentativa){
+      if (this.primeiraTentativa) {
         this.salvarResultado('acerto'); // Salva o resultado como acerto
-        this.processQuestionResponse(value, true);
-      }else{
+      } else {
         this.salvarResultado('erro'); // Salva o resultado como erro
       }
-      
+      this.processQuestionResponse(value, true);
       this.buttonClass(btn, true);
       this.onSuccess();
       setTimeout(() => {
         this.router.navigate(['fase-1-13']);
       }, 1000);
-    } else if (this.primeiraTentativa && value != "Imprimem pixels"){
-      this.processQuestionResponse(value,false);
-      this.primeiraTentativa = false; // Marca que já houve uma tentativa
-      this.buttonClass(btn, false);
-      this.onError();
     } else {
+      this.processQuestionResponse(value, false);
+      this.primeiraTentativa = false; // Marca que já houve uma tentativa
       this.buttonClass(btn, false);
       this.onError();
     }
   }
 
   processQuestionResponse(userResponse: string, isCorrect: boolean): void {
-    const question: Question = new Question(this.idUser,this.idApp,this.phaseActivity,this.numberActivity,userResponse,this.expectedResponse,isCorrect,this.dateResponse,this.typeOfQuestion);
+    const question: Question = new Question(this.idUser, this.idApp, this.phaseActivity, this.numberActivity, userResponse, this.expectedResponse, isCorrect, this.dateResponse, this.typeOfQuestion);
     this.questionsService.saveResponseQuestion(question).subscribe(
       response => {
         console.log("Question saved successfully:", response);
@@ -110,8 +105,8 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
     }, 1000);
   }
 
-   // Salvar resultado no localStorage
-   salvarResultado(resultado: string): void {
+  // Salvar resultado no localStorage
+  salvarResultado(resultado: string): void {
     const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
     resultados.push(resultado);
     localStorage.setItem('resultados', JSON.stringify(resultados));

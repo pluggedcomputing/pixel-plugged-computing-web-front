@@ -43,22 +43,22 @@ export class ScreenTenLevelThreeComponent implements OnInit {
 
   primeiraTentativa: boolean = true;
 
-   /// Variáveis para o DB
-   idUser: string = ""
-   idApp: string = "WEB-PIXEL 1.0"
-   phaseActivity: string = "3"
-   numberActivity: string = "5";
-   typeOfQuestion: string = "MULTIPLA ESCOLHA"
-   expectedResponse: string = "K"
-   dateResponse: Date;
-   ///
+  /// Variáveis para o DB
+  idUser: string = ""
+  idApp: string = "WEB-PIXEL 1.0"
+  phaseActivity: string = "3"
+  numberActivity: string = "5";
+  typeOfQuestion: string = "MULTIPLA ESCOLHA"
+  expectedResponse: string = "K"
+  dateResponse: Date;
+  ///
 
-  constructor(   private router: Router, 
+  constructor(private router: Router,
     public toastService: ToastService,
-    private questionsService: QuestionsService, 
+    private questionsService: QuestionsService,
     private sessionStorageService: SessionStorageService
-     ) {
-      this.dateResponse = new Date();
+  ) {
+    this.dateResponse = new Date();
     this.grid = this.initialCoordinates.map((row) => row.map((value) => value === 0));
   }
 
@@ -72,67 +72,63 @@ export class ScreenTenLevelThreeComponent implements OnInit {
     this.grid[rowIndex][cellIndex] = !this.grid[rowIndex][cellIndex];
   }
 
- // validar resposta
- changeAnswers(value: string, btn: number): void {
-  if (value === "K") {
-    if(this.primeiraTentativa){
-      this.salvarResultado('acerto'); // Salva o resultado como acerto
+  // validar resposta
+  changeAnswers(value: string, btn: number): void {
+    if (value === "K") {
+      if (this.primeiraTentativa) {
+        this.salvarResultado('acerto'); // Salva o resultado como acerto
+      } else {
+        this.salvarResultado('erro'); // Salva o resultado como erro
+      }
       this.processQuestionResponse(value, true);
-    }else{
-      this.salvarResultado('erro'); // Salva o resultado como erro
+      this.buttonClass(btn, true);
+      this.onSuccess();
+      setTimeout(() => {
+        this.router.navigate(['fase-3-11']);
+      }, 1000);
+    } else {
+      this.processQuestionResponse(value, false);
+      this.primeiraTentativa = false; // Marca que já houve uma tentativa
+      this.buttonClass(btn, false);
+      this.onError();
     }
-    
-    this.buttonClass(btn, true);
-    this.onSuccess();
-    setTimeout(() => {
-      this.router.navigate(['fase-3-11']);
-    }, 1000);
-  } else if (this.primeiraTentativa && value != "K"){
-    this.processQuestionResponse(value,false);
-    this.primeiraTentativa = false; // Marca que já houve uma tentativa
-    this.buttonClass(btn, false);
-    this.onError();
-  } else {
-    this.buttonClass(btn, false);
-    this.onError();
   }
-}
 
-processQuestionResponse(userResponse: string, isCorrect: boolean): void {
-  const question: Question = new Question(this.idUser,this.idApp,this.phaseActivity,this.numberActivity,userResponse,this.expectedResponse,isCorrect,this.dateResponse,this.typeOfQuestion);
-  this.questionsService.saveResponseQuestion(question).subscribe(
-    response => {
-      console.log("Question saved successfully:", response);
-    },
-    error => {
-      console.error("Error saving question:", error);
-    }
-  );
-}
+  processQuestionResponse(userResponse: string, isCorrect: boolean): void {
+    const question: Question = new Question(this.idUser, this.idApp, this.phaseActivity, this.numberActivity, userResponse, this.expectedResponse, isCorrect, this.dateResponse, this.typeOfQuestion);
+    this.questionsService.saveResponseQuestion(question).subscribe(
+      response => {
+        console.log("Question saved successfully:", response);
+      },
+      error => {
+        console.error("Error saving question:", error);
+      }
+    );
+  }
 
-// resposta certa
-onSuccess(): void {
-  this.notification.show('Você acertou!', 'success');
-}
+  // resposta certa
+  onSuccess(): void {
+    this.notification.show('Você acertou!', 'success');
+  }
 
-// resposta errada
-onError(): void {
-  this.notification.show('Tente outra vez.', 'error');
-}
+  // resposta errada
+  onError(): void {
+    this.notification.show('Tente outra vez.', 'error');
+  }
 
-// botões alternativas
-buttonClass(button: number, status: boolean): void {
-  this.buttonClasses[button] = status ? "correct" : "incorrect";
-  setTimeout(() => {
-    this.buttonClasses[button] = "";
-  }, 1000);
-}
+  // botões alternativas
+  buttonClass(button: number, status: boolean): void {
+    this.buttonClasses[button] = status ? "correct" : "incorrect";
+    setTimeout(() => {
+      this.buttonClasses[button] = "";
+    }, 1000);
+  }
 
- // Salvar resultado no localStorage
- salvarResultado(resultado: string): void {
-  const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
-  resultados.push(resultado);
-  localStorage.setItem('resultados', JSON.stringify(resultados));
-}
+  // Salvar resultado no localStorage
+  salvarResultado(resultado: string): void {
+    const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
+    resultados.push(resultado);
+    localStorage.setItem('resultados', JSON.stringify(resultados));
+  }
 
 }
