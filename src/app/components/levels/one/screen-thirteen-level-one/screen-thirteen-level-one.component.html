@@ -24,20 +24,23 @@
       <div class="stars-container">
 
         <!--  (acertos) -->
-        <div *ngFor="let acerto of getArray(acertos)" class="star">
+        <div *ngFor="let acerto of getArray(estrelasAmarelas)" class="star">
           <img src="assets/win/estrela.png" alt="Estrela Amarela" class="imagem-estrela">
         </div>
       
         <!--  (erros) -->
-        <div *ngFor="let erro of getArray(erros)" class="star">
+        <div *ngFor="let erro of getArray(estrelasBrancas)" class="star">
           <img src="assets/win/estrela-branca.png" alt="Estrela Branca" class="imagem-estrela">
         </div>
       </div>
 
-      <p>
-        <strong>Você concluiu a FASE 1 do CP Pixel Web!</strong>
-        
-      </p>
+      <div class="mensagem-final">
+        <p>
+           {{mensagemFinal}} 
+        </p>
+
+      </div>
+
 
     </div>
 
