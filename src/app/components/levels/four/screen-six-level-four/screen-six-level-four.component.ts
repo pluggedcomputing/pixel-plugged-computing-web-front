@@ -1,7 +1,12 @@
-import { ToastService } from '../../toast.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { trigger, state, style, transition, animate } from '@angular/animations';
+import { NotificationComponent } from '../../../notification/notification.component';
+import { ToastService } from '../../toast.service';
+import { Question } from 'src/app/models/question.model';
+import { QuestionsService } from 'src/app/service/question/questions.service';
+import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
+import { MatrizService } from 'src/app/service/matriz/matriz.service'; 
+
 
 @Component({
   selector: 'app-screen-six-level-four',
@@ -10,145 +15,110 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 })
 export class ScreenSixLevelFourComponent implements OnInit {
 
-  rectangles: boolean[] = [true, false, true, false, true];
+  @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
-  flip1: string = 'inactive';
-  flip2: string = 'active';
-  flip4: string = 'active';
-  flip8: string = 'inactive';
-  flip16: string = 'active';
+  // alternativas
+  answers: string[] = ["0,1,1,2,1", "1,1,3", "4,1", this.matrizService.obterLinhaComoString(1)];
 
-  byn1: number = 1;
-  byn2: number = 0;
-  byn4: number = 0;
-  byn8: number = 1;
-  byn16: number = 0;
+  // matriz inicial
+  matrizPintada: boolean[][] = [];
 
-  btnClass1: string = "";
-  btnClass2: string = "";
-  btnClass3: string = "";
-  btnClass4: string = "";
+  primeiraLinhaString: string = "";
 
-  attempts: number = 0;
+  // cordenadas das linhas
+  rowWords: string[] = ['', this.matrizService.obterLinhaComoString(2), this.matrizService.obterLinhaComoString(3), this.matrizService.obterLinhaComoString(4), this.matrizService.obterLinhaComoString(5)];
 
-  question: string = "Agora vamos praticar? pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. lembre-se de que o 1 é branco e o 0 é preto.";
+  buttonClasses: { [key: number]: string } = {
+    1: "",
+    2: "",
+    3: "",
+    4: "",
+  };
 
-  answers: string[] = ["Q", "G", "P", "D"];
+  primeiraTentativa: boolean = true;
 
-  rectangleStatus: boolean[][] = Array.from({ length: 5 }, () => Array(5).fill(false));
+  /// Variáveis para o DB
+  idUser: string = ""
+  idApp: string = "WEB-PIXEL 1.0"
+  phaseActivity: string = "4"
+  numberActivity: string = "2";
+  typeOfQuestion: string = "MULTIPLA ESCOLHA"
+  expectedResponse: string = this.matrizService.obterLinhaComoString(1)
+  dateResponse: Date;
+  ///
 
-  grid: boolean[][];
-
-  // Coordenadas iniciais
-  initialCoordinates: number[][] = [
-    [1, 1, 0, 1, 1],
-    [0, 1, 1, 1, 1],
-    [0, 1, 1, 1, 0],
-    [0, 1, 1, 1, 1],
-    [1, 0, 0, 0, 1]
-  ];
-
-  rowWords: string[] = ["0,4,1", "0,1,3,1", "0,1,3,1", "0,1,3,1", "0,4,1"];
-
-  toggleCell(rowIndex: number, cellIndex: number): void {
-    this.grid[rowIndex][cellIndex] = !this.grid[rowIndex][cellIndex];
-  }
-
-  constructor(private router: Router, public toastService: ToastService) {
-    this.grid = this.initialCoordinates.map(row => row.map(value => value === 0));
-  }
+  constructor(private router: Router,
+    public toastService: ToastService,
+    private questionsService: QuestionsService,
+    private sessionStorageService: SessionStorageService,
+    private matrizService: MatrizService
+  ) {
+    this.dateResponse = new Date();
+    this.matrizPintada = this.matrizService.obterMatrizPintada();
+     }
 
   ngOnInit(): void {
+    this.idUser = this.sessionStorageService.getItem('userID') || 'Default Data';
     this.answers.sort(() => Math.random() - 0.5);
   }
 
-  toggleFlip(card: number): void {
-    if (card == 1) {
-      this.flip1 = (this.flip1 == 'inactive') ? 'active' : 'inactive';
-    } else if (card == 2) {
-      this.flip2 = (this.flip2 == 'inactive') ? 'active' : 'inactive';
-    } else if (card == 4) {
-      this.flip4 = (this.flip4 == 'inactive') ? 'active' : 'inactive';
-    } else if (card == 8) {
-      this.flip8 = (this.flip8 == 'inactive') ? 'active' : 'inactive';
-    } else if (card == 16) {
-      this.flip16 = (this.flip16 == 'inactive') ? 'active' : 'inactive';
-    }
-    this.toggleBynaries();
-  }
-
+  // validar resposta
   changeAnswers(value: string, btn: number): void {
-    if (value === "D") {
+    if (value === this.matrizService.obterLinhaComoString(1)) {
+      if (this.primeiraTentativa) {
+        this.salvarResultado('acerto'); // Salva o resultado como acerto
+      } else {
+        this.salvarResultado('erro'); // Salva o resultado como erro
+      }
+      this.processQuestionResponse(value, true);
       this.buttonClass(btn, true);
+      this.onSuccess();
       setTimeout(() => {
         this.router.navigate(['fase-4-7']);
       }, 1000);
     } else {
+      this.processQuestionResponse(value, false);
+      this.primeiraTentativa = false; // Marca que já houve uma tentativa
       this.buttonClass(btn, false);
+      this.onError();
     }
   }
 
-  toggleBynaries(): void {
-    if (this.flip1 === 'active') {
-      setTimeout(() => { this.byn1 = 0; }, 400);
-    } else {
-      setTimeout(() => { this.byn1 = 1; }, 400);
-    }
-
-    if (this.flip2 === 'active') {
-      setTimeout(() => { this.byn2 = 0; }, 400);
-    } else {
-      setTimeout(() => { this.byn2 = 1; }, 400);
-    }
-
-    if (this.flip4 === 'active') {
-      setTimeout(() => { this.byn4 = 0; }, 400);
-    } else {
-      setTimeout(() => { this.byn4 = 1; }, 400);
-    }
-
-    if (this.flip8 === 'active') {
-      setTimeout(() => { this.byn8 = 0; }, 400);
-    } else {
-      setTimeout(() => { this.byn8 = 1; }, 400);
-    }
-
-    if (this.flip16 === 'active') {
-      setTimeout(() => { this.byn16 = 0; }, 400);
-    } else {
-      setTimeout(() => { this.byn16 = 1; }, 400);
-    }
+  processQuestionResponse(userResponse: string, isCorrect: boolean): void {
+    const question: Question = new Question(this.idUser, this.idApp, this.phaseActivity, this.numberActivity, userResponse, this.expectedResponse, isCorrect, this.dateResponse, this.typeOfQuestion);
+    this.questionsService.saveResponseQuestion(question).subscribe(
+      response => {
+        console.log("Question saved successfully:", response);
+      },
+      error => {
+        console.error("Error saving question:", error);
+      }
+    );
   }
 
-  pickAnswer(answer: string): void {
-    if (answer !== "p") {
-      this.toastService.show('Tente outra vez.');
-      this.attempts += 1;
-      console.log(this.attempts);
-    }
+  // resposta certa
+  onSuccess(): void {
+    this.notification.show('Você acertou!', 'success');
   }
 
+  // resposta errada
+  onError(): void {
+    this.notification.show('Tente outra vez.', 'error');
+  }
+
+  // botões alternativas
   buttonClass(button: number, status: boolean): void {
-    if (button == 1) {
-      this.btnClass1 = status ? "correct" : "incorrect";
-      setTimeout(() => { this.btnClass1 = ""; }, 1000);
-    }
-    if (button == 2) {
-      this.btnClass2 = status ? "correct" : "incorrect";
-      setTimeout(() => { this.btnClass2 = ""; }, 1000);
-    }
-    if (button == 3) {
-      this.btnClass3 = status ? "correct" : "incorrect";
-      setTimeout(() => { this.btnClass3 = ""; }, 1000);
-    }
-    if (button == 4) {
-      this.btnClass4 = status ? "correct" : "incorrect";
-      setTimeout(() => { this.btnClass4 = ""; }, 1000);
-    }
-
+    this.buttonClasses[button] = status ? "correct" : "incorrect";
+    setTimeout(() => {
+      this.buttonClasses[button] = "";
+    }, 1000);
   }
 
-  toggleRectangle(row: number, col: number): void {
-    this.rectangleStatus[row][col] = !this.rectangleStatus[row][col];
+  // Salvar resultado no localStorage
+  salvarResultado(resultado: string): void {
+    const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
+    resultados.push(resultado);
+    localStorage.setItem('resultados', JSON.stringify(resultados));
   }
+
 }

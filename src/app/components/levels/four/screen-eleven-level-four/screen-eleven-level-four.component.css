@@ -94,6 +94,10 @@ p {
   color: #073d7c;
 }
 
+.mensagem-final{
+  margin-top: 8px;
+}
+
 @media (max-width: 991px) {
   .container div img {
     width: 35%;

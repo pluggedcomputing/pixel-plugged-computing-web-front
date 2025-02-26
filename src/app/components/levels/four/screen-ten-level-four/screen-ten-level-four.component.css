@@ -6,6 +6,7 @@ body {
   width: 100%;
   height: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -36,8 +37,7 @@ body {
 
 .content {
   display: flex;
-  width: 100%;
-  height: 100%;
+  width: 80%;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -51,7 +51,6 @@ h3 {
 p {
   color: #073d7c;
   width: 35%;
-  height: 150px;
   text-align: justify;
   margin-top: 2rem;
   font-size: 1.2rem;
@@ -59,10 +58,11 @@ p {
 
 .bi {
   color: #073d7c;
-  font-size: 3rem;
+  font-size: 4rem;
 }
 
-@media(max-width: 991px) {
+@media (max-width: 991px) {
+
   p {
     width: 40%;
     font-size: 1.2rem;
@@ -73,8 +73,7 @@ p {
   }
 }
 
-@media(max-width: 767px) {
-
+@media (max-width: 767px) {
   p {
     width: 60%;
     font-size: 1rem;
@@ -85,7 +84,7 @@ p {
   }
 }
 
-@media(max-width: 484px) {
+@media (max-width: 484px) {
   p {
     width: 70%;
     font-size: 0.8rem;
@@ -96,116 +95,114 @@ p {
   }
 }
 
-.rectangles {
-  display: flex;
-}
-
-.rectangle-container {
+/* Estilo da matriz */
+.matriz {
   display: flex;
   flex-direction: column;
-  /* Organiza os itens verticalmente */
   align-items: center;
-  /* Centraliza os itens horizontalmente */
 }
 
-.rectangle {
-  width: 40px;
-  height: 60px;
-  margin: 2px;
-  background-color: white;
-  border: 2px solid #073d7c;
+/* Estilo da paleta de cores */
+.paleta {
+  display: flex;
   justify-content: center;
-  cursor: pointer;
+  margin-top: 8px;
 }
 
-.rectangle.black {
-  background-color: black;
-}
-
-.number {
-  color: #073d7c;
-}
-
-.answer-table {
-  margin-top: 0.8rem;
-}
-
-.btn {
-  background-color: var(--dark-blue);
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-  padding-inline: 10px;
-  padding-block: 10px;
-  border-radius: 4px !important;
-}
-
-.btn:hover,
-.btn:active,
-.btn:focus {
-  background-color: var(--dark-blue);
-}
-
-.byn-number {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--dark-blue);
-}
-
-.correct {
-  background-color: var(--answer-green);
-}
-
-.correct:hover,
-.correct:focus {
-  background-color: var(--answer-green);
-}
-
-.incorrect {
-  background-color: var(--answer-red);
-}
-
-.incorrect:hover,
-.incorrect:focus {
-  background-color: var(--answer-red);
-}
-
-.btn {
-  font-size: 1rem;
-}
-
-@media only screen and (max-width: 515px) {
-  p {
-    font-size: 1rem;
-  }
-
-  .bi {
-    font-size: 1.5rem;
-    top: 40%;
-  }
-}
-
+/* matriz de quadrados */
 .grid-row {
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 2%;
 }
 
 .cell {
   width: 40px;
   height: 60px;
   border: 2px solid #073d7c;
-  background-color: white;
   box-sizing: border-box;
-  /* Ensure borders don't affect the size */
   margin-right: 5px;
-  /* Add spacing between cells */
-}
-
-.cell.black {
-  background-color: black;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
 }
 
 .word {
   margin-left: 10px;
   font-weight: bold;
+  color: #073d7c;
+}
+
+
+.color-cell {
+  width: 40px;
+  height: 60px;
+  border: 2px solid #073d7c;
+  box-sizing: border-box;
+  margin-right: 5px;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.color-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 2%;
+  flex-direction: column;
+}
+
+.numero {
+  margin-top: 5px; /* Espaçamento entre o quadrado e o número */
+  font-size: 14px; /* Tamanho do texto */
+  font-weight: bold; /* Texto em negrito */
+  color: #073d7c; /* Cor do texto */
+}
+
+
+/* botões */
+.answer-table {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Espaço uniforme entre os botões */
+}
+
+/* botão */
+button {
+  background-color: #073d7c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 12px 200px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:active,
+button:focus {
+  background-color: #052d5a;
+}
+
+.correct {
+  background-color: var(--answer-green, #28a745);
+}
+
+.correct:hover,
+.correct:focus {
+  background-color: var(--answer-green-hover, #218838);
+}
+
+.incorrect {
+  background-color: var(--answer-red, #dc3545);
+}
+
+.incorrect:hover,
+.incorrect:focus {
+  background-color: var(--answer-red-hover, #c82333);
 }
