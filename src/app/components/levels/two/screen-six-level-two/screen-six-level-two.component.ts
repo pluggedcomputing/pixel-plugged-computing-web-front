@@ -10,8 +10,8 @@ export class ScreenSixLevelTwoComponent implements OnInit {
   resultados: string[] = [];
   acertos: number = 0;
   erros: number = 0;
-  estrelasAmarelas: number = 0;
-  estrelasBrancas: number = 0;
+  estrelasPreenchidas: number = 0;
+  estrelasVazias: number = 0;
   mensagemFinal: string = '';
 
   constructor() { }
@@ -24,33 +24,33 @@ export class ScreenSixLevelTwoComponent implements OnInit {
     this.definirMensagemFinal();
   }
 
-  // Método para calcular as estrelas
+  // Método para calcular as estrelasPreenchidas
   calcularEstrelas(): void {
-    const totalEstrelas = 5; // Total de estrelas a serem exibidas
+    const totalEstrelas = 5; // Total de estrelasPreenchidas a serem exibidas
 
     // Calcula a proporção de acertos e erros
     const proporcaoAcertos = this.acertos / (this.acertos + this.erros);
 
-    // Calcula a quantidade de estrelas amarelas e brancas
-    this.estrelasAmarelas = Math.round(totalEstrelas * proporcaoAcertos);
-    this.estrelasBrancas = totalEstrelas - this.estrelasAmarelas;
+    // Calcula a quantidade de estrelasPreenchidas amarelas e brancas
+    this.estrelasPreenchidas = Math.round(totalEstrelas * proporcaoAcertos);
+    this.estrelasVazias = totalEstrelas - this.estrelasPreenchidas;
   }
 
   definirMensagemFinal(): void {
-    if (this.estrelasAmarelas === 5) {
+    if (this.estrelasPreenchidas === 5) {
       this.mensagemFinal = 'Incrível! Você acertou tudo!';
-    } else if (this.estrelasAmarelas === 4) {
+    } else if (this.estrelasPreenchidas === 4) {
       this.mensagemFinal = 'Muito bom! Quase perfeito!';
-    } else if (this.estrelasAmarelas === 3) {
+    } else if (this.estrelasPreenchidas === 3) {
       this.mensagemFinal = 'Bom trabalho! Continue praticando!';
-    } else if (this.estrelasAmarelas === 2) {
+    } else if (this.estrelasPreenchidas === 2) {
       this.mensagemFinal = 'Você está no caminho certo! Vamos melhorar!';
     } else {
       this.mensagemFinal = 'Tudo é aprendizagem! Tente novamente!';
     }
   }
 
-   // Array de estrelas
+   // Array de estrelasPreenchidas
    getArray(length: number): any[] {
     return new Array(length);
   }

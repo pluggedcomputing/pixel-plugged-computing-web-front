@@ -24,12 +24,12 @@
       <div class="stars-container">
 
         <!--  (acertos) -->
-        <div *ngFor="let acerto of getArray(estrelasAmarelas)" class="star">
+        <div *ngFor="let acerto of getArray(estrelasPreenchidas)" class="star">
           <img src="assets/win/estrela.png" alt="Estrela Amarela" class="imagem-estrela">
         </div>
       
         <!--  (erros) -->
-        <div *ngFor="let erro of getArray(estrelasBrancas)" class="star">
+        <div *ngFor="let erro of getArray(estrelasVazias)" class="star">
           <img src="assets/win/estrela-branca.png" alt="Estrela Branca" class="imagem-estrela">
         </div>
       </div>
