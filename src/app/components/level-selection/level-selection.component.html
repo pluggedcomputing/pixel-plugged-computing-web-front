@@ -1,84 +1,78 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seleção de fase</title>
+  <title>Seleção de Fase</title>
 </head>
 
 <body>
 
-  <div class="container">
+  <div class="container-tela">
 
-    <div class="content">
+    <div class="container-central">
 
-      <h3><strong>Seleção de fase</strong></h3>
+      <h2><strong>Seleção de Fase</strong></h2>
 
-      <div class="level-group">
-        <div class="level">
-          <a routerLink="/fase-1-1">
-            <img src="assets/levels/level1.png" alt="Fase 1">
-            <div class="description">
-              <p><strong>FASE 1</strong></p>
-              <p>Imagens e pixels</p>
-            </div>
-            <i class="bi bi-chevron-right"></i>
-          </a>
-        </div>
-        <div class="level">
-          <a routerLink="/fase-2-1">
-            <img src="assets/levels/level2.png" alt="Fase 2">
-            <div class="description">
-              <p><strong>FASE 2</strong></p>
-              <p>Codificar imagens com 1 e 0</p>
-            </div>
-            <i class="bi bi-chevron-right"></i>
-          </a>
-        </div>
-        <div class="level">
-          <a routerLink="/fase-3-1">
-            <img src="assets/levels/level3.png" alt="Fase 3">
-            <div class="description">
-              <p><strong>FASE 3</strong></p>
-              <p>Imagens compactas</p>
-            </div>
-            <i class="bi bi-chevron-right"></i>
-          </a>
-        </div>
-        <div class="level">
-          <a routerLink="/fase-4-1">
-            <img src="assets/levels/level4.png" alt="Fase 4">
-            <div class="description">
-              <p><strong>FASE 4</strong></p>
-              <p>Usando run-length coding</p>
-            </div>
-            <i class="bi bi-chevron-right"></i>
-          </a>
-        </div>
+      <div class="container-fases">
+
+        <button routerLink="/fase-1-1" class="botao-fase">
+          <img src="assets/levels/level1.png" class="imagem-fase">
+          <div class="descricao-fase">
+            <h3><strong>FASE 1</strong></h3>
+            <h5>Imagens e pixels</h5>
+          </div>
+          <span class="seta">&gt;</span>
+        </button>
+
+        <button routerLink="/fase-2-1" class="botao-fase">
+          <img src="assets/levels/level2.png" class="imagem-fase">
+          <div class="descricao-fase">
+            <h3><strong>FASE 2</strong></h3>
+            <h5>Codificar imagens com 1 e 0</h5>
+          </div>
+          <span class="seta">&gt;</span>
+        </button>
+
+        <button routerLink="/fase-3-1" class="botao-fase">
+          <img src="assets/levels/level3.png" class="imagem-fase">
+          <div class="descricao-fase">
+            <h3><strong>FASE 3</strong></h3>
+            <h5>Imagens compactadas</h5>
+          </div>
+          <span class="seta">&gt;</span>
+        </button>
+
+        <button routerLink="/fase-4-1" class="botao-fase">
+          <img src="assets/levels/level4.png" class="imagem-fase">
+          <div class="descricao-fase">
+            <h3><strong>FASE 4</strong></h3>
+            <h5>Usando run-length coding</h5>
+          </div>
+          <span class="seta">&gt;</span>
+        </button>
+
       </div>
 
-    </div>
+      <div class="container-rodape">
 
-    <div class="rodape">
-      
-      <div class="botao-rodape" routerLink="/help">
-        <div class="icone-botao">
-          <img class="icone" src="assets/cover/ajuda.png">
+        <div routerLink="/help" class="botao-rodape">
+          <img src="assets/cover/ajuda.png" class="imagem-rodape">
+          <h5>Ajuda</h5>
         </div>
-        <p class="text-botao"> Ajuda </p>
+
+        <div routerLink="/help" class="botao-rodape">
+          <img src="assets/cover/sobre.png" class="imagem-rodape">
+          <h5>Sobre</h5>
+        </div>
+
       </div>
 
-      <div class="botao-rodape" routerLink="/about">
-        <div class="icone-botao">
-          <img class="icone" src="assets/cover/sobre.png">
-        </div>
-        <p class="text-botao"> Sobre </p>
-      </div>
     </div>
 
   </div>
+
 </body>
 
 </html>

@@ -1,139 +1,214 @@
-body {
-  background-color: #ffffff;
+body{
+  background-color: white;
 }
 
-.container {
+h2{
+  color: #073d7c;
+}
+
+h3{
+  font-size: 100%;
+  color: #073d7c;
+}
+
+h5{
+  font-size: 90%;
+  color: #073d7c;
+}
+
+span{
+  font-size: 100%;
+  color: #073d7c;
+}
+
+.container-tela {
   width: 100%;
-  height: 100%;
+  padding: 5%;
+}
+
+.container-central {
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 5px;
 }
 
-.content {
-  display: flex;
+/* Fases */
+
+.container-fases{
   width: 80%;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  gap: 10px;
 }
 
-h3 {
-  color: #073d7c;
-  margin: 1rem 0 2rem 0;
-}
-
-p {
-  color: #073d7c;
-  width: 100%;
-  text-align: justify;
-  margin-top: 0.5rem;
-  font-size: 1.2rem;
-}
-
-.level-group {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-
-}
-
-.level {
-  background-color: #A6F3D6;
-  border-radius: 25px;
-  width: 50%;
-  height: 20%;
-  margin: 0.5rem;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
-.level a {
-  display: flex;
-  color: #073d7c;
-  align-items: center;
-  gap: 2%;
-  text-decoration: none;
-
-}
-
-.level a img {
-  width: 20%;
-  margin: 0.5rem
-}
-
-.description {
-  width: 300px;
-}
-
-.rodape {
-  margin-top: 10px;
+.botao-fase {
+  width: 90%;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  text-align: center;
-  gap: 40px; 
+  align-items: center;
+  padding: 5%;
+  gap: 10px;
+  border-radius: 8px;
+  background-color: #A6F3D6;
+  border-color: #A6F3D6;
+  transition: transform 0.1s ease-in-out; 
 }
 
+.botao-fase:hover {
+  transform: scale(1.03); 
+}
 
-.botao-rodape {
+.botao-fase:active {
+  transform: scale(0.95); 
+}
+
+.descricao-fase{
+  width: 80%;
+  text-align: left;
+}
+
+.imagem-fase{
+  width: 30%;
+}
+
+/* Rodapé */
+
+.container-rodape{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.botao-rodape{
+  width: 80%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
   cursor: pointer;
-  justify-content: center;
-  align-items: center;
+  transition: transform 0.1s ease-in-out; 
 }
 
-.icone {
-  width: 50px; 
-  height: 50px; 
+.botao-rodape:hover {
+  transform: scale(1.05); 
+}
+
+.botao-rodape:active {
+  transform: scale(0.95); 
+}
+
+.imagem-rodape{
+  width: 40%;
   background-color: #A6F3D6;
-  border-radius: 50%; 
-  display: flex; 
-  justify-content: center;
-  align-items: center;
+  border-radius: 50%;
 }
 
-.text-botao {
-  font-size: 1rem;
-  text-align: center;
-}
+/* Escala Tablet */
 
-@media (max-width: 991px) {
-  .container div img {
+@media (min-width: 768px) {
+  .container-tela {
+    padding: 2%;
+  }
+
+  .container-fases {
+    width: 40%;
+    gap: 12px;
+  }
+
+  .botao-fase {
+    width: 80%;
+    padding: 4%;
+    gap: 12px;
+  }
+
+  .descricao-fase {
+    width: 85%;
+    font-size: 105%;
+  }
+
+  h3 {
+    font-size: 110%;
+  }
+
+  h5, span {
+    font-size: 100%;
+  }
+
+  .imagem-fase {
+    width: 28%;
+  }
+
+  .container-rodape {
+    width: 40%;
+  }
+
+  .botao-rodape {
+    width: 40%;
+  }
+
+  .imagem-rodape {
     width: 35%;
   }
+}
 
-  p {
+/* Escala Desktop */
+
+@media (min-width: 1024px) {
+  .container-tela {
+    padding: 2%;
+  }
+
+  .container-fases {
     width: 40%;
-    font-size: 1.2rem;
+    gap: 16px;
+  }
+
+  .botao-fase {
+    width: 60%;
+    padding: 3%;
+    gap: 14px;
+  }
+
+  .descricao-fase {
+    width: 85%;
+    font-size: 90%;
+  }
+
+  h3 {
+    font-size: 150%;
+  }
+
+  h5 {
+    font-size: 105%;
+  }
+
+  span{
+    font-size: 150%;
+  }
+
+  .imagem-fase {
+    width: 25%;
+  }
+
+  .container-rodape {
+    width: 40%;
+  }
+
+  .botao-rodape {
+    width: 40%;
+    padding: 10px;
+  }
+
+  .imagem-rodape {
+    width: 20%;
   }
 }
 
-@media (max-width: 767px) {
-  .container div img {
-    width: 60%;
-  }
-
-  p {
-    width: 60%;
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 484px) {
-  .container div img {
-    width: 60%;
-  }
-
-  p {
-    width: 70%;
-    font-size: 0.8rem;
-  }
-}
