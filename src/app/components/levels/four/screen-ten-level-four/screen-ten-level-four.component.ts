@@ -47,7 +47,7 @@ selectedColor: string = 'black';
   idUser: string = ""
   idApp: string = "WEB-PIXEL 1.0"
   phaseActivity: string = "4"
-  numberActivity: string = "4";
+  numberActivity: string = "2";
   typeOfQuestion: string = "MULTIPLA ESCOLHA"
   expectedResponse: string = this.matrizService.obterLinhaComoStringColorida(1)
   dateResponse: Date;

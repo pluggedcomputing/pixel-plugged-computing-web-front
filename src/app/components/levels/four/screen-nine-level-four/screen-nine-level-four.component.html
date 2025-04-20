@@ -1,83 +1,64 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fase 4</title>
-  </head>
 
-  <body>
-    <app-notification #notification></app-notification>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fase 4</title>
+</head>
 
-    <div class="container">
-      <img
-        class="icone-voltar"
-        src="assets/cover/fases-branca.png"
-        routerLink="/fases"
-      />
+<body>
+  <app-notification #notification></app-notification>
 
-      <div>
-        <a routerLink="/fase-4-8">
-          <i class="bi bi-chevron-left"></i>
-        </a>
-      </div>
+  <div class="container">
+    <img class="icone-voltar" src="assets/cover/fases-branca.png" routerLink="/fases" />
 
-      <div class="content">
-        <h3><strong>FASE 4</strong></h3>
+    <div>
+      <a routerLink="/fase-4-8">
+        <i class="bi bi-chevron-left"></i>
+      </a>
+    </div>
 
-        <!-- Matriz de quadrados -->
-        <div class="matriz">
-          <div *ngFor="let row of grid; let rowIndex = index" class="grid-row">
-            <div
-              *ngFor="let cell of row; let cellIndex = index"
-              class="cell"
-              [ngStyle]="{ 'background-color': cell }"
-              (click)="paintCell(rowIndex, cellIndex)"
-            ></div>
-          </div>
-                  <!-- Paleta de cores -->
+    <div class="content">
+      <h3><strong>FASE 4</strong></h3>
+
+      <!-- Matriz de quadrados -->
+      <div class="matriz">
+        <div *ngFor="let row of grid; let rowIndex = index" class="grid-row">
+          <div *ngFor="let cell of row; let cellIndex = index" class="cell" [ngStyle]="{ 'background-color': cell }"
+            (click)="paintCell(rowIndex, cellIndex)"></div>
+        </div>
+        <!-- Paleta de cores -->
         <div class="paleta">
-          <div
-            *ngFor="let color of paletteColors; let i = index"
-            class="color-container"
-          >
-            <div
-              class="color-cell"
-              [ngStyle]="{ 'background-color': color }"
-              (click)="selectColor(color)"
-            ></div>
+          <div *ngFor="let color of paletteColors; let i = index" class="color-container">
+            <div class="color-cell" [ngStyle]="{ 'background-color': color }" (click)="selectColor(color)"></div>
             <span class="numero">{{ i }}</span>
             <!-- Número de 0 a 4 -->
           </div>
         </div>
-        </div>
-
-
-
-        <p>
-          Que tal agora desenhar com cores e tentar descobrir o códigos que
-          representa essa imagem? Pinte no quadro acima sua imagem e clique em
-          concluir.
-        </p>
-
-        <!-- Botões de resposta -->
-        <div class="answer-table">
-          <button
-            *ngFor="let answer of answers; let btnIndex = index"
-            [ngClass]="buttonClasses[btnIndex + 1]"
-            (click)="changeAnswers(answer, btnIndex + 1)"
-          >
-            {{ answer }}
-          </button>
-        </div>
       </div>
 
-      <div>
-        <a routerLink="/fase-4-9">
-          <i class="bi bi-chevron-right"></i>
-        </a>
+      <p>
+        Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima
+        sua imagem e clique em concluir.
+      </p>
+
+      <!-- Botões de resposta -->
+      <div class="answer-table">
+        <button *ngFor="let answer of answers; let btnIndex = index" [ngClass]="buttonClasses[btnIndex + 1]"
+          (click)="changeAnswers(answer, btnIndex + 1)">
+          {{ answer }}
+        </button>
       </div>
     </div>
-  </body>
+
+    <div>
+      <a routerLink="/fase-4-9">
+        <i class="bi bi-chevron-right"></i>
+      </a>
+    </div>
+  </div>
+</body>
+
 </html>

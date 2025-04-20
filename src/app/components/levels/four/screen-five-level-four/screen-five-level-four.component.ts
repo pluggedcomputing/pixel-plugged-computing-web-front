@@ -2,9 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { NotificationComponent } from '../../../notification/notification.component';
 import { ToastService } from '../../toast.service';
-import { Question } from 'src/app/models/question.model';
-import { QuestionsService } from 'src/app/service/question/questions.service';
-import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
 import { MatrizService } from 'src/app/service/matriz/matriz.service';
 
 @Component({
@@ -43,28 +40,14 @@ export class ScreenFiveLevelFourComponent implements OnInit {
 
   primeiraTentativa: boolean = true;
 
-  /// Variáveis para o DB
-  idUser: string = ""
-  idApp: string = "WEB-PIXEL 1.0"
-  phaseActivity: string = "4"
-  numberActivity: string = "1";
-  typeOfQuestion: string = "PINTAR"
-  expectedResponse: string = "Concluir"
-  dateResponse: Date;
-  ///
-
   constructor(private router: Router,
     public toastService: ToastService,
-    private questionsService: QuestionsService,
-    private sessionStorageService: SessionStorageService,
     private matrizService: MatrizService
   ) {
-    this.dateResponse = new Date();
     this.grid = this.initialCoordinates.map((row) => row.map((value) => value === 0));
   }
 
   ngOnInit(): void {
-    this.idUser = this.sessionStorageService.getItem('userID') || 'Default Data';
     this.answers.sort(() => Math.random() - 0.5);
   }
 
@@ -76,46 +59,15 @@ export class ScreenFiveLevelFourComponent implements OnInit {
   // validar resposta
   changeAnswers(value: string, btn: number): void {
     if (value === "Concluir") {
-      if (this.primeiraTentativa) {
-        this.salvarResultado('acerto'); // Salva o resultado como acerto
-      } else {
-        this.salvarResultado('erro'); // Salva o resultado como erro
-      }
       this.matrizService.salvarMatrizPintada(this.grid);
-      this.processQuestionResponse(value, true);
       this.buttonClass(btn, true);
-      this.onSuccess();
       setTimeout(() => {
         this.router.navigate(['fase-4-6']);
       }, 1000);
     } else {
-      this.processQuestionResponse(value, false);
       this.primeiraTentativa = false; // Marca que já houve uma tentativa
       this.buttonClass(btn, false);
-      this.onError();
     }
-  }
-
-  processQuestionResponse(userResponse: string, isCorrect: boolean): void {
-    const question: Question = new Question(this.idUser, this.idApp, this.phaseActivity, this.numberActivity, userResponse, this.expectedResponse, isCorrect, this.dateResponse, this.typeOfQuestion);
-    this.questionsService.saveResponseQuestion(question).subscribe(
-      response => {
-        console.log("Question saved successfully:", response);
-      },
-      error => {
-        console.error("Error saving question:", error);
-      }
-    );
-  }
-
-  // resposta certa
-  onSuccess(): void {
-    this.notification.show('Você acertou!', 'success');
-  }
-
-  // resposta errada
-  onError(): void {
-    this.notification.show('Tente outra vez.', 'error');
   }
 
   // botões alternativas
@@ -124,13 +76,6 @@ export class ScreenFiveLevelFourComponent implements OnInit {
     setTimeout(() => {
       this.buttonClasses[button] = "";
     }, 1000);
-  }
-
-  // Salvar resultado no localStorage
-  salvarResultado(resultado: string): void {
-    const resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
-    resultados.push(resultado);
-    localStorage.setItem('resultados', JSON.stringify(resultados));
   }
 
 }

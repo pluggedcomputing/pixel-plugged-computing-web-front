@@ -1,22 +1,22 @@
-body{
+body {
   background-color: white;
 }
 
-h2{
+h2 {
   color: #073d7c;
 }
 
-h3{
+h3 {
   font-size: 100%;
   color: #073d7c;
 }
 
-h5{
+h5 {
   font-size: 90%;
   color: #073d7c;
 }
 
-span{
+span {
   font-size: 100%;
   color: #073d7c;
 }
@@ -37,17 +37,19 @@ span{
 
 /* Fases */
 
-.container-fases{
+.container-fases {
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 10px;
+  padding-top: 5%;
 }
 
 .botao-fase {
   width: 90%;
+  height: 100px;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -56,37 +58,38 @@ span{
   border-radius: 8px;
   background-color: #A6F3D6;
   border-color: #A6F3D6;
-  transition: transform 0.1s ease-in-out; 
+  transition: transform 0.1s ease-in-out;
 }
 
 .botao-fase:hover {
-  transform: scale(1.03); 
+  transform: scale(1.03);
 }
 
 .botao-fase:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
-.descricao-fase{
+.descricao-fase {
   width: 80%;
   text-align: left;
 }
 
-.imagem-fase{
+.imagem-fase {
   width: 30%;
 }
 
 /* Rodapé */
 
-.container-rodape{
+.container-rodape {
   width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: row;
+  padding-top: 3%;
 }
 
-.botao-rodape{
+.botao-rodape {
   width: 80%;
   display: flex;
   flex-direction: column;
@@ -94,18 +97,18 @@ span{
   padding: 10px;
   gap: 5px;
   cursor: pointer;
-  transition: transform 0.1s ease-in-out; 
+  transition: transform 0.1s ease-in-out;
 }
 
 .botao-rodape:hover {
-  transform: scale(1.05); 
+  transform: scale(1.05);
 }
 
 .botao-rodape:active {
-  transform: scale(0.95); 
+  transform: scale(0.95);
 }
 
-.imagem-rodape{
+.imagem-rodape {
   width: 40%;
   background-color: #A6F3D6;
   border-radius: 50%;
@@ -121,10 +124,12 @@ span{
   .container-fases {
     width: 40%;
     gap: 12px;
+    padding-top: 2%;
   }
 
   .botao-fase {
-    width: 80%;
+    width: 100%;
+    height: 130px;
     padding: 4%;
     gap: 12px;
   }
@@ -138,7 +143,8 @@ span{
     font-size: 110%;
   }
 
-  h5, span {
+  h5,
+  span {
     font-size: 100%;
   }
 
@@ -148,6 +154,7 @@ span{
 
   .container-rodape {
     width: 40%;
+    padding-top: 2%;
   }
 
   .botao-rodape {
@@ -169,10 +176,12 @@ span{
   .container-fases {
     width: 40%;
     gap: 16px;
+    padding-top: 2%;
   }
 
   .botao-fase {
-    width: 60%;
+    width: 70%;
+    height: 140px;
     padding: 3%;
     gap: 14px;
   }
@@ -190,7 +199,7 @@ span{
     font-size: 105%;
   }
 
-  span{
+  span {
     font-size: 150%;
   }
 
@@ -200,6 +209,7 @@ span{
 
   .container-rodape {
     width: 40%;
+    padding-top: 1%;
   }
 
   .botao-rodape {
@@ -211,4 +221,3 @@ span{
     width: 20%;
   }
 }
-

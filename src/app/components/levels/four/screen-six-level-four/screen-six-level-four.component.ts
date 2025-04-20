@@ -41,7 +41,7 @@ export class ScreenSixLevelFourComponent implements OnInit {
   idUser: string = ""
   idApp: string = "WEB-PIXEL 1.0"
   phaseActivity: string = "4"
-  numberActivity: string = "2";
+  numberActivity: string = "1";
   typeOfQuestion: string = "MULTIPLA ESCOLHA"
   expectedResponse: string = this.matrizService.obterLinhaComoString(1)
   dateResponse: Date;
