@@ -10,6 +10,11 @@ body {
 
 }
 
+.botao{
+  width: 20%;
+  margin-bottom: 1rem;
+}
+
 .capa {
   width: 30%;
   margin-bottom: 1rem;

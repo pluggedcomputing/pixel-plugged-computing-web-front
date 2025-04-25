@@ -17,7 +17,7 @@ export class ScreenTenLevelOneComponent implements OnInit {
   @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
   // alternativas
-  answers: string[] = ["Como representação que economize a quantidade de dados enviada", "Usando pontos pretos como 0 e brancos como 1"];
+  answers: string[] = ["Com representação que economize a quantidade de dados enviada", "Usando pontos pretos como 0 e brancos como 1"];
 
   buttonClasses: { [key: number]: string } = {
     1: "",
@@ -55,7 +55,7 @@ export class ScreenTenLevelOneComponent implements OnInit {
 
   // validar resposta
   changeAnswers(value: string, btn: number): void {
-    if (value === "Como representação que economize a quantidade de dados enviada") {
+    if (value === "Com representação que economize a quantidade de dados enviada") {
       if (this.primeiraTentativa) {
         this.salvarResultado('acerto'); // Salva o resultado como acerto
       } else {

@@ -32,7 +32,7 @@ export class ScreenNineLevelThreeComponent implements OnInit {
   ];
 
   // cordenadas das linhas
-  rowWords: string[] = ["0,3,1", "2,1,2", "2,1,2", "0,1,1,1,2", "?,?,?,?,?"];
+  rowWords: string[] = ["0,3,1", "2,1,2", "2,1,2", "0,1,1,1,2", ""];
 
   buttonClasses: { [key: number]: string } = {
     1: "",

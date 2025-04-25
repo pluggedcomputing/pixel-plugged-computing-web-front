@@ -34,7 +34,7 @@
         máquina de fax?
       </p>
 
-      <div class="answer-table row justify-content-center w-100">
+      <div class="answer-table">
         <button *ngFor="let answer of answers; let btnIndex = index" [ngClass]="buttonClasses[btnIndex + 1]"
           (click)="changeAnswers(answer, btnIndex + 1)">
           {{ answer }}
