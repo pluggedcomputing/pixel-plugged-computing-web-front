@@ -1,51 +1,5 @@
 body {
-  background-color: #ffffff;
-}
-
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.container div img {
-  width: 30%;
-}
-
-.icone-voltar {
-  background-color: #A6F3D6;
-  position: fixed;
-  width: 4%;
-  top: 0;
-  /* Alinha ao topo da tela */
-  right: 0;
-  /* Alinha à direita da tela */
-  margin: 10px;
-  /* Opcional: adiciona uma margem */
-  padding: 10px;
-  /* Espaçamento interno */
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out; /* Suaviza o efeito de redimensionamento */
-}
-
-.icone-voltar:hover {
-  transform: scale(1.1); /* Amplia o botão ao passar o mouse */
-}
-
-.icone-voltar:active {
-  transform: scale(0.95); /* Reduz o botão ao clicar */
-}
-
-
-.content {
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  background-color: white;
 }
 
 h3 {
@@ -55,58 +9,131 @@ h3 {
 
 p {
   color: #073d7c;
-  width: 35%;
+  width: 80%;
   text-align: justify;
   margin-top: 2rem;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .bi {
   color: #073d7c;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
-@media (max-width: 991px) {
-  .container div img {
-    width: 35%;
-  }
-
-  p {
-    width: 40%;
-    font-size: 1.2rem;
-  }
-
-  .bi {
-    font-size: 2rem;
-  }
+.capa {
+  width: 80%;
 }
 
-@media (max-width: 767px) {
-  .container div img {
-    width: 60%;
-  }
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
 
+.content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.icone-voltar {
+  background-color: #A6F3D6;
+  position: fixed;
+  width: 12%;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icone-voltar:hover {
+  background-color: #88daba;
+}
+
+.icone-voltar:active {
+  transform: scale(0.95); /* Reduz o botão ao clicar */
+}
+
+/* Escala Tablet */
+
+@media (min-width: 768px) {
+  h3 {
+    margin: 1rem 0 2rem 0;
+  }
+  
   p {
-    width: 60%;
+    width: 50%;
+    margin-top: 2rem;
     font-size: 1rem;
   }
-
+  
   .bi {
-    font-size: 1.8rem;
+    font-size: 3rem;
+  }
+  
+  .capa {
+    width: 40%;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .content {
+    width: 100%;
+  }
+  
+  .icone-voltar {
+    width: 8%;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
   }
 }
 
-@media (max-width: 484px) {
-  .container div img {
-    width: 60%;
-  }
+/* Escala Desktop */
 
+@media (min-width: 1024px) {
+  h3 {
+    margin: 1rem 0 2rem 0;
+  }
+  
   p {
-    width: 70%;
-    font-size: 0.8rem;
+    width: 35%;
+    margin-top: 2rem;
+    font-size: 1.2rem;
   }
-
+  
   .bi {
-    font-size: 1.5rem;
+    font-size: 4rem;
+  }
+  
+  .capa {
+    width: 30%;
+  }
+  
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .content {
+    width: 100%;
+  }
+  
+  .icone-voltar {
+    width: 4%;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
   }
 }
