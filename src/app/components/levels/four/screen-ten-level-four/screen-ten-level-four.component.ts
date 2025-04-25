@@ -18,7 +18,18 @@ export class ScreenTenLevelFourComponent implements OnInit {
   @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
   // alternativas
-  answers: string[] = ["0,1,1,2,1", "1,1,3", "4,1", this.matrizService.obterLinhaComoStringColorida(1)];
+
+  answers: string[] = this.answersVerify();
+
+  answersVerify(){
+    const answersList: string[] = ["1-0,2-1,2-0", "1-0,3-1,1-0", "4-0,1-1", this.matrizService.obterLinhaComoStringColorida(1)];
+    for(let i = 0; i < 3; i++){
+      if(answersList[i] === this.matrizService.obterLinhaComoStringColorida(1)){
+        answersList[3] = "3-2,1-4,1-0";
+      }
+    }
+    return answersList;
+  }
 
   // matriz inicial
   matrizPintada: String[][] = [];

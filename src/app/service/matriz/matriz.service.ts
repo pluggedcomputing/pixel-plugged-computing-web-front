@@ -25,21 +25,17 @@ export class MatrizService {
 
   // Retornar linha como string
   obterLinhaComoString(numero_linha: number): string {
-    return this.runLengthEncode(this.matrizPintada[numero_linha - 1].map(cell => cell ? '1' : '0').join(","));
+    return this.runLegthCoding(this.matrizPintada[numero_linha - 1].map(cell => cell ? '0' : '1').join(","));
   }
 
-  obterLinhaComoStringColorida(numero_linha: number): string {
-    return  this.runLengthEncode(this.mapColorsToNumbers(this.matrizColorida[numero_linha - 1].join(",")));
-  }
-
-  runLengthEncode(input: string): string {
+  runLegthCoding(linha: string){
     // Divide a string em um array de números
-    const pixels = input.split(',').map(Number);
-
+    const pixels = linha.split(',').map(Number);
+    
     // Inicializa o resultado e o contador
     let result = '';
     let count = 1;
-
+    
     // Percorre o array de pixels
     for (let i = 0; i < pixels.length; i++) {
       // Verifica se o próximo pixel é igual ao atual
@@ -47,13 +43,23 @@ export class MatrizService {
         count++; // Incrementa o contador se for igual
       } else {
         // Adiciona a contagem e o valor ao resultado
-        result += `${count}-${pixels[i]},`;
+        result += `${count},`;
         count = 1; // Reseta o contador
       }
     }
 
+    if(pixels[0] == 0){
+      result = '0,' + result;
+    }
+    
     // Remove a vírgula final e retorna o resultado
     return result.slice(0, -1);
+  }
+
+  // Matriz colorida
+  
+  obterLinhaComoStringColorida(numero_linha: number): string {
+    return  this.runLengthEncode(this.mapColorsToNumbers(this.matrizColorida[numero_linha - 1].join(",")));
   }
 
   mapColorsToNumbers(input: string): string {
@@ -75,4 +81,29 @@ export class MatrizService {
     // Junta os números em uma string separada por vírgulas
     return numbers.join(',');
   }
+
+  runLengthEncode(input: string): string {
+    // Divide a string em um array de números
+    const pixels = input.split(',').map(Number);
+    
+    // Inicializa o resultado e o contador
+    let result = '';
+    let count = 1;
+    
+    // Percorre o array de pixels
+    for (let i = 0; i < pixels.length; i++) {
+      // Verifica se o próximo pixel é igual ao atual
+      if (pixels[i] === pixels[i + 1]) {
+        count++; // Incrementa o contador se for igual
+      } else {
+        // Adiciona a contagem e o valor ao resultado
+        result += `${count}-${pixels[i]},`;
+        count = 1; // Reseta o contador
+      }
+    }
+    
+    // Remove a vírgula final e retorna o resultado
+    return result.slice(0, -1);
+  }
+
 }

@@ -12,7 +12,7 @@ h3 {
 }
 
 h5 {
-  font-size: 90%;
+  font-size: 70%;
   color: #073d7c;
 }
 
@@ -170,7 +170,7 @@ span {
 
 @media (min-width: 1024px) {
   .container-tela {
-    padding: 2%;
+    padding: 1%;
   }
 
   .container-fases {
@@ -204,12 +204,12 @@ span {
   }
 
   .imagem-fase {
-    width: 25%;
+    width: 20%;
   }
 
   .container-rodape {
     width: 40%;
-    padding-top: 1%;
+    padding-top: 2px;
   }
 
   .botao-rodape {
