@@ -26,8 +26,7 @@
 
     <div class="matriz">
       <div *ngFor="let row of grid; let rowIndex = index" class="grid-row">
-        <div
-          *ngFor="let cell of row; let cellIndex = index"
+        <div *ngFor="let cell of row; let cellIndex = index"
           class="cell"
           [ngClass]="{ 'black': cell, 'white': !cell }"
           (click)="toggleCell(rowIndex, cellIndex)"

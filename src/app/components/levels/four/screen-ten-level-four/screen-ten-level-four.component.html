@@ -28,7 +28,8 @@
 
         <!-- Matriz de quadrados -->
         <div class="matriz">
-          <div
+          <div>
+            <div
             *ngFor="let row of matrizPintada; let rowIndex = index"
             class="grid-row"
           >
@@ -40,6 +41,8 @@
             ></div>
             <span class="word">{{ rowWords[rowIndex] }}</span>
           </div>
+          </div>
+          
           <!-- Paleta de cores -->
           <div class="paleta">
             <div

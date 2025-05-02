@@ -25,9 +25,11 @@
 
       <!-- Matriz de quadrados -->
       <div class="matriz">
-        <div *ngFor="let row of grid; let rowIndex = index" class="grid-row">
-          <div *ngFor="let cell of row; let cellIndex = index" class="cell" [ngStyle]="{ 'background-color': cell }"
-            (click)="paintCell(rowIndex, cellIndex)"></div>
+        <div>
+          <div *ngFor="let row of grid; let rowIndex = index" class="grid-row">
+            <div *ngFor="let cell of row; let cellIndex = index" class="cell" [ngStyle]="{ 'background-color': cell }"
+              (click)="paintCell(rowIndex, cellIndex)"></div>
+          </div>
         </div>
         <!-- Paleta de cores -->
         <div class="paleta">

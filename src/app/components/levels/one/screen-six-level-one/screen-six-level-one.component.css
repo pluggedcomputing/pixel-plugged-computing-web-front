@@ -44,7 +44,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 12px;
+  gap: 6px;
 }
 
 .rectangle {
@@ -219,7 +219,7 @@ button:focus {
   }
 
   .answer-table {
-    width: 50%;
+    width: 35%;
     display: flex;
     flex-direction: column;
   }

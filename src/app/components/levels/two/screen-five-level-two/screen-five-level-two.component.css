@@ -29,6 +29,7 @@ p {
   height: 100%;
   display: flex;
   align-items: center;
+  flex-direction: row;
 }
 
 .content {
@@ -36,6 +37,44 @@ p {
   width: 100%;
   align-items: center;
   flex-direction: column;
+}
+
+.matriz {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* matriz de quadrados */
+.grid-row {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 6px;
+  gap: 6px;
+}
+
+/* quadrado branco */
+.cell {
+  width: 30px;
+  height: 50px;
+  border: 2px solid #073d7c;
+  background-color: white;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease;
+}
+
+/* quadrado preto */
+.cell.black {
+  background-color: black;
+}
+
+.word {
+  font-weight: bold;
+  color: #073d7c;
+  font-size: 0.9rem;
 }
 
 .icone-voltar {
@@ -51,66 +90,29 @@ p {
 }
 
 .icone-voltar:hover {
-  background-color: #88daba;
+  background-color: #073d7c;
 }
 
 .icone-voltar:active {
   transform: scale(0.95);
-  /* Reduz o botão ao clicar */
 }
 
-/* matriz de quadrados */
-.grid-row {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  margin-bottom: 2%;
-}
-
-/* quadrado branco */
-.cell {
-  width: 30px;
-  height: 45px;
-  border: 2px solid #073d7c;
-  background-color: white;
-  box-sizing: border-box;
-  margin-right: 5px;
-  transition: background-color 0.3s ease;
-}
-
-/* quadrado preto */
-.cell.black {
-  background-color: black;
-}
-
-.word {
-  margin-left: 8px;
-  font-weight: bold;
-  color: #073d7c;
-}
-
-
-/* botões */
 .answer-table {
-  align-items: center;
-  width: 100%;
-  margin-top: 1rem;
+  width: 80%;
   display: flex;
   flex-direction: column;
-  gap: 5px;
-  /* Espaço uniforme entre os botões */
 }
 
-/* botão */
 button {
   background-color: #073d7c;
-  width: 100%;
-  padding: 10px;
   color: white;
   border: none;
-  border-radius: 4px;
-  font-size: 0.9rem;
+  margin-top: 0.5rem;
+  font-size: 1.0rem;
+  padding-inline: 10px;
+  padding-block: 10px;
+  border-radius: 4px !important;
+  font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -177,40 +179,6 @@ button:focus {
     padding: 10px;
     border-radius: 50%;
   }
-
-  /* matriz de quadrados */
-  .grid-row {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    margin-bottom: 2%;
-  }
-
-  /* quadrado branco */
-  .cell {
-    width: 40px;
-    height: 60px;
-    margin-right: 5px;
-    }
-
-  .word {
-    margin-left: 10px;
-  }
-
-
-  /* botões */
-  .answer-table {
-    margin-top: 1.5rem;
-    gap: 10px;
-    /* Espaço uniforme entre os botões */
-  }
-
-  /* botão */
-  button {
-    border-radius: 4px;
-    padding: 12px 200px;
-    font-size: 1rem;
-  }
 }
 
 /* Escala Desktop */
@@ -252,37 +220,47 @@ button:focus {
     border-radius: 50%;
   }
 
-    /* matriz de quadrados */
-    .grid-row {
-      width: 100%;
-      height: 100%;
-      display: flex;
-      margin-bottom: 2%;
-    }
-  
-    /* quadrado branco */
-    .cell {
-      width: 40px;
-      height: 60px;
-      margin-right: 5px;
-      }
-  
-    .word {
-      margin-left: 10px;
-    }
-  
-  
-    /* botões */
-    .answer-table {
-      margin-top: 1.5rem;
-      gap: 10px;
-      /* Espaço uniforme entre os botões */
-    }
-  
-    /* botão */
-    button {
-      border-radius: 4px;
-      padding: 12px 200px;
-      font-size: 1rem;
-    }
+  .answer-table {
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .matriz{
+    width: 30%;
+  }
+
+  /* matriz de quadrados */
+  .grid-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 2%;
+    gap: 0px;
+  }
+
+  /* quadrado branco */
+  .cell {
+    width: 40px;
+    height: 60px;
+    border: 2px solid #073d7c;
+    background-color: white;
+    box-sizing: border-box;
+    margin-right: 5px;
+    transition: background-color 0.3s ease;
+  }
+
+  /* quadrado preto */
+  .cell.black {
+    background-color: black;
+  }
+
+  .word {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #073d7c;
+    font-size: 1rem;
+  }
+
 }
