@@ -2,47 +2,6 @@ body {
   background-color: #A6F3D6;
 }
 
-.container {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.icone-voltar {
-  background-color: #073d7c;
-  position: fixed;
-  width: 4%;
-  top: 0;
-  /* Alinha ao topo da tela */
-  right: 0;
-  /* Alinha à direita da tela */
-  margin: 10px;
-  /* Opcional: adiciona uma margem */
-  padding: 10px;
-  /* Espaçamento interno */
-  border-radius: 50%;
-  cursor: pointer;
-  transition: transform 0.2s ease-in-out; /* Suaviza o efeito de redimensionamento */
-}
-
-.icone-voltar:hover {
-  transform: scale(1.1); /* Amplia o botão ao passar o mouse */
-}
-
-.icone-voltar:active {
-  transform: scale(0.95); /* Reduz o botão ao clicar */
-}
-
-.content {
-  display: flex;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-
 h3 {
   color: #073d7c;
   margin: 1rem 0 2rem 0;
@@ -50,49 +9,54 @@ h3 {
 
 p {
   color: #073d7c;
-  width: 35%;
+  width: 80%;
   text-align: justify;
   margin-top: 2rem;
-  font-size: 1.2rem;
+  font-size: 0.8rem;
 }
 
 .bi {
   color: #073d7c;
-  font-size: 4rem;
+  font-size: 2rem;
 }
 
-@media (max-width: 991px) {
-
-  p {
-    width: 40%;
-    font-size: 1.2rem;
-  }
-
-  .bi {
-    font-size: 2rem;
-  }
+.capa {
+  width: 80%;
 }
 
-@media (max-width: 767px) {
-  p {
-    width: 60%;
-    font-size: 1rem;
-  }
-
-  .bi {
-    font-size: 1.8rem;
-  }
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
 }
 
-@media (max-width: 484px) {
-  p {
-    width: 70%;
-    font-size: 0.8rem;
-  }
+.content {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
 
-  .bi {
-    font-size: 1.5rem;
-  }
+.icone-voltar {
+  background-color: #073d7c;
+  position: fixed;
+  width: 12%;
+  top: 0;
+  right: 0;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.icone-voltar:hover {
+  background-color: #88daba;
+}
+
+.icone-voltar:active {
+  transform: scale(0.95);
+  /* Reduz o botão ao clicar */
 }
 
 /* matriz de quadrados */
@@ -106,8 +70,8 @@ p {
 
 /* quadrado branco */
 .cell {
-  width: 40px;
-  height: 60px;
+  width: 30px;
+  height: 45px;
   border: 2px solid #073d7c;
   background-color: white;
   box-sizing: border-box;
@@ -121,7 +85,7 @@ p {
 }
 
 .word {
-  margin-left: 10px;
+  margin-left: 8px;
   font-weight: bold;
   color: #073d7c;
 }
@@ -129,21 +93,24 @@ p {
 
 /* botões */
 .answer-table {
-  margin-top: 1.5rem;
+  align-items: center;
+  width: 100%;
+  margin-top: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 5px;
   /* Espaço uniforme entre os botões */
 }
 
 /* botão */
 button {
   background-color: #073d7c;
+  width: 100%;
+  padding: 10px;
   color: white;
   border: none;
   border-radius: 4px;
-  padding: 12px 200px;
-  font-size: 1rem;
+  font-size: 0.9rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
@@ -170,4 +137,152 @@ button:focus {
 .incorrect:hover,
 .incorrect:focus {
   background-color: var(--answer-red-hover, #c82333);
+}
+
+/* Escala Tablet */
+
+@media (min-width: 768px) {
+  h3 {
+    margin: 1rem 0 2rem 0;
+  }
+
+  p {
+    width: 50%;
+    margin-top: 2rem;
+    font-size: 1rem;
+  }
+
+  .bi {
+    font-size: 3rem;
+  }
+
+  .capa {
+    width: 40%;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .icone-voltar {
+    width: 8%;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+  /* matriz de quadrados */
+  .grid-row {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    margin-bottom: 2%;
+  }
+
+  /* quadrado branco */
+  .cell {
+    width: 40px;
+    height: 60px;
+    margin-right: 5px;
+    }
+
+  .word {
+    margin-left: 10px;
+  }
+
+
+  /* botões */
+  .answer-table {
+    margin-top: 1.5rem;
+    gap: 10px;
+    /* Espaço uniforme entre os botões */
+  }
+
+  /* botão */
+  button {
+    border-radius: 4px;
+    padding: 12px 200px;
+    font-size: 1rem;
+  }
+}
+
+/* Escala Desktop */
+
+@media (min-width: 1024px) {
+  h3 {
+    margin: 1rem 0 2rem 0;
+  }
+
+  p {
+    width: 35%;
+    margin-top: 2rem;
+    font-size: 1.2rem;
+  }
+
+  .bi {
+    font-size: 4rem;
+  }
+
+  .capa {
+    width: 30%;
+  }
+
+  .container {
+    width: 100%;
+    height: 100%;
+  }
+
+  .content {
+    width: 100%;
+  }
+
+  .icone-voltar {
+    width: 4%;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+  }
+
+    /* matriz de quadrados */
+    .grid-row {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      margin-bottom: 2%;
+    }
+  
+    /* quadrado branco */
+    .cell {
+      width: 40px;
+      height: 60px;
+      margin-right: 5px;
+      }
+  
+    .word {
+      margin-left: 10px;
+    }
+  
+  
+    /* botões */
+    .answer-table {
+      margin-top: 1.5rem;
+      gap: 10px;
+      /* Espaço uniforme entre os botões */
+    }
+  
+    /* botão */
+    button {
+      border-radius: 4px;
+      padding: 12px 200px;
+      font-size: 1rem;
+    }
 }

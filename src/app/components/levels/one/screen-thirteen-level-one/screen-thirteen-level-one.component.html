@@ -17,7 +17,7 @@
 
       <h3><strong>FASE 1</strong></h3>
 
-      <img class="image" src="assets/win/win-level.png">
+      <img class="imagem-parabens" src="assets/win/win-level.png">
 
       <h3><strong>PARABÉNS</strong></h3>
 
@@ -27,25 +27,25 @@
         <div *ngFor="let acerto of getArray(estrelasPreenchidas)" class="star">
           <img src="assets/win/estrela.png" alt="Estrela Amarela" class="imagem-estrela">
         </div>
-      
+
         <!--  (erros) -->
         <div *ngFor="let erro of getArray(estrelasVazias)" class="star">
           <img src="assets/win/estrela-branca.png" alt="Estrela Branca" class="imagem-estrela">
         </div>
+
       </div>
 
       <div class="mensagem-final">
         <p>
-           {{mensagemFinal}} 
+          {{mensagemFinal}}
         </p>
-
       </div>
 
 
     </div>
 
     <div class="rodape">
-      
+
       <div class="botao-rodape" routerLink="/fase-1-1">
         <div class="icone-botao">
           <img class="icone" src="assets/cover/reiniciar.png">
@@ -70,6 +70,7 @@
 
 
   </div>
+
 </body>
 
 </html>
