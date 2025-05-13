@@ -40,10 +40,11 @@ p {
 }
 
 .matriz {
-  width: 69%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2px;
 }
 
 /* matriz de quadrados */
@@ -51,9 +52,7 @@ p {
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  margin-bottom: 6px;
-  gap: 6px;
+  gap: 2px;
 }
 
 /* quadrado branco */
@@ -69,12 +68,6 @@ p {
 /* quadrado preto */
 .cell.black {
   background-color: black;
-}
-
-.word {
-  font-weight: bold;
-  color: #073d7c;
-  font-size: 0.9rem;
 }
 
 .icone-voltar {
@@ -261,6 +254,13 @@ button:focus {
     font-weight: bold;
     color: #073d7c;
     font-size: 1rem;
+  }
+
+  .matriz-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
 }

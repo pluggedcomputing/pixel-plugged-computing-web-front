@@ -26,12 +26,14 @@
 
       <h3><strong>FASE 4</strong></h3>
 
-      <div class="matriz">
-        <div *ngFor="let row of matrizPintada; let rowIndex = index" class="grid-row">
-          <div *ngFor="let cell of row; let cellIndex = index" class="cell"
-            [ngClass]="{ 'black': cell, 'white': !cell }">
+      <div class="matriz-container">
+        <div class="matriz">
+          <div *ngFor="let row of matrizPintada; let rowIndex = index" class="grid-row">
+            <div *ngFor="let cell of row; let cellIndex = index" class="cell"
+              [ngClass]="{ 'black': cell, 'white': !cell }">
+            </div>
+            <span class="word">{{ rowWords[rowIndex] }}</span>
           </div>
-          <span class="word">{{ rowWords[rowIndex] }}</span>
         </div>
       </div>
 

@@ -40,10 +40,11 @@ p {
 }
 
 .matriz {
-  width: 85%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2px;
 }
 
 /* matriz de quadrados */
@@ -52,6 +53,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
+  gap: 2px;
 }
 
 /* quadrado branco */
@@ -225,13 +227,13 @@ button:focus {
   }
 
   .matriz{
-    width: 50%;
+    width: 100%;
     gap: 5px;
   }
 
   /* matriz de quadrados */
   .grid-row {
-    width: 50%;
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -256,6 +258,10 @@ button:focus {
     color: #073d7c;
     font-size: 1rem;
     margin-left: 5px;
+  }
+
+  .matriz-container {
+    width: 30%;
   }
 
 }
