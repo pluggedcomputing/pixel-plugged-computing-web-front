@@ -52,8 +52,6 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 6px;
-  gap: 6px;
 }
 
 /* quadrado branco */
@@ -72,9 +70,9 @@ p {
 }
 
 .word {
-  font-weight: bold;
   color: #073d7c;
   font-size: 0.9rem;
+  font-weight: bold;
 }
 
 .icone-voltar {
@@ -227,17 +225,16 @@ button:focus {
   }
 
   .matriz{
-    width: 25%;
+    width: 50%;
+    gap: 5px;
   }
 
   /* matriz de quadrados */
   .grid-row {
-    width: 100%;
-    height: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
-    margin-bottom: 2%;
-    gap: 0px;
+    gap: 5px;
   }
 
   /* quadrado branco */
@@ -247,7 +244,6 @@ button:focus {
     border: 2px solid #073d7c;
     background-color: white;
     box-sizing: border-box;
-    margin-right: 5px;
     transition: background-color 0.3s ease;
   }
 
@@ -257,10 +253,9 @@ button:focus {
   }
 
   .word {
-    margin-left: 10px;
-    font-weight: bold;
     color: #073d7c;
     font-size: 1rem;
+    margin-left: 5px;
   }
 
 }

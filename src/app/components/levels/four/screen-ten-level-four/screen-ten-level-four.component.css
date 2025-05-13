@@ -39,11 +39,18 @@ p {
   flex-direction: column;
 }
 
-.matriz {
-  width: 90%;
+.matriz-container{
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.matriz {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
 }
 
 /* matriz de quadrados */
@@ -52,8 +59,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 6px;
-  gap: 6px;
+  gap: 2px;
 }
 
 /* quadrado branco */
@@ -72,9 +78,10 @@ p {
 }
 
 .word {
-  font-weight: bold;
   color: #073d7c;
   font-size: 0.9rem;
+  font-weight: bold;
+  margin-left: 2px;
 }
 
 /* Estilo da paleta de cores */
@@ -83,7 +90,7 @@ p {
   display: flex;
   margin-top: 8px;
   align-items: center;
-  gap: 6px;
+  gap: 2px;
 }
 
 .color-container {
@@ -262,18 +269,17 @@ button:focus {
     flex-direction: column;
   }
 
-  .matriz {
-    width: 30%;
+  .matriz{
+    width: 100%;
+    gap: 5px;
   }
 
   /* matriz de quadrados */
   .grid-row {
     width: 100%;
-    height: 100%;
     display: flex;
     align-items: center;
-    margin-bottom: 2%;
-    gap: 0px;
+    gap: 5px;
   }
 
   /* quadrado branco */
@@ -283,7 +289,6 @@ button:focus {
     border: 2px solid #073d7c;
     background-color: white;
     box-sizing: border-box;
-    margin-right: 5px;
     transition: background-color 0.3s ease;
   }
 
@@ -293,14 +298,13 @@ button:focus {
   }
 
   .word {
-    margin-left: 10px;
-    font-weight: bold;
     color: #073d7c;
     font-size: 1rem;
+    margin-left: 5px;
   }
 
-  /* Estilo da paleta de cores */
-  .paleta {
+   /* Estilo da paleta de cores */
+   .paleta {
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -326,13 +330,9 @@ button:focus {
 
   .numero {
     margin-top: 5px;
-    /* Espaçamento entre o quadrado e o número */
     font-size: 14px;
-    /* Tamanho do texto */
     font-weight: bold;
-    /* Texto em negrito */
     color: #073d7c;
-    /* Cor do texto */
   }
 
 }
