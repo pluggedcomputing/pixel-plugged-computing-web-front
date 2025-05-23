@@ -12,10 +12,10 @@ export class HelpComponent {
 
   constructor(private messagesService: MessagesService) {
     this.messagesService.getMensagens().subscribe(data => {
-      this.messages = data; // Atualiza sempre que o serviço emite novos dados
+      this.messages = data;
     });
 
-    this.messagesService.carregarMensagens(); // Inicia o carregamento
+    this.messagesService.carregarMensagens(); 
   }
 
 }

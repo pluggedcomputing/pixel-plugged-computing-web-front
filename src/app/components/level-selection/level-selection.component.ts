@@ -1,15 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MessagesService } from 'src/app/service/messages/messages.service';
 
 @Component({
   selector: 'app-level-selection',
   templateUrl: './level-selection.component.html',
   styleUrls: ['./level-selection.component.css']
 })
-export class LevelSelectionComponent implements OnInit {
+export class LevelSelectionComponent {
 
-  constructor() { }
+  messages: any = {};
 
-  ngOnInit(): void {
+  constructor(private messagesService: MessagesService) {
+    this.messagesService.getMensagens().subscribe(data => {
+      this.messages = data;
+    });
+
+    this.messagesService.carregarMensagens();
   }
 
 }

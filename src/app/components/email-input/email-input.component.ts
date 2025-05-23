@@ -24,9 +24,8 @@ export class EmailInputComponent {
     private messagesService: MessagesService
   ) {
     this.messagesService.getMensagens().subscribe(data => {
-      this.messages = data; // Atualiza sempre que o serviço emite novos dados
+      this.messages = data;
     });
-    // Inicia o carregamento
   }
 
   submitUserID() {

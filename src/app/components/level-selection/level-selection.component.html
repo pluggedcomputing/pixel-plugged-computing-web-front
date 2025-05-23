@@ -13,15 +13,15 @@
 
     <div class="container-central">
 
-      <h2><strong>SELEÇÃO DE FASE</strong></h2>
+      <h2><strong>{{messages.phaseSelection.title}}</strong></h2>
 
       <div class="container-fases">
 
         <button routerLink="/fase-1-1" class="botao-fase">
           <img src="assets/levels/level1.png" class="imagem-fase">
           <div class="descricao-fase">
-            <h3><strong>FASE 1</strong></h3>
-            <h5>Imagens e pixels</h5>
+            <h3><strong>{{messages.phaseSelection.buttonPhase1.title}}</strong></h3>
+            <h5>{{messages.phaseSelection.buttonPhase1.subtitle}}</h5>
           </div>
           <span class="seta-direita"> > </span>
         </button>
@@ -29,8 +29,8 @@
         <button routerLink="/fase-2-1" class="botao-fase">
           <img src="assets/levels/level2.png" class="imagem-fase">
           <div class="descricao-fase">
-            <h3><strong>FASE 2</strong></h3>
-            <h5>Codificar imagens com 1 e 0</h5>
+            <h3><strong>{{messages.phaseSelection.buttonPhase2.title}}</strong></h3>
+            <h5>{{messages.phaseSelection.buttonPhase2.subtitle}}</h5>
           </div>
           <span class="seta"> > </span>
         </button>
@@ -38,8 +38,8 @@
         <button routerLink="/fase-3-1" class="botao-fase">
           <img src="assets/levels/level3.png" class="imagem-fase">
           <div class="descricao-fase">
-            <h3><strong>FASE 3</strong></h3>
-            <h5>Imagens compactadas</h5>
+            <h3><strong>{{messages.phaseSelection.buttonPhase3.title}}</strong></h3>
+            <h5>{{messages.phaseSelection.buttonPhase3.subtitle}}</h5>
           </div>
           <span class="seta"> > </span>
         </button>
@@ -47,8 +47,8 @@
         <button routerLink="/fase-4-1" class="botao-fase">
           <img src="assets/levels/level4.png" class="imagem-fase">
           <div class="descricao-fase">
-            <h3><strong>FASE 4</strong></h3>
-            <h5>Usando run-length coding</h5>
+            <h3><strong>{{messages.phaseSelection.buttonPhase4.title}}</strong></h3>
+            <h5>{{messages.phaseSelection.buttonPhase4.subtitle}}</h5>
           </div>
           <span class="seta"> > </span>
         </button>
@@ -59,12 +59,12 @@
 
         <div routerLink="/help" class="botao-rodape">
           <img src="assets/cover/ajuda.png" class="imagem-rodape">
-          <h5>Ajuda</h5>
+          <h5>{{messages.phaseSelection.helpButton}}</h5>
         </div>
 
         <div routerLink="/about" class="botao-rodape">
           <img src="assets/cover/sobre.png" class="imagem-rodape">
-          <h5>Sobre</h5>
+          <h5>{{messages.phaseSelection.aboutButton}}</h5>
         </div>
 
       </div>
