@@ -1,15 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MessagesService } from 'src/app/service/messages/messages.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
-export class HomeComponent implements OnInit {
+export class HomeComponent {
+  messages: any = {};
 
-  constructor() { }
+  constructor(private messagesService: MessagesService) {
+    this.messagesService.getMensagens().subscribe(data => {
+      this.messages = data; // Atualiza sempre que o serviço emite novos dados
+    });
 
-  ngOnInit(): void {
+    this.messagesService.carregarMensagens(); // Inicia o carregamento
   }
 
+  trocarIdiomaPortugues() {
+    this.messagesService.trocarIdioma("pt-br");
+  }
+
+  trocarIdiomaIngles() {
+    this.messagesService.trocarIdioma("en");
+  }
 }

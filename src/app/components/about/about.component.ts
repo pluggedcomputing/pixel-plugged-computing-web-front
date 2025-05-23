@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { MessagesService } from 'src/app/service/messages/messages.service';
+
 
 @Component({
   selector: 'app-about',
   templateUrl: './about.component.html',
   styleUrls: ['./about.component.css']
 })
-export class AboutComponent implements OnInit {
+export class AboutComponent {
 
-  constructor() { }
+  messages: any = {};
 
-  ngOnInit(): void {
+
+  constructor(private messagesService: MessagesService) {
+    this.messagesService.getMensagens().subscribe(data => {
+      this.messages = data; // Atualiza sempre que o serviço emite novos dados
+    });
+
+    this.messagesService.carregarMensagens(); // Inicia o carregamento
   }
 
 }

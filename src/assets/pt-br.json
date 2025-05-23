@@ -1,0 +1,54 @@
+{
+    "homeScreen": {
+        "title": "COLORINDO COM NÚMEROS",
+        "subtitle": "Representação de Imagens",
+        "startButton": "INICIAR",
+        "selectLanguage": "Selecione o idioma:"
+    },
+    "userIdentification": {
+        "title": "Digite seu e-mail ou código de usuário ou apenas seu nome:",
+        "submitButton": "Enviar",
+        "anonymousButton": "Entrar sem meus dados",
+        "exception": "Por favor, digite seu e-mail ou código."
+    },
+    "phaseSelection": {
+        "title": "SELEÇÃO DE FASE",
+        "buttonPhase1": {
+            "title": "FASE 1",
+            "subtitle": "Imagens e pixels"
+        },
+        "buttonPhase2": {
+            "title": "FASE 2",
+            "subtitle": "Codificar imagens com 1 e 0"
+        },
+        "buttonPhase3": {
+            "title": "FASE 3",
+            "subtitle": "Imagens compactadas"
+        },
+        "buttonPhase4": {
+            "title": "FASE 4",
+            "subtitle": "Usando run-length coding"
+        },
+        "helpButton": "Ajuda",
+        "aboutButton": "Sobre"
+    },
+    "help": {
+        "title": "AJUDA",
+        "paragraph1": "O Computação Plugada Pixel Web se baseia na atividade \"Representação de imagens\" do livro de Bell T.Witten, I. e Follows, M. (2011), \"Computer Science Unplugged - Ensinando Ciência da Computação sem o uso do computador\" Tradução Luciano Porto Barreto, 2011.",
+        "paragraph2": "Em cada fase você encontrará telas com conteúdo informativo e também algumas telas com exercícios.",
+        "paragraph3": "Sugerimos que inicie pela Fase 1 e depois siga a ordem crescente das fases: Fase 2, Fase 3 e Fase 4.",
+        "paragraph4": "Você poderá repetir as atividades a qualquer momento para melhorar seu desempenho em cada fase.",
+        "paragraph5": "Para mais informações, entre em contato conosco através do e-mail:",
+        "paragraph6": "Estamos trabalhando continuamente para melhorar a experiência dos nossos usuários. Seu feedback é muito importante. Ajude-nos preenchendo formulários de avaliação disponíveis no site do projeto:"
+    },
+    "about": {
+        "title": "SOBRE",
+        "paragraph1": "O Computação Plugada Pixel Web se baseia na atividade \"Representação de imagens\" do livro de Bell T.Witten, I. e Follows, M. (2011), \"Computer Science Unplugged - Ensinando Ciência da Computação sem o uso do computado\" Tradução Luciano Porto Barreto, 2011.",
+        "paragraph2": "Este livro apresenta atividades práticas, lúdicas e acessíveis sobre diversos temas da ciência da computação. Sua prática é fácil não só em salas de aula mas também fora, podendo ser administrado por professores e compreendido pelas crianças.",
+        "paragraph3": "O Computação Plugada Pixel Web aqui apresentado busca simplificar ainda mais a aplicação das propostas sem a necessidade de produção de materiais adicionais. Ele mostra alguns temas por vezes considerados complexos de maneira simples para diferentes públicos.",
+        "paragraph4": "O Computação Plugada Pixel faz parte de uma família com vários outros recursos educacionais para o ensino de computação. Conheça mais sobre os demais visitando nosso site:"
+    },
+    "phase1": {
+
+    }
+}

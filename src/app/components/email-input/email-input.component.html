@@ -9,17 +9,17 @@
 <body>
   <div class="container">
     <div class="content">
-      <h2>Digite seu e-mail ou código de usuário ou apenas seu nome:</h2>
+      <h2>{{messages.userIdentification.title}}</h2>
       <form (ngSubmit)="submitUserID()">
         <input type="userID" id="userID" name="userID" [(ngModel)]="userID" required> 
         <br>
         <br>
-        <button type="submit">Enviar</button>
+        <button type="submit">{{messages.userIdentification.submitButton}}</button>
       </form>
       <br>
-      <a (click)="submitUserAnonymous()">Entrar sem meus dados</a>
+      <a (click)="submitUserAnonymous()">{{messages.userIdentification.anonymousButton}}</a>
       <br>
-      <span *ngIf="!userID && submitted" class="error-message">Por favor, digite seu e-mail ou código.</span>
+      <span *ngIf="!userID && submitted" class="error-message">{{messages.userIdentification.exception}}</span>
     </div>
   </div>
 </body>

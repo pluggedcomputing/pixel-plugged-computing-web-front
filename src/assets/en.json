@@ -1,0 +1,52 @@
+{
+    "homeScreen": {
+        "title": "COLORING WITH NUMBERS",
+        "subtitle": "Image Representation",
+        "startButton": "START",
+        "selectLanguage": "Select language:"
+    },
+    "userIdentification": {
+        "title": "Enter your email or user code or just your name:",
+        "submitButton": "Submit",
+        "anonymousButton": "Log in without my data",
+        "exception": "Please enter your email or code."
+    },
+    "phaseSelection": {
+        "title": "PHASE SELECTION",
+        "buttonPhase1": {
+            "title": "PHASE 1",
+            "subtitle": "Images and pixels"
+        },
+        "buttonPhase2": {
+            "title": "PHASE 2",
+            "subtitle": "Encode images with 1s and 0s"
+        },
+        "buttonPhase3": {
+            "title": "PHASE 3",
+            "subtitle": "Compressed images"
+        },
+        "buttonPhase4": {
+            "title": "PHASE 4",
+            "subtitle": "Using run-length coding"
+        },
+        "helpButton": "Help",
+        "aboutButton": "About"
+    },
+    "help": {
+        "title": "HELP",
+        "paragraph1": "Pixel Web Plugged Computing is based on the activity \"Image Representation\" from the book by Bell T. Witten, I. and Follows, M. (2011), \"Computer Science Unplugged - Teaching Computer Science without the use of the computer\" Translation by Luciano Porto Barreto, 2011.",
+        "paragraph2": "In each phase you will find screens with informative content and also some screens with exercises.",
+        "paragraph3": "We suggest that you start with Phase 1 and then follow the increasing order of the phases: Phase 2, Phase 3 and Phase 4.",
+        "paragraph4": "You can repeat the activities at any time to improve your performance in each phase.",
+        "paragraph5": "For more information, contact us via email:",
+        "paragraph6": "We are continuously working to improve the experience of our users. Your feedback is very important. Help us by filling out evaluation forms available on project website:"
+    },
+    "about": {
+        "title": "ABOUT",
+        "paragraph1": "Pixel Web Plugged Computing is based on the activity \"Image Representation\" from the book by Bell T. Witten, I. and Follows, M. (2011), \"Computer Science Unplugged - Teaching Computer Science without the use of computers\" Translation by Luciano Porto Barreto, 2011.",
+        "paragraph2": "This book presents practical, playful and accessible activities on various computer science topics. It is easy to use not only in classrooms but also outside, and can be administered by teachers and understood by children.",
+        "paragraph3": "Pixel Web Plugged Computing presented here seeks to further simplify the application of the proposals without the need to produce additional materials. It shows some topics sometimes considered complex in a simple way for different audiences.",
+        "paragraph4": "Pixel Web Plugged Computing is part of a family with several other educational resources for teaching computing. Learn more about the others by visiting our website:"
+    },
+    "phase1": {}
+}

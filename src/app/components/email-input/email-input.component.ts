@@ -3,6 +3,7 @@ import { UserInputService } from 'src/app/service/user/user.service';
 import { User } from 'src/app/models/user.model';
 import { Router } from '@angular/router';
 import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
+import { MessagesService } from 'src/app/service/messages/messages.service';
 
 @Component({
   selector: 'app-email-input',
@@ -14,11 +15,19 @@ export class EmailInputComponent {
   userID: string = "";
   submitted: boolean = false;
 
+  messages: any = {};
+
   constructor(
     private userInputService: UserInputService,
     private router: Router,
-    private sessionStorageService: SessionStorageService
-  ) { }
+    private sessionStorageService: SessionStorageService,
+    private messagesService: MessagesService
+  ) {
+    this.messagesService.getMensagens().subscribe(data => {
+      this.messages = data; // Atualiza sempre que o serviço emite novos dados
+    });
+    // Inicia o carregamento
+  }
 
   submitUserID() {
     if (!this.userID) {
@@ -30,7 +39,7 @@ export class EmailInputComponent {
     this.userInputService.saveUser(user).subscribe(
       response => {
         this.sessionStorageService.setItem('userID', this.userID);
-        console.log("User saved successfully:", response);      
+        console.log("User saved successfully:", response);
       },
       error => {
         console.error("Error saving user:", error);
@@ -38,7 +47,7 @@ export class EmailInputComponent {
       }
     );
     console.log(this.userID);
-    this.router.navigate(['/fases']); 
+    this.router.navigate(['/fases']);
   }
 
   submitUserAnonymous() {
@@ -48,7 +57,7 @@ export class EmailInputComponent {
       response => {
         this.sessionStorageService.setItem('userID', "Anonymous");
         console.log("User saved successfully:", response);
-        
+
       },
       error => {
         console.error("Error saving user:", error);
@@ -56,6 +65,7 @@ export class EmailInputComponent {
       }
     );
     console.log("Anonymous");
-    this.router.navigate(['/fases']); 
+    this.router.navigate(['/fases']);
   }
+
 }

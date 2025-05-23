@@ -4,6 +4,32 @@ body {
 
 .container {
   width: 100%;
+  display: flex;
+}
+
+
+.idiomas{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.iconesIdiomas{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconeIdioma{
+  width: 50px;
+  cursor: pointer;
 }
 
 .content {
@@ -14,7 +40,7 @@ body {
   flex-direction: column;
 }
 
-.container div img {
+.capa {
   margin-top: 1rem;
   width: 35%;
 }
@@ -31,6 +57,11 @@ h3 {
   color: #07377a;
   font-size: 1.4rem;
   margin: 0 0 2rem 0;
+}
+
+h6 {
+  color: #07377a;
+  font-size: 1.2rem;
 }
 
 .btn {

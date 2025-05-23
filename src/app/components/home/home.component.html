@@ -9,13 +9,23 @@
 </head>
 
 <body>
+
   <div class="container">
+
+    <div class="idiomas">
+      <h6>{{messages.homeScreen.selectLanguage}}</h6>
+      <div class="iconesIdiomas">
+        <img class="iconeIdioma" src="assets/languages/pt-br.png" alt="iconeBrasil" (click)="trocarIdiomaPortugues()" />
+        <img class="iconeIdioma" src="assets/languages/en.png" alt="iconeEua" (click)="trocarIdiomaIngles()" />
+      </div>
+    </div>
+
     <div class="content">
-      <img src="assets/cover/capa.png" alt="Cover" />
-      <h2>COLORINDO COM NÚMEROS</h2>
-      <h3>Representação de Imagens</h3>
+      <img class="capa" src="assets/cover/capa.png" alt="Cover" />
+      <h2>{{messages.homeScreen.title}}</h2>
+      <h3>{{messages.homeScreen.subtitle}}</h3>
       <button type="button" class="btn btn-primary" routerLink="/email-input">
-        INICIAR
+        {{messages.homeScreen.startButton}}
       </button>
     </div>
   </div>
