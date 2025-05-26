@@ -37,17 +37,23 @@ export class ScreenThirteenLevelOneComponent implements OnInit {
   }
 
   definirMensagemFinal(): void {
-    if (this.estrelasPreenchidas === 5) {
-      this.mensagemFinal = 'Incrível! Você acertou tudo!';
-    } else if (this.estrelasPreenchidas === 4) {
-      this.mensagemFinal = 'Muito bom! Quase perfeito!';
-    } else if (this.estrelasPreenchidas === 3) {
-      this.mensagemFinal = 'Bom trabalho! Continue praticando!';
-    } else if (this.estrelasPreenchidas === 2) {
-      this.mensagemFinal = 'Você está no caminho certo! Vamos melhorar!';
-    } else {
-      this.mensagemFinal = 'Tudo é aprendizagem! Tente novamente!';
-    }
+    switch (this.estrelasPreenchidas) {
+      case 5:
+        this.mensagemFinal = 'Incrível! Você acertou tudo!';
+        break;
+      case 4:
+        this.mensagemFinal = 'Muito bom! Quase perfeito!';
+        break;
+      case 3:
+        this.mensagemFinal = 'Bom trabalho! Continue praticando!';
+        break;
+      case 2:
+        this.mensagemFinal = 'Você está no caminho certo! Vamos melhorar!';
+        break;
+      default:
+        this.mensagemFinal = 'Tudo é aprendizagem! Tente novamente!';
+        break;
+    } 
   }
 
   // Array de estrelas

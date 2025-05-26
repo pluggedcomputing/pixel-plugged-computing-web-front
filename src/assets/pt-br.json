@@ -49,6 +49,62 @@
         "paragraph4": "O Computação Plugada Pixel faz parte de uma família com vários outros recursos educacionais para o ensino de computação. Conheça mais sobre os demais visitando nosso site:"
     },
     "phase1": {
-
+        "title": "FASE 1",
+        "informationTexts": {
+            "text1": "Você sabia que os computadores armazenam desenhos, fotografias, e outras imagens usando apenas números? A seguir, entenderemos melhor.",
+            "text2": "As telas dos computadores são divididas em uma grade de pequenos, quadrados, podendo ser cada um de uma cor específica. Chamamos esses quadrados de elementos de imagem ou pixels.",
+            "text3": "Em uma imagem em preto e branco, cada pixel pode ser preto ou branco, então tudo que o computador precisa armazenar é quais pontos são pretos e quais são brancos.",
+            "text4": "Uma imagem correspondente à letra C, por exemplo, poderia ser representada com números binários (bits). Se o 1 indica um quadrado branco e o 0 indica um quadrado preto, então poderíamos ter uma grade de 5 X 6 pixels como a ilustrada acima.",
+            "text5": "Você já viu um aparelho de fac-símile (fax)? Esse aparelho era muito utilizado antigamente para o envio de documentos em preto e branco.",
+            "text6": "Uma máquina de fax é basicamente um computador simples que efetua uma varredura sobre uma folha e identifica os pontos brancos ou não e armazena essa informação em aproximadamente 1000 x 2000 pixels, que são transmitidos para outra máquina de fax utilizando a rede de telefonia.",
+            "text7": "Quando a outra máquina de fax recebe a mensagem, ela imprime os pixels em uma página.",
+            "text8": "Para economizar no armazenamento e transmissão de dados, é mais interessante ultilizar uma representação dos dados que economize a quantidade de informação transmitida ou armazenada."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "Pinte os pixels acima de preto ou branco clicando em cada um deles e veja o código em bits (sequências de 0s e 1s) correspondente."
+            },
+            "exercice2": {
+                "text": "A sequência de pixels acima pode ser representada por qual código?",
+                "alternatives": [
+                    "1,0,1,0,1",
+                    "1,1,1,0,1",
+                    "1,1,0,0,0",
+                    "0,0,0,1,0"
+                ]
+            },
+            "exercice3": {
+                "text": "Como você acha que eram codificadas as mensagens enviadas através de uma máquina de fax?",
+                "alternatives": [
+                    "Com representação que economize a quantidade de dados enviada",
+                    "Usando pontos pretos como 0 e brancos como 1"
+                ]
+            },
+            "exercice4": {
+                "text": "Considerando o que foi apresentado, responda: O que as máquinas de fax fazem?",
+                "alternatives": [
+                    "Transmitem mensagens de áudio",
+                    "Editam imagens",
+                    "Imprimem pixels",
+                    "Realizam operações matemáticas"
+                ]
+            }
+        }
+    },
+    "phase2": {},
+    "phase3": {},
+    "phase4": {},
+    "congratulationsScreen": {
+        "title": "PARABÉNS!",
+        "motivationalMessages": {
+            "excellent": "Incrível! Você acertou tudo!",
+            "veryGood": "Muito bom! Quase perfeito!",
+            "good": "Bom trabalho! Continue praticando!",
+            "acceptable": "Você está no caminho certo! Vamos melhorar!",
+            "tryAgain": "Tudo é aprendizagem! Tente novamente!"
+        },
+        "remakeButton": "Refazer",
+        "homeButton": "Home",
+        "nextButton": "Continuar"
     }
 }

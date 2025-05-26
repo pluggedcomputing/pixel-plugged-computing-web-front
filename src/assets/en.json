@@ -48,5 +48,60 @@
         "paragraph3": "Pixel Web Plugged Computing presented here seeks to further simplify the application of the proposals without the need to produce additional materials. It shows some topics sometimes considered complex in a simple way for different audiences.",
         "paragraph4": "Pixel Web Plugged Computing is part of a family with several other educational resources for teaching computing. Learn more about the others by visiting our website:"
     },
-    "phase1": {}
+    "phase1": {
+        "title": "PHASE 1",
+        "informationTexts": {
+            "text1": "Did you know that computers store drawings, photographs, and other images using only numbers? We'll learn more about this later.",
+            "text2": "Computer screens are divided into a grid of small, squares, each of which can be a specific color. We call these squares picture elements or pixels.",
+            "text3": "In a black and white image, each pixel can be either black or white, so all the computer needs to store is which dots are black and which are white.",
+            "text4": "An image corresponding to the letter C, for example, could be represented with binary numbers (bits). If 1 indicates a white square and 0 indicates a black square, then we could have a 5 X 6 pixel grid like the one illustrated above.",
+            "text5": "Have you ever seen a facsimile (fax) machine? This device was widely used in the past to sending documents in black and white.",
+            "text6": "A fax machine is basically a simple computer that scans a sheet of paper and identifies whether or not it is white and stores this information in approximately 1000 x 2000 pixels, which are transmitted to another fax machine using the telephone network.",
+            "text7": "When the other fax machine receives the message, it prints the pixels on a page.",
+            "text8": "To save on data storage and transmission, it is more interesting to use a data representation that saves the amount of information transmitted or stored."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "Color the pixels above black or white by clicking on each one of them and see the corresponding bit code (sequences of 0s and 1s)."
+            },
+            "exercice2": {
+                "text": "Which code can represent the sequence of pixels above?",
+                "alternatives": [
+                    "1,0,1,0,1",
+                    "1,1,1,0,1",
+                    "1,1,0,0,0",
+                    "0,0,0,1,0"
+                ]
+            },
+            "exercice3": {
+                "text": "How do you think messages sent through a fax machine were encoded?",
+                "alternatives": [
+                    "With a representation that saves the amount of data sent",
+                    "Using black dots as 0 and white dots as 1"
+                ]
+            },
+            "exercice4": {
+                "text": "Considering what was presented, answer: What do fax machines do?",
+                "alternatives": [
+                    "Transmit audio messages",
+                    "Edit images",
+                    "Print pixels",
+                    "Perform mathematical operations"
+                ]
+            }
+        }
+    },
+    "congratulationsScreen": {
+        "title": "CONGRATULATIONS!",
+        "motivationalMessages": {
+            "excellent": "Awesome! You got everything right!",
+            "veryGood": "Very good! Almost perfect!",
+            "good": "Good job! Keep practicing!",
+            "acceptable": "You're on the right track! Let's improve!",
+            "tryAgain": "Everything is a learning experience! Try again!"
+        },
+        "remakeButton": "Remake",
+        "homeButton": "Home",
+        "nextButton": "Continue"
+    }
 }
