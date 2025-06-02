@@ -72,7 +72,8 @@
                 "alternatives": [
                     "With a representation that saves the amount of data sent",
                     "Using black dots as 0 and white dots as 1"
-                ]
+                ],
+                "correctAlternative": "With a representation that saves the amount of data sent"
             },
             "exercice4": {
                 "text": "Considering what was presented, answer: What do fax machines do?",
@@ -81,7 +82,8 @@
                     "Edit images",
                     "Print pixels",
                     "Perform mathematical operations"
-                ]
+                ],
+                "correctAlternative": "Print pixels"
             }
         }
     },

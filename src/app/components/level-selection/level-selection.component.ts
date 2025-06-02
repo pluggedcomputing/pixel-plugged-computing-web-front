@@ -8,14 +8,8 @@ import { MessagesService } from 'src/app/service/messages/messages.service';
 })
 export class LevelSelectionComponent {
 
-  messages: any = {};
-
   constructor(private messagesService: MessagesService) {
-    this.messagesService.getMensagens().subscribe(data => {
-      this.messages = data;
-    });
 
-    this.messagesService.carregarMensagens();
   }
 
 }

@@ -72,7 +72,8 @@
                 "alternatives": [
                     "Com representação que economize a quantidade de dados enviada",
                     "Usando pontos pretos como 0 e brancos como 1"
-                ]
+                ],
+                "correctAlternative": "Com representação que economize a quantidade de dados enviada"
             },
             "exercice4": {
                 "text": "Considerando o que foi apresentado, responda: O que as máquinas de fax fazem?",
@@ -81,7 +82,8 @@
                     "Editam imagens",
                     "Imprimem pixels",
                     "Realizam operações matemáticas"
-                ]
+                ],
+                "correctAlternative": "Imprimem pixels"
             }
         }
     },
@@ -144,18 +146,14 @@
         "exercises": {
             "exercice1": {
                 "text": "Que tal desenhar você mesmo e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir.",
-                "alternatives": [
-                    "Concluir"
-                ]
+                "buttonFinish": "Concluir"
             },
             "exercice2": {
                 "text": "Selecione a sequência que representa a primeira linha de sua imagem."
             },
             "exercice3": {
                 "text": "Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir.",
-                "alternatives": [
-                    "Concluir"
-                ]
+                "buttonFinish": "Concluir"
             },
             "exercice4": {
                 "text": "Selecione a sequência que representa a primeira linha de sua imagem. Note que o código tem o formato: quantidade-código da cor."
