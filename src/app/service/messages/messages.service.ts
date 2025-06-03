@@ -12,7 +12,7 @@ export class MessagesService {
   constructor(private http: HttpClient) {}
 
   carregarMensagens() {
-    this.http.get(`assets/${this.language}.json`).subscribe(data => {
+    this.http.get(`assets/languages/${this.language}.json`).subscribe(data => {
       this.mensagens$.next(data); // Notifica todos os subscribers
     });
   }
