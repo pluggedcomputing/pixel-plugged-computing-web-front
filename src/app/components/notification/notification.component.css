@@ -22,18 +22,13 @@
 }
 
 /* Resposta certa */
-.notification.success {
+.notification.acerto {
   background-color: #28a745;
 }
 
 /* Resposta errada */
-.notification.error {
+.notification.erro {
   background-color: #dc3545;
-}
-
-/* Lançar informação */
-.notification.info {
-  background-color: #17a2b8;
 }
 
 .close-btn {

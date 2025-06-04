@@ -12,4 +12,12 @@ export class LevelSelectionComponent {
 
   }
 
+    mudarIdiomaIngles() {
+    this.messagesService.changeEn();
+  }
+
+  mudarIdiomaPortugues() {
+    this.messagesService.changePtbr();
+  }
+
 }

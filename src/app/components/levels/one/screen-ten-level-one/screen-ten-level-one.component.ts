@@ -6,6 +6,7 @@ import { Question } from 'src/app/models/question.model';
 import { QuestionsService } from 'src/app/service/question/questions.service';
 import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
 import { MessagesService } from 'src/app/service/messages/messages.service';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -18,7 +19,8 @@ export class ScreenTenLevelOneComponent implements OnInit {
   @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
   // alternativas
-  answers: string[] = ["Com representação que economize a quantidade de dados enviada", "Usando pontos pretos como 0 e brancos como 1"];
+  answers: string[] = [];
+  correctAlternative: string = "";
 
   buttonClasses: { [key: number]: string } = {
     1: "",
@@ -30,12 +32,12 @@ export class ScreenTenLevelOneComponent implements OnInit {
   primeiraTentativa: boolean = true;
 
   /// Variáveis para o DB
-  idUser: string = ""
-  idApp: string = "WEB-PIXEL 1.0"
-  phaseActivity: string = "1"
+  idUser: string = "";
+  idApp: string = "WEB-PIXEL 1.0";
+  phaseActivity: string = "1";
   numberActivity: string = "2";
-  typeOfQuestion: string = "MULTIPLA ESCOLHA"
-  expectedResponse: string = "Como representação que economize a quantidade de dados enviada"
+  typeOfQuestion: string = "MULTIPLA ESCOLHA";
+  expectedResponse: string = this.correctAlternative;
   dateResponse: Date;
   ///
 
@@ -44,7 +46,8 @@ export class ScreenTenLevelOneComponent implements OnInit {
     public toastService: ToastService,
     private questionsService: QuestionsService,
     private sessionStorageService: SessionStorageService,
-    private messagesService: MessagesService
+    private messagesService: MessagesService,
+    private translate: TranslateService
 
   ) {
     this.dateResponse = new Date();
@@ -53,11 +56,17 @@ export class ScreenTenLevelOneComponent implements OnInit {
   ngOnInit(): void {
     this.answers.sort(() => Math.random() - 0.5);
     this.idUser = this.sessionStorageService.getItem('userID') || 'Default Data';
+    this.translate.get('level1.exercises.exercice3.alternatives').subscribe((text) => {
+      this.answers = text;
+    });
+    this.translate.get('level1.exercises.exercice3.correctAlternative').subscribe((text) => {
+      this.correctAlternative = text;
+    });
   }
 
   // validar resposta
   changeAnswers(value: string, btn: number): void {
-    if (value === "Com representação que economize a quantidade de dados enviada") {
+    if (value === this.correctAlternative) {  
       if (this.primeiraTentativa) {
         this.salvarResultado('acerto'); // Salva o resultado como acerto
       } else {
@@ -91,12 +100,12 @@ export class ScreenTenLevelOneComponent implements OnInit {
 
   // resposta certa
   onSuccess(): void {
-    this.notification.show('Você acertou!', 'success');
+    this.notification.respostaCerta();
   }
 
   // resposta errada
   onError(): void {
-    this.notification.show('Tente outra vez.', 'error');
+    this.notification.respostaErrada();
   }
 
   // botões alternativas

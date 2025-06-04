@@ -5,7 +5,8 @@ import { ToastService } from '../../toast.service';
 import { Question } from 'src/app/models/question.model';
 import { QuestionsService } from 'src/app/service/question/questions.service';
 import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
-
+import { MessagesService } from 'src/app/service/messages/messages.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-screen-twelve-level-one',
@@ -17,7 +18,9 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
   @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
   // alternativas
-  answers: string[] = ["Realizam operações matemáticas", "Imprimem pixels", "Editam imagens", "Transmitem mensagens de áudio"];
+  answers: string[] = [];
+
+  correctAlternative: string = "";
 
   buttonClasses: { [key: number]: string } = {
     1: "",
@@ -29,12 +32,12 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
   primeiraTentativa: boolean = true;
 
   /// Variáveis para o DB
-  idUser: string = ""
-  idApp: string = "WEB-PIXEL 1.0"
-  phaseActivity: string = "1"
+  idUser: string = "";
+  idApp: string = "WEB-PIXEL 1.0";
+  phaseActivity: string = "1";
   numberActivity: string = "3";
-  typeOfQuestion: string = "MULTIPLA ESCOLHA"
-  expectedResponse: string = "Imprimem pixels"
+  typeOfQuestion: string = "MULTIPLA ESCOLHA";
+  expectedResponse: string = this.correctAlternative;
   dateResponse: Date;
   ///
 
@@ -42,7 +45,9 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
     private router: Router,
     public toastService: ToastService,
     private questionsService: QuestionsService,
-    private sessionStorageService: SessionStorageService
+    private sessionStorageService: SessionStorageService,
+    private messagesService: MessagesService,
+    private translate: TranslateService
 
   ) {
     this.dateResponse = new Date();
@@ -51,11 +56,17 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
   ngOnInit(): void {
     this.answers.sort(() => Math.random() - 0.5);
     this.idUser = this.sessionStorageService.getItem('userID') || 'Default Data';
+    this.translate.get('level1.exercises.exercice4.alternatives').subscribe((text) => {
+      this.answers = text;
+    });
+    this.translate.get('level1.exercises.exercice4.correctAlternative').subscribe((text) => {
+      this.correctAlternative = text;
+    });
   }
 
   // validar resposta
   changeAnswers(value: string, btn: number): void {
-    if (value === "Imprimem pixels") {
+    if (value === this.correctAlternative) {
       if (this.primeiraTentativa) {
         this.salvarResultado('acerto'); // Salva o resultado como acerto
       } else {
@@ -63,7 +74,7 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
       }
       this.processQuestionResponse(value, true);
       this.buttonClass(btn, true);
-      this.onSuccess();
+      this.notification.respostaCerta();
       setTimeout(() => {
         this.router.navigate(['fase-1-13']);
       }, 1000);
@@ -71,7 +82,7 @@ export class ScreenTwelveLevelOneComponent implements OnInit {
       this.processQuestionResponse(value, false);
       this.primeiraTentativa = false; // Marca que já houve uma tentativa
       this.buttonClass(btn, false);
-      this.onError();
+      this.notification.respostaErrada();
     }
   }
 

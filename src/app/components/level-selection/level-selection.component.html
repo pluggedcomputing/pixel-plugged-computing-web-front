@@ -13,6 +13,15 @@
 
     <div class="container-central">
 
+      <div class="idiomas">
+        <h6>{{ 'homeScreen.selectLanguage' | translate}}</h6>
+        <div class="iconesIdiomas">
+          <img class="iconeIdioma" src="assets/languages/flags/pt-br.png" alt="iconeBrasil"
+            (click)="mudarIdiomaPortugues()" />
+          <img class="iconeIdioma" src="assets/languages/flags/en.png" alt="iconeEua" (click)="mudarIdiomaIngles()" />
+        </div>
+      </div>
+
       <h2><strong>{{ 'levelSelection.title' | translate}}</strong></h2>
 
       <div class="container-fases">

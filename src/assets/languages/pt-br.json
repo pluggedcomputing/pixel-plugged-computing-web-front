@@ -162,15 +162,19 @@
     },
     "congratulationsScreen": {
         "title": "PARABÉNS!",
-        "motivationalMessages": {
-            "excellent": "Incrível! Você acertou tudo!",
-            "veryGood": "Muito bom! Quase perfeito!",
-            "good": "Bom trabalho! Continue praticando!",
-            "acceptable": "Você está no caminho certo! Vamos melhorar!",
-            "tryAgain": "Tudo é aprendizagem! Tente novamente!"
-        },
+        "motivationalMessages":[
+            "Incrível! Você acertou tudo!",
+            "Muito bom! Quase perfeito!",
+            "Bom trabalho! Continue praticando!",
+            "Você está no caminho certo! Vamos melhorar!",
+            "Tudo é aprendizagem! Tente novamente!"
+        ],
         "remakeButton": "Refazer",
         "homeButton": "Home",
         "nextButton": "Continuar"
-    }
+    },
+    "notifications": [
+        "Você acertou!",
+        "Tente outra vez."
+    ]
 }
