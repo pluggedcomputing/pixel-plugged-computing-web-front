@@ -111,12 +111,12 @@ export class ScreenFourLevelTwoComponent implements OnInit {
 
   // resposta certa
   onSuccess(): void {
-    this.notification.show('Você acertou!', 'success');
+    this.notification.respostaCerta();
   }
 
   // resposta errada
   onError(): void {
-    this.notification.show('Tente outra vez.', 'error');
+    this.notification.respostaErrada();
   }
 
   // botões alternativas

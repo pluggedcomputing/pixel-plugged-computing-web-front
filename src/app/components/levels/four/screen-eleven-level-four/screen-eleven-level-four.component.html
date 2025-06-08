@@ -15,11 +15,11 @@
 
     <div class="content">
 
-      <h3><strong>FASE 4</strong></h3>
+      <h3><strong>{{ 'level4.title' | translate}}</strong></h3>
 
       <img class="imagem-parabens" src="assets/win/win-level.png">
 
-      <h3><strong>PARABÉNS</strong></h3>
+      <h3><strong>{{ 'congratulationsScreen.title' | translate}}</strong></h3>
 
       <div class="stars-container">
 
@@ -49,14 +49,14 @@
         <div class="icone-botao">
           <img class="icone" src="assets/cover/reiniciar.png">
         </div>
-        <p class="text-botao"> Refazer </p>
+        <p class="text-botao"> {{'congratulationsScreen.remakeButton' | translate}} </p>
       </div>
 
       <div class="botao-rodape" routerLink="/fases">
         <div class="icone-botao">
           <img class="icone" src="assets/cover/home.png">
         </div>
-        <p class="text-botao"> Home </p>
+        <p class="text-botao"> {{'congratulationsScreen.homeButton' | translate}} </p>
       </div>
       
     </div>
