@@ -111,7 +111,7 @@
             "text1": "You learned that we can represent an image through black and white dots, represented by 0 and 1 respectively.",
             "text2": "However, we can use a compressed representation, called 'run-length coding', using less space and less transmission time.",
             "text3": "To store an image on the computer while saving space, simply store how many dots are black and how many dots are white. For example, the first line of the image above can be represented by 1,1,3,1,1 indicating the sequence of 1 white pixel, 1 black, 3 whites, 1 black and 1 white.",
-            "text4": "Note that the first code represents the number of white pixels and the second the number of black pixels, and so on. When the first code is 0 (zero), the first pixel will be black, since 0 (zero) represents the absence of white pixels.",
+            "text4": "See that the first code represents the number of white pixels and the second the number of black pixels, and so on. When the first code is 0 (zero), the first pixel will be black, since 0 (zero) represents the absence of white pixels.",
             "text5": "See above how to represent the letter T. The first line consists of 0 white pixels, followed by 5 black pixels and the following lines of 2 white pixels, 1 black and 2 white pixels.",
             "text6": "Below, you can see the letter W represented with run-length coding. The first line is composed of 1 white pixel, 1 black, 3 whites, 1 black and 1 white. The second line is composed of 2 whites, 1 black, 2 whites, 1 black and 1 white. The third line is composed of 3 whites, 1 black, 2 whites and 1 black."
         },
