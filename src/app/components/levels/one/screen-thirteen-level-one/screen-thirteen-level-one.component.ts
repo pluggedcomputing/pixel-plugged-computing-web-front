@@ -1,4 +1,7 @@
+import { MessagesService } from 'src/app/service/messages/messages.service';
+import { TranslateService } from '@ngx-translate/core';
 import { Component, OnInit } from '@angular/core';
+import { ToastService } from '../../toast.service';
 
 @Component({
   selector: 'app-screen-thirteen-level-one',
@@ -12,15 +15,24 @@ export class ScreenThirteenLevelOneComponent implements OnInit {
   erros: number = 0;
   estrelasPreenchidas: number = 0;
   estrelasVazias: number = 0;
-  mensagemFinal: string = '';
 
-  constructor() { }
+  mensagemFinal: string = "";
+
+  mensagens: string[] = [];
+
+  constructor(
+    public toastService: ToastService,
+    private messagesService: MessagesService,
+    private translate: TranslateService) { }
 
   ngOnInit(): void {
     this.resultados = JSON.parse(localStorage.getItem('resultados') || '[]');
     this.acertos = this.resultados.filter(resultado => resultado === 'acerto').length;
     this.erros = this.resultados.filter(resultado => resultado === 'erro').length;
     this.calcularEstrelas();
+    this.translate.get('congratulationsScreen.motivationalMessages').subscribe((text) => {
+      this.mensagens = text;
+    });
     this.definirMensagemFinal();
   }
 
@@ -37,23 +49,19 @@ export class ScreenThirteenLevelOneComponent implements OnInit {
   }
 
   definirMensagemFinal(): void {
+
     switch (this.estrelasPreenchidas) {
-      case 5:
-        this.mensagemFinal = 'Incrível! Você acertou tudo!';
+      case 5: this.mensagemFinal = this.mensagens[0];
         break;
-      case 4:
-        this.mensagemFinal = 'Muito bom! Quase perfeito!';
+      case 4: this.mensagemFinal = this.mensagens[1];
         break;
-      case 3:
-        this.mensagemFinal = 'Bom trabalho! Continue praticando!';
+      case 3: this.mensagemFinal = this.mensagens[2];
         break;
-      case 2:
-        this.mensagemFinal = 'Você está no caminho certo! Vamos melhorar!';
+      case 2: this.mensagemFinal = this.mensagens[3];
         break;
-      default:
-        this.mensagemFinal = 'Tudo é aprendizagem! Tente novamente!';
-        break;
-    } 
+      default: this.mensagemFinal = this.mensagens[4];
+    }
+
   }
 
   // Array de estrelas
@@ -64,5 +72,6 @@ export class ScreenThirteenLevelOneComponent implements OnInit {
   ngOnDestroy(): void {
     localStorage.removeItem('resultados'); // Remove os resultados do localStorage
   }
+
 
 }

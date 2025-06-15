@@ -16,6 +16,11 @@ h5 {
   color: #073d7c;
 }
 
+h6 {
+  color: #07377a;
+  font-size: 1.2rem;
+}
+
 span {
   font-size: 100%;
   color: #073d7c;
@@ -33,6 +38,30 @@ span {
   align-items: center;
   flex-direction: column;
   gap: 5px;
+}
+
+.idiomas{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.iconesIdiomas{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconeIdioma{
+  width: 50px;
+  cursor: pointer;
 }
 
 /* Fases */

@@ -1,8 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { MessagesService } from 'src/app/service/messages/messages.service';
+import { TranslateService } from '@ngx-translate/core';
 
 interface Notification {
   message: string;
-  type: 'success' | 'error' | 'info';
+  type: string;
   icon: string;
 }
 
@@ -11,15 +13,30 @@ interface Notification {
   templateUrl: './notification.component.html',
   styleUrls: ['./notification.component.css'],
 })
-export class NotificationComponent {
+
+export class NotificationComponent implements OnInit {
+
   notifications: Notification[] = [];
 
+  mensages: string[] = [];
+
+  constructor(
+    private messagesService: MessagesService,
+    private translate: TranslateService
+  ) { }
+
+    ngOnInit(): void {
+      this.translate.get('notifications').subscribe((text) => {
+      this.mensages = text;
+    });
+    }
+
   // Lança a notificação dependendo do tipo e define a duração
-  show(message: string, type: 'success' | 'error' | 'info', duration: number = 3000): void {
+  show(message: string, type: string, duration: number = 3000): void {
     let icon: string;
 
     // Define o ícone baseado no tipo de notificação
-    if (type === 'success') {
+    if (type === "acerto") {
       icon = '✔';
     } else {
       icon = '✖'
@@ -35,4 +52,13 @@ export class NotificationComponent {
   remove(notification: Notification): void {
     this.notifications = this.notifications.filter(n => n !== notification);
   }
+
+  respostaCerta(): void {
+    this.show(this.mensages[0], 'acerto');
+  }
+
+  respostaErrada(): void {
+    this.show(this.mensages[1], 'erro');
+  }
+
 }

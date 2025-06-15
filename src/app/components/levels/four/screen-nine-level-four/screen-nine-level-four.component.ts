@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { NotificationComponent } from '../../../notification/notification.component';
 import { ToastService } from '../../toast.service';
 import { MatrizService } from 'src/app/service/matriz/matriz.service';
+import { MessagesService } from 'src/app/service/messages/messages.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-screen-nine-level-four',
@@ -14,7 +16,7 @@ export class ScreenNineLevelFourComponent implements OnInit {
   @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
   // alternativas
-  answers: string[] = ["Concluir"];
+  answers: string[] = [];
 
   // Matriz de cores (inicialmente todos brancos)
   grid: string[][] = Array.from({ length: 5 }, () => Array(5).fill('white'));
@@ -36,12 +38,17 @@ export class ScreenNineLevelFourComponent implements OnInit {
 
   constructor(private router: Router,
     public toastService: ToastService,
-    private matrizService: MatrizService
+    private matrizService: MatrizService,
+    private messagesService: MessagesService,
+    private translate: TranslateService
   ) {
   }
 
   ngOnInit(): void {
     this.answers.sort(() => Math.random() - 0.5);
+    this.translate.get('level4.exercises.exercice3.alternatives').subscribe((text) => {
+      this.answers = text;
+    });
   }
 
   // Selecionar cor da paleta
@@ -56,7 +63,7 @@ export class ScreenNineLevelFourComponent implements OnInit {
 
   // validar resposta
   changeAnswers(value: string, btn: number): void {
-    if (value === "Concluir") {
+    if (value === "Concluir" || value === "Finish") {
       this.matrizService.salvarMatrizCorolida(this.grid);
       this.buttonClass(btn, true);
       setTimeout(() => {

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessagesService } from 'src/app/service/messages/messages.service';
 
 @Component({
   selector: 'app-screen-eight-level-one',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ScreenEightLevelOneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private messagesService: MessagesService) { }
 
   ngOnInit(): void {
   }

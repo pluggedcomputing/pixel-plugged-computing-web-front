@@ -5,6 +5,7 @@ import { ToastService } from '../../toast.service';
 import { Question } from 'src/app/models/question.model';
 import { QuestionsService } from 'src/app/service/question/questions.service';
 import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
+import { MessagesService } from 'src/app/service/messages/messages.service';
 
 @Component({
   selector: 'app-screen-three-level-two',
@@ -56,7 +57,8 @@ export class ScreenThreeLevelTwoComponent implements OnInit {
   constructor(private router: Router,
     public toastService: ToastService,
     private questionsService: QuestionsService,
-    private sessionStorageService: SessionStorageService
+    private sessionStorageService: SessionStorageService,
+    private messagesService: MessagesService
 
   ) {
     this.dateResponse = new Date();
@@ -109,12 +111,12 @@ export class ScreenThreeLevelTwoComponent implements OnInit {
 
   // resposta certa
   onSuccess(): void {
-    this.notification.show('Você acertou!', 'success');
+    this.notification.respostaCerta();
   }
 
   // resposta errada
   onError(): void {
-    this.notification.show('Tente outra vez.', 'error');
+    this.notification.respostaErrada();
   }
 
   // botões alternativas

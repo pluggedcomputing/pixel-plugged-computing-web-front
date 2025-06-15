@@ -1,30 +1,28 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { BehaviorSubject } from 'rxjs';
+import { TranslateService } from '@ngx-translate/core';
 
 @Injectable({
   providedIn: 'root'
 })
 export class MessagesService {
-  private mensagens$ = new BehaviorSubject<any>({}); // Inicializa com um objeto vazio
-  private language: string = "pt-br";
 
-  constructor(private http: HttpClient) {}
-
-  carregarMensagens() {
-    this.http.get(`assets/languages/${this.language}.json`).subscribe(data => {
-      this.mensagens$.next(data); // Notifica todos os subscribers
-    });
+  constructor(private translate: TranslateService) {
+    const languageSave = localStorage.getItem('idioma') || 'pt-br';
+    translate.setDefaultLang('pt-br');
+    translate.use(languageSave);
   }
 
-  trocarIdioma(newLanguage: string): void {
-    if (newLanguage !== this.language) {
-      this.language = newLanguage;
-      this.carregarMensagens();
-    }
+  setLanguage(language: string) {
+    this.translate.use(language);
+    localStorage.setItem('idioma', language);
   }
 
-  getMensagens() {
-    return this.mensagens$.asObservable(); // Retorna um Observable para ser subscrito
+  changePtbr() {
+    this.setLanguage('pt-br');
   }
+   
+  changeEn() {
+    this.setLanguage('en');
+  }
+
 }

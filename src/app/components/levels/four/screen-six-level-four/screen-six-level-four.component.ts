@@ -5,8 +5,9 @@ import { ToastService } from '../../toast.service';
 import { Question } from 'src/app/models/question.model';
 import { QuestionsService } from 'src/app/service/question/questions.service';
 import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
-import { MatrizService } from 'src/app/service/matriz/matriz.service'; 
-
+import { MatrizService } from 'src/app/service/matriz/matriz.service';
+import { MessagesService } from 'src/app/service/messages/messages.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-screen-six-level-four',
@@ -20,10 +21,10 @@ export class ScreenSixLevelFourComponent implements OnInit {
   // alternativas
   answers: string[] = this.answersVerify();
 
-  answersVerify(){
+  answersVerify() {
     const answersList: string[] = ["0,1,1,2,1", "1,1,3", "4,1", this.matrizService.obterLinhaComoString(1)];
-    for(let i = 0; i < 3; i++){
-      if(answersList[i] === this.matrizService.obterLinhaComoString(1)){
+    for (let i = 0; i < 3; i++) {
+      if (answersList[i] === this.matrizService.obterLinhaComoString(1)) {
         answersList[3] = "1,2,2";
       }
     }
@@ -61,11 +62,13 @@ export class ScreenSixLevelFourComponent implements OnInit {
     public toastService: ToastService,
     private questionsService: QuestionsService,
     private sessionStorageService: SessionStorageService,
-    private matrizService: MatrizService
+    private matrizService: MatrizService,
+    private messagesService: MessagesService,
+    private translate: TranslateService
   ) {
     this.dateResponse = new Date();
     this.matrizPintada = this.matrizService.obterMatrizPintada();
-     }
+  }
 
   ngOnInit(): void {
     this.idUser = this.sessionStorageService.getItem('userID') || 'Default Data';
@@ -108,12 +111,12 @@ export class ScreenSixLevelFourComponent implements OnInit {
 
   // resposta certa
   onSuccess(): void {
-    this.notification.show('Você acertou!', 'success');
+    this.notification.respostaCerta();
   }
 
   // resposta errada
   onError(): void {
-    this.notification.show('Tente outra vez.', 'error');
+    this.notification.respostaErrada();
   }
 
   // botões alternativas

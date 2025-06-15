@@ -5,8 +5,8 @@ import { ToastService } from '../../toast.service';
 import { Question } from 'src/app/models/question.model';
 import { QuestionsService } from 'src/app/service/question/questions.service';
 import { SessionStorageService } from 'src/app/service/session-storage/session-storage-service.service';
-import { MatrizService } from 'src/app/service/matriz/matriz.service'; 
-
+import { MatrizService } from 'src/app/service/matriz/matriz.service';
+import { MessagesService } from 'src/app/service/messages/messages.service';
 
 @Component({
   selector: 'app-screen-ten-level-four',
@@ -21,10 +21,10 @@ export class ScreenTenLevelFourComponent implements OnInit {
 
   answers: string[] = this.answersVerify();
 
-  answersVerify(){
+  answersVerify() {
     const answersList: string[] = ["1-0,2-1,2-0", "1-0,3-1,1-0", "4-0,1-1", this.matrizService.obterLinhaComoStringColorida(1)];
-    for(let i = 0; i < 3; i++){
-      if(answersList[i] === this.matrizService.obterLinhaComoStringColorida(1)){
+    for (let i = 0; i < 3; i++) {
+      if (answersList[i] === this.matrizService.obterLinhaComoStringColorida(1)) {
         answersList[3] = "3-2,1-4,1-0";
       }
     }
@@ -39,11 +39,11 @@ export class ScreenTenLevelFourComponent implements OnInit {
   // cordenadas das linhas
   rowWords: string[] = ['', this.matrizService.obterLinhaComoStringColorida(2), this.matrizService.obterLinhaComoStringColorida(3), this.matrizService.obterLinhaComoStringColorida(4), this.matrizService.obterLinhaComoStringColorida(5)];
 
-// Paleta de cores disponíveis
-paletteColors: string[] = ['black', 'white', 'red', 'green', 'blue'];
+  // Paleta de cores disponíveis
+  paletteColors: string[] = ['black', 'white', 'red', 'green', 'blue'];
 
-// Cor selecionada (inicialmente preta)
-selectedColor: string = 'black';
+  // Cor selecionada (inicialmente preta)
+  selectedColor: string = 'black';
 
   buttonClasses: { [key: number]: string } = {
     1: "",
@@ -68,11 +68,12 @@ selectedColor: string = 'black';
     public toastService: ToastService,
     private questionsService: QuestionsService,
     private sessionStorageService: SessionStorageService,
-    private matrizService: MatrizService
+    private matrizService: MatrizService,
+    private messagesService: MessagesService,
   ) {
     this.dateResponse = new Date();
     this.matrizPintada = this.matrizService.obterMatrizColorida();
-     }
+  }
 
   ngOnInit(): void {
     this.idUser = this.sessionStorageService.getItem('userID') || 'Default Data';
@@ -125,12 +126,12 @@ selectedColor: string = 'black';
 
   // resposta certa
   onSuccess(): void {
-    this.notification.show('Você acertou!', 'success');
+    this.notification.respostaCerta();
   }
 
   // resposta errada
   onError(): void {
-    this.notification.show('Tente outra vez.', 'error');
+    this.notification.respostaErrada();
   }
 
   // botões alternativas

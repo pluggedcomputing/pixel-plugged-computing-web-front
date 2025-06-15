@@ -3,6 +3,8 @@ import { Router } from '@angular/router';
 import { NotificationComponent } from '../../../notification/notification.component';
 import { ToastService } from '../../toast.service';
 import { MatrizService } from 'src/app/service/matriz/matriz.service';
+import { MessagesService } from 'src/app/service/messages/messages.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-screen-five-level-four',
@@ -14,7 +16,7 @@ export class ScreenFiveLevelFourComponent implements OnInit {
   @ViewChild(NotificationComponent) notification!: NotificationComponent;
 
   // alternativas
-  answers: string[] = ["Concluir"];
+  answers: string[] = [];
 
   grid: boolean[][];
 
@@ -42,13 +44,18 @@ export class ScreenFiveLevelFourComponent implements OnInit {
 
   constructor(private router: Router,
     public toastService: ToastService,
-    private matrizService: MatrizService
+    private matrizService: MatrizService,
+    private messagesService: MessagesService,
+    private translate: TranslateService
   ) {
     this.grid = this.initialCoordinates.map((row) => row.map((value) => value === 0));
   }
 
   ngOnInit(): void {
     this.answers.sort(() => Math.random() - 0.5);
+    this.translate.get('level4.exercises.exercice1.alternatives').subscribe((text) => {
+      this.answers = text;
+    });
   }
 
   // mudar cor quadrado
@@ -58,7 +65,7 @@ export class ScreenFiveLevelFourComponent implements OnInit {
 
   // validar resposta
   changeAnswers(value: string, btn: number): void {
-    if (value === "Concluir") {
+    if (value === "Concluir" || value === "Finish") {
       this.matrizService.salvarMatrizPintada(this.grid);
       this.buttonClass(btn, true);
       setTimeout(() => {

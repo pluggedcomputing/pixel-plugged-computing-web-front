@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessagesService } from 'src/app/service/messages/messages.service';
 
 @Component({
   selector: 'app-screen-five-level-one',
@@ -10,7 +11,7 @@ export class ScreenFiveLevelOneComponent implements OnInit {
   rectangleStatus: boolean[] = [false, false, false, false, false];
   numbers: number[] = [1, 1, 1, 1, 1];
 
-  constructor() { }
+  constructor(private messagesService: MessagesService) { }
 
   ngOnInit(): void {
   }

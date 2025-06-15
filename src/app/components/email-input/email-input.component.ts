@@ -15,17 +15,12 @@ export class EmailInputComponent {
   userID: string = "";
   submitted: boolean = false;
 
-  messages: any = {};
-
   constructor(
     private userInputService: UserInputService,
     private router: Router,
     private sessionStorageService: SessionStorageService,
     private messagesService: MessagesService
   ) {
-    this.messagesService.getMensagens().subscribe(data => {
-      this.messages = data;
-    });
   }
 
   submitUserID() {
