@@ -1,4 +1,7 @@
 {
+    "application": {
+        "name": "Pixel Web Plugged Computing"
+    },
     "homeScreen": {
         "title": "COLORING WITH NUMBERS",
         "subtitle": "Image Representation",

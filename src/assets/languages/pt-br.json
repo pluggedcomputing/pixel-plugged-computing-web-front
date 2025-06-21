@@ -1,4 +1,7 @@
 {
+    "application": {
+        "name": "Computação Plugada Pixel Web"
+    },
     "homeScreen": {
         "title": "COLORINDO COM NÚMEROS",
         "subtitle": "Representação de Imagens",
@@ -162,7 +165,7 @@
     },
     "congratulationsScreen": {
         "title": "PARABÉNS!",
-        "motivationalMessages":[
+        "motivationalMessages": [
             "Incrível! Você acertou tudo!",
             "Muito bom! Quase perfeito!",
             "Bom trabalho! Continue praticando!",
