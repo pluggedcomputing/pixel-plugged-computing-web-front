@@ -9,15 +9,14 @@ import { MessagesService } from 'src/app/service/messages/messages.service';
 export class LevelSelectionComponent {
 
   constructor(private messagesService: MessagesService) {
-
   }
 
-    mudarIdiomaIngles() {
-    this.messagesService.changeEn();
+  changeLanguageToEnglish() {
+    this.messagesService.setLanguage('en');
   }
 
-  mudarIdiomaPortugues() {
-    this.messagesService.changePtbr();
+  changeLanguageToPortuguese() {
+    this.messagesService.setLanguage('pt-br');
   }
 
 }

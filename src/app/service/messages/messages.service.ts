@@ -17,12 +17,4 @@ export class MessagesService {
     localStorage.setItem('idioma', language);
   }
 
-  changePtbr() {
-    this.setLanguage('pt-br');
-  }
-   
-  changeEn() {
-    this.setLanguage('en');
-  }
-
 }
