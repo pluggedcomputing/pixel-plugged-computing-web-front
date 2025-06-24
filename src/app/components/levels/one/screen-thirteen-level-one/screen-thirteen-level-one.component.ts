@@ -73,5 +73,4 @@ export class ScreenThirteenLevelOneComponent implements OnInit {
     localStorage.removeItem('resultados'); // Remove os resultados do localStorage
   }
 
-
 }

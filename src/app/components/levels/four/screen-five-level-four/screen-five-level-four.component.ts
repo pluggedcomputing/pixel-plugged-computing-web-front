@@ -52,7 +52,6 @@ export class ScreenFiveLevelFourComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.answers.sort(() => Math.random() - 0.5);
     this.translate.get('level4.exercises.exercice1.alternatives').subscribe((text) => {
       this.answers = text;
     });
