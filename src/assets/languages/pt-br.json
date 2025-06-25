@@ -149,14 +149,18 @@
         "exercises": {
             "exercice1": {
                 "text": "Que tal desenhar você mesmo e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir.",
-                "buttonFinish": "Concluir"
+                "alternatives": [
+                    "Concluir"
+                ]
             },
             "exercice2": {
                 "text": "Selecione a sequência que representa a primeira linha de sua imagem."
             },
             "exercice3": {
                 "text": "Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir.",
-                "buttonFinish": "Concluir"
+                "alternatives": [
+                    "Concluir"
+                ]
             },
             "exercice4": {
                 "text": "Selecione a sequência que representa a primeira linha de sua imagem. Note que o código tem o formato: quantidade-código da cor."
