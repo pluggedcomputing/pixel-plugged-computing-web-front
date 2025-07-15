@@ -40,30 +40,6 @@ span {
   gap: 5px;
 }
 
-.idiomas{
-  display: flex;
-  flex-direction: column;
-  width: 300px;
-  align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
-  margin-top: 10px;
-  text-align: center;
-}
-
-.iconesIdiomas{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 10px;
-}
-
-.iconeIdioma{
-  width: 50px;
-  cursor: pointer;
-}
-
 /* Fases */
 
 .container-fases {

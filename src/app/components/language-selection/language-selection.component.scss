@@ -1,0 +1,65 @@
+@import "../../../assets/styles/variables.scss";
+
+h6 {
+  color: $secundary-color;
+  font-size: 1rem;
+}
+
+.languages {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.languagesFlags {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.iconFlag {
+  width: 50px;
+  cursor: pointer;
+}
+
+/* Escala Tablet */
+
+@media (min-width: 768px) {}
+
+
+/* Escala Desktop */
+
+@media (min-width: 1024px) {
+
+  h6 {
+    font-size: 1.25rem;
+  }
+
+  .languages {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top:0;
+    right: 0;
+  }
+
+  .languagesFlags {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .iconFlag {
+    width: 50px;
+    cursor: pointer;
+  }
+
+}

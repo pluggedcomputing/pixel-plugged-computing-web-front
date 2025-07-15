@@ -11,22 +11,14 @@
 <body>
 
   <div class="container">
-
-    <div class="idiomas">
-      <h6>{{ 'homeScreen.selectLanguage' | translate}}</h6>
-      <div class="iconesIdiomas">
-        <img class="iconeIdioma" src="assets/languages/flags/pt-br.png" alt="iconeBrasil" (click)="mudarIdiomaPortugues()" />
-        <img class="iconeIdioma" src="assets/languages/flags/en.png" alt="iconeEua" (click)="mudarIdiomaIngles()" />
-      </div>
-    </div>
-
     <div class="content">
       <img class="capa" src="assets/cover/capa.png" alt="Cover" />
       <h2>{{ 'homeScreen.title' | translate}}</h2>
       <h3>{{ 'homeScreen.subtitle' | translate}}</h3>
       <button type="button" class="btn btn-primary" routerLink="/email-input">
-    {{ 'homeScreen.startButton' | translate}}
+        {{ 'homeScreen.startButton' | translate}}
       </button>
+      <app-language-selection></app-language-selection>
     </div>
   </div>
 </body>

@@ -5,8 +5,10 @@
     "homeScreen": {
         "title": "COLORINDO COM NÚMEROS",
         "subtitle": "Representação de Imagens",
-        "startButton": "INICIAR",
-        "selectLanguage": "Selecione o idioma:"
+        "startButton": "INICIAR"
+    },
+    "languageSelection": {
+        "title": "Selecione o idioma:"
     },
     "userIdentification": {
         "title": "Digite seu e-mail ou código de usuário ou apenas seu nome:",

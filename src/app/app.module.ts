@@ -57,6 +57,7 @@ import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { LanguageSelectionComponent } from './components/language-selection/language-selection.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +110,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
     HelpComponent,
     AboutComponent,
     EmailInputComponent,
+    LanguageSelectionComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 import { MessagesService } from 'src/app/service/messages/messages.service';
+import { LanguageSelectionComponent } from '../language-selection/language-selection.component';
 
 @Component({
   selector: 'app-level-selection',
@@ -7,6 +8,8 @@ import { MessagesService } from 'src/app/service/messages/messages.service';
   styleUrls: ['./level-selection.component.css']
 })
 export class LevelSelectionComponent {
+
+  @ViewChild(LanguageSelectionComponent) languageSelectionComponent!: LanguageSelectionComponent;
 
   constructor(private messagesService: MessagesService) {
 
