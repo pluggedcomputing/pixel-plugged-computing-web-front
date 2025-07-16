@@ -38,26 +38,6 @@ p {
   flex-direction: column;
 }
 
-.icone-voltar {
-  background-color: #A6F3D6;
-  position: fixed;
-  width: 12%;
-  top: 0;
-  right: 0;
-  margin: 10px;
-  padding: 10px;
-  border-radius: 50%;
-  cursor: pointer;
-}
-
-.icone-voltar:hover {
-  background-color: #88daba;
-}
-
-.icone-voltar:active {
-  transform: scale(0.95); /* Reduz o botão ao clicar */
-}
-
 /* Escala Tablet */
 
 @media (min-width: 768px) {
@@ -86,15 +66,6 @@ p {
   
   .content {
     width: 100%;
-  }
-  
-  .icone-voltar {
-    width: 8%;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 50%;
   }
 }
 
@@ -127,13 +98,5 @@ p {
   .content {
     width: 100%;
   }
-  
-  .icone-voltar {
-    width: 4%;
-    top: 0;
-    right: 0;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 50%;
-  }
+
 }

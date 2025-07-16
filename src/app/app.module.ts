@@ -58,6 +58,9 @@ import { RouterModule } from '@angular/router';
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { LanguageSelectionComponent } from './components/language-selection/language-selection.component';
+import { ExitButtonComponent } from './components/buttons/exit-button/exit-button.component';
+import { ExitButtonQuestionComponent } from './components/buttons/exit-button-question/exit-button-question.component';
+import { QrCodeComponent } from './pages/five/qr-code/qr-code.component';
 
 @NgModule({
   declarations: [
@@ -111,6 +114,9 @@ import { LanguageSelectionComponent } from './components/language-selection/lang
     AboutComponent,
     EmailInputComponent,
     LanguageSelectionComponent,
+    ExitButtonComponent,
+    ExitButtonQuestionComponent,
+    QrCodeComponent
   ],
   imports: [
     BrowserModule,

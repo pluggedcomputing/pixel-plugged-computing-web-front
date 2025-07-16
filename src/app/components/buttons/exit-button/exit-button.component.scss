@@ -1,0 +1,37 @@
+@import "../../../../assets/styles/variables.scss";
+
+.icone-voltar {
+    background-color: $primary-color;
+    position: fixed;
+    width: 12%;
+    top: 0;
+    right: 0;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.icone-voltar:hover {
+    background-color: $hover-primary;
+}
+
+.icone-voltar:active {
+    transform: scale(0.95); /* Reduz o botão ao clicar */
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    .icone-voltar {
+        width: 8%;
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1024px) {
+    .icone-voltar {
+        width: 4%;
+    }
+}
