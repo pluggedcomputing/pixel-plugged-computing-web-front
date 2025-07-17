@@ -1,0 +1,189 @@
+{
+    "application": {
+        "name": "Pixel Web Plugged Computing"
+    },
+    "homeScreen": {
+        "title": "COLORING WITH NUMBERS",
+        "subtitle": "Image Representation",
+        "startButton": "START"
+    },
+    "languageSelection": {
+        "title": "Select language:"
+    },
+    "userIdentification": {
+        "title": "Enter your email or user code or just your name:",
+        "submitButton": "Submit",
+        "anonymousButton": "Log in without my data",
+        "exception": "Please enter your email or code."
+    },
+    "levelSelection": {
+        "title": "LEVEL SELECTION",
+        "buttonLevel1": {
+            "title": "LEVEL 1",
+            "subtitle": "Images and pixels"
+        },
+        "buttonLevel2": {
+            "title": "LEVEL 2",
+            "subtitle": "Encode images with 1s and 0s"
+        },
+        "buttonLevel3": {
+            "title": "LEVEL 3",
+            "subtitle": "Compressed images"
+        },
+        "buttonLevel4": {
+            "title": "LEVEL 4",
+            "subtitle": "Using run-length coding"
+        },
+        "helpButton": "Help",
+        "aboutButton": "About"
+    },
+    "help": {
+        "title": "HELP",
+        "paragraph1": "Pixel Web Plugged Computing is based on the activity \"Image Representation\" from the book by Bell T. Witten, I. and Follows, M. (2011), \"Computer Science Unplugged - Teaching Computer Science without the use of the computer\" Translation by Luciano Porto Barreto, 2011.",
+        "paragraph2": "In each level you will find screens with informative content and also some screens with exercises.",
+        "paragraph3": "We suggest that you start with Level 1 and then follow the increasing order of the levels: Level 2, Level 3 and Level 4.",
+        "paragraph4": "You can repeat the activities at any time to improve your performance in each level.",
+        "paragraph5": "For more information, contact us via email:",
+        "paragraph6": "We are continuously working to improve the experience of our users. Your feedback is very important. Help us by filling out evaluation forms available on project website:"
+    },
+    "about": {
+        "title": "ABOUT",
+        "paragraph1": "Pixel Web Plugged Computing is based on the activity \"Image Representation\" from the book by Bell T. Witten, I. and Follows, M. (2011), \"Computer Science Unplugged - Teaching Computer Science without the use of computers\" Translation by Luciano Porto Barreto, 2011.",
+        "paragraph2": "This book presents practical, playful and accessible activities on various computer science topics. It is easy to use not only in classrooms but also outside, and can be administered by teachers and understood by children.",
+        "paragraph3": "Pixel Web Plugged Computing presented here seeks to further simplify the application of the proposals without the need to produce additional materials. It shows some topics sometimes considered complex in a simple way for different audiences.",
+        "paragraph4": "Pixel Web Plugged Computing is part of a family with several other educational resources for teaching computing. Learn more about the others by visiting our website:"
+    },
+    "level1": {
+        "title": "LEVEL 1",
+        "informationTexts": {
+            "text1": "Did you know that computers store drawings, photographs, and other images using only numbers? We'll learn more about this later.",
+            "text2": "Computer screens are divided into a grid of small, squares, each of which can be a specific color. We call these squares picture elements or pixels.",
+            "text3": "In a black and white image, each pixel can be either black or white, so all the computer needs to store is which dots are black and which are white.",
+            "text4": "An image corresponding to the letter C, for example, could be represented with binary numbers (bits). If 1 indicates a white square and 0 indicates a black square, then we could have a 5 X 6 pixel grid like the one illustrated above.",
+            "text5": "Have you ever seen a facsimile (fax) machine? This device was widely used in the past to sending documents in black and white.",
+            "text6": "A fax machine is basically a simple computer that scans a sheet of paper and identifies whether or not it is white and stores this information in approximately 1000 x 2000 pixels, which are transmitted to another fax machine using the telephone network.",
+            "text7": "When the other fax machine receives the message, it prints the pixels on a page.",
+            "text8": "To save on data storage and transmission, it is more interesting to use a data representation that saves the amount of information transmitted or stored."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "Color the pixels above black or white by clicking on each one of them and see the corresponding bit code (sequences of 0s and 1s)."
+            },
+            "exercice2": {
+                "text": "Which code can represent the sequence of pixels above?"
+            },
+            "exercice3": {
+                "text": "How do you think messages sent through a fax machine were encoded?",
+                "alternatives": [
+                    "With a representation that saves the amount of data sent",
+                    "Using black dots as 0 and white dots as 1"
+                ],
+                "correctAlternative": "With a representation that saves the amount of data sent"
+            },
+            "exercice4": {
+                "text": "Considering what was presented, answer: What do fax machines do?",
+                "alternatives": [
+                    "Transmit audio messages",
+                    "Edit images",
+                    "Print pixels",
+                    "Perform mathematical operations"
+                ],
+                "correctAlternative": "Print pixels"
+            }
+        }
+    },
+    "level2": {
+        "title": "LEVEL 2",
+        "informationTexts": {
+            "text1": "You have learned that to store a black and white image the computer only needs to store which pixels are black and which are white.",
+            "text2": "For example, if we want to display an image corresponding to the letter C, we need to think of the screen as a grid with several black or white squares. By enlarging an image more and more, we can see a grid of pixels similar to these."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "Now let's practice? Color the image represented by the codes above and choose the letter represented by the code. Remember that 1 is white and 0 is black."
+            },
+            "exercice2": {
+                "text": "Now let's practice? Color the squares corresponding to the indicated binary codes and choose the letter that will be displayed."
+            },
+            "exercice3": {
+                "text": "Now try to find out which code corresponds to the last line and is missing in this drawing of the letter W."
+            }
+        }
+    },
+    "level3": {
+        "title": "LEVEL 3",
+        "informationTexts": {
+            "text1": "You learned that we can represent an image through black and white dots, represented by 0 and 1 respectively.",
+            "text2": "However, we can use a compressed representation, called 'run-length coding', using less space and less transmission time.",
+            "text3": "To store an image on the computer while saving space, simply store how many dots are black and how many dots are white. For example, the first line of the image above can be represented by 1,1,3,1,1 indicating the sequence of 1 white pixel, 1 black, 3 whites, 1 black and 1 white.",
+            "text4": "See that the first code represents the number of white pixels and the second the number of black pixels, and so on. When the first code is 0 (zero), the first pixel will be black, since 0 (zero) represents the absence of white pixels.",
+            "text5": "See above how to represent the letter T. The first line consists of 0 white pixels, followed by 5 black pixels and the following lines of 2 white pixels, 1 black and 2 white pixels.",
+            "text6": "Below, you can see the letter W represented with run-length coding. The first line is composed of 1 white pixel, 1 black, 3 whites, 1 black and 1 white. The second line is composed of 2 whites, 1 black, 2 whites, 1 black and 1 white. The third line is composed of 3 whites, 1 black, 2 whites and 1 black."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "Which letter is being represented in the code above considering the new coding learned? You can color the squares black or white by clicking on them."
+            },
+            "exercice2": {
+                "text": "Adjust the pixels of the image above according to the codes indicated. Which letter is being represented?"
+            },
+            "exercice3": {
+                "text": "Color the missing squares considering the code of each line and answer: Which letter is represented?"
+            },
+            "exercice4": {
+                "text": "How would you represent the last line of the image above?"
+            },
+            "exercice5": {
+                "text": "Which letter is being represented in the code above considering the new coding learned? You can color the squares in black or white by clicking on them."
+            }
+        }
+    },
+    "level4": {
+        "title": "LEVEL 4",
+        "informationTexts": {
+            "text1": "As we saw before, a fax machine is capable of transmitting images to another machine. Images printed by fax machines usually have large blocks of white pixels (e.g., the margins) or black pixels (e.g., a horizontal line).",
+            "text2": "Color images also have repeating areas. In order to save storage space, programmers can use various compression techniques.",
+            "text3": "The method seen in Level 3 that allows images to be compressed was 'run-length coding'. If they were not compressed, they would take much longer to be transmitted and this would require much more storage space, making it impossible to send fax pages or to put photos on a web page.",
+            "text4": "For example, fax images were usually compressed to about one-seventh of their original size. Without compression, they would take seven times longer to be transmitted! Remember that transmission speeds were not as good in the past as they are today.",
+            "text5": "Photos and images are often compressed to one tenth or even one hundredth of their size (using a different technique). This allows a larger number of images to be stored on devices and to be downloaded more quickly from the Internet.",
+            "text6": "A person who creates an application to transmit photos, for example, can choose the most appropriate technique for compressing the images they are transmitting."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "How about drawing yourself and trying to figure out the code that represents this image? Color your image in the box above and click finish.",
+                "alternatives": [
+                    "Finish"
+                ]
+            },
+            "exercice2": {
+                "text": "Select the sequence that represents the first line of your image."
+            },
+            "exercice3": {
+                "text": "How about now drawing with colors and trying to find the code that represents this image? Paint your image in the box above and click finish.",
+                "alternatives": [
+                    "Finish"
+                ]
+            },
+            "exercice4": {
+                "text": "Select the sequence that represents the first line of your image. Note that the code has the format: quantity-color code."
+            }
+        }
+    },
+    "congratulationsScreen": {
+        "title": "CONGRATULATIONS!",
+        "motivationalMessages": [
+            "Awesome! You got everything right!",
+            "Very good! Almost perfect!",
+            "Good job! Keep practicing!",
+            "You're on the right track! Let's improve!",
+            "Everything is a learning experience! Try again!"
+        ],
+        "remakeButton": "Remake",
+        "homeButton": "Home",
+        "nextButton": "Continue"
+    },
+    "notifications": [
+        "You got it right!",
+        "Try again."
+    ]
+}

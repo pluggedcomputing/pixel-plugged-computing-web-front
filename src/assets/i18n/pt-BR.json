@@ -1,0 +1,189 @@
+{
+    "application": {
+        "name": "Computação Plugada Pixel Web"
+    },
+    "homeScreen": {
+        "title": "COLORINDO COM NÚMEROS",
+        "subtitle": "Representação de Imagens",
+        "startButton": "INICIAR"
+    },
+    "languageSelection": {
+        "title": "Selecione o idioma:"
+    },
+    "userIdentification": {
+        "title": "Digite seu e-mail ou código de usuário ou apenas seu nome:",
+        "submitButton": "Enviar",
+        "anonymousButton": "Entrar sem meus dados",
+        "exception": "Por favor, digite seu e-mail ou código."
+    },
+    "levelSelection": {
+        "title": "SELEÇÃO DE FASE",
+        "buttonLevel1": {
+            "title": "FASE 1",
+            "subtitle": "Imagens e pixels"
+        },
+        "buttonLevel2": {
+            "title": "FASE 2",
+            "subtitle": "Codificar imagens com 1 e 0"
+        },
+        "buttonLevel3": {
+            "title": "FASE 3",
+            "subtitle": "Imagens compactadas"
+        },
+        "buttonLevel4": {
+            "title": "FASE 4",
+            "subtitle": "Usando run-length coding"
+        },
+        "helpButton": "Ajuda",
+        "aboutButton": "Sobre"
+    },
+    "help": {
+        "title": "AJUDA",
+        "paragraph1": "O Computação Plugada Pixel Web se baseia na atividade \"Representação de imagens\" do livro de Bell T.Witten, I. e Follows, M. (2011), \"Computer Science Unplugged - Ensinando Ciência da Computação sem o uso do computador\" Tradução Luciano Porto Barreto, 2011.",
+        "paragraph2": "Em cada fase você encontrará telas com conteúdo informativo e também algumas telas com exercícios.",
+        "paragraph3": "Sugerimos que inicie pela Fase 1 e depois siga a ordem crescente das fases: Fase 2, Fase 3 e Fase 4.",
+        "paragraph4": "Você poderá repetir as atividades a qualquer momento para melhorar seu desempenho em cada fase.",
+        "paragraph5": "Para mais informações, entre em contato conosco através do e-mail:",
+        "paragraph6": "Estamos trabalhando continuamente para melhorar a experiência dos nossos usuários. Seu feedback é muito importante. Ajude-nos preenchendo formulários de avaliação disponíveis no site do projeto:"
+    },
+    "about": {
+        "title": "SOBRE",
+        "paragraph1": "O Computação Plugada Pixel Web se baseia na atividade \"Representação de imagens\" do livro de Bell T.Witten, I. e Follows, M. (2011), \"Computer Science Unplugged - Ensinando Ciência da Computação sem o uso do computado\" Tradução Luciano Porto Barreto, 2011.",
+        "paragraph2": "Este livro apresenta atividades práticas, lúdicas e acessíveis sobre diversos temas da ciência da computação. Sua prática é fácil não só em salas de aula mas também fora, podendo ser administrado por professores e compreendido pelas crianças.",
+        "paragraph3": "O Computação Plugada Pixel Web aqui apresentado busca simplificar ainda mais a aplicação das propostas sem a necessidade de produção de materiais adicionais. Ele mostra alguns temas por vezes considerados complexos de maneira simples para diferentes públicos.",
+        "paragraph4": "O Computação Plugada Pixel faz parte de uma família com vários outros recursos educacionais para o ensino de computação. Conheça mais sobre os demais visitando nosso site:"
+    },
+    "level1": {
+        "title": "FASE 1",
+        "informationTexts": {
+            "text1": "Você sabia que os computadores armazenam desenhos, fotografias, e outras imagens usando apenas números? A seguir, entenderemos melhor.",
+            "text2": "As telas dos computadores são divididas em uma grade de pequenos, quadrados, podendo ser cada um de uma cor específica. Chamamos esses quadrados de elementos de imagem ou pixels.",
+            "text3": "Em uma imagem em preto e branco, cada pixel pode ser preto ou branco, então tudo que o computador precisa armazenar é quais pontos são pretos e quais são brancos.",
+            "text4": "Uma imagem correspondente à letra C, por exemplo, poderia ser representada com números binários (bits). Se o 1 indica um quadrado branco e o 0 indica um quadrado preto, então poderíamos ter uma grade de 5 X 6 pixels como a ilustrada acima.",
+            "text5": "Você já viu um aparelho de fac-símile (fax)? Esse aparelho era muito utilizado antigamente para o envio de documentos em preto e branco.",
+            "text6": "Uma máquina de fax é basicamente um computador simples que efetua uma varredura sobre uma folha e identifica os pontos brancos ou não e armazena essa informação em aproximadamente 1000 x 2000 pixels, que são transmitidos para outra máquina de fax utilizando a rede de telefonia.",
+            "text7": "Quando a outra máquina de fax recebe a mensagem, ela imprime os pixels em uma página.",
+            "text8": "Para economizar no armazenamento e transmissão de dados, é mais interessante ultilizar uma representação dos dados que economize a quantidade de informação transmitida ou armazenada."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "Pinte os pixels acima de preto ou branco clicando em cada um deles e veja o código em bits (sequências de 0s e 1s) correspondente."
+            },
+            "exercice2": {
+                "text": "A sequência de pixels acima pode ser representada por qual código?"
+            },
+            "exercice3": {
+                "text": "Como você acha que eram codificadas as mensagens enviadas através de uma máquina de fax?",
+                "alternatives": [
+                    "Com representação que economize a quantidade de dados enviada",
+                    "Usando pontos pretos como 0 e brancos como 1"
+                ],
+                "correctAlternative": "Com representação que economize a quantidade de dados enviada"
+            },
+            "exercice4": {
+                "text": "Considerando o que foi apresentado, responda: O que as máquinas de fax fazem?",
+                "alternatives": [
+                    "Transmitem mensagens de áudio",
+                    "Editam imagens",
+                    "Imprimem pixels",
+                    "Realizam operações matemáticas"
+                ],
+                "correctAlternative": "Imprimem pixels"
+            }
+        }
+    },
+    "level2": {
+        "title": "FASE 2",
+        "informationTexts": {
+            "text1": "Você aprendeu que para armazenar uma imagem em preto e branco o computador apenas precisa armazenar quais pixels são pretos e quais são brancos.",
+            "text2": "Por exemplo, se quisermos exibir uma imagem correspondente à letra C, precisamos pensar na tela com uma grade com vários quadrados pretos ou brancos. Ao ampliarmos uma imagem mais e mais, podemos ver uma grade de pixels semelhantes a estes."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "Agora vamos praticar? Pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. Lembre-se de que o 1 é branco e o 0 é preto."
+            },
+            "exercice2": {
+                "text": "Agora vamos praticar? Pinte os quadrados correspondentes aos códigos binários indicados e escolha a letra que será exibida."
+            },
+            "exercice3": {
+                "text": "Agora tente descobrir qual o código correspondente à última linha e que está faltando neste desenho da letra W."
+            }
+        }
+    },
+    "level3": {
+        "title": "FASE 3",
+        "informationTexts": {
+            "text1": "Você aprendeu que podemos representar uma imagem através de pontos pretos e brancos, representados por 0 e 1 respectivamente.",
+            "text2": "Podemos, porém, utilizar uma representação comprimida, chamada de 'run-length coding', gastando menos espaço e menos tempo de transmissão.",
+            "text3": "Para armazenar uma imagem no computador economizando espaço, basta armazenar quantos pontos são pretos e quantos pontos são brancos. Por exemplo, a primeira linha da imagem acima pode ser representada por 1,1,3,1,1 indicando a sequência de 1 pixel branco, 1 preto, 3 brancos, 1 preto e 1 branco.",
+            "text4": "Note que o primeiro código representa a quantidade de pixels brancos e o segundo a quantidade de pixels pretos, e assim sucessivamente. Quando o primeiro código é 0 (zero), o primeiro pixel será preto, pois o 0 (zero) representa a ausência de pixels brancos.",
+            "text5": "Veja acima como representar a letra T. A primeira linha consiste de 0 pixels brancos, seguindos de 5 pixels pretos e as linhas seguintes de 2 pixels brancos, 1 preto e 2 brancos.",
+            "text6": "Abaixo, você pode ver a letra W representada com run-length coding. A primeira linha é composta por 1 pixel branco, 1 preto, 3 brancos, 1 preto e 1 branco. A segunda linha é composta por 2 brancos, 1 preto, 2 brancos, 1 preto e 1 branco. A terceira linha é composta por 3 brancos, 1 preto, 2 brancos e 1 preto."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles."
+            },
+            "exercice2": {
+                "text": "Ajuste os pixels da imagem acima de acordo com os códigos indicados. Qual a letra que está sendo representada?"
+            },
+            "exercice3": {
+                "text": "Pinte os quadrados que faltam considerando o código de cada linha e responda: Qual a letra representada?"
+            },
+            "exercice4": {
+                "text": "Como você representaria a última linha da imagem acima?"
+            },
+            "exercice5": {
+                "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles."
+            }
+        }
+    },
+    "level4": {
+        "title": "FASE 4",
+        "informationTexts": {
+            "text1": "Como vimos antes, uma máquina de fax é capaz de transmitir imagens para uma outra máquina. Imagens impressas por máquinas de fax geralmente têm grandes blocos de pixels brancos (por exemplo, as margens) ou pretos (por exemplo, uma linha horizontal).",
+            "text2": "Imagens coloridas também possuem áreas repetidas. A fim de economizar o espaço de armazenamento, os programadores podem usar diversas técnicas de compressão.",
+            "text3": "O método visto na Fase 3, que permite comprimir imagens, foi o 'run-length coding'. Se elas não fossem comprimidas, levariam muito mais tempo para serem transmitidas e isso exigiria muito mais espaço para armazenamento, inviabilizando o envio de páginas de fax ou que fosse possível colocar fotos em uma páginas da Internet.",
+            "text4": "Por exemplo, imagens de fax eram geralmente comprimidas para aproximadamente um sétimo do seu tamanho original. Sem a compressão, estas demorariam sete vezes mais para serem transmitidas! Lembre-se de que as velocidades de transmissão não eram tão boas antigamente como as que temos hoje.",
+            "text5": "Fotos e imagens são frequentemente comprimidas para um décimo ou até um centésimo de seu tamanho (usando uma técnica diferente). Isto permite que um número maior de imagens sejam armazenadas nos dispositivos e que possam ser baixadas mais rapidamente da internet.",
+            "text6": "Uma pessoa que cria um aplicativo para transmitir fotos, por exemplo, pode escolher a técnica mais adequada para compressão das imagens que está transmitindo."
+        },
+        "exercises": {
+            "exercice1": {
+                "text": "Que tal desenhar você mesmo e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir.",
+                "alternatives": [
+                    "Concluir"
+                ]
+            },
+            "exercice2": {
+                "text": "Selecione a sequência que representa a primeira linha de sua imagem."
+            },
+            "exercice3": {
+                "text": "Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir.",
+                "alternatives": [
+                    "Concluir"
+                ]
+            },
+            "exercice4": {
+                "text": "Selecione a sequência que representa a primeira linha de sua imagem. Note que o código tem o formato: quantidade-código da cor."
+            }
+        }
+    },
+    "congratulationsScreen": {
+        "title": "PARABÉNS!",
+        "motivationalMessages": [
+            "Incrível! Você acertou tudo!",
+            "Muito bom! Quase perfeito!",
+            "Bom trabalho! Continue praticando!",
+            "Você está no caminho certo! Vamos melhorar!",
+            "Tudo é aprendizagem! Tente novamente!"
+        ],
+        "remakeButton": "Refazer",
+        "homeButton": "Home",
+        "nextButton": "Continuar"
+    },
+    "notifications": [
+        "Você acertou!",
+        "Tente outra vez."
+    ]
+}
