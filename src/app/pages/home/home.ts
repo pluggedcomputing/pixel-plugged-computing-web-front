@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
+import { LanguageSelection } from '../../components/language-selection/language-selection';
 
 @Component({
   selector: 'app-home',
-  imports: [],
+  standalone: true,
+  imports: [LanguageSelection],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
 export class Home {
-
 }
