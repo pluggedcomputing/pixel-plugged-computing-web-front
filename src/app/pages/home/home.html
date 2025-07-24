@@ -1,14 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-
-
-<app-language-selection></app-language-selection>    
-    
-</body>
-</html>
+<div class="container-page">
+    <img src="assets/images/logos/logo-cp.png" alt="logo-cp">
+    <h2>{{ 'homeScreen.title' | translate}}</h2>
+    <h3>{{ 'homeScreen.subtitle' | translate}}</h3>
+    <button routerLink="/about">
+        {{ 'homeScreen.startButton' | translate}}
+    </button>
+    <app-language-selection></app-language-selection>
+</div>
