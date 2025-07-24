@@ -1,24 +1,22 @@
 import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { MessagesService } from '../../services/messages/messages-service';
 
 @Component({
   selector: 'app-language-selection',
   standalone: true,
-  imports: [CommonModule, TranslateModule],
+  imports: [TranslateModule],
   templateUrl: './language-selection.html',
   styleUrl: './language-selection.scss'
 })
 export class LanguageSelection {
 
-  private translate = inject(TranslateService);
-
-  setLanguage(language: string){
-    this.translate.use(language);
+  constructor(private messages: MessagesService){
   }
 
-  constructor(){
-    this.translate.setDefaultLang('pt-br');
-    this.translate.use('pt-br')
+  changelanguage(language: string){
+    this.messages.setLanguage(language);
   }
+  
 }
