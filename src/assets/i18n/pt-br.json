@@ -205,5 +205,8 @@
     "notifications": [
         "Você acertou!",
         "Tente outra vez."
-    ]
+    ],
+    "notFound": {
+        "title": "Ops... por favor, volte para a tela inicial clicando no botão abaixo."
+    }
 }

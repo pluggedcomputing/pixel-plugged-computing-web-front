@@ -1,0 +1,40 @@
+@use "../../../assets/styles/variables" as *;
+
+div {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  background-color: $primary-color;
+  justify-content: center;
+}
+
+button {
+  background-color: $secundary-color;
+  border-radius: $border-circle;
+  padding: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+button:hover {
+  background-color: $hover-secundary;
+}
+
+h2 {
+  width: 500px;
+  text-align: center;
+  color: $secundary-color;
+}
+
+img {
+  width: 50px;
+}
+
+.logo-cp {
+  width: 300px;
+  background-color: $secundary-color;
+  border-radius: $border-high;
+  padding: 40px;
+}

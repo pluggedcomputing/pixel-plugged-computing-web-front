@@ -205,5 +205,8 @@
     "notifications": [
         "You got it right!",
         "Try again."
-    ]
+    ],
+    "notFound": {
+        "title": "Oops... please return to the homepage by clicking the button below."
+    }
 }
