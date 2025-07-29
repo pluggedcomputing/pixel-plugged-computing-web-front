@@ -18,24 +18,44 @@
     },
     "levelSelection": {
         "title": "SELEÇÃO DE FASE",
-        "buttonLevel1": {
-            "title": "FASE 1",
-            "subtitle": "Imagens e pixels"
-        },
-        "buttonLevel2": {
-            "title": "FASE 2",
-            "subtitle": "Codificar imagens com 1 e 0"
-        },
-        "buttonLevel3": {
-            "title": "FASE 3",
-            "subtitle": "Imagens compactadas"
-        },
-        "buttonLevel4": {
-            "title": "FASE 4",
-            "subtitle": "Usando run-length coding"
-        },
-        "helpButton": "Ajuda",
-        "aboutButton": "Sobre"
+        "buttonsLevels": [
+            {
+                "title": "FASE 1",
+                "subtitle": "Imagens e pixels",
+                "srcImage": "../../../assets/images/selection-levels/level1.png",
+                "router": "/home"
+            },
+            {
+                "title": "FASE 2",
+                "subtitle": "Codificar imagens com 1 e 0",
+                "srcImage": "../../../assets/images/selection-levels/level2.png",
+                "router": "/home"
+            },
+            {
+                "title": "FASE 3",
+                "subtitle": "Imagens compactadas",
+                "srcImage": "../../../assets/images/selection-levels/level3.png",
+                "router": "/home"
+            },
+            {
+                "title": "FASE 4",
+                "subtitle": "Usando run-length coding",
+                "srcImage": "../../../assets/images/selection-levels/level4.png",
+                "router": "/home"
+            }
+        ],
+        "buttonsFooter": [
+            {
+                "title": "Ajuda",
+                "srcImage": "../../../assets/icons/buttons/help.png",
+                "router": "/help"
+            },
+            {
+                "title": "Sobre",
+                "srcImage": "../../../assets/icons/buttons/about.png",
+                "router": "/about"
+            }
+        ]
     },
     "help": {
         "title": "AJUDA",

@@ -18,24 +18,44 @@
     },
     "levelSelection": {
         "title": "LEVEL SELECTION",
-        "buttonLevel1": {
-            "title": "LEVEL 1",
-            "subtitle": "Images and pixels"
-        },
-        "buttonLevel2": {
-            "title": "LEVEL 2",
-            "subtitle": "Encode images with 1s and 0s"
-        },
-        "buttonLevel3": {
-            "title": "LEVEL 3",
-            "subtitle": "Compressed images"
-        },
-        "buttonLevel4": {
-            "title": "LEVEL 4",
-            "subtitle": "Using run-length coding"
-        },
-        "helpButton": "Help",
-        "aboutButton": "About"
+        "buttonsLevels": [
+            {
+                "title": "LEVEL 1",
+                "subtitle": "Images and pixels",
+                "srcImage": "../../../assets/images/selection-levels/level1.png",
+                "router": "/home"
+            },
+            {
+                "title": "LEVEL 2",
+                "subtitle": "Encode images with 1s and 0s",
+                "srcImage": "../../../assets/images/selection-levels/level2.png",
+                "router": "/home"
+            },
+            {
+                "title": "LEVEL 3",
+                "subtitle": "Compressed images",
+                "srcImage": "../../../assets/images/selection-levels/level3.png",
+                "router": "/home"
+            },
+            {
+                "title": "LEVEL 4",
+                "subtitle": "Using run-length coding",
+                "srcImage": "../../../assets/images/selection-levels/level4.png",
+                "router": "/home"
+            }
+        ],
+        "buttonsFooter": [
+            {
+                "title": "Help",
+                "srcImage": "../../../assets/icons/buttons/help.png",
+                "router": "/help"
+            },
+            {
+                "title": "About",
+                "srcImage": "../../../assets/icons/buttons/about.png",
+                "router": "/about"
+            }
+        ]
     },
     "help": {
         "title": "HELP",
