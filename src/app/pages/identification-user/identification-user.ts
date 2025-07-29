@@ -13,11 +13,10 @@ import { FormsModule } from '@angular/forms';
   standalone: true,
   imports: [CommonModule, TranslateModule, FormsModule],
   templateUrl: './identification-user.html',
-  styleUrl: './identification-user.scss'
+  styleUrl: './identification-user.scss',
 })
 export class IdentificationUser {
-
-  userID: string = "";
+  userID: string = '';
   submitted: boolean = false;
 
   constructor(
@@ -25,8 +24,7 @@ export class IdentificationUser {
     private router: Router,
     private sessionStorageService: SessionStorageService,
     private messagesService: MessagesService
-  ) {
-  }
+  ) {}
 
   submitUserID() {
     if (!this.userID) {
@@ -36,35 +34,37 @@ export class IdentificationUser {
     const user: User = { userID: this.userID };
     this.userInputService.userID = this.userID;
     this.userInputService.saveUser(user).subscribe(
-      response => {
+      (response) => {
         this.sessionStorageService.setItem('userID', this.userID);
-        console.log("User saved successfully:", response);
+        console.log('User saved successfully:', response);
       },
-      error => {
-        console.error("Error saving user:", error);
-        alert("Houve um erro ao se conectar, você está usando o sistema offline!");
+      (error) => {
+        console.error('Error saving user:', error);
+        alert(
+          'Houve um erro ao se conectar, você está usando o sistema offline!'
+        );
       }
     );
     console.log(this.userID);
-    this.router.navigate(['/fases']);
+    this.router.navigate(['/level-selection']);
   }
 
   submitUserAnonymous() {
-    const user: User = { userID: "Anonymous" };
-    this.userInputService.userID = "Anonymous";
+    const user: User = { userID: 'Anonymous' };
+    this.userInputService.userID = 'Anonymous';
     this.userInputService.saveUser(user).subscribe(
-      response => {
-        this.sessionStorageService.setItem('userID', "Anonymous");
-        console.log("User saved successfully:", response);
-
+      (response) => {
+        this.sessionStorageService.setItem('userID', 'Anonymous');
+        console.log('User saved successfully:', response);
       },
-      error => {
-        console.error("Error saving user:", error);
-        alert("Houve um erro ao se conectar, você está usando o sistema offline!");
+      (error) => {
+        console.error('Error saving user:', error);
+        alert(
+          'Houve um erro ao se conectar, você está usando o sistema offline!'
+        );
       }
     );
-    console.log("Anonymous");
-    this.router.navigate(['/fases']);
+    console.log('Anonymous');
+    this.router.navigate(['/level-selection']);
   }
-
 }

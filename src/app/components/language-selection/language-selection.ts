@@ -17,6 +17,7 @@ export class LanguageSelection {
 
   changelanguage(language: string){
     this.messages.setLanguage(language);
+    window.location.reload();
   }
   
 }

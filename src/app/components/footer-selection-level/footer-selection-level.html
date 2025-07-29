@@ -1,0 +1,9 @@
+<div>
+  <app-footer-button
+    *ngFor="let button of footerButtons"
+    [title]="button.title"
+    [imageSrc]="button.srcImage"
+    [router]="button.router"
+  >
+  </app-footer-button>
+</div>

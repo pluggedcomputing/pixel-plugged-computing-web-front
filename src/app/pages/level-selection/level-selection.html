@@ -1,11 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<div>
+  <h1>{{'levelSelection.title' | translate}}</h1>
+  <app-level-button
+    *ngFor="let level of levelsButtons"
+    [title]="level.title"
+    [subTitle]="level.subtitle"
+    [imageSrc]="level.srcImage"
+    [router]="level.router"
+  >
+  </app-level-button>
+  <app-language-selection></app-language-selection>
+  <app-footer-selection-level></app-footer-selection-level>
+</div>

@@ -16,5 +16,9 @@ export class MessagesService {
       this.translate.use(language);
       localStorage.setItem('language', language);
     }
+
+    getMessages(messages: string){
+      return this.translate.get(messages);
+    }
   
 }
