@@ -23,25 +23,31 @@
                 "title": "FASE 1",
                 "subtitle": "Imagens e pixels",
                 "srcImage": "../../../assets/images/selection-levels/level1.png",
-                "router": "/home"
+                "router": "/level-1"
             },
             {
                 "title": "FASE 2",
                 "subtitle": "Codificar imagens com 1 e 0",
                 "srcImage": "../../../assets/images/selection-levels/level2.png",
-                "router": "/home"
+                "router": "/level-2"
             },
             {
                 "title": "FASE 3",
                 "subtitle": "Imagens compactadas",
                 "srcImage": "../../../assets/images/selection-levels/level3.png",
-                "router": "/home"
+                "router": "/level-3"
             },
             {
                 "title": "FASE 4",
                 "subtitle": "Usando run-length coding",
                 "srcImage": "../../../assets/images/selection-levels/level4.png",
-                "router": "/home"
+                "router": "/level-4"
+            },
+            {
+                "title": "FASE 5",
+                "subtitle": "qr",
+                "srcImage": "../../../assets/images/selection-levels/level5.png",
+                "router": "/level-5"
             }
         ],
         "buttonsFooter": [
@@ -75,6 +81,14 @@
     },
     "level1": {
         "title": "FASE 1",
+        "screens": [
+            {
+                "id": 1,
+                "title": "TEST 1",
+                "imgUrl": "../../../",
+                "text": "teste a a"
+            }
+        ],
         "informationTexts": {
             "text1": "Você sabia que os computadores armazenam desenhos, fotografias, e outras imagens usando apenas números? A seguir, entenderemos melhor.",
             "text2": "As telas dos computadores são divididas em uma grade de pequenos, quadrados, podendo ser cada um de uma cor específica. Chamamos esses quadrados de elementos de imagem ou pixels.",
