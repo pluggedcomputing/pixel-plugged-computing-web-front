@@ -1,20 +1,24 @@
-@use '../../../assets/styles/variables.scss' as *;
+@use "../../../assets/styles/variables.scss" as *;
 
-div{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
+div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
 }
 
-button{
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: none;
-}
+button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: $white;
 
-mat-icon{
+  mat-icon {
+    font-size: 80px;
+    width: 80px;
+    height: 80px;
     color: $secundary-color;
+  }
 }

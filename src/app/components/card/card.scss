@@ -1,6 +1,7 @@
 @use "../../../assets/styles/variables.scss" as *;
 
 div {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,10 +15,12 @@ img {
 
 h2 {
   color: $secundary-color;
+  font-size: 1.8rem;
 }
 
 p {
   width: 400px;
   text-align: justify;
   color: $secundary-color;
+  font-size: 1.2rem;
 }
