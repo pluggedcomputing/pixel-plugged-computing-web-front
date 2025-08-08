@@ -345,7 +345,43 @@
     },
     "level5": {
         "title": "FASE 5",
-        "screens": []
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-1.png",
+                "text": ""
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-2.png",
+                "text": ""
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-3.png",
+                "text": ""
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-4.png",
+                "text": ""
+            },
+            {
+                "type": "screenText",
+                "id": 5,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-5.png",
+                "text": ""
+            }
+        ]
     },
     "congratulationsScreen": {
         "title": "PARABÉNS!",

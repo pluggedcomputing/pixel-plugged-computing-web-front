@@ -1,16 +1,23 @@
-div{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+@use "../../../assets/styles/variables.scss" as *;
+
+div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-img{
-    width: 400px;
-    margin-left: 100px;
-    margin-right: 100px;
+img {
+  width: 400px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
-p{
-   width: 400px; 
-   text-align: justify;
+h2 {
+  color: $secundary-color;
+}
+
+p {
+  width: 400px;
+  text-align: justify;
+  color: $secundary-color;
 }
