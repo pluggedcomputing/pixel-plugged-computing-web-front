@@ -1,0 +1,17 @@
+<div>
+  <app-exit-button></app-exit-button>
+  <div>
+    <label for="texto-qr">Digite o texto:</label>
+    <input
+      id="texto-qr"
+      type="text"
+      [value]="text()"
+      (input)="updateText($event)"
+      style="margin-left: 8px; font-size: 1rem; padding: 4px"
+    />
+  </div>
+
+  <div style="margin-top: 2rem">
+    <app-qr-code [textQrCode]="text()"></app-qr-code>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+<div>
+  <button mat-icon-button (click)="prevCard()">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+  <app-card
+    [title]="cards[index].title"
+    [imgUrl]="cards[index].imgUrl"
+    [text]="cards[index].text"
+  >
+  </app-card>
+
+  <button mat-icon-button (click)="nextCard()">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { MessagesService } from '../../services/messages/messages-service';
 import { LanguageSelection } from '../../components/language-selection/language-selection';
@@ -6,7 +6,7 @@ import { LevelButton } from '../../components/buttons/level-button/level-button'
 import { CommonModule } from '@angular/common';
 import { FooterSelectionLevel } from '../../components/footer-selection-level/footer-selection-level';
 
-interface Level{
+interface Level {
   title: string;
   subtitle: string;
   srcImage: string;
@@ -16,16 +16,20 @@ interface Level{
 @Component({
   selector: 'app-level-selection',
   standalone: true,
-  imports: [TranslateModule, LanguageSelection, LevelButton, CommonModule, FooterSelectionLevel],
+  imports: [
+    TranslateModule,
+    LanguageSelection,
+    LevelButton,
+    CommonModule,
+    FooterSelectionLevel,
+  ],
   templateUrl: './level-selection.html',
   styleUrl: './level-selection.scss',
 })
-
 export class LevelSelection implements OnInit {
+  private messagesService = inject(MessagesService);
 
   levelsButtons: Level[] = [];
-
-  constructor(private messagesService: MessagesService) {}
 
   ngOnInit(): void {
     this.messagesService

@@ -45,7 +45,7 @@
             },
             {
                 "title": "LEVEL 5",
-                "subtitle": "qr",
+                "subtitle": "QR Code",
                 "srcImage": "../../../assets/images/selection-levels/level5.png",
                 "router": "/level-5"
             }
@@ -80,21 +80,65 @@
         "paragraph4": "Pixel Web Plugged Computing is part of a family with several other educational resources for teaching computing. Learn more about the others by visiting our website:"
     },
     "level1": {
+        "title": "LEVEL 1",
         "screens": [
             {
-                "srcImage": "../../../assts/images/level-1",
-                "text": "text1"
+                "type": "screenText",
+                "id": 1,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-1.png",
+                "text": "Did you know that computers store drawings, photographs, and other images using only numbers? We'll learn more about this later."
             },
             {
-                "srcImage": "../../../assts/images/level-1",
-                "text": "text2"
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-2.png",
+                "text": "Computer screens are divided into a grid of small, squares, each of which can be a specific color. We call these squares picture elements or pixels."
             },
             {
-                "srcImage": "../../../assts/images/level-1",
-                "text": "text3"
+                "type": "screenText",
+                "id": 3,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-3.png",
+                "text": "In a black and white image, each pixel can be either black or white, so all the computer needs to store is which dots are black and which are white."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-4.png",
+                "text": "An image corresponding to the letter C, for example, could be represented with binary numbers (bits). If 1 indicates a white square and 0 indicates a black square, then we could have a 5 X 6 pixel grid like the one illustrated above."
+            },
+            {
+                "type": "screenText",
+                "id": 5,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-5.png",
+                "text": "Have you ever seen a facsimile (fax) machine? This device was widely used in the past to sending documents in black and white."
+            },
+            {
+                "type": "screenText",
+                "id": 6,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-6.png",
+                "text": "A fax machine is basically a simple computer that scans a sheet of paper and identifies whether or not it is white and stores this information in approximately 1000 x 2000 pixels, which are transmitted to another fax machine using the telephone network."
+            },
+            {
+                "type": "screenText",
+                "id": 7,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-7.png",
+                "text": "When the other fax machine receives the message, it prints the pixels on a page."
+            },
+            {
+                "type": "screenText",
+                "id": 8,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-8.png",
+                "text": "To save on data storage and transmission, it is more interesting to use a data representation that saves the amount of information transmitted or stored."
             }
         ],
-        "title": "LEVEL 1",
         "informationTexts": {
             "text1": "Did you know that computers store drawings, photographs, and other images using only numbers? We'll learn more about this later.",
             "text2": "Computer screens are divided into a grid of small, squares, each of which can be a specific color. We call these squares picture elements or pixels.",
@@ -134,6 +178,22 @@
     },
     "level2": {
         "title": "LEVEL 2",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Level 2",
+                "imgUrl": "../../../../assets/images/level-2/img-1.png",
+                "text": "You have learned that to store a black and white image the computer only needs to store which pixels are black and which are white."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 2",
+                "imgUrl": "../../../../assets/images/level-2/img-2.png",
+                "text": "For example, if we want to display an image corresponding to the letter C, we need to think of the screen as a grid with several black or white squares. By enlarging an image more and more, we can see a grid of pixels similar to these."
+            }
+        ],
         "informationTexts": {
             "text1": "You have learned that to store a black and white image the computer only needs to store which pixels are black and which are white.",
             "text2": "For example, if we want to display an image corresponding to the letter C, we need to think of the screen as a grid with several black or white squares. By enlarging an image more and more, we can see a grid of pixels similar to these."
@@ -152,6 +212,43 @@
     },
     "level3": {
         "title": "LEVEL 3",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-1.png",
+                "text": "You learned that we can represent an image through black and white dots, represented by 0 and 1 respectively."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-2.png",
+                "text": "However, we can use a compressed representation, called 'run-length coding', using less space and less transmission time."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-3.png",
+                "text": "To store an image on the computer while saving space, simply store how many dots are black and how many dots are white. For example, the first line of the image above can be represented by 1,1,3,1,1 indicating the sequence of 1 white pixel, 1 black, 3 whites, 1 black and 1 white."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-4.png",
+                "text": "See that the first code represents the number of white pixels and the second the number of black pixels, and so on. When the first code is 0 (zero), the first pixel will be black, since 0 (zero) represents the absence of white pixels."
+            },
+            {
+                "type": "screenText",
+                "id": 5,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-5.png",
+                "text": "See above how to represent the letter T. The first line consists of 0 white pixels, followed by 5 black pixels and the following lines of 2 white pixels, 1 black and 2 white pixels."
+            }
+        ],
         "informationTexts": {
             "text1": "You learned that we can represent an image through black and white dots, represented by 0 and 1 respectively.",
             "text2": "However, we can use a compressed representation, called 'run-length coding', using less space and less transmission time.",
@@ -180,6 +277,50 @@
     },
     "level4": {
         "title": "LEVEL 4",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-1.png",
+                "text": "As we saw before, a fax machine is capable of transmitting images to another machine. Images printed by fax machines usually have large blocks of white pixels (e.g., the margins) or black pixels (e.g., a horizontal line)."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-2.png",
+                "text": "Color images also have repeating areas. In order to save storage space, programmers can use various compression techniques."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-3.png",
+                "text": "The method seen in Level 3 that allows images to be compressed was 'run-length coding'. If they were not compressed, they would take much longer to be transmitted and this would require much more storage space, making it impossible to send fax pages or to put photos on a web page."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-4.png",
+                "text": "For example, fax images were usually compressed to about one-seventh of their original size. Without compression, they would take seven times longer to be transmitted! Remember that transmission speeds were not as good in the past as they are today."
+            },
+            {
+                "type": "screenText",
+                "id": 5,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-5.png",
+                "text": "Photos and images are often compressed to one tenth or even one hundredth of their size (using a different technique). This allows a larger number of images to be stored on devices and to be downloaded more quickly from the Internet."
+            },
+            {
+                "type": "screenText",
+                "id": 6,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-6.png",
+                "text": "A person who creates an application to transmit photos, for example, can choose the most appropriate technique for compressing the images they are transmitting."
+            }
+        ],
         "informationTexts": {
             "text1": "As we saw before, a fax machine is capable of transmitting images to another machine. Images printed by fax machines usually have large blocks of white pixels (e.g., the margins) or black pixels (e.g., a horizontal line).",
             "text2": "Color images also have repeating areas. In order to save storage space, programmers can use various compression techniques.",

@@ -1,13 +1,16 @@
 <div>
   <h1>{{'levelSelection.title' | translate}}</h1>
+
+  @for (level of levelsButtons; track level) {
   <app-level-button
-    *ngFor="let level of levelsButtons"
     [title]="level.title"
     [subTitle]="level.subtitle"
     [imageSrc]="level.srcImage"
     [router]="level.router"
   >
   </app-level-button>
+  }
+
   <app-footer-selection-level></app-footer-selection-level>
   <app-language-selection></app-language-selection>
 </div>
