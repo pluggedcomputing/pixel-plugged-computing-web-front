@@ -351,35 +351,49 @@
                 "id": 1,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-1.png",
-                "text": ""
+                "text": "Você sabe o que são QR Codes? Eles já estão inseridos no nosso dia a dia, são quadrados como esse ilustrado na figura acima. A sigla QR significa 'Quick Response' ou 'Resposta Rápida'. Sua principal função é permitir que você acesse um link, um vídeo, ou informação, instantaneamente apenas apontando a câmera do celular, sem precisar digitar nada."
             },
             {
                 "type": "screenText",
                 "id": 2,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-2.png",
-                "text": ""
+                "text": "Você já deve ter usado várias vezes QR Codes mesmo sem saber o que eram. Seja quando foi pagar uma conta no Pix, escaneando o código na maquininha. Quando foi se conectar em algum site, como o WhatsApp Web, que usa um QR Code como meio de acesso. E até mesmo para se conectar em uma rede Wi-Fi sem precisar digitar a senha, é só escanear e pronto, já está conectado."
             },
             {
                 "type": "screenText",
                 "id": 3,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-3.png",
-                "text": ""
+                "text": "Sabe como isso acontece? O QR Code é gerado a partir da transformação de informações, seja dados de pagamento, um link ou uma senha, para um visual único que o seu celular consegue ler. Cada pequeno quadrado preto ou branco representa uma informação. O sistema organiza esses quadrados em uma grade seguindo um padrão específico para representar os dados que foram inseridos. Podemos dizer que é a tradução de uma informação para uma imagem codificada, que pode ser decifrada por um leitor digital."
             },
             {
                 "type": "screenText",
                 "id": 4,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-4.png",
-                "text": ""
+                "text": "Um QR Code não é apenas um amontoado de quadros, ele possui uma estrutura muito inteligente. Os três quadrados maiores que podem ser vistos nos cantos funcionam como um 'GPS', que ajuda a câmera do seu celular a identificar a posição e o ângulo do código, assim ele pode ser lido mesmo de cabeça para baixo ou torto. Além disso, um QR Code é projetado para ser 'autocorrigível'. Parte dos seus dados são dedicados para correção de erros, para que mesmo que esteja riscado ou com partes faltando, como na imagem acima, ainda é possível identificar a informação quando escaneado."
             },
             {
                 "type": "screenText",
                 "id": 5,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-5.png",
-                "text": ""
+                "text": "A mesma praticidade que torna o QR Code tão útil também pode ser explorada por pessoas mal-intencionadas. Um dos principais é quando um QR Code malicioso te direciona para um site falso, que imita um banco ou rede social, para roubar suas senhas. Outro risco é a instalação de um vírus que está mascarado como um aplicativo comum, e seu download é iniciado assim que o código é escaneado. Fique atento a golpes comuns como códigos falsos colados em cima dos originais em locais públicos ou códigos com promoções ilusórias."
+            },
+            {
+                "type": "screenText",
+                "id": 6,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-6.png",
+                "text": "Para se proteger desses ataques e evitar problemas, é sempre bom desconfiar de tudo suspeito. Escaneie apenas códigos em fontes confiáveis, lojas conhecidas ou de pessoas de confiança. Desconfie de descontos aleatórios, de uma mega promoção, que podem estar colados em locais públicos. É sempre bom conferir o link antes de acessar um site, verifique se é oficial. Em casos de pagamento, sempre verifique as informações de quem vai receber, veja se o nome da pessoa ou loja é o correto antes de confirmar. Essas pequenas checagens podem te livrar de um problema."
+            },
+            {
+                "type": "screenText",
+                "id": 7,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-7.png",
+                "text": "E que tal você mesmo gerar alguns QR Codes? Qualquer um pode gerar um QR Code, para compartilhar informações, seja seu perfil em uma rede social, seu próprio código Pix para receber pagamentos, ou qualquer outro dado útil para você."
             }
         ]
     },
