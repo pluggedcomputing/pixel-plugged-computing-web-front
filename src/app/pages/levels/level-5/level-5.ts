@@ -6,7 +6,7 @@ import { CardHost } from '../../../components/card-host/card-host';
 @Component({
   selector: 'app-level-5',
   standalone: true,
-  imports: [ExitButton, QrCode, CardHost],
+  imports: [ExitButton, CardHost], //QrCode
   templateUrl: './level-5.html',
   styleUrl: './level-5.scss',
 })
