@@ -76,21 +76,21 @@ h6 {
 }
 
 @media(max-width: 1320px) {
-  .container div img {
+  .capa {
     margin-top: 6rem;
     width: 50%;
   }
 }
 
 @media(max-width: 1198px) {
-  .container div img {
+  .capa {
     margin-top: 6rem;
     width: 70%;
   }
 }
 
 @media(max-width: 994px) {
-  .container div img {
+  .capa {
     margin-top: 6rem;
     width: 70%;
   }
@@ -98,7 +98,7 @@ h6 {
 
 @media(max-width: 777px) {
 
-  .container div img {
+  .capa {
     margin-top: 6rem;
     width: 80%;
   }
