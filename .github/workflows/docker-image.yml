@@ -14,7 +14,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout código
+    
+    - name: Checkout
       uses: actions/checkout@v4
 
     - name: Login no GHCR
@@ -29,11 +30,11 @@ jobs:
       with:
         push: true
         tags: |
-         ghcr.io/pluggedcomputing/pixel-plugged-computing-web-front:latest
+          ghcr.io/pluggedcomputing/pixel-plugged-computing-web-front:latest
         cache-from: type=registry,ref=ghcr.io/pluggedcomputing/pixel-plugged-computing-web-front:latest
         cache-to: type=inline
 
-    - name: Callback Portainer webhook
+    - name: Callback portainer webhook
       uses: muinmomin/webhook-action@v1.0.0
       with:
         url: ${{ secrets.PORTAINER_WEBHOOK }}
