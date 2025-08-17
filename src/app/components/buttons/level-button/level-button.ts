@@ -1,5 +1,4 @@
 import { Component, inject, Input } from '@angular/core';
-import { MessagesService } from '../../../services/messages/messages-service';
 import { TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { MatIcon } from '@angular/material/icon';
@@ -11,16 +10,15 @@ import { MatIcon } from '@angular/material/icon';
   templateUrl: './level-button.html',
   styleUrl: './level-button.scss',
 })
-export class LevelButton {
-  private messagesService = inject(MessagesService);
-  private routerLink = inject(Router);
+export class LevelButtonComponent {
+  private router = inject(Router);
 
   @Input() title: string | undefined;
-  @Input() subTitle: string | undefined;
-  @Input() imageSrc: string | undefined;
-  @Input() router: string | undefined;
+  @Input() subtitle: string | undefined;
+  @Input() imgUrl: string | undefined;
+  @Input() route: string | undefined;
 
   navigateTo() {
-    this.routerLink.navigate([this.router]);
+    this.router.navigate([this.route]);
   }
 }

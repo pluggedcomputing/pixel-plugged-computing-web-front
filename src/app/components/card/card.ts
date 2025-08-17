@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   templateUrl: './card.html',
   styleUrl: './card.scss',
 })
-export class Card {
+export class CardComponent {
   @Input() title: string | undefined;
   @Input() imgUrl: string | undefined;
   @Input() text: string | undefined;

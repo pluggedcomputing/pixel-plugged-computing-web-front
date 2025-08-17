@@ -1,6 +1,5 @@
-import { CommonModule } from '@angular/common';
 import { Component, inject } from '@angular/core';
-import { TranslateModule, TranslateService } from '@ngx-translate/core';
+import { TranslateModule } from '@ngx-translate/core';
 import { MessagesService } from '../../services/messages/messages-service';
 
 @Component({
@@ -8,16 +7,13 @@ import { MessagesService } from '../../services/messages/messages-service';
   standalone: true,
   imports: [TranslateModule],
   templateUrl: './language-selection.html',
-  styleUrl: './language-selection.scss'
+  styleUrl: './language-selection.scss',
 })
-export class LanguageSelection {
+export class LanguageSelectionComponent {
+  private messagesService = inject(MessagesService);
 
-  constructor(private messages: MessagesService){
-  }
-
-  changelanguage(language: string){
-    this.messages.setLanguage(language);
+  changelanguage(language: string) {
+    this.messagesService.setLanguage(language);
     window.location.reload();
   }
-  
 }

@@ -16,7 +16,7 @@ import QRCode from 'qrcode';
   templateUrl: './qr-code.html',
   styleUrl: './qr-code.scss',
 })
-export class QrCode implements AfterViewInit, OnChanges {
+export class QrCodeComponent implements AfterViewInit, OnChanges {
   @ViewChild('qrCanvas') private canvas!: ElementRef<HTMLCanvasElement>;
 
   @Input({ required: true }) textQrCode: string | undefined;

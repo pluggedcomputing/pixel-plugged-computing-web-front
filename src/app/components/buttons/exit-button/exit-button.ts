@@ -8,6 +8,5 @@ import { RouterLink } from '@angular/router';
   templateUrl: './exit-button.html',
   styleUrl: './exit-button.scss'
 })
-export class ExitButton {
-
+export class ExitButtonComponent {
 }

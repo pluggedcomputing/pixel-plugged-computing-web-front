@@ -1,31 +1,26 @@
-import { Component } from '@angular/core';
-import { FooterButton } from '../buttons/footer-button/footer-button';
+import { Component, inject } from '@angular/core';
+import { FooterButtonComponent } from '../buttons/footer-button/footer-button';
 import { CommonModule } from '@angular/common';
 import { MessagesService } from '../../services/messages/messages-service';
-
-interface buttonFooter {
-  title: string;
-  srcImage: string;
-  router: string;
-}
+import { Footer } from '../../models/button-footer.model';
 
 @Component({
   selector: 'app-footer-selection-level',
   standalone: true,
-  imports: [FooterButton, CommonModule],
+  imports: [FooterButtonComponent, CommonModule],
   templateUrl: './footer-selection-level.html',
   styleUrl: './footer-selection-level.scss',
 })
-export class FooterSelectionLevel {
-  footerButtons: buttonFooter[] = [];
+export class FooterSelectionLevelComponent {
+  private messagesService = inject(MessagesService);
 
-  constructor(private messagesService: MessagesService) {}
+  buttonFooterList: Footer[] = [];
 
   ngOnInit(): void {
     this.messagesService
       .getMessages('levelSelection.buttonsFooter')
       .subscribe((buttons) => {
-        this.footerButtons = buttons;
+        this.buttonFooterList = buttons;
       });
   }
 }

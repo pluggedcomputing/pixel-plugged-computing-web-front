@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { LevelButton } from './level-button';
+import { LevelButtonComponent } from './level-button';
 
 describe('LevelButton', () => {
-  let component: LevelButton;
-  let fixture: ComponentFixture<LevelButton>;
+  let component: LevelButtonComponent;
+  let fixture: ComponentFixture<LevelButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LevelButton]
+      imports: [LevelButtonComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(LevelButton);
+    fixture = TestBed.createComponent(LevelButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

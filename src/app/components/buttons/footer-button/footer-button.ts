@@ -1,5 +1,4 @@
-import { Component, Input } from '@angular/core';
-import { MessagesService } from '../../../services/messages/messages-service';
+import { Component, inject, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 
@@ -10,17 +9,14 @@ import { Router } from '@angular/router';
   templateUrl: './footer-button.html',
   styleUrl: './footer-button.scss',
 })
-export class FooterButton {
-  constructor(
-    private messagesService: MessagesService,
-    private routerLink: Router
-  ) {}
+export class FooterButtonComponent {
+  private router = inject(Router);
 
   @Input() title: string | undefined;
-  @Input() imageSrc: string | undefined;
-  @Input() router: string | undefined;
+  @Input() imgUrl: string | undefined;
+  @Input() route: string | undefined;
 
   navigateTo() {
-    this.routerLink.navigate([this.router]);
+    this.router.navigate([this.route]);
   }
 }

@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ExitButton } from './exit-button';
+import { ExitButtonComponent } from './exit-button';
 
 describe('ExitButton', () => {
-  let component: ExitButton;
-  let fixture: ComponentFixture<ExitButton>;
+  let component: ExitButtonComponent;
+  let fixture: ComponentFixture<ExitButtonComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ExitButton]
+      imports: [ExitButtonComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ExitButton);
+    fixture = TestBed.createComponent(ExitButtonComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

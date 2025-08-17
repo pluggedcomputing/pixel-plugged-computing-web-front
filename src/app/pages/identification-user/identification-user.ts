@@ -15,7 +15,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './identification-user.html',
   styleUrl: './identification-user.scss',
 })
-export class IdentificationUser {
+export class IdentificationUserComponent {
   userID: string = '';
   submitted: boolean = false;
 

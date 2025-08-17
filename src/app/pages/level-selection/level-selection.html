@@ -1,12 +1,12 @@
 <div>
   <h1>{{'levelSelection.title' | translate}}</h1>
 
-  @for (level of levelsButtons; track level) {
+  @for (level of buttonLevelList; track level) {
   <app-level-button
     [title]="level.title"
-    [subTitle]="level.subtitle"
-    [imageSrc]="level.srcImage"
-    [router]="level.router"
+    [subtitle]="level.subtitle"
+    [imgUrl]="level.imgUrl"
+    [route]="level.route"
   >
   </app-level-button>
   }

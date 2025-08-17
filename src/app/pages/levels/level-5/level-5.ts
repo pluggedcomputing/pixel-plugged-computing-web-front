@@ -1,16 +1,16 @@
 import { Component, signal } from '@angular/core';
-import { ExitButton } from '../../../components/buttons/exit-button/exit-button';
-import { QrCode } from '../../../components/qr-code/qr-code';
-import { CardHost } from '../../../components/card-host/card-host';
+import { ExitButtonComponent } from '../../../components/buttons/exit-button/exit-button';
+import { QrCodeComponent } from '../../../components/qr-code/qr-code';
+import { CardHostComponent } from '../../../components/card-host/card-host';
 
 @Component({
   selector: 'app-level-5',
   standalone: true,
-  imports: [ExitButton, CardHost], //QrCode
+  imports: [ExitButtonComponent, CardHostComponent], //QrCode
   templateUrl: './level-5.html',
   styleUrl: './level-5.scss',
 })
-export class Level5 {
+export class Level5Component {
   level: string = '5';
 
   // Qr Code

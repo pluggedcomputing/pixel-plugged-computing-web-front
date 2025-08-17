@@ -1,9 +1,10 @@
 <div>
+  @for (button of buttonFooterList; track button) {
   <app-footer-button
-    *ngFor="let button of footerButtons"
     [title]="button.title"
-    [imageSrc]="button.srcImage"
-    [router]="button.router"
+    [imgUrl]="button.imgUrl"
+    [route]="button.route"
   >
   </app-footer-button>
+  }
 </div>

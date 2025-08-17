@@ -22,44 +22,44 @@
             {
                 "title": "LEVEL 1",
                 "subtitle": "Images and pixels",
-                "srcImage": "../../../assets/images/selection-levels/level1.png",
-                "router": "/level-1"
+                "imgUrl": "../../../assets/images/selection-levels/level1.png",
+                "route": "/level-1"
             },
             {
                 "title": "LEVEL 2",
                 "subtitle": "Encode images with 1s and 0s",
-                "srcImage": "../../../assets/images/selection-levels/level2.png",
-                "router": "/level-2"
+                "imgUrl": "../../../assets/images/selection-levels/level2.png",
+                "route": "/level-2"
             },
             {
                 "title": "LEVEL 3",
                 "subtitle": "Compressed images",
-                "srcImage": "../../../assets/images/selection-levels/level3.png",
-                "router": "/level-3"
+                "imgUrl": "../../../assets/images/selection-levels/level3.png",
+                "route": "/level-3"
             },
             {
                 "title": "LEVEL 4",
                 "subtitle": "Using run-length coding",
-                "srcImage": "../../../assets/images/selection-levels/level4.png",
-                "router": "/level-4"
+                "imgUrl": "../../../assets/images/selection-levels/level4.png",
+                "route": "/level-4"
             },
             {
                 "title": "LEVEL 5",
                 "subtitle": "QR Code",
-                "srcImage": "../../../assets/images/selection-levels/level5.png",
-                "router": "/level-5"
+                "imgUrl": "../../../assets/images/selection-levels/level5.png",
+                "route": "/level-5"
             }
         ],
         "buttonsFooter": [
             {
                 "title": "Help",
-                "srcImage": "../../../assets/icons/buttons/help.png",
-                "router": "/help"
+                "imgUrl": "../../../assets/icons/buttons/help.png",
+                "route": "/help"
             },
             {
                 "title": "About",
-                "srcImage": "../../../assets/icons/buttons/about.png",
-                "router": "/about"
+                "imgUrl": "../../../assets/icons/buttons/about.png",
+                "route": "/about"
             }
         ]
     },

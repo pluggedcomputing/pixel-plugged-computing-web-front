@@ -1,5 +1,5 @@
 import { Component, inject, Input, OnInit } from '@angular/core';
-import { Card } from '../card/card';
+import { CardComponent } from '../card/card';
 import { MessagesService } from '../../services/messages/messages-service';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
@@ -7,13 +7,13 @@ import { MatIconModule } from '@angular/material/icon';
 @Component({
   selector: 'app-card-host',
   standalone: true,
-  imports: [Card, CommonModule, MatIconModule],
+  imports: [CardComponent, CommonModule, MatIconModule],
   templateUrl: './card-host.html',
   styleUrl: './card-host.scss',
 })
-export class CardHost implements OnInit {
+export class CardHostComponent implements OnInit {
   private messagesService = inject(MessagesService);
-  cards: Card[] = [];
+  cards: CardComponent[] = [];
   index = 0;
 
   @Input() level: string | undefined;
