@@ -5,7 +5,6 @@ import { About } from './pages/about/about';
 import { LevelSelection } from './pages/level-selection/level-selection';
 import { NotFound } from './pages/not-found/not-found';
 import { IdentificationUser } from './pages/identification-user/identification-user';
-import { ScreenHost } from './pages/screen-host/screen-host';
 import { Level1 } from './pages/levels/level-1/level-1';
 import { Level2 } from './pages/levels/level-2/level-2';
 import { Level3 } from './pages/levels/level-3/level-3';
@@ -23,7 +22,6 @@ export const routes: Routes = [
   { path: 'level-3', component: Level3 },
   { path: 'level-4', component: Level4 },
   { path: 'level-5', component: Level5 },
-  { path: 'curso/:id', component: ScreenHost },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: NotFound },
 ];
