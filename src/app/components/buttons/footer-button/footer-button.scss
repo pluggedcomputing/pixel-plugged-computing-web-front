@@ -16,10 +16,19 @@ img {
   border-radius: $border-circle;
 }
 
-img:hover{
-    background-color: $hover-primary;
+img:hover {
+  background-color: $hover-primary;
 }
 
-h3{
-    color: $secundary-color;
+h3 {
+  color: $secundary-color;
+}
+
+.level {
+  background-color: $secundary-color;
+  padding: 10px;
+}
+
+.level:hover {
+  background-color: $hover-secundary;
 }

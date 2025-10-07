@@ -6,6 +6,7 @@ import { LevelButtonComponent } from '../../components/buttons/level-button/leve
 import { CommonModule } from '@angular/common';
 import { FooterSelectionLevelComponent } from '../../components/footer-selection-level/footer-selection-level';
 import { ButtonLevel } from '../../models/button-level.model';
+import { Footer } from '../../models/button-footer.model';
 
 @Component({
   selector: 'app-level-selection',
@@ -23,6 +24,8 @@ import { ButtonLevel } from '../../models/button-level.model';
 export class LevelSelectionComponent implements OnInit {
   private messagesService = inject(MessagesService);
 
+  footers: Footer[] = [];
+
   buttonLevelList: ButtonLevel[] = [];
 
   ngOnInit(): void {
@@ -30,6 +33,11 @@ export class LevelSelectionComponent implements OnInit {
       .getMessages('levelSelection.buttonsLevels')
       .subscribe((messages) => {
         this.buttonLevelList = messages;
+      });
+    this.messagesService
+      .getMessages('levelSelection.footer')
+      .subscribe((footer) => {
+        this.footers = footer;
       });
   }
 }

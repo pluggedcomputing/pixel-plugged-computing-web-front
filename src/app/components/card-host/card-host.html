@@ -1,16 +1,47 @@
-<div>
-  <button mat-icon-button (click)="prevCard()">
+@if (cards[index].type != 'screenCongratulations') {
+<div
+  [ngClass]="{
+  screenText: cards[index].type === 'screenText',
+  screenExercice: cards[index].type === 'screenExercice',
+  screenCongratulations: cards[index].type === 'screenCongratulations'
+}"
+>
+  <button
+    [ngClass]="{
+  screenText: cards[index].type === 'screenText',
+  screenExercice: cards[index].type === 'screenExercice',
+  screenCongratulations: cards[index].type === 'screenCongratulations'
+}"
+    mat-icon-button
+    (click)="prevCard()"
+  >
     <mat-icon>chevron_left</mat-icon>
   </button>
 
   <app-card
+    [type]="cards[index].type"
     [title]="cards[index].title"
     [imgUrl]="cards[index].imgUrl"
     [text]="cards[index].text"
+    [exercice]="cards[index].exercice"
+    (buttonClickedCard)="verifyAnswer($event)"
   >
   </app-card>
 
-  <button mat-icon-button (click)="nextCard()">
+  <button
+    [ngClass]="{
+  screenText: cards[index].type === 'screenText',
+  screenExercice: cards[index].type === 'screenExercice',
+  screenCongratulations: cards[index].type === 'screenCongratulations'
+}"
+    mat-icon-button
+    (click)="nextCard()"
+  >
     <mat-icon>chevron_right</mat-icon>
   </button>
 </div>
+}@else {
+<div class="screenCongratulations">
+  <app-congratulations [footers]="cards[index].footers"></app-congratulations>
+</div>
+}

@@ -1,0 +1,28 @@
+<div class="congratulations-container">
+  <img
+    class="congratulations-img"
+    src="../../../assets/images/congratulations/logo.png"
+    alt=""
+  />
+  <h3>{{'congratulationsScreen.title' | translate}}</h3>
+  <div class="star-container">
+    @for (star of getArrayStar(corrects); track $index) {
+    <img
+      class="star-img"
+      src="../../../assets/images/congratulations/star-blue.png"
+      alt="star"
+    />
+    } @for (star of getArrayStar(incorrects); track $index) {
+    <img
+      class="star-img"
+      src="../../../assets/images/congratulations/star-white.png"
+      alt="star"
+    />
+    }
+  </div>
+  <p>{{messageForUser}}</p>
+  <app-footer-selection-level
+    [footers]="footers"
+    [typeButton]="type"
+  ></app-footer-selection-level>
+</div>

@@ -1,0 +1,10 @@
+<div>
+  @for (answer of answerList; track answer) {
+  <app-button-answer
+    [answer]="answer"
+    [correctAnswer]="correctAnswer"
+    (clicked)="onButtonClicked($event)"
+  >
+  </app-button-answer>
+  }
+</div>

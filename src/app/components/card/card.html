@@ -1,5 +1,20 @@
-<div>
-    <h2>{{title}}</h2>
-    <img src="{{imgUrl}}" alt="">
-    <p>{{text}}</p>
+<div
+  [ngClass]="{
+  screenText: type === 'screenText',
+  screenExercice: type === 'screenExercice',
+  screenCongratulations: type === 'screenCongratulations'
+}"
+>
+  <h2>{{title}}</h2>
+  <img src="{{imgUrl}}" alt="" />
+  <p>{{text}}</p>
+
+  <app-answer-host
+    [answerList]="exercice?.answers"
+    [correctAnswer]="exercice?.correctAnswer"
+    (buttonClicked)="onButtonClicked($event)"
+  >
+  </app-answer-host>
+
+  
 </div>

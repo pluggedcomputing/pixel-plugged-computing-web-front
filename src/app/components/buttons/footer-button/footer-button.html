@@ -1,4 +1,11 @@
 <div>
-    <img src="{{imgUrl}}" alt="" (click)="navigateTo()">
-    <h3>{{title}}</h3>
+  <img
+    [ngClass]="{
+    level: type === 'level'
+}"
+    src="{{imgUrl}}"
+    alt=""
+    (click)="navigateTo()"
+  />
+  <h3>{{title}}</h3>
 </div>

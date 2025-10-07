@@ -50,7 +50,7 @@
                 "route": "/level-5"
             }
         ],
-        "buttonsFooter": [
+        "footer": [
             {
                 "title": "Ajuda",
                 "imgUrl": "../../../assets/icons/buttons/help.png",
@@ -132,47 +132,70 @@
                 "text": "Quando a outra máquina de fax recebe a mensagem, ela imprime os pixels em uma página."
             },
             {
-                "type": "screenText",
+                "type": "screenExercice",
                 "id": 8,
                 "title": "Fase 1",
                 "imgUrl": "../../../../assets/images/level-1/img-8.png",
+                "text": "Como você acha que eram codificadas as mensagens enviadas através de uma máquina de fax?",
+                "exercice": {
+                    "answers": [
+                        "Com representação que economize a quantidade de dados enviada",
+                        "Usando pontos pretos como 0 e brancos como 1"
+                    ],
+                    "correctAnswer": "Com representação que economize a quantidade de dados enviada"
+                }
+            },
+            {
+                "type": "screenText",
+                "id": 9,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-9.png",
                 "text": "Para economizar no armazenamento e transmissão de dados, é mais interessante ultilizar uma representação dos dados que economize a quantidade de informação transmitida ou armazenada."
+            },
+            {
+                "type": "screenExercice",
+                "id": 10,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-10.png",
+                "text": "Considerando o que foi apresentado, responda: O que as máquinas de fax fazem?",
+                "exercice": {
+                    "answers": [
+                        "Transmitem mensagens de áudio",
+                        "Editam imagens",
+                        "Imprimem pixels",
+                        "Realizam operações matemáticas"
+                    ],
+                    "correctAnswer": "Imprimem pixels"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 11,
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-1"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continuar",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-2"
+                    }
+                ]
             }
         ],
-        "informationTexts": {
-            "text1": "Você sabia que os computadores armazenam desenhos, fotografias, e outras imagens usando apenas números? A seguir, entenderemos melhor.",
-            "text2": "As telas dos computadores são divididas em uma grade de pequenos, quadrados, podendo ser cada um de uma cor específica. Chamamos esses quadrados de elementos de imagem ou pixels.",
-            "text3": "Em uma imagem em preto e branco, cada pixel pode ser preto ou branco, então tudo que o computador precisa armazenar é quais pontos são pretos e quais são brancos.",
-            "text4": "Uma imagem correspondente à letra C, por exemplo, poderia ser representada com números binários (bits). Se o 1 indica um quadrado branco e o 0 indica um quadrado preto, então poderíamos ter uma grade de 5 X 6 pixels como a ilustrada acima.",
-            "text5": "Você já viu um aparelho de fac-símile (fax)? Esse aparelho era muito utilizado antigamente para o envio de documentos em preto e branco.",
-            "text6": "Uma máquina de fax é basicamente um computador simples que efetua uma varredura sobre uma folha e identifica os pontos brancos ou não e armazena essa informação em aproximadamente 1000 x 2000 pixels, que são transmitidos para outra máquina de fax utilizando a rede de telefonia.",
-            "text7": "Quando a outra máquina de fax recebe a mensagem, ela imprime os pixels em uma página.",
-            "text8": "Para economizar no armazenamento e transmissão de dados, é mais interessante ultilizar uma representação dos dados que economize a quantidade de informação transmitida ou armazenada."
-        },
         "exercises": {
             "exercice1": {
                 "text": "Pinte os pixels acima de preto ou branco clicando em cada um deles e veja o código em bits (sequências de 0s e 1s) correspondente."
             },
             "exercice2": {
                 "text": "A sequência de pixels acima pode ser representada por qual código?"
-            },
-            "exercice3": {
-                "text": "Como você acha que eram codificadas as mensagens enviadas através de uma máquina de fax?",
-                "alternatives": [
-                    "Com representação que economize a quantidade de dados enviada",
-                    "Usando pontos pretos como 0 e brancos como 1"
-                ],
-                "correctAlternative": "Com representação que economize a quantidade de dados enviada"
-            },
-            "exercice4": {
-                "text": "Considerando o que foi apresentado, responda: O que as máquinas de fax fazem?",
-                "alternatives": [
-                    "Transmitem mensagens de áudio",
-                    "Editam imagens",
-                    "Imprimem pixels",
-                    "Realizam operações matemáticas"
-                ],
-                "correctAlternative": "Imprimem pixels"
             }
         }
     },
