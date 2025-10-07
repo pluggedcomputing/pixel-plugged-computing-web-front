@@ -1,6 +1,7 @@
 [build]
   command = "ng build --configuration production"
-  publish = "dist/pixel-plugged-computing-web"
+  publish = "dist/pixel-plugged-computing-web/browser"
+
 
 [[redirects]]
   from = "/*"
