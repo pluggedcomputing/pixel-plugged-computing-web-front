@@ -6,8 +6,21 @@
 }"
 >
   <h2>{{title}}</h2>
+
   <img src="{{imgUrl}}" alt="" />
+
+  @if (exercice?.matriz) {
+  <app-matriz
+    [pixels]="exercice?.matriz?.pixels"
+    [rows]="exercice?.matriz?.rows"
+  ></app-matriz>
+  }
+
   <p>{{text}}</p>
+
+  @if(qrCode){
+  <app-qr-code-activity [placeHolder]="qrCode"></app-qr-code-activity>
+  }
 
   <app-answer-host
     [answerList]="exercice?.answers"
@@ -15,6 +28,4 @@
     (buttonClicked)="onButtonClicked($event)"
   >
   </app-answer-host>
-
-  
 </div>

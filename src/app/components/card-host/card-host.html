@@ -1,4 +1,5 @@
 @if (cards[index].type != 'screenCongratulations') {
+
 <div
   [ngClass]="{
   screenText: cards[index].type === 'screenText',
@@ -6,6 +7,12 @@
   screenCongratulations: cards[index].type === 'screenCongratulations'
 }"
 >
+  @if (cards[index].type === 'screenText') {
+  <app-exit-button></app-exit-button>
+  }@else{
+  <app-exit-button-blue></app-exit-button-blue>
+  }
+
   <button
     [ngClass]="{
   screenText: cards[index].type === 'screenText',
@@ -24,6 +31,7 @@
     [imgUrl]="cards[index].imgUrl"
     [text]="cards[index].text"
     [exercice]="cards[index].exercice"
+    [qrCode]="cards[index].qrCode"
     (buttonClickedCard)="verifyAnswer($event)"
   >
   </app-card>
@@ -40,8 +48,12 @@
     <mat-icon>chevron_right</mat-icon>
   </button>
 </div>
+
 }@else {
 <div class="screenCongratulations">
-  <app-congratulations [footers]="cards[index].footers"></app-congratulations>
+  <app-congratulations
+    [footers]="cards[index].footers"
+    (isRemake)="remakeLevel($event)"
+  ></app-congratulations>
 </div>
 }

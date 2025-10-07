@@ -1,10 +1,12 @@
-import { Component, inject, Input, OnInit } from '@angular/core';
+import { Component, inject, Input, OnInit, Output } from '@angular/core';
 import { CardComponent } from '../card/card';
 import { MessagesService } from '../../services/messages/messages-service';
 import { CommonModule, NgClass } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
 import { Card } from '../../models/card.model';
 import { Congratulations } from '../congratulations/congratulations';
+import { ExitButtonComponent } from '../buttons/exit-button/exit-button';
+import { ExitButtonBlueComponent } from '../buttons/exit-button-blue/exit-button-blue';
 
 @Component({
   selector: 'app-card-host',
@@ -15,6 +17,8 @@ import { Congratulations } from '../congratulations/congratulations';
     MatIconModule,
     NgClass,
     Congratulations,
+    ExitButtonComponent,
+    ExitButtonBlueComponent,
   ],
   templateUrl: './card-host.html',
   styleUrl: './card-host.scss',
@@ -63,6 +67,12 @@ export class CardHostComponent implements OnInit {
       setTimeout(() => {
         this.index = this.index + 1;
       }, 1000);
+    }
+  }
+
+  remakeLevel(value: string) {
+    if (value === 'Remake' || value === 'Refazer') {
+      this.index = 0;
     }
   }
 }

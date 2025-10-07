@@ -10,9 +10,7 @@ div {
 }
 
 img {
-  width: 400px;
-  margin-left: 150px;
-  margin-right: 150px;
+  width: 220px;
 }
 
 h2 {
@@ -21,10 +19,10 @@ h2 {
 }
 
 p {
-  width: 400px;
+  width: 220px;
   text-align: justify;
   color: $secundary-color;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .screenCongratulations {
@@ -33,4 +31,22 @@ p {
 
 .screenExercice {
   background-color: $primary-color;
+}
+
+// desktop
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  img {
+    width: 400px;
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+
+  p {
+    width: 400px;
+    font-size: 1.2rem;
+  }
 }

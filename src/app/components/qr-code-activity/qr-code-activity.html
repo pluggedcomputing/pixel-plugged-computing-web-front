@@ -1,0 +1,16 @@
+<div class="container-qrcode">
+  <div class="input-qrcode">
+    <label for="texto-qr">Digite a URL do site:</label>
+    <input
+      id="texto-qr"
+      type="text"
+      [value]="text()"
+      (input)="updateText($event)"
+      placeholder="{{placeHolder}}"
+    />
+  </div>
+
+  <div class="qr-code">
+    <app-qr-code [textQrCode]="text()"></app-qr-code>
+  </div>
+</div>

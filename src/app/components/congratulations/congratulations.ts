@@ -1,4 +1,12 @@
-import { Component, inject, Input, OnDestroy, OnInit } from '@angular/core';
+import {
+  Component,
+  EventEmitter,
+  inject,
+  Input,
+  OnDestroy,
+  OnInit,
+  Output,
+} from '@angular/core';
 import { MessagesService } from '../../services/messages/messages-service';
 import { TranslateModule } from '@ngx-translate/core';
 import { Footer } from '../../models/button-footer.model';
@@ -18,11 +26,17 @@ export class Congratulations implements OnInit, OnDestroy {
 
   @Input() footers: Footer[] | undefined;
 
+  @Output() isRemake = new EventEmitter<string>();
+
   private responsesUser: string[] = [];
   corrects: number = 0;
   incorrects: number = 0;
   messageForUser: string = '';
   private messagesCongratulationsList: string[] = [];
+
+  onIsRemake(value: string) {
+    this.isRemake.emit(value);
+  }
 
   ngOnInit(): void {
     this.responsesUser = JSON.parse(

@@ -10,17 +10,20 @@ div {
 }
 
 button {
-  width: 80px;
-  height: 80px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
+  margin-bottom: 250px;
+  margin-left: 20px;
+  margin-right: 20px;
   cursor: pointer;
   border: none;
   background-color: $white;
 
   mat-icon {
-    font-size: 80px;
-    width: 80px;
-    height: 80px;
+    font-size: 60px;
+    width: 60px;
+    height: 60px;
     color: $secundary-color;
   }
 }
@@ -31,4 +34,16 @@ button {
 
 .screenExercice {
   background-color: $primary-color;
+}
+
+@media (min-width: 1024px) {
+  button {
+    width: 80px;
+    height: 80px;
+    mat-icon {
+      font-size: 80px;
+      width: 80px;
+      height: 80px;
+    }
+  }
 }

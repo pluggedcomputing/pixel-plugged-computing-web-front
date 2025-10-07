@@ -215,23 +215,212 @@
                 "title": "Fase 2",
                 "imgUrl": "../../../../assets/images/level-2/img-2.png",
                 "text": "Por exemplo, se quisermos exibir uma imagem correspondente à letra C, precisamos pensar na tela com uma grade com vários quadrados pretos ou brancos. Ao ampliarmos uma imagem mais e mais, podemos ver uma grade de pixels semelhantes a estes."
-            }
-        ],
-        "informationTexts": {
-            "text1": "Você aprendeu que para armazenar uma imagem em preto e branco o computador apenas precisa armazenar quais pixels são pretos e quais são brancos.",
-            "text2": "Por exemplo, se quisermos exibir uma imagem correspondente à letra C, precisamos pensar na tela com uma grade com vários quadrados pretos ou brancos. Ao ampliarmos uma imagem mais e mais, podemos ver uma grade de pixels semelhantes a estes."
-        },
-        "exercises": {
-            "exercice1": {
-                "text": "Agora vamos praticar? Pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. Lembre-se de que o 1 é branco e o 0 é preto."
             },
-            "exercice2": {
-                "text": "Agora vamos praticar? Pinte os quadrados correspondentes aos códigos binários indicados e escolha a letra que será exibida."
+            {
+                "type": "screenExercice",
+                "id": 3,
+                "title": "Fase 2",
+                "text": "Agora vamos praticar? Pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. Lembre-se de que o 1 é branco e o 0 é preto.",
+                "exercice": {
+                    "matriz": {
+                        "pixels": [
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        ],
+                        "rows": [
+                            "1,0,0,0,0",
+                            "1,0,1,1,0",
+                            "1,0,0,0,0",
+                            "1,0,1,1,1",
+                            "1,0,1,1,1"
+                        ]
+                    },
+                    "answers": [
+                        "P",
+                        "T",
+                        "L",
+                        "C"
+                    ],
+                    "correctAnswer": "P"
+                }
             },
-            "exercice3": {
-                "text": "Agora tente descobrir qual o código correspondente à última linha e que está faltando neste desenho da letra W."
+            {
+                "type": "screenExercice",
+                "id": 4,
+                "title": "Fase 2",
+                "text": "Vamos praticar? Pinte os quadrados correspondentes aos códigos binários indicados e escolha a letra que será exibida.",
+                "exercice": {
+                    "matriz": {
+                        "pixels": [
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        ],
+                        "rows": [
+                            "1,0,0,0,1",
+                            "0,1,1,1,1",
+                            "0,1,0,0,1",
+                            "0,1,1,0,1",
+                            "1,0,0,0,1"
+                        ]
+                    },
+                    "answers": [
+                        "W",
+                        "G",
+                        "M",
+                        "Q"
+                    ],
+                    "correctAnswer": "G"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 4,
+                "title": "Fase 2",
+                "text": "Agora tente descobrir qual o código correspondente à última linha e que está faltando neste desenho da letra W.",
+                "exercice": {
+                    "matriz": {
+                        "pixels": [
+                            [
+                                0,
+                                1,
+                                1,
+                                1,
+                                0
+                            ],
+                            [
+                                0,
+                                1,
+                                1,
+                                1,
+                                0
+                            ],
+                            [
+                                0,
+                                1,
+                                0,
+                                1,
+                                0
+                            ],
+                            [
+                                0,
+                                0,
+                                1,
+                                0,
+                                0
+                            ],
+                            [
+                                0,
+                                1,
+                                1,
+                                1,
+                                0
+                            ]
+                        ],
+                        "rows": [
+                            "0,1,1,1,0",
+                            "0,1,1,1,0",
+                            "0,1,0,1,0",
+                            "0,0,1,0,0",
+                            "?"
+                        ]
+                    },
+                    "answers": [
+                        "1,1,1,0,1",
+                        "1,1,0,1,0",
+                        "1,1,0,0,1",
+                        "0,1,1,1,0"
+                    ],
+                    "correctAnswer": "0,1,1,1,0"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 11,
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-2"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continuar",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-3"
+                    }
+                ]
             }
-        }
+        ]
     },
     "level3": {
         "title": "FASE 3",
@@ -270,33 +459,334 @@
                 "title": "Fase 3",
                 "imgUrl": "../../../../assets/images/level-3/img-5.png",
                 "text": "Veja acima como representar a letra T. A primeira linha consiste de 0 pixels brancos, seguindos de 5 pixels pretos e as linhas seguintes de 2 pixels brancos, 1 preto e 2 brancos."
+            },
+            {
+                "type": "screenExercice",
+                "id": 6,
+                "title": "Fase 3",
+                "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles.",
+                "exercice": {
+                    "matriz": {
+                        "pixels": [
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        ],
+                        "rows": [
+                            "1,1,3",
+                            "1,1,3",
+                            "1,1,3",
+                            "1,1,3",
+                            "1,3,1"
+                        ]
+                    },
+                    "answers": [
+                        "L",
+                        "K",
+                        "I",
+                        "J"
+                    ],
+                    "correctAnswer": "L"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 7,
+                "title": "Fase 3",
+                "text": "Ajuste os pixels da imagem acima de acordo com os códigos indicados. Qual a letra que está sendo representada?",
+                "exercice": {
+                    "matriz": {
+                        "pixels": [
+                            [
+                                1,
+                                1,
+                                0,
+                                1,
+                                1
+                            ],
+                            [
+                                0,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                0,
+                                1,
+                                1,
+                                1,
+                                0
+                            ],
+                            [
+                                0,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                0,
+                                0,
+                                0,
+                                1
+                            ]
+                        ],
+                        "rows": [
+                            "0,4,1",
+                            "0,1,3,1",
+                            "0,1,3,1",
+                            "0,1,3,1",
+                            "0,4,1"
+                        ]
+                    },
+                    "answers": [
+                        "Q",
+                        "G",
+                        "P",
+                        "D"
+                    ],
+                    "correctAnswer": "D"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 8,
+                "title": "Fase 3",
+                "text": "Pinte os quadrados que faltam considerando o código de cada linha e responda: Qual a letra representada?",
+                "exercice": {
+                    "matriz": {
+                        "pixels": [
+                            [
+                                1,
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            [
+                                0,
+                                1,
+                                1,
+                                1,
+                                0
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                0
+                            ]
+                        ],
+                        "rows": [
+                            "0,5",
+                            "0,1,3,1",
+                            "0,4,1",
+                            "0,1,3,1",
+                            "0,1,3,1"
+                        ]
+                    },
+                    "answers": [
+                        "R",
+                        "H",
+                        "Q",
+                        "A"
+                    ],
+                    "correctAnswer": "R"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 9,
+                "title": "Fase 3",
+                "text": "Como você representaria a última linha da imagem acima?",
+                "exercice": {
+                    "matriz": {
+                        "pixels": [
+                            [
+                                1,
+                                0,
+                                0,
+                                0,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                0,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                0,
+                                1,
+                                1
+                            ],
+                            [
+                                0,
+                                1,
+                                0,
+                                1,
+                                1
+                            ],
+                            [
+                                0,
+                                0,
+                                0,
+                                1,
+                                1
+                            ]
+                        ],
+                        "rows": [
+                            "0,3,1",
+                            "2,1,2",
+                            "2,1,2",
+                            "0,1,1,1,2",
+                            "?"
+                        ]
+                    },
+                    "answers": [
+                        "1,1,1,2",
+                        "0,1,2,1,1",
+                        "0,2,1,2",
+                        "0,3,2"
+                    ],
+                    "correctAnswer": "0,3,2"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 10,
+                "title": "Fase 3",
+                "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles.",
+                "exercice": {
+                    "matriz": {
+                        "pixels": [
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ],
+                            [
+                                1,
+                                1,
+                                1,
+                                1,
+                                1
+                            ]
+                        ],
+                        "rows": [
+                            "0,1,2,1,1",
+                            "0,1,1,1,2",
+                            "0,2,3",
+                            "0,1,1,1,2",
+                            "0,1,2,1,1"
+                        ]
+                    },
+                    "answers": [
+                        "I",
+                        "K",
+                        "L",
+                        "J"
+                    ],
+                    "correctAnswer": "K"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 11,
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-3"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continuar",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-4"
+                    }
+                ]
             }
-        ],
-        "informationTexts": {
-            "text1": "Você aprendeu que podemos representar uma imagem através de pontos pretos e brancos, representados por 0 e 1 respectivamente.",
-            "text2": "Podemos, porém, utilizar uma representação comprimida, chamada de 'run-length coding', gastando menos espaço e menos tempo de transmissão.",
-            "text3": "Para armazenar uma imagem no computador economizando espaço, basta armazenar quantos pontos são pretos e quantos pontos são brancos. Por exemplo, a primeira linha da imagem acima pode ser representada por 1,1,3,1,1 indicando a sequência de 1 pixel branco, 1 preto, 3 brancos, 1 preto e 1 branco.",
-            "text4": "Note que o primeiro código representa a quantidade de pixels brancos e o segundo a quantidade de pixels pretos, e assim sucessivamente. Quando o primeiro código é 0 (zero), o primeiro pixel será preto, pois o 0 (zero) representa a ausência de pixels brancos.",
-            "text5": "Veja acima como representar a letra T. A primeira linha consiste de 0 pixels brancos, seguindos de 5 pixels pretos e as linhas seguintes de 2 pixels brancos, 1 preto e 2 brancos.",
-            "text6": "Abaixo, você pode ver a letra W representada com run-length coding. A primeira linha é composta por 1 pixel branco, 1 preto, 3 brancos, 1 preto e 1 branco. A segunda linha é composta por 2 brancos, 1 preto, 2 brancos, 1 preto e 1 branco. A terceira linha é composta por 3 brancos, 1 preto, 2 brancos e 1 preto."
-        },
-        "exercises": {
-            "exercice1": {
-                "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles."
-            },
-            "exercice2": {
-                "text": "Ajuste os pixels da imagem acima de acordo com os códigos indicados. Qual a letra que está sendo representada?"
-            },
-            "exercice3": {
-                "text": "Pinte os quadrados que faltam considerando o código de cada linha e responda: Qual a letra representada?"
-            },
-            "exercice4": {
-                "text": "Como você representaria a última linha da imagem acima?"
-            },
-            "exercice5": {
-                "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles."
-            }
-        }
+        ]
     },
     "level4": {
         "title": "FASE 4",
@@ -331,20 +821,19 @@
             },
             {
                 "type": "screenText",
-                "id": 5,
+                "id": 7,
                 "title": "Fase 4",
                 "imgUrl": "../../../../assets/images/level-4/img-5.png",
                 "text": "Fotos e imagens são frequentemente comprimidas para um décimo ou até um centésimo de seu tamanho (usando uma técnica diferente). Isto permite que um número maior de imagens sejam armazenadas nos dispositivos e que possam ser baixadas mais rapidamente da internet."
+            },
+            {
+                "type": "screenText",
+                "id": 8,
+                "title": "Fase 4",
+                "imgUrl": "../../../../assets/images/level-4/img-6.png",
+                "text": "Uma pessoa que cria um aplicativo para transmitir fotos, por exemplo, pode escolher a técnica mais adequada para compressão das imagens que está transmitindo."
             }
         ],
-        "informationTexts": {
-            "text1": "Como vimos antes, uma máquina de fax é capaz de transmitir imagens para uma outra máquina. Imagens impressas por máquinas de fax geralmente têm grandes blocos de pixels brancos (por exemplo, as margens) ou pretos (por exemplo, uma linha horizontal).",
-            "text2": "Imagens coloridas também possuem áreas repetidas. A fim de economizar o espaço de armazenamento, os programadores podem usar diversas técnicas de compressão.",
-            "text3": "O método visto na Fase 3, que permite comprimir imagens, foi o 'run-length coding'. Se elas não fossem comprimidas, levariam muito mais tempo para serem transmitidas e isso exigiria muito mais espaço para armazenamento, inviabilizando o envio de páginas de fax ou que fosse possível colocar fotos em uma páginas da Internet.",
-            "text4": "Por exemplo, imagens de fax eram geralmente comprimidas para aproximadamente um sétimo do seu tamanho original. Sem a compressão, estas demorariam sete vezes mais para serem transmitidas! Lembre-se de que as velocidades de transmissão não eram tão boas antigamente como as que temos hoje.",
-            "text5": "Fotos e imagens são frequentemente comprimidas para um décimo ou até um centésimo de seu tamanho (usando uma técnica diferente). Isto permite que um número maior de imagens sejam armazenadas nos dispositivos e que possam ser baixadas mais rapidamente da internet.",
-            "text6": "Uma pessoa que cria um aplicativo para transmitir fotos, por exemplo, pode escolher a técnica mais adequada para compressão das imagens que está transmitindo."
-        },
         "exercises": {
             "exercice1": {
                 "text": "Que tal desenhar você mesmo e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir.",
@@ -374,49 +863,164 @@
                 "id": 1,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-1.png",
-                "text": "Você sabe o que são QR Codes? Eles já estão inseridos no nosso dia a dia, são quadrados como esse ilustrado na figura acima. A sigla QR significa 'Quick Response' ou 'Resposta Rápida'. Sua principal função é permitir que você acesse um link, um vídeo, ou informação, instantaneamente apenas apontando a câmera do celular, sem precisar digitar nada."
+                "text": "Você sabe o que são QR Codes? São quadrados como esse ilustrado na figura acima e que estão inseridos no nosso dia a dia. A sigla QR significa 'Quick Response' ou 'Resposta Rápida'. Sua principal função é permitir que você acesse um link, um vídeo, ou informação, instantaneamente apenas apontando a câmera do celular, sem precisar digitar nada."
             },
             {
                 "type": "screenText",
                 "id": 2,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-2.png",
-                "text": "Você já deve ter usado várias vezes QR Codes mesmo sem saber o que eram. Seja quando foi pagar uma conta no Pix, escaneando o código na maquininha. Quando foi se conectar em algum site, como o WhatsApp Web, que usa um QR Code como meio de acesso. E até mesmo para se conectar em uma rede Wi-Fi sem precisar digitar a senha, é só escanear e pronto, já está conectado."
+                "qrCode": "https://…",
+                "text": "Que tal gerar um QR Code para algum site? Digite na caixa de texto abaixo o endereço (URL) de algum site ou serviço na Internet (ex: https://cppixel.a4s.dev.br). Depois, veja o QRCode gerado."
             },
             {
                 "type": "screenText",
                 "id": 3,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-3.png",
-                "text": "Sabe como isso acontece? O QR Code é gerado a partir da transformação de informações, seja dados de pagamento, um link ou uma senha, para um visual único que o seu celular consegue ler. Cada pequeno quadrado preto ou branco representa uma informação. O sistema organiza esses quadrados em uma grade seguindo um padrão específico para representar os dados que foram inseridos. Podemos dizer que é a tradução de uma informação para uma imagem codificada, que pode ser decifrada por um leitor digital."
+                "imgUrl": "../../../../assets/images/level-5/img-2.png",
+                "text": "Você já deve ter usado várias vezes QR Codes, mesmo sem saber o que eram. Por exemplo, você já deve ter escaneado algum QR Code de alguma maquininha de pagamento ou pode ter usado um QR Code para entrar no WhatsApp pelo seu computador ou para se conectar em uma rede Wi-Fi."
             },
             {
                 "type": "screenText",
                 "id": 4,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-4.png",
-                "text": "Um QR Code não é apenas um amontoado de quadros, ele possui uma estrutura muito inteligente. Os três quadrados maiores que podem ser vistos nos cantos funcionam como um 'GPS', que ajuda a câmera do seu celular a identificar a posição e o ângulo do código, assim ele pode ser lido mesmo de cabeça para baixo ou torto. Além disso, um QR Code é projetado para ser 'autocorrigível'. Parte dos seus dados são dedicados para correção de erros, para que mesmo que esteja riscado ou com partes faltando, como na imagem acima, ainda é possível identificar a informação quando escaneado."
+                "imgUrl": "../../../../assets/images/level-5/img-3.png",
+                "text": "Sabe como isso acontece? Um QR Code gerado é formado por vários quadrados pretos ou brancos (pixels) que representam uma informação, como os dados de pagamento, um link para um site ou uma senha."
             },
             {
                 "type": "screenText",
                 "id": 5,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-5.png",
-                "text": "A mesma praticidade que torna o QR Code tão útil também pode ser explorada por pessoas mal-intencionadas. Um dos principais é quando um QR Code malicioso te direciona para um site falso, que imita um banco ou rede social, para roubar suas senhas. Outro risco é a instalação de um vírus que está mascarado como um aplicativo comum, e seu download é iniciado assim que o código é escaneado. Fique atento a golpes comuns como códigos falsos colados em cima dos originais em locais públicos ou códigos com promoções ilusórias."
+                "imgUrl": "../../../../assets/images/level-5/img-4.png",
+                "text": "No QR Code há também 3 quadrados maiores que podem ser vistos nos cantos e que são chamados de marcadores de posição. Eles indicam onde começa e onde termina o código QR Code, a sua orientação (se está de pé, de lado ou de cabeça para baixo)."
             },
             {
                 "type": "screenText",
                 "id": 6,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-6.png",
-                "text": "Para se proteger desses ataques e evitar problemas, é sempre bom desconfiar de tudo suspeito. Escaneie apenas códigos em fontes confiáveis, lojas conhecidas ou de pessoas de confiança. Desconfie de descontos aleatórios, de uma mega promoção, que podem estar colados em locais públicos. É sempre bom conferir o link antes de acessar um site, verifique se é oficial. Em casos de pagamento, sempre verifique as informações de quem vai receber, veja se o nome da pessoa ou loja é o correto antes de confirmar. Essas pequenas checagens podem te livrar de um problema."
+                "imgUrl": "../../../../assets/images/level-5/img-8.png",
+                "text": "Cada módulo é a menor unidade quadrada do QR Code que pode ser preta ou branca e representa 1 bit de informação (1 ou 0). É importante destacar também que o QR Code é projetado para ser 'autocorrigível', ou seja, para que possa ser identificado mesmo que esteja com alguns riscos ou pequenas partes faltando."
             },
             {
                 "type": "screenText",
                 "id": 7,
                 "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-5.png",
+                "text": "A mesma praticidade que torna o QR Code tão útil também pode ser explorada por pessoas mal-intencionadas. Por exemplo, ao acessar um link através de um  QR Code, você pode ir para um site falso que imita o site oficial de um banco ou rede social e pode estar oferecendo informações pessoais, como suas senhas, para essas pessoas, o que é muito perigoso."
+            },
+            {
+                "type": "screenText",
+                "id": 8,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-14.png",
+                "text": "Outro risco é que ao acessar um QR Code você baixe e instale algum aplicativo malicioso, que pode também danificar seu dispositivo ou coletar dados indevidamente."
+            },
+            {
+                "type": "screenText",
+                "id": 9,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-6.png",
+                "text": "Para se proteger desses ataques e evitar problemas, desconfie de uma mega promoção ou desconto disponível em um QRCode em um lugar público. Caso decida escanear o código, observe o endereço (URL) que você está acessando e se está sendo solicitada alguma permissão de instalação de aplicativo."
+            },
+            {
+                "type": "screenText",
+                "id": 10,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-13.png",
+                "text": "Se estiver acessando um QR Code para pagamento, sempre confira os dados de quem está recebendo e veja se o nome da pessoa ou loja é o correto antes de confirmar."
+            },
+            {
+                "type": "screenText",
+                "id": 11,
+                "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-7.png",
-                "text": "E que tal você mesmo gerar alguns QR Codes? Qualquer um pode gerar um QR Code, para compartilhar informações, seja seu perfil em uma rede social, seu próprio código Pix para receber pagamentos, ou qualquer outro dado útil para você."
+                "text": "Já comentamos que você deve ter cuidado com os links que abre. Para conferir se o site é seguro, é importante verificar verificar a URL, que é basicamente o endereço do site ou serviço na internet, como https://instagram.com. Portanto, se ao acessar um QR Code, aparecer algo como https://instagramo.com, desconfie."
+            },
+            {
+                "type": "screenText",
+                "id": 12,
+                "title": "Fase 5",
+                "qrCode": "seunome@gmail...",
+                "text": "Existem vários sites para gerar um QR Code, Por exemplo, você pode gerar um QR Code para seu email. Agora, digite na caixa de texto abaixo seu e-mail (ex: computacaoplugada@dcx.ufpb.br) e veja o QR Code gerado."
+            },
+            {
+                "type": "screenExercice",
+                "id": 13,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-9.png",
+                "text": "Agora que você sabe o que são QR Codes, qual das seguintes opções é um exemplo prático de algo que VOCÊ pode criar com um QR Code?",
+                "exercice": {
+                    "answers": [
+                        "Um código para o Wi-Fi da sua casa, facilitando o acesso para visitas",
+                        "Um QR Code que aumenta a velocidade da sua internet",
+                        "Um QR Code que bloqueia anúncios em sites",
+                        "Um QR Code que funciona como um antivírus para o celular"
+                    ],
+                    "correctAnswer": "Um código para o Wi-Fi da sua casa, facilitando o acesso para visitas"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 14,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-10.png",
+                "text": "Discutimos sobre o perigo de Acessar links a partir de QR Codes não confiáveis. O que pode acontecer nesse tipo de golpe (marque a opção incorreta)?",
+                "exercice": {
+                    "answers": [
+                        "Podemos compartilhar fotos pessoais sem perceber",
+                        "Acessamos um site que imita um site verdadeiro e rouba nossos dados",
+                        "Contribuímos para uma campanha falsa",
+                        "Ganhamos um prêmio em dinheiro"
+                    ],
+                    "correctAnswer": "Ganhamos um prêmio em dinheiro"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 15,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-11.png",
+                "text": "Uma das características inteligentes de um QR Code é a Autocorreção. O que isso significa na prática?",
+                "exercice": {
+                    "answers": [
+                        "Que ele corrige erros de digitação no link para o qual aponta",
+                        "Que o código consegue ser lido mesmo que esteja um pouco riscado ou sujo",
+                        "Que ele se atualiza automaticamente com novas informações",
+                        "Que ele aponta para sites alternativos se o original estiver fora do ar"
+                    ],
+                    "correctAnswer": "Que o código consegue ser lido mesmo que esteja um pouco riscado ou sujo"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 16,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-12.png",
+                "text": "Falamos sobre verificar o link antes de abrir. Mas O que é uma URL, o endereço que aparece quando você escaneia um QR Code?",
+                "exercice": {
+                    "answers": [
+                        "É o nome de um aplicativo que precisa ser instalado",
+                        "É um código secreto para se conectar ao Wi-Fi",
+                        "É o endereço único de um site ou página na internet, como https://www.google.com",
+                        "É o nome de usuário de uma pessoa em uma rede social"
+                    ],
+                    "correctAnswer": "É o endereço único de um site ou página na internet, como https://www.google.com"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 17,
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-5"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    }
+                ]
             }
         ]
     },

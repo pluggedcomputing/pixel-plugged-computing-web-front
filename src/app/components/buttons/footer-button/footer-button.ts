@@ -1,4 +1,4 @@
-import { Component, inject, Input } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
 import { NgClass } from '@angular/common';
@@ -17,8 +17,10 @@ export class FooterButtonComponent {
   @Input() title: string | undefined;
   @Input() imgUrl: string | undefined;
   @Input() route: string | undefined;
+  @Output() isRemake = new EventEmitter<string>();
 
   navigateTo() {
+    this.isRemake.emit(this.title);
     this.router.navigate([this.route]);
   }
 }
