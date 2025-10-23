@@ -5,7 +5,6 @@
     flex-direction: column;
     align-items: center;
     gap: 10px;
-    margin-top: 1rem;
 }
 
 .flags{
@@ -21,12 +20,6 @@ h3{
 img{
     width: 50px;
     cursor: pointer;
-}
-
-
-// tablet
-@media(min-width: 768px){
-
 }
 
 // desktop
