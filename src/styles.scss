@@ -1,15 +1,14 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;700&display=swap");
 
 * {
+  font-family: "Poppins", sans-serif;
   margin: 0;
   padding: 0;
   gap: 0;
   box-sizing: border-box;
 }
 
-html,
-body {
-  min-height: 100vh;
-  font-family: "Poppins", sans-serif;
+body{
+  background-color: black;
 }
