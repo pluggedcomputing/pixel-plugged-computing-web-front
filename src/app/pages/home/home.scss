@@ -1,56 +1,58 @@
-@use '../../../assets/styles/variables' as *;
+@use "../../../assets/styles/variables" as *;
 
 div {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $primary-color;
-    gap: 10px;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: $primary-color;
+  gap: 10px;
 }
 
 h2 {
-    color: $secundary-color;
-    margin-top: 1rem;
+  color: $secundary-color;
 }
 
 h3 {
-    color: $secundary-color;
+  color: $secundary-color;
 }
 
 img {
-    margin-top: 50px;
-    width: 400px;
+  width: 400px;
+  height: auto;
 }
 
 button {
-    font-size: 20px;
-    width: 350px;
-    height: 50px;
-    background-color: $secundary-color;
-    color: $white;
-    font-weight: bold;
-    border: none;
-    border-radius: 25px;
-    cursor: pointer;
-    margin-top: 20px;
-    margin-bottom: 20px;
+  font-size: 20px;
+  width: 350px;
+  height: 50px;
+  background-color: $secundary-color;
+  color: $white;
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
-button:hover{
-    background-color: $hover-secundary;
+img,
+button {
+  max-width: 100%;
+}
+
+button:hover {
+  background-color: $hover-secundary;
 }
 
 // desktop
-@media(min-width: 1024px) {
+@media (min-width: 1024px) {
+  img {
+    width: 450px;
+  }
 
-    img{
-        width: 450px;
-    }
-
-    button{
-        width: 400px;
-    }
-
+  button {
+    width: 400px;
+  }
 }
