@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 import { CardHostComponent } from '../../../components/card-host/card-host';
-import { ExitButtonComponent } from '../../../components/buttons/exit-button/exit-button';
 
 @Component({
   selector: 'app-level-3',
   standalone: true,
-  imports: [CardHostComponent, ExitButtonComponent],
+  imports: [CardHostComponent],
   templateUrl: './level-3.html',
   styleUrl: './level-3.scss',
 })
