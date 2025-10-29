@@ -1,7 +1,9 @@
 @use "../../../../assets/styles/variables.scss" as *;
 
 button {
-  width: 220px;
+  width: 250px;
+  height: auto;
+  max-width: 100%;
   background-color: $secundary-color;
   color: $white;
   border: none;
@@ -36,6 +38,7 @@ button:focus {
   background-color: var(--answer-red-hover, #c82333);
 }
 
+//desktop
 @media (min-width: 1024px) {
   button {
     width: 400px;

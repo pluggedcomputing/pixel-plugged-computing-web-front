@@ -19,10 +19,9 @@
   screenExercice: cards[index].type === 'screenExercice',
   screenCongratulations: cards[index].type === 'screenCongratulations'
 }"
-    mat-icon-button
     (click)="prevCard()"
   >
-    <mat-icon>chevron_left</mat-icon>
+    <p class="seta"> < </p>
   </button>
 
   <app-card
@@ -42,11 +41,8 @@
   screenExercice: cards[index].type === 'screenExercice',
   screenCongratulations: cards[index].type === 'screenCongratulations'
 }"
-    mat-icon-button
     (click)="nextCard()"
-  >
-    <mat-icon>chevron_right</mat-icon>
-  </button>
+  > <p class="seta"> > </p> </button>
 </div>
 
 }@else {
