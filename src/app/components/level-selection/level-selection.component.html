@@ -1,87 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seleção de Fase</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Seleção de Fase</title>
-</head>
+  <body>
+    <div class="container-tela">
+      <div class="container-central">
+        <h2>
+          <strong>{{ "levelSelection.title" | translate }}</strong>
+        </h2>
 
-<body>
+        <div class="container-fases">
+          <button routerLink="/fase-1-1" class="botao-fase">
+            <img src="assets/levels/level1.png" class="imagem-fase" />
+            <div class="descricao-fase">
+              <h3>
+                <strong>{{
+                  "levelSelection.buttonLevel1.title" | translate
+                }}</strong>
+              </h3>
+              <h5>{{ "levelSelection.buttonLevel1.subtitle" | translate }}</h5>
+            </div>
+            <span class="seta-direita"> > </span>
+          </button>
 
-  <div class="container-tela">
+          <button routerLink="/fase-2-1" class="botao-fase">
+            <img src="assets/levels/level2.png" class="imagem-fase" />
+            <div class="descricao-fase">
+              <h3>
+                <strong>{{
+                  "levelSelection.buttonLevel2.title" | translate
+                }}</strong>
+              </h3>
+              <h5>{{ "levelSelection.buttonLevel2.subtitle" | translate }}</h5>
+            </div>
+            <span class="seta"> > </span>
+          </button>
 
-    <div class="container-central">
+          <button routerLink="/fase-3-1" class="botao-fase">
+            <img src="assets/levels/level3.png" class="imagem-fase" />
+            <div class="descricao-fase">
+              <h3>
+                <strong>{{
+                  "levelSelection.buttonLevel3.title" | translate
+                }}</strong>
+              </h3>
+              <h5>{{ "levelSelection.buttonLevel3.subtitle" | translate }}</h5>
+            </div>
+            <span class="seta"> > </span>
+          </button>
 
-      <div class="idiomas">
-        <h6>{{ 'homeScreen.selectLanguage' | translate}}</h6>
-        <div class="iconesIdiomas">
-          <img class="iconeIdioma" src="assets/languages/flags/pt-br.png" alt="iconeBrasil"
-            (click)="mudarIdiomaPortugues()" />
-          <img class="iconeIdioma" src="assets/languages/flags/en.png" alt="iconeEua" (click)="mudarIdiomaIngles()" />
-        </div>
-      </div>
-
-      <h2><strong>{{ 'levelSelection.title' | translate}}</strong></h2>
-
-      <div class="container-fases">
-
-        <button routerLink="/fase-1-1" class="botao-fase">
-          <img src="assets/levels/level1.png" class="imagem-fase">
-          <div class="descricao-fase">
-            <h3><strong>{{ 'levelSelection.buttonLevel1.title' | translate}}</strong></h3>
-            <h5>{{ 'levelSelection.buttonLevel1.subtitle' | translate}}</h5>
-          </div>
-          <span class="seta-direita"> > </span>
-        </button>
-
-        <button routerLink="/fase-2-1" class="botao-fase">
-          <img src="assets/levels/level2.png" class="imagem-fase">
-          <div class="descricao-fase">
-            <h3><strong>{{ 'levelSelection.buttonLevel2.title' | translate}}</strong></h3>
-            <h5>{{ 'levelSelection.buttonLevel2.subtitle' | translate}}</h5>
-          </div>
-          <span class="seta"> > </span>
-        </button>
-
-        <button routerLink="/fase-3-1" class="botao-fase">
-          <img src="assets/levels/level3.png" class="imagem-fase">
-          <div class="descricao-fase">
-            <h3><strong>{{ 'levelSelection.buttonLevel3.title' | translate}}</strong></h3>
-            <h5>{{ 'levelSelection.buttonLevel3.subtitle' | translate}}</h5>
-          </div>
-          <span class="seta"> > </span>
-        </button>
-
-        <button routerLink="/fase-4-1" class="botao-fase">
-          <img src="assets/levels/level4.png" class="imagem-fase">
-          <div class="descricao-fase">
-            <h3><strong>{{ 'levelSelection.buttonLevel4.title' | translate}}</strong></h3>
-            <h5>{{ 'levelSelection.buttonLevel4.subtitle' | translate}}</h5>
-          </div>
-          <span class="seta"> > </span>
-        </button>
-
-      </div>
-
-      <div class="container-rodape">
-
-        <div routerLink="/help" class="botao-rodape">
-          <img src="assets/cover/ajuda.png" class="imagem-rodape">
-          <h5>{{ 'levelSelection.helpButton' | translate}}</h5>
+          <button routerLink="/fase-4-1" class="botao-fase">
+            <img src="assets/levels/level4.png" class="imagem-fase" />
+            <div class="descricao-fase">
+              <h3>
+                <strong>{{
+                  "levelSelection.buttonLevel4.title" | translate
+                }}</strong>
+              </h3>
+              <h5>{{ "levelSelection.buttonLevel4.subtitle" | translate }}</h5>
+            </div>
+            <span class="seta"> > </span>
+          </button>
         </div>
 
-        <div routerLink="/about" class="botao-rodape">
-          <img src="assets/cover/sobre.png" class="imagem-rodape">
-          <h5>{{ 'levelSelection.aboutButton' | translate}}</h5>
+        <div class="container-rodape">
+          <div routerLink="/help" class="botao-rodape">
+            <img src="assets/cover/ajuda.png" class="imagem-rodape" />
+            <h5>{{ "levelSelection.helpButton" | translate }}</h5>
+          </div>
+
+          <div routerLink="/about" class="botao-rodape">
+            <img src="assets/cover/sobre.png" class="imagem-rodape" />
+            <h5>{{ "levelSelection.aboutButton" | translate }}</h5>
+          </div>
         </div>
 
+        <div class="idiomas">
+          <h6>{{ "homeScreen.selectLanguage" | translate }}</h6>
+          <div class="iconesIdiomas">
+            <img
+              class="iconeIdioma"
+              src="assets/languages/flags/pt-br.png"
+              alt="iconeBrasil"
+              (click)="mudarIdiomaPortugues()"
+            />
+            <img
+              class="iconeIdioma"
+              src="assets/languages/flags/en.png"
+              alt="iconeEua"
+              (click)="mudarIdiomaIngles()"
+            />
+          </div>
+        </div>
       </div>
-
     </div>
-
-  </div>
-
-</body>
-
+  </body>
 </html>

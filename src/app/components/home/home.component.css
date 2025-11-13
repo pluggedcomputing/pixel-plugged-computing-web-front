@@ -5,29 +5,28 @@ body {
 .container {
   width: 100%;
   display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 
-.idiomas{
+.idiomas {
   display: flex;
   flex-direction: column;
   width: 300px;
   align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
   margin-top: 10px;
   text-align: center;
 }
 
-.iconesIdiomas{
+.iconesIdiomas {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
 
-.iconeIdioma{
+.iconeIdioma {
   width: 50px;
   cursor: pointer;
 }
@@ -35,14 +34,13 @@ body {
 .content {
   display: flex;
   width: 100%;
-  justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
 .capa {
-  margin-top: 1rem;
-  width: 35%;
+  margin-top: 3rem;
+  width: 80%;
 }
 
 h2 {
@@ -51,6 +49,7 @@ h2 {
   font-weight: 700;
   margin: 1rem 0 0 0;
   font-size: 1.6rem;
+  text-align: center;
 }
 
 h3 {
@@ -68,47 +67,32 @@ h6 {
   width: 350px;
   height: 50px;
   background-color: #07377a;
-  margin: 1.5rem 0;
+  margin: 1rem 0;
   box-shadow: 0 8px 5px #508ea4;
   font-size: 1.5rem;
   font-weight: bold;
   padding: 0;
 }
 
-@media(max-width: 1320px) {
-  .capa {
-    margin-top: 6rem;
-    width: 50%;
+@media(min-width: 1024px) {
+
+  .idiomas {
+    position: fixed;
+    right: 0;
+    top: 0;
   }
-}
-
-@media(max-width: 1198px) {
-  .capa {
-    margin-top: 6rem;
-    width: 70%;
-  }
-}
-
-@media(max-width: 994px) {
-  .capa {
-    margin-top: 6rem;
-    width: 70%;
-  }
-}
-
-@media(max-width: 777px) {
 
   .capa {
-    margin-top: 6rem;
-    width: 80%;
+    margin-top: 4rem;
+    width: 35%;
   }
 
   h2 {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
   }
 
   h3 {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .btn {

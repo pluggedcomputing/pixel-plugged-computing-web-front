@@ -40,26 +40,23 @@ span {
   gap: 5px;
 }
 
-.idiomas{
+.idiomas {
   display: flex;
   flex-direction: column;
   width: 300px;
   align-items: center;
-  position: fixed;
-  top: 0;
-  right: 0;
   margin-top: 10px;
   text-align: center;
 }
 
-.iconesIdiomas{
+.iconesIdiomas {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 10px;
 }
 
-.iconeIdioma{
+.iconeIdioma {
   width: 50px;
   /* cursor: pointer; */
 }
@@ -198,6 +195,13 @@ span {
 /* Escala Desktop */
 
 @media (min-width: 1024px) {
+
+  .idiomas {
+    position: fixed;
+    top: 0;
+    right: 0;
+  }
+
   .container-tela {
     padding: 1%;
   }
