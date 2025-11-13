@@ -10,6 +10,7 @@
 }
 
 .congratulations-img {
+  margin-top: 50px;
   width: 200px;
 }
 
@@ -21,7 +22,7 @@
 }
 
 .star-img {
-  width: 50px;
+  width: 30px;
 }
 
 h3 {
@@ -33,7 +34,7 @@ h3 {
 p {
   color: $secundary-color;
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 0.9rem;
 }
 
 /* desktop */
@@ -41,5 +42,11 @@ p {
 @media (min-width: 1024px) {
   .congratulations-img {
     width: 400px;
+  }
+  .star-img {
+    width: 50px;
+  }
+  p {
+    font-size: 1.2rem;
   }
 }

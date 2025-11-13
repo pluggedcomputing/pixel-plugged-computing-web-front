@@ -34,7 +34,7 @@ export class QrCodeComponent implements AfterViewInit, OnChanges {
     if (!this.textQrCode) {
       return;
     }
-    QRCode.toCanvas(this.canvas.nativeElement, this.textQrCode, { width: 300}, (error) => {
+    QRCode.toCanvas(this.canvas.nativeElement, this.textQrCode, { width: 230}, (error) => {
       if (error) {
         console.error('Erro ao gerar o QR Code', error);
       } else {

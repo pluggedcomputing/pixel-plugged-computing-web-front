@@ -1,12 +1,11 @@
 import { Component, inject, Input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { Router } from '@angular/router';
-import { MatIcon } from '@angular/material/icon';
 
 @Component({
   selector: 'app-level-button',
   standalone: true,
-  imports: [TranslateModule, MatIcon],
+  imports: [TranslateModule],
   templateUrl: './level-button.html',
   styleUrl: './level-button.scss',
 })
