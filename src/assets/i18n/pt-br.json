@@ -111,6 +111,31 @@
                 "text": "Uma imagem correspondente à letra C, por exemplo, poderia ser representada com números binários (bits). Se o 1 indica um quadrado branco e o 0 indica um quadrado preto, então poderíamos ter uma grade de 5 X 6 pixels como a ilustrada acima."
             },
             {
+                "type": "screenExample",
+                "id": 5,
+                "title": "Fase 1",
+                "text": "Pinte os pixels acima de preto ou branco clicando em cada um deles e veja o código em bits (sequências de 0s e 1s) correspondente."
+            },
+            {
+                "type": "screenExercice",
+                "id": 3,
+                "title": "Fase 1",
+                "text": "A sequência de pixels acima pode ser representada por qual código?",
+                "idMatriz": "1-1",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "1,0,0,0,0",
+                        "1,0,1,0,1",
+                        "0,1,0,1,1",
+                        "1,0,1,1,1",
+                        "1,1,1,1,1"
+                    ],
+                    "correctAnswer": "1,0,1,0,1"
+                }
+            },
+            {
                 "type": "screenText",
                 "id": 5,
                 "title": "Fase 1",
@@ -138,6 +163,8 @@
                 "imgUrl": "../../../../assets/images/level-1/img-8.png",
                 "text": "Como você acha que eram codificadas as mensagens enviadas através de uma máquina de fax?",
                 "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "Com representação que economize a quantidade de dados enviada",
                         "Usando pontos pretos como 0 e brancos como 1"
@@ -159,6 +186,8 @@
                 "imgUrl": "../../../../assets/images/level-1/img-10.png",
                 "text": "Considerando o que foi apresentado, responda: O que as máquinas de fax fazem?",
                 "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "Transmitem mensagens de áudio",
                         "Editam imagens",
@@ -189,15 +218,7 @@
                     }
                 ]
             }
-        ],
-        "exercises": {
-            "exercice1": {
-                "text": "Pinte os pixels acima de preto ou branco clicando em cada um deles e veja o código em bits (sequências de 0s e 1s) correspondente."
-            },
-            "exercice2": {
-                "text": "A sequência de pixels acima pode ser representada por qual código?"
-            }
-        }
+        ]
     },
     "level2": {
         "title": "FASE 2",
@@ -221,53 +242,10 @@
                 "id": 3,
                 "title": "Fase 2",
                 "text": "Agora vamos praticar? Pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. Lembre-se de que o 1 é branco e o 0 é preto.",
+                "idMatriz": "2-1",
                 "exercice": {
-                    "matriz": {
-                        "pixels": [
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ]
-                        ],
-                        "rows": [
-                            "1,0,0,0,0",
-                            "1,0,1,1,0",
-                            "1,0,0,0,0",
-                            "1,0,1,1,1",
-                            "1,0,1,1,1"
-                        ]
-                    },
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "P",
                         "T",
@@ -282,53 +260,10 @@
                 "id": 4,
                 "title": "Fase 2",
                 "text": "Vamos praticar? Pinte os quadrados correspondentes aos códigos binários indicados e escolha a letra que será exibida.",
+                "idMatriz": "2-2",
                 "exercice": {
-                    "matriz": {
-                        "pixels": [
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ]
-                        ],
-                        "rows": [
-                            "1,0,0,0,1",
-                            "0,1,1,1,1",
-                            "0,1,0,0,1",
-                            "0,1,1,0,1",
-                            "1,0,0,0,1"
-                        ]
-                    },
+                    "numberExercice": "2",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "W",
                         "G",
@@ -343,53 +278,10 @@
                 "id": 4,
                 "title": "Fase 2",
                 "text": "Agora tente descobrir qual o código correspondente à última linha e que está faltando neste desenho da letra W.",
+                "idMatriz": "2-3",
                 "exercice": {
-                    "matriz": {
-                        "pixels": [
-                            [
-                                0,
-                                1,
-                                1,
-                                1,
-                                0
-                            ],
-                            [
-                                0,
-                                1,
-                                1,
-                                1,
-                                0
-                            ],
-                            [
-                                0,
-                                1,
-                                0,
-                                1,
-                                0
-                            ],
-                            [
-                                0,
-                                0,
-                                1,
-                                0,
-                                0
-                            ],
-                            [
-                                0,
-                                1,
-                                1,
-                                1,
-                                0
-                            ]
-                        ],
-                        "rows": [
-                            "0,1,1,1,0",
-                            "0,1,1,1,0",
-                            "0,1,0,1,0",
-                            "0,0,1,0,0",
-                            "?"
-                        ]
-                    },
+                    "numberExercice": "3",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "1,1,1,0,1",
                         "1,1,0,1,0",
@@ -465,53 +357,10 @@
                 "id": 6,
                 "title": "Fase 3",
                 "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles.",
+                "idMatriz": "3-1",
                 "exercice": {
-                    "matriz": {
-                        "pixels": [
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ]
-                        ],
-                        "rows": [
-                            "1,1,3",
-                            "1,1,3",
-                            "1,1,3",
-                            "1,1,3",
-                            "1,3,1"
-                        ]
-                    },
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "L",
                         "K",
@@ -526,53 +375,10 @@
                 "id": 7,
                 "title": "Fase 3",
                 "text": "Ajuste os pixels da imagem acima de acordo com os códigos indicados. Qual a letra que está sendo representada?",
+                "idMatriz": "3-2",
                 "exercice": {
-                    "matriz": {
-                        "pixels": [
-                            [
-                                1,
-                                1,
-                                0,
-                                1,
-                                1
-                            ],
-                            [
-                                0,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                0,
-                                1,
-                                1,
-                                1,
-                                0
-                            ],
-                            [
-                                0,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                0,
-                                0,
-                                0,
-                                1
-                            ]
-                        ],
-                        "rows": [
-                            "0,4,1",
-                            "0,1,3,1",
-                            "0,1,3,1",
-                            "0,1,3,1",
-                            "0,4,1"
-                        ]
-                    },
+                    "numberExercice": "2",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "Q",
                         "G",
@@ -587,53 +393,10 @@
                 "id": 8,
                 "title": "Fase 3",
                 "text": "Pinte os quadrados que faltam considerando o código de cada linha e responda: Qual a letra representada?",
+                "idMatriz": "3-3",
                 "exercice": {
-                    "matriz": {
-                        "pixels": [
-                            [
-                                1,
-                                0,
-                                0,
-                                0,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                0,
-                                0,
-                                0,
-                                0,
-                                1
-                            ],
-                            [
-                                0,
-                                1,
-                                1,
-                                1,
-                                0
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                0
-                            ]
-                        ],
-                        "rows": [
-                            "0,5",
-                            "0,1,3,1",
-                            "0,4,1",
-                            "0,1,3,1",
-                            "0,1,3,1"
-                        ]
-                    },
+                    "numberExercice": "3",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "R",
                         "H",
@@ -648,53 +411,10 @@
                 "id": 9,
                 "title": "Fase 3",
                 "text": "Como você representaria a última linha da imagem acima?",
+                "idMatriz": "3-4",
                 "exercice": {
-                    "matriz": {
-                        "pixels": [
-                            [
-                                1,
-                                0,
-                                0,
-                                0,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                0,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                0,
-                                1,
-                                1
-                            ],
-                            [
-                                0,
-                                1,
-                                0,
-                                1,
-                                1
-                            ],
-                            [
-                                0,
-                                0,
-                                0,
-                                1,
-                                1
-                            ]
-                        ],
-                        "rows": [
-                            "0,3,1",
-                            "2,1,2",
-                            "2,1,2",
-                            "0,1,1,1,2",
-                            "?"
-                        ]
-                    },
+                    "numberExercice": "4",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "1,1,1,2",
                         "0,1,2,1,1",
@@ -709,53 +429,10 @@
                 "id": 10,
                 "title": "Fase 3",
                 "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles.",
+                "idMatriz": "3-5",
                 "exercice": {
-                    "matriz": {
-                        "pixels": [
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ],
-                            [
-                                1,
-                                1,
-                                1,
-                                1,
-                                1
-                            ]
-                        ],
-                        "rows": [
-                            "0,1,2,1,1",
-                            "0,1,1,1,2",
-                            "0,2,3",
-                            "0,1,1,1,2",
-                            "0,1,2,1,1"
-                        ]
-                    },
+                    "numberExercice": "5",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "I",
                         "K",
@@ -933,7 +610,7 @@
                 "id": 11,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-7.png",
-                "text": "Já comentamos que você deve ter cuidado com os links que abre. Para conferir se o site é seguro, é importante verificar verificar a URL, que é basicamente o endereço do site ou serviço na internet, como https://instagram.com. Portanto, se ao acessar um QR Code, aparecer algo como https://instagramo.com, desconfie."
+                "text": "Já comentamos que você deve ter cuidado com os links que abre. Para conferir se o site é seguro, é importante verificar a URL, que é basicamente o endereço do site ou serviço na internet, como https://instagram.com. Portanto, se ao acessar um QR Code, aparecer algo como https://instagramo.com, desconfie."
             },
             {
                 "type": "screenText",
@@ -949,6 +626,8 @@
                 "imgUrl": "../../../../assets/images/level-5/img-9.png",
                 "text": "Agora que você sabe o que são QR Codes, qual das seguintes opções é um exemplo prático de algo que VOCÊ pode criar com um QR Code?",
                 "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "Um código para o Wi-Fi da sua casa, facilitando o acesso para visitas",
                         "Um QR Code que aumenta a velocidade da sua internet",
@@ -965,6 +644,8 @@
                 "imgUrl": "../../../../assets/images/level-5/img-10.png",
                 "text": "Discutimos sobre o perigo de Acessar links a partir de QR Codes não confiáveis. O que pode acontecer nesse tipo de golpe (marque a opção incorreta)?",
                 "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "Podemos compartilhar fotos pessoais sem perceber",
                         "Acessamos um site que imita um site verdadeiro e rouba nossos dados",
@@ -981,6 +662,8 @@
                 "imgUrl": "../../../../assets/images/level-5/img-11.png",
                 "text": "Uma das características inteligentes de um QR Code é a Autocorreção. O que isso significa na prática?",
                 "exercice": {
+                    "numberExercice": "3",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "Que ele corrige erros de digitação no link para o qual aponta",
                         "Que o código consegue ser lido mesmo que esteja um pouco riscado ou sujo",
@@ -997,6 +680,8 @@
                 "imgUrl": "../../../../assets/images/level-5/img-12.png",
                 "text": "Falamos sobre verificar o link antes de abrir. Mas O que é uma URL, o endereço que aparece quando você escaneia um QR Code?",
                 "exercice": {
+                    "numberExercice": "4",
+                    "type": "MULTIPLA ESCOLHA",
                     "answers": [
                         "É o nome de um aplicativo que precisa ser instalado",
                         "É um código secreto para se conectar ao Wi-Fi",

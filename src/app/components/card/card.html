@@ -2,18 +2,20 @@
   [ngClass]="{
   screenText: type === 'screenText',
   screenExercice: type === 'screenExercice',
-  screenCongratulations: type === 'screenCongratulations'
+  screenCongratulations: type === 'screenCongratulations',
+  screenExample: type === 'screenExample'
 }"
 >
   <h2>{{title}}</h2>
 
   <img src="{{imgUrl}}" alt="" />
 
-  @if (exercice?.matriz) {
-  <app-matriz
-    [pixels]="exercice?.matriz?.pixels"
-    [rows]="exercice?.matriz?.rows"
-  ></app-matriz>
+  @if (matriz) {
+  <app-matriz [pixels]="matriz.pixels" [rows]="matriz.rows"></app-matriz>
+  } 
+  
+  @if (type === 'screenExample') {
+  <app-pixels-example></app-pixels-example>
   }
 
   <p>{{text}}</p>

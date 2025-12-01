@@ -4,11 +4,19 @@ import { AnswerHostComponent } from '../answer-host/answer-host';
 import { NgClass } from '@angular/common';
 import { MatrizComponent } from '../matriz/matriz';
 import { QrCodeActivityComponent } from '../qr-code-activity/qr-code-activity';
+import { PixelsExample } from '../pixels-example/pixels-example';
+import { Matriz } from '../../models/matriz.model';
 
 @Component({
   selector: 'app-card',
   standalone: true,
-  imports: [AnswerHostComponent, NgClass, MatrizComponent, QrCodeActivityComponent],
+  imports: [
+    AnswerHostComponent,
+    NgClass,
+    MatrizComponent,
+    QrCodeActivityComponent,
+    PixelsExample,
+  ],
   templateUrl: './card.html',
   styleUrl: './card.scss',
 })
@@ -17,8 +25,9 @@ export class CardComponent {
   @Input() title: string | undefined;
   @Input() imgUrl?: string | undefined;
   @Input() text: string | undefined;
-  @Input() exercice?: Exercice | undefined;
+  @Input() exercice: Exercice | undefined;
   @Input() qrCode?: string | undefined;
+  @Input() matriz?: Matriz | undefined;
   @Output() buttonClickedCard = new EventEmitter<string>();
 
   onButtonClicked(value: string) {

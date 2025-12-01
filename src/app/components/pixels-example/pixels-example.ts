@@ -1,17 +1,15 @@
-import { Component, inject, Input } from '@angular/core';
-import { MatrizService } from '../../services/matriz/matriz-service';
 import { NgClass } from '@angular/common';
+import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-matriz',
+  selector: 'app-pixels-example',
   standalone: true,
   imports: [NgClass],
-  templateUrl: './matriz.html',
-  styleUrl: './matriz.scss',
+  templateUrl: './pixels-example.html',
+  styleUrl: './pixels-example.scss',
 })
-export class MatrizComponent {
-  @Input() rows: string[] | undefined;
-  @Input() pixels: number[][] | undefined;
+export class PixelsExample {
+  pixels: number[][] = [[1, 1, 1, 1, 1]];
 
   setColorPixel(indexLinha: number, indexPixel: number): void {
     if (!this.pixels || !this.pixels[indexLinha]) return;

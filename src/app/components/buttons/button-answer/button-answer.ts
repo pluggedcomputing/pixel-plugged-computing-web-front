@@ -43,7 +43,7 @@ export class ButtonAnswerComponent {
       this.saveFirstResponse(this.type);
       this.isFirstResponse = false;
     }
-    this.clicked.emit(this.type);
+    this.clicked.emit(this.answer);
     this.block = true;
     setTimeout(() => {
       this.type = '';

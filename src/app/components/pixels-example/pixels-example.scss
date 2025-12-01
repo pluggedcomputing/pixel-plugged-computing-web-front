@@ -13,6 +13,8 @@
   flex-direction: column;
   align-items: center;
   gap: 2px;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 .linha {
@@ -23,18 +25,18 @@
 }
 
 .pixel {
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   cursor: pointer;
   border: solid;
   border-color: $secundary-color;
 }
 
-.rows {
+.container-pixel {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
-  align-items: left;
 }
 
 p {
@@ -52,7 +54,7 @@ p {
 
 //desktop
 @media (min-width: 1024px) {
-  .container-matriz{
+  .container-matriz {
     width: 400px;
   }
   .pixel {
@@ -60,8 +62,8 @@ p {
     height: 50px;
   }
 
-  .rows{
-    gap: 25px;
+  .matriz {
+    margin-top: 5rem;
   }
 
   p {

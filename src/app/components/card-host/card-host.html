@@ -4,7 +4,9 @@
   [ngClass]="{
   screenText: cards[index].type === 'screenText',
   screenExercice: cards[index].type === 'screenExercice',
-  screenCongratulations: cards[index].type === 'screenCongratulations'
+  screenCongratulations: cards[index].type === 'screenCongratulations',
+  screenExample: cards[index].type === 'screenExample',
+
 }"
 >
   @if (cards[index].type === 'screenText') {
@@ -17,11 +19,13 @@
     [ngClass]="{
   screenText: cards[index].type === 'screenText',
   screenExercice: cards[index].type === 'screenExercice',
-  screenCongratulations: cards[index].type === 'screenCongratulations'
+  screenCongratulations: cards[index].type === 'screenCongratulations',
+  screenExample: cards[index].type === 'screenExample',
+
 }"
     (click)="prevCard()"
   >
-    <p class="seta"> < </p>
+    <p class="seta"><</p>
   </button>
 
   <app-card
@@ -31,6 +35,7 @@
     [text]="cards[index].text"
     [exercice]="cards[index].exercice"
     [qrCode]="cards[index].qrCode"
+    [matriz]="getMatrizById()"
     (buttonClickedCard)="verifyAnswer($event)"
   >
   </app-card>
@@ -39,10 +44,14 @@
     [ngClass]="{
   screenText: cards[index].type === 'screenText',
   screenExercice: cards[index].type === 'screenExercice',
-  screenCongratulations: cards[index].type === 'screenCongratulations'
+  screenCongratulations: cards[index].type === 'screenCongratulations',
+  screenExample: cards[index].type === 'screenExample',
+
 }"
     (click)="nextCard()"
-  > <p class="seta"> > </p> </button>
+  >
+    <p class="seta">></p>
+  </button>
 </div>
 
 }@else {
