@@ -547,21 +547,21 @@
             },
             {
                 "type": "screenText",
-                "id": 3,
+                "id": 2,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-2.png",
                 "text": "Você já deve ter usado várias vezes QR Codes, mesmo sem saber o que eram. Por exemplo, você já deve ter escaneado algum QR Code de alguma maquininha de pagamento ou pode ter usado um QR Code para entrar no WhatsApp pelo seu computador ou para se conectar em uma rede Wi-Fi."
             },
             {
                 "type": "screenText",
-                "id": 4,
+                "id": 3,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-3.png",
                 "text": "Sabe como isso acontece? Um QR Code gerado é formado por vários quadrados pretos ou brancos (pixels) que representam uma informação, como os dados de pagamento, um link para um site ou uma senha."
             },
             {
                 "type": "screenText",
-                "id": 5,
+                "id": 4,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-4.png",
                 "text": "No QR Code há também 3 quadrados maiores que podem ser vistos nos cantos e que são chamados de marcadores de posição. Eles indicam onde começa e onde termina o código QR Code, a sua orientação (se está de pé, de lado ou de cabeça para baixo)."
@@ -638,7 +638,7 @@
                 "id": 14,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-12.png",
-                "text": "Discutimos sobre o perigo de Acessar links a partir de QR Codes não confiáveis. O que pode acontecer nesse tipo de golpe (marque a opção incorreta)?",
+                "text": "Discutimos sobre o perigo de Acessar links a partir de QR Codes não confiáveis. O que pode acontecer nesse tipo de golpe? (marque a opção INCORRETA)",
                 "exercice": {
                     "numberExercice": "2",
                     "type": "MULTIPLA ESCOLHA",
