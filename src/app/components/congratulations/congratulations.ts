@@ -22,6 +22,8 @@ import { FooterSelectionLevelComponent } from '../footer-selection-level/footer-
 export class Congratulations implements OnInit, OnDestroy {
   private msssagesService = inject(MessagesService);
 
+  @Input() level: string | undefined;
+
   type = 'level';
 
   @Input() footers: Footer[] | undefined;

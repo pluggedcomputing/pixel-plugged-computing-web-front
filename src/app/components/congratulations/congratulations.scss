@@ -1,5 +1,10 @@
 @use "../../../assets/styles/variables.scss" as *;
 
+h2 {
+  color: $secundary-color;
+  font-size: 1.8rem;
+}
+
 .congratulations-container {
   background-color: $primary-color;
   min-height: 100vh;

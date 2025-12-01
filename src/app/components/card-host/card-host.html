@@ -58,6 +58,7 @@
 <div class="screenCongratulations">
   <app-congratulations
     [footers]="cards[index].footers"
+    [level]="cards[index].title"
     (isRemake)="remakeLevel($event)"
   ></app-congratulations>
 </div>

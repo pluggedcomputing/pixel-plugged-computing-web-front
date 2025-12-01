@@ -200,6 +200,7 @@
             {
                 "type": "screenCongratulations",
                 "id": 11,
+                "title": "Fase 1",
                 "footers": [
                     {
                         "title": "Refazer",
@@ -294,6 +295,7 @@
             {
                 "type": "screenCongratulations",
                 "id": 11,
+                "title": "Fase 2",
                 "footers": [
                     {
                         "title": "Refazer",
@@ -445,6 +447,7 @@
             {
                 "type": "screenCongratulations",
                 "id": 11,
+                "title": "Fase 3",
                 "footers": [
                     {
                         "title": "Refazer",
@@ -544,13 +547,6 @@
             },
             {
                 "type": "screenText",
-                "id": 2,
-                "title": "Fase 5",
-                "qrCode": "https://…",
-                "text": "Que tal gerar um QR Code para algum site? Digite na caixa de texto abaixo o endereço (URL) de algum site ou serviço na Internet (ex: https://cppixel.a4s.dev.br). Depois, veja o QRCode gerado."
-            },
-            {
-                "type": "screenText",
                 "id": 3,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-2.png",
@@ -574,56 +570,56 @@
                 "type": "screenText",
                 "id": 6,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-8.png",
+                "imgUrl": "../../../../assets/images/level-5/img-5.png",
                 "text": "Cada módulo é a menor unidade quadrada do QR Code que pode ser preta ou branca e representa 1 bit de informação (1 ou 0). É importante destacar também que o QR Code é projetado para ser 'autocorrigível', ou seja, para que possa ser identificado mesmo que esteja com alguns riscos ou pequenas partes faltando."
             },
             {
                 "type": "screenText",
                 "id": 7,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-5.png",
+                "imgUrl": "../../../../assets/images/level-5/img-6.png",
                 "text": "A mesma praticidade que torna o QR Code tão útil também pode ser explorada por pessoas mal-intencionadas. Por exemplo, ao acessar um link através de um  QR Code, você pode ir para um site falso que imita o site oficial de um banco ou rede social e pode estar oferecendo informações pessoais, como suas senhas, para essas pessoas, o que é muito perigoso."
             },
             {
                 "type": "screenText",
                 "id": 8,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-14.png",
+                "imgUrl": "../../../../assets/images/level-5/img-7.png",
                 "text": "Outro risco é que ao acessar um QR Code você baixe e instale algum aplicativo malicioso, que pode também danificar seu dispositivo ou coletar dados indevidamente."
             },
             {
                 "type": "screenText",
                 "id": 9,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-6.png",
-                "text": "Para se proteger desses ataques e evitar problemas, desconfie de uma mega promoção ou desconto disponível em um QRCode em um lugar público. Caso decida escanear o código, observe o endereço (URL) que você está acessando e se está sendo solicitada alguma permissão de instalação de aplicativo."
+                "imgUrl": "../../../../assets/images/level-5/img-8.png",
+                "text": "Para se proteger desses ataques e evitar problemas, desconfie de uma mega promoção ou desconto disponível em um QRCode em um lugar público."
             },
             {
                 "type": "screenText",
                 "id": 10,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-13.png",
+                "imgUrl": "../../../../assets/images/level-5/img-9.png",
                 "text": "Se estiver acessando um QR Code para pagamento, sempre confira os dados de quem está recebendo e veja se o nome da pessoa ou loja é o correto antes de confirmar."
             },
             {
                 "type": "screenText",
                 "id": 11,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-7.png",
+                "imgUrl": "../../../../assets/images/level-5/img-10.png",
                 "text": "Já comentamos que você deve ter cuidado com os links que abre. Para conferir se o site é seguro, é importante verificar a URL, que é basicamente o endereço do site ou serviço na internet, como https://instagram.com. Portanto, se ao acessar um QR Code, aparecer algo como https://instagramo.com, desconfie."
             },
             {
                 "type": "screenText",
-                "id": 12,
+                "id": 2,
                 "title": "Fase 5",
-                "qrCode": "seunome@gmail...",
-                "text": "Existem vários sites para gerar um QR Code, Por exemplo, você pode gerar um QR Code para seu email. Agora, digite na caixa de texto abaixo seu e-mail (ex: computacaoplugada@dcx.ufpb.br) e veja o QR Code gerado."
+                "qrCode": "https://…",
+                "text": "Que tal gerar um QR Code para algum site? Digite na caixa de texto abaixo o endereço (URL) de algum site ou serviço na Internet (ex: https://facebook.com). Depois, veja o QRCode gerado."
             },
             {
                 "type": "screenExercice",
                 "id": 13,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-9.png",
+                "imgUrl": "../../../../assets/images/level-5/img-11.png",
                 "text": "Agora que você sabe o que são QR Codes, qual das seguintes opções é um exemplo prático de algo que VOCÊ pode criar com um QR Code?",
                 "exercice": {
                     "numberExercice": "1",
@@ -641,7 +637,7 @@
                 "type": "screenExercice",
                 "id": 14,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-10.png",
+                "imgUrl": "../../../../assets/images/level-5/img-12.png",
                 "text": "Discutimos sobre o perigo de Acessar links a partir de QR Codes não confiáveis. O que pode acontecer nesse tipo de golpe (marque a opção incorreta)?",
                 "exercice": {
                     "numberExercice": "2",
@@ -649,7 +645,7 @@
                     "answers": [
                         "Podemos compartilhar fotos pessoais sem perceber",
                         "Acessamos um site que imita um site verdadeiro e rouba nossos dados",
-                        "Contribuímos para uma campanha falsa",
+                        "Podemos nos cadastrar em uma campanha que de fato não existe",
                         "Ganhamos um prêmio em dinheiro"
                     ],
                     "correctAnswer": "Ganhamos um prêmio em dinheiro"
@@ -659,7 +655,7 @@
                 "type": "screenExercice",
                 "id": 15,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-11.png",
+                "imgUrl": "../../../../assets/images/level-5/img-13.png",
                 "text": "Uma das características inteligentes de um QR Code é a Autocorreção. O que isso significa na prática?",
                 "exercice": {
                     "numberExercice": "3",
@@ -677,8 +673,8 @@
                 "type": "screenExercice",
                 "id": 16,
                 "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-12.png",
-                "text": "Falamos sobre verificar o link antes de abrir. Mas O que é uma URL, o endereço que aparece quando você escaneia um QR Code?",
+                "imgUrl": "../../../../assets/images/level-5/img-14.png",
+                "text": "Falamos sobre verificar a URL do link antes de abrir. Mas o que é uma URL?",
                 "exercice": {
                     "numberExercice": "4",
                     "type": "MULTIPLA ESCOLHA",
@@ -694,6 +690,7 @@
             {
                 "type": "screenCongratulations",
                 "id": 17,
+                "title": "Fase 5",
                 "footers": [
                     {
                         "title": "Refazer",
