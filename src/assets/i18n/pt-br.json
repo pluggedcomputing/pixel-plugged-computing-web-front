@@ -512,6 +512,40 @@
                 "title": "Fase 4",
                 "imgUrl": "../../../../assets/images/level-4/img-6.png",
                 "text": "Uma pessoa que cria um aplicativo para transmitir fotos, por exemplo, pode escolher a técnica mais adequada para compressão das imagens que está transmitindo."
+            },
+            {
+                "type": "screenSave",
+                "id": 8,
+                "title": "Fase 4",
+                "text": "Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir."
+            },
+            {
+                "type": "screenMatrizColor",
+                "id": 8,
+                "title": "Fase 4",
+                "text": "Selecione a sequência que representa a primeira linha de sua imagem. Note que o código tem o formato: quantidade-código da cor."
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 17,
+                "title": "Fase 4",
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-4"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continuar",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-5"
+                    }
+                ]
             }
         ],
         "exercises": {
@@ -523,15 +557,6 @@
             },
             "exercice2": {
                 "text": "Selecione a sequência que representa a primeira linha de sua imagem."
-            },
-            "exercice3": {
-                "text": "Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir.",
-                "alternatives": [
-                    "Concluir"
-                ]
-            },
-            "exercice4": {
-                "text": "Selecione a sequência que representa a primeira linha de sua imagem. Note que o código tem o formato: quantidade-código da cor."
             }
         }
     },

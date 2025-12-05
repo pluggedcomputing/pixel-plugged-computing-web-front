@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MatrizService {
   private matriz: boolean[][] = [];
-  private matrizColor: string[][] = [];
+  private matrizColor: number[][] = [];
 
   setMatriz(matriz: boolean[][]) {
     this.matriz = matriz;
@@ -45,47 +45,28 @@ export class MatrizService {
 
   // Matriz colorida
 
-  getMatrizColor(): string[][] {
+  getMatrizColor(): number[][] {
     return this.matrizColor;
   }
 
-  setMatrizColor(matriz: string[][]) {
+  setMatrizColor(matriz: number[][]) {
     this.matrizColor = matriz;
   }
 
   getLinhaMatrizColor(numero_linha: number): string {
-    return this.getLinhaMatrizColorToString(
-      this.mapColorsToNumbers(this.matrizColor[numero_linha - 1].join(','))
-    );
+    const linha = this.matrizColor[numero_linha - 1];
+    return this.getLinhaMatrizColorToString(linha);
   }
 
-  mapColorsToNumbers(input: string): string {
-    const colorMap: { [key: string]: number } = {
-      black: 0,
-      white: 1,
-      red: 2,
-      green: 3,
-      blue: 4,
-    };
-
-    const colors = input.split(',');
-
-    const numbers = colors.map((color) => colorMap[color]);
-
-    return numbers.join(',');
-  }
-
-  getLinhaMatrizColorToString(input: string): string {
-    const pixels = input.split(',').map(Number);
-
+  getLinhaMatrizColorToString(input: number[]): string {
     let result = '';
     let count = 1;
 
-    for (let i = 0; i < pixels.length; i++) {
-      if (pixels[i] === pixels[i + 1]) {
+    for (let i = 0; i < input.length; i++) {
+      if (input[i] === input[i + 1]) {
         count++;
       } else {
-        result += `${count}-${pixels[i]},`;
+        result += `${count}-${input[i]},`;
         count = 1;
       }
     }

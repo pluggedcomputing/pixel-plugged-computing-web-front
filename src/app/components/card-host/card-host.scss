@@ -22,12 +22,16 @@ button {
   max-width: 100%;
 }
 
-.seta{
+.seta {
   color: $secundary-color;
   font-size: 3rem;
 }
 
-.screenCongratulations, .screenExercice, .screenExample {
+.screenCongratulations,
+.screenExercice,
+.screenExample,
+.screenSave,
+.screenMatrizColor {
   background-color: $primary-color;
 }
 
@@ -37,7 +41,7 @@ button {
     height: 80px;
   }
 
-  .seta{
+  .seta {
     font-size: 5rem;
   }
 }

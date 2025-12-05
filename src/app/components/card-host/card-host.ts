@@ -12,6 +12,7 @@ import { SessionStorageService } from '../../services/session-storage/session-st
 import { Question } from '../../models/question.model';
 import { Matriz } from '../../models/matriz.model';
 import { Matrizes } from '../../../assets/data/matrizesForLevels';
+import { MatrizService } from '../../services/matriz/matriz-service';
 
 @Component({
   selector: 'app-card-host',
@@ -32,6 +33,7 @@ export class CardHostComponent implements OnInit {
   private questionService = inject(QuestionService);
   private sessionStorageService = inject(SessionStorageService);
   private messagesService = inject(MessagesService);
+  private matrizService = inject(MatrizService);
   cards: Card[] = [];
   index = 0;
 
@@ -81,13 +83,34 @@ export class CardHostComponent implements OnInit {
   }
 
   verifyAnswer(value: string) {
-    if (
-      value === this.cards[this.index].exercice?.correctAnswer &&
-      this.isNotLastScreen()
-    ) {
+    const current = this.cards[this.index];
+
+    if (current.type === 'screenSave') {
+      setTimeout(() => {
+        this.index++;
+      }, 1000);
+
+      return;
+    }
+
+    if (current.type === 'screenMatrizColor') {
+      const correct = this.matrizService.getLinhaMatrizColor(1);
+
+      const isCorrect = value === correct;
+
+      this.sendResponseToActivies(value, isCorrect);
+
+      if (isCorrect && this.isNotLastScreen()) {
+        setTimeout(() => this.index++, 1000);
+      }
+
+      return;
+    }
+
+    if (value === current.exercice?.correctAnswer && this.isNotLastScreen()) {
       this.sendResponseToActivies(value, true);
       setTimeout(() => {
-        this.index = this.index + 1;
+        this.index++;
       }, 1000);
     } else {
       this.sendResponseToActivies(value, false);
