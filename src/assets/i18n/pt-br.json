@@ -592,11 +592,29 @@
                 "text": "No QR Code há também 3 quadrados maiores que podem ser vistos nos cantos e que são chamados de marcadores de posição. Eles indicam onde começa e onde termina o código QR Code, a sua orientação (se está de pé, de lado ou de cabeça para baixo)."
             },
             {
+                "type": "screenExercice",
+                "id": 13,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-11.png",
+                "text": "Agora que você sabe o que são QR Codes, escolha dentre as opções a seguir, um exemplo de cenário onde podemos usar estes códigos.",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "Um QR Code que aumenta a velocidade da sua internet",
+                        "Um QR Code que bloqueia anúncios em sites",
+                        "Um código para receber um pagamento por pix",
+                        "Um QR Code que funciona como um antivírus para o celular"
+                    ],
+                    "correctAnswer": "Um código para receber um pagamento por pix"
+                }
+            },
+            {
                 "type": "screenText",
                 "id": 6,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-5.png",
-                "text": "Cada módulo é a menor unidade quadrada do QR Code que pode ser preta ou branca e representa 1 bit de informação (1 ou 0). É importante destacar também que o QR Code é projetado para ser 'autocorrigível', ou seja, para que possa ser identificado mesmo que esteja com alguns riscos ou pequenas partes faltando."
+                "text": "É importante destacar também que o QR Code é projetado para ser 'autocorrigível', ou seja, para que possa ser identificado mesmo que esteja com alguns riscos ou pequenas partes faltando."
             },
             {
                 "type": "screenText",
@@ -620,45 +638,6 @@
                 "text": "Para se proteger desses ataques e evitar problemas, desconfie de uma mega promoção ou desconto disponível em um QRCode em um lugar público."
             },
             {
-                "type": "screenText",
-                "id": 10,
-                "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-9.png",
-                "text": "Se estiver acessando um QR Code para pagamento, sempre confira os dados de quem está recebendo e veja se o nome da pessoa ou loja é o correto antes de confirmar."
-            },
-            {
-                "type": "screenText",
-                "id": 11,
-                "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-10.png",
-                "text": "Já comentamos que você deve ter cuidado com os links que abre. Para conferir se o site é seguro, é importante verificar a URL, que é basicamente o endereço do site ou serviço na internet, como https://instagram.com. Portanto, se ao acessar um QR Code, aparecer algo como https://instagramo.com, desconfie."
-            },
-            {
-                "type": "screenText",
-                "id": 2,
-                "title": "Fase 5",
-                "qrCode": "https://…",
-                "text": "Que tal gerar um QR Code para algum site? Digite na caixa de texto abaixo o endereço (URL) de algum site ou serviço na Internet (ex: https://facebook.com). Depois, veja o QRCode gerado."
-            },
-            {
-                "type": "screenExercice",
-                "id": 13,
-                "title": "Fase 5",
-                "imgUrl": "../../../../assets/images/level-5/img-11.png",
-                "text": "Agora que você sabe o que são QR Codes, qual das seguintes opções é um exemplo prático de algo que VOCÊ pode criar com um QR Code?",
-                "exercice": {
-                    "numberExercice": "1",
-                    "type": "MULTIPLA ESCOLHA",
-                    "answers": [
-                        "Um código para o Wi-Fi da sua casa, facilitando o acesso para visitas",
-                        "Um QR Code que aumenta a velocidade da sua internet",
-                        "Um QR Code que bloqueia anúncios em sites",
-                        "Um QR Code que funciona como um antivírus para o celular"
-                    ],
-                    "correctAnswer": "Um código para o Wi-Fi da sua casa, facilitando o acesso para visitas"
-                }
-            },
-            {
                 "type": "screenExercice",
                 "id": 14,
                 "title": "Fase 5",
@@ -675,6 +654,27 @@
                     ],
                     "correctAnswer": "Ganhamos um prêmio em dinheiro"
                 }
+            },
+            {
+                "type": "screenText",
+                "id": 10,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-9.png",
+                "text": "Se estiver acessando um QR Code para pagamento, sempre confira os dados de quem está recebendo e veja se o nome da pessoa ou loja é o correto antes de confirmar."
+            },
+            {
+                "type": "screenText",
+                "id": 11,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-10.png",
+                "text": "Você também deve ter cuidado ao usar um QR Code para abrir um link. Sempre preste atenção à URL do link, que é o endereço do site sendo acessado. Veja se não há alguma letrinha a mais ou a menos, por exemplo"
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Fase 5",
+                "qrCode": "https://…",
+                "text": "Que tal gerar um QR Code para algum site? Digite na caixa de texto abaixo o endereço (URL) de algum site ou serviço na Internet (ex: https://cppixel.a4s.dev.br). Depois, veja o QRCode gerado."
             },
             {
                 "type": "screenExercice",
