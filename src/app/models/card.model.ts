@@ -11,4 +11,5 @@ export interface Card {
   qrCode?: string;
   exercice?: Exercice;
   footers?: Footer[];
+  form?: string;
 }
