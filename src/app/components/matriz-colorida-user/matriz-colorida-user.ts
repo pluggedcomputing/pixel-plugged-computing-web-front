@@ -16,6 +16,7 @@ export class MatrizColoridaUser {
 
   correct!: string;
   answers!: string[];
+  rows!: string[];
   pixels!: number[][];
 
   matrizService = inject(MatrizService);
@@ -23,7 +24,13 @@ export class MatrizColoridaUser {
   ngOnInit() {
     this.pixels = this.matrizService.getMatrizColor();
     this.correct = this.matrizService.getLinhaMatrizColor(1);
-
+    this.rows = [
+      '?',
+      this.matrizService.getLinhaMatrizColor(2),
+      this.matrizService.getLinhaMatrizColor(3),
+      this.matrizService.getLinhaMatrizColor(4),
+      this.matrizService.getLinhaMatrizColor(5),
+    ];
     this.answers = ['1-2,3-3,1-1', '4-4,1-3', '1-2,2-0,2-4', this.correct];
   }
 

@@ -25,7 +25,7 @@ import { MatrizService } from '../../services/matriz/matriz-service';
     Congratulations,
     ExitButtonComponent,
     ExitButtonBlueComponent,
-  ],
+],
   templateUrl: './card-host.html',
   styleUrl: './card-host.scss',
 })

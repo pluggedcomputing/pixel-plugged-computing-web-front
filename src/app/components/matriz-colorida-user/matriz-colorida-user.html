@@ -1,21 +1,30 @@
-<div class="container-matriz">
-  <div class="matriz">
-    @for (linha of pixels; track $index; let indexLinha = $index) {
-    <div class="linha">
-      @for (pixel of linha; track $index; let indexPixel = $index) {
-      <button
-        class="pixel"
-        [ngClass]="{
+<div class="container-page">
+  <div class="container-matriz">
+    <div class="matriz">
+      @for (linha of pixels; track $index; let indexLinha = $index) {
+      <div class="linha">
+        @for (pixel of linha; track $index; let indexPixel = $index) {
+        <button
+          class="pixel"
+          [ngClass]="{
       black: pixel === 0,
       white: pixel === 1,
       red: pixel === 2,
       blue: pixel === 3,
       green: pixel === 4
     }"
-      ></button>
+        ></button>
+        }
+      </div>
       }
     </div>
-    }
+    <div class="rows">
+      @for (row of rows; track $index) {
+      <div class="container-row">
+        <p>{{row}}</p>
+      </div>
+      }
+    </div>
   </div>
 
   <div class="pallet-colors">
