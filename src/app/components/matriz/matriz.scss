@@ -33,8 +33,15 @@
 .rows {
   display: flex;
   flex-direction: column;
-  gap: 5px;
   align-items: left;
+  gap: 2px;
+}
+
+.container-row {
+  display: flex;
+  align-items: center;
+  width: auto;
+  height: 30px;
 }
 
 p {
@@ -52,7 +59,7 @@ p {
 
 //desktop
 @media (min-width: 1024px) {
-  .container-matriz{
+  .container-matriz {
     width: 400px;
   }
   .pixel {
@@ -60,8 +67,8 @@ p {
     height: 50px;
   }
 
-  .rows{
-    gap: 25px;
+  .container-row{
+    height: 50px;
   }
 
   p {
