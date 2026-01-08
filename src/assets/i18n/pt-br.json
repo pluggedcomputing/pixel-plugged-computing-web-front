@@ -750,5 +750,8 @@
     ],
     "notFound": {
         "title": "Ops... por favor, volte para a tela inicial clicando no botão abaixo."
+    },
+    "buttons": {
+        "form": "Formulário de Avaliação"
     }
 }
