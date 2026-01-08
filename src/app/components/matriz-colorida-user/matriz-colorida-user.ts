@@ -31,7 +31,12 @@ export class MatrizColoridaUser {
       this.matrizService.getLinhaMatrizColor(4),
       this.matrizService.getLinhaMatrizColor(5),
     ];
-    this.answers = ['1-2,3-3,1-1', '4-4,1-3', '1-2,2-0,2-4', this.correct];
+    this.answers = ['1-2,3-3,1-1', '4-4,1-3', '1-2,2-0,2-4'];
+
+    // verifica se já existe a alternativa correta
+    this.answers.push(
+      this.answers.includes(this.correct) ? '3-1,2-2' : this.correct
+    );
   }
 
   black: number = 0;
