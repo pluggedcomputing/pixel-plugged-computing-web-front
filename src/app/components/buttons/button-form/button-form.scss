@@ -1,5 +1,9 @@
 @use "../../../../assets/styles/variables.scss" as *;
 
+a {
+  text-decoration: none;
+}
+
 button {
   display: flex;
   height: 35px;
@@ -14,10 +18,10 @@ button {
   cursor: pointer;
 }
 
-button:hover{
+button:hover {
   background-color: $hover-secundary;
 }
 
-img{
+img {
   width: 25px;
 }
