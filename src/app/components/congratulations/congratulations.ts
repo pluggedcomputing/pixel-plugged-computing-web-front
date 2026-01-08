@@ -11,11 +11,12 @@ import { MessagesService } from '../../services/messages/messages-service';
 import { TranslateModule } from '@ngx-translate/core';
 import { Footer } from '../../models/button-footer.model';
 import { FooterSelectionLevelComponent } from '../footer-selection-level/footer-selection-level';
+import { ButtonForm } from "../buttons/button-form/button-form";
 
 @Component({
   selector: 'app-congratulations',
   standalone: true,
-  imports: [TranslateModule, FooterSelectionLevelComponent],
+  imports: [TranslateModule, FooterSelectionLevelComponent, ButtonForm],
   templateUrl: './congratulations.html',
   styleUrl: './congratulations.scss',
 })
