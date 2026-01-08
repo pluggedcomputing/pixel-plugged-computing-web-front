@@ -6,8 +6,8 @@ import { MatrizComponent } from '../matriz/matriz';
 import { QrCodeActivityComponent } from '../qr-code-activity/qr-code-activity';
 import { PixelsExample } from '../pixels-example/pixels-example';
 import { Matriz } from '../../models/matriz.model';
-import { MatrizColoridaUser } from "../matriz-colorida-user/matriz-colorida-user";
-import { SaveMatriz } from "../save-matriz/save-matriz";
+import { MatrizColor } from "../matriz-color/matriz-colorida-user";
+import { SaveMatrizColor } from "../save-matriz-color/save-matriz";
 
 @Component({
   selector: 'app-card',
@@ -18,8 +18,8 @@ import { SaveMatriz } from "../save-matriz/save-matriz";
     MatrizComponent,
     QrCodeActivityComponent,
     PixelsExample,
-    MatrizColoridaUser,
-    SaveMatriz
+    MatrizColor,
+    SaveMatrizColor
 ],
   templateUrl: './card.html',
   styleUrl: './card.scss',

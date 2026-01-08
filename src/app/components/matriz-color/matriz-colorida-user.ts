@@ -10,7 +10,7 @@ import { AnswerHostComponent } from '../answer-host/answer-host';
   templateUrl: './matriz-colorida-user.html',
   styleUrl: './matriz-colorida-user.scss',
 })
-export class MatrizColoridaUser {
+export class MatrizColor {
   @Output() buttonClicked = new EventEmitter<string>();
   @Input() text: string | undefined;
 

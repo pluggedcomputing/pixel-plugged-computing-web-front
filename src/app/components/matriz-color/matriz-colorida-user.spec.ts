@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MatrizColoridaUser } from './matriz-colorida-user';
+import { MatrizColor } from './matriz-colorida-user';
 
 describe('MatrizColoridaUser', () => {
-  let component: MatrizColoridaUser;
-  let fixture: ComponentFixture<MatrizColoridaUser>;
+  let component: MatrizColor;
+  let fixture: ComponentFixture<MatrizColor>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [MatrizColoridaUser]
+      imports: [MatrizColor]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(MatrizColoridaUser);
+    fixture = TestBed.createComponent(MatrizColor);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -9,7 +9,7 @@ import { MatrizService } from '../../services/matriz/matriz-service';
   templateUrl: './save-matriz.html',
   styleUrl: './save-matriz.scss',
 })
-export class SaveMatriz {
+export class SaveMatrizColor {
   matrizService = inject(MatrizService);
 
   @Output() buttonClicked = new EventEmitter<string>();

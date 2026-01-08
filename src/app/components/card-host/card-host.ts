@@ -25,7 +25,7 @@ import { MatrizService } from '../../services/matriz/matriz-service';
     Congratulations,
     ExitButtonComponent,
     ExitButtonBlueComponent,
-],
+  ],
   templateUrl: './card-host.html',
   styleUrl: './card-host.scss',
 })
@@ -79,7 +79,17 @@ export class CardHostComponent implements OnInit {
   }
 
   private isNotScreenExercice() {
-    return this.cards[this.index].type !== 'screenExercice';
+    const cardType = this.cards[this.index].type;
+    switch (cardType) {
+      case 'screenExercice':
+        return false;
+      case 'screenSave':
+        return false;
+      case 'screenMatrizColor':
+        return false;
+      default:
+        return true;
+    }
   }
 
   verifyAnswer(value: string) {
