@@ -6,7 +6,7 @@ import { MatrizComponent } from '../matriz/matriz';
 import { QrCodeActivityComponent } from '../qr-code-activity/qr-code-activity';
 import { PixelsExample } from '../pixels-example/pixels-example';
 import { Matriz } from '../../models/matriz.model';
-import { MatrizColor } from "../matriz-color/matriz-colorida-user";
+import { MatrizColor } from "../matriz-color-activity/matriz-colorida-user";
 import { SaveMatrizColor } from "../save-matriz-color/save-matriz";
 
 @Component({

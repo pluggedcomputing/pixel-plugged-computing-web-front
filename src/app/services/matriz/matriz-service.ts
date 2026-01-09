@@ -4,21 +4,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root',
 })
 export class MatrizService {
-  private matriz: boolean[][] = [];
+  private matriz: number[][] = [];
   private matrizColor: number[][] = [];
 
-  setMatriz(matriz: boolean[][]) {
+  setMatriz(matriz: number[][]) {
     this.matriz = matriz;
   }
 
-  getMatriz(): boolean[][] {
+  getMatriz(): number[][] {
     return this.matriz;
   }
 
-  getLinhaMatriz(numberLine: number): string {
-    return this.getLinhaMatrizToString(
-      this.matriz[numberLine - 1].map((cell) => (cell ? '0' : '1')).join(',')
-    );
+  getLinhaMatriz(numero_linha: number): string {
+    const linha = this.matriz[numero_linha - 1];
+    return this.getLinhaMatrizColorToString(linha);
   }
 
   getLinhaMatrizToString(linha: string) {
