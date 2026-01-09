@@ -1,0 +1,27 @@
+@use "../../../../assets/styles/variables.scss" as *;
+
+a {
+  text-decoration: none;
+}
+
+button {
+  display: flex;
+  height: 35px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  align-items: center;
+  font-size: 1rem;
+  background-color: $secundary-color;
+  color: white;
+  gap: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: $hover-secundary;
+}
+
+img {
+  width: 25px;
+}

@@ -1,0 +1,13 @@
+<div class="notification-container">
+  @for (notification of notificationList; track notification;){
+  <div
+    class="notification"
+    [ngClass]="{
+  correct: notification.type === 'correct',
+  incorrect: notification.type === 'incorrect'
+}"
+  >
+    {{ notification.icon }} {{ notification.message }}
+  </div>
+  }
+</div>

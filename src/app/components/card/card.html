@@ -1,0 +1,39 @@
+<div
+  [ngClass]="{
+  screenText: type === 'screenText',
+  screenExercice: type === 'screenExercice',
+  screenCongratulations: type === 'screenCongratulations',
+  screenExample: type === 'screenExample',
+  screenMatrizColor: type === 'screenMatrizColor',
+  screenSave: type === 'screenSave',
+}"
+>
+  <h2>{{title}}</h2>
+
+  <img src="{{imgUrl}}" alt="" />
+
+  @if (matriz) {
+  <app-matriz [pixels]="matriz.pixels" [rows]="matriz.rows"></app-matriz>
+  } @if (type === 'screenSave') {
+  <app-save-matriz (buttonClicked)="onButtonClicked($event)"> </app-save-matriz>
+  } @if(type === 'screenMatrizColor'){
+  <app-matriz-colorida-user
+    (buttonClicked)="onButtonClicked($event)"
+  ></app-matriz-colorida-user>
+  } @if (type === 'screenExample') {
+  <app-pixels-example></app-pixels-example>
+  }
+
+  <p>{{text}}</p>
+
+  @if(qrCode){
+  <app-qr-code-activity [placeHolder]="qrCode"></app-qr-code-activity>
+  }
+
+  <app-answer-host
+    [answerList]="exercice?.answers"
+    [correctAnswer]="exercice?.correctAnswer"
+    (buttonClicked)="onButtonClicked($event)"
+  >
+  </app-answer-host>
+</div>

@@ -1,0 +1,47 @@
+@use "../../../../assets/styles/variables.scss" as *;
+
+button {
+  width: 250px;
+  height: auto;
+  max-width: 100%;
+  background-color: $secundary-color;
+  color: $white;
+  border: none;
+  font-size: 1rem;
+  border-radius: 8px;
+  padding: 10px 10px 10px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover,
+button:active,
+button:focus {
+  background-color: #052d5a;
+}
+
+.correct {
+  background-color: var(--answer-green, #28a745);
+}
+
+.correct:hover,
+.correct:focus {
+  background-color: var(--answer-green-hover, #218838);
+}
+
+.incorrect {
+  background-color: var(--answer-red, #dc3545);
+}
+
+.incorrect:hover,
+.incorrect:focus {
+  background-color: var(--answer-red-hover, #c82333);
+}
+
+//desktop
+@media (min-width: 1024px) {
+  button {
+    width: 400px;
+    font-size: 1rem;
+  }
+}

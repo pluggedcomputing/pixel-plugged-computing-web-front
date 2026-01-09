@@ -1,0 +1,759 @@
+{
+    "application": {
+        "name": "Computação Plugada Pixel Web"
+    },
+    "homeScreen": {
+        "title": "COLORINDO COM NÚMEROS",
+        "subtitle": "Representação de Imagens",
+        "startButton": "INICIAR"
+    },
+    "languageSelection": {
+        "title": "Selecione o idioma:"
+    },
+    "userIdentification": {
+        "title": "Digite seu e-mail ou código de usuário ou apenas seu nome:",
+        "submitButton": "Enviar",
+        "anonymousButton": "Entrar sem meus dados",
+        "exception": "Por favor, digite seu e-mail ou código."
+    },
+    "levelSelection": {
+        "title": "SELEÇÃO DE FASE",
+        "buttonsLevels": [
+            {
+                "title": "FASE 1",
+                "subtitle": "Imagens e pixels",
+                "imgUrl": "../../../assets/images/selection-levels/level1.png",
+                "route": "/level-1"
+            },
+            {
+                "title": "FASE 2",
+                "subtitle": "Codificar imagens com 1 e 0",
+                "imgUrl": "../../../assets/images/selection-levels/level2.png",
+                "route": "/level-2"
+            },
+            {
+                "title": "FASE 3",
+                "subtitle": "Imagens compactadas",
+                "imgUrl": "../../../assets/images/selection-levels/level3.png",
+                "route": "/level-3"
+            },
+            {
+                "title": "FASE 4",
+                "subtitle": "Usando run-length coding",
+                "imgUrl": "../../../assets/images/selection-levels/level4.png",
+                "route": "/level-4"
+            },
+            {
+                "title": "FASE 5",
+                "subtitle": "QR Code",
+                "imgUrl": "../../../assets/images/selection-levels/level5.png",
+                "route": "/level-5"
+            }
+        ],
+        "footer": [
+            {
+                "title": "Ajuda",
+                "imgUrl": "../../../assets/icons/buttons/help.png",
+                "route": "/help"
+            },
+            {
+                "title": "Sobre",
+                "imgUrl": "../../../assets/icons/buttons/about.png",
+                "route": "/about"
+            }
+        ]
+    },
+    "help": {
+        "title": "AJUDA",
+        "paragraph1": "O Computação Plugada Pixel Web se baseia na atividade \"Representação de imagens\" do livro de Bell T.Witten, I. e Follows, M. (2011), \"Computer Science Unplugged - Ensinando Ciência da Computação sem o uso do computador\" Tradução Luciano Porto Barreto, 2011.",
+        "paragraph2": "Em cada fase você encontrará telas com conteúdo informativo e também algumas telas com exercícios.",
+        "paragraph3": "Sugerimos que inicie pela Fase 1 e depois siga a ordem crescente das fases: Fase 2, Fase 3 e Fase 4.",
+        "paragraph4": "Você poderá repetir as atividades a qualquer momento para melhorar seu desempenho em cada fase.",
+        "paragraph5": "Para mais informações, entre em contato conosco através do e-mail:",
+        "paragraph6": "Estamos trabalhando continuamente para melhorar a experiência dos nossos usuários. Seu feedback é muito importante. Ajude-nos preenchendo formulários de avaliação disponíveis no site do projeto:"
+    },
+    "about": {
+        "title": "SOBRE",
+        "paragraph1": "O Computação Plugada Pixel Web se baseia na atividade \"Representação de imagens\" do livro de Bell T.Witten, I. e Follows, M. (2011), \"Computer Science Unplugged - Ensinando Ciência da Computação sem o uso do computado\" Tradução Luciano Porto Barreto, 2011.",
+        "paragraph2": "Este livro apresenta atividades práticas, lúdicas e acessíveis sobre diversos temas da ciência da computação. Sua prática é fácil não só em salas de aula mas também fora, podendo ser administrado por professores e compreendido pelas crianças.",
+        "paragraph3": "O Computação Plugada Pixel Web aqui apresentado busca simplificar ainda mais a aplicação das propostas sem a necessidade de produção de materiais adicionais. Ele mostra alguns temas por vezes considerados complexos de maneira simples para diferentes públicos.",
+        "paragraph4": "O Computação Plugada Pixel faz parte de uma família com vários outros recursos educacionais para o ensino de computação. Conheça mais sobre os demais visitando nosso site:"
+    },
+    "level1": {
+        "title": "FASE 1",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-1.png",
+                "text": "Você sabia que os computadores armazenam desenhos, fotografias, e outras imagens usando apenas números? A seguir, entenderemos melhor."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-2.png",
+                "text": "As telas dos computadores são divididas em uma grade de pequenos, quadrados, podendo ser cada um de uma cor específica. Chamamos esses quadrados de elementos de imagem ou pixels."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-3.png",
+                "text": "Em uma imagem em preto e branco, cada pixel pode ser preto ou branco, então tudo que o computador precisa armazenar é quais pontos são pretos e quais são brancos."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-4.png",
+                "text": "Uma imagem correspondente à letra C, por exemplo, poderia ser representada com números binários (bits). Se o 1 indica um quadrado branco e o 0 indica um quadrado preto, então poderíamos ter uma grade de 5 X 6 pixels como a ilustrada acima."
+            },
+            {
+                "type": "screenExample",
+                "id": 5,
+                "title": "Fase 1",
+                "text": "Pinte os pixels acima de preto ou branco clicando em cada um deles e veja o código em bits (sequências de 0s e 1s) correspondente."
+            },
+            {
+                "type": "screenExercice",
+                "id": 3,
+                "title": "Fase 1",
+                "text": "A sequência de pixels acima pode ser representada por qual código?",
+                "idMatriz": "1-1",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "1,0,0,0,0",
+                        "1,0,1,0,1",
+                        "0,1,0,1,1",
+                        "1,0,1,1,1",
+                        "1,1,1,1,1"
+                    ],
+                    "correctAnswer": "1,0,1,0,1"
+                }
+            },
+            {
+                "type": "screenText",
+                "id": 5,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-5.png",
+                "text": "Você já viu um aparelho de fac-símile (fax)? Esse aparelho era muito utilizado antigamente para o envio de documentos em preto e branco."
+            },
+            {
+                "type": "screenText",
+                "id": 6,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-6.png",
+                "text": "Uma máquina de fax é basicamente um computador simples que efetua uma varredura sobre uma folha e identifica os pontos brancos ou não e armazena essa informação em aproximadamente 1000 x 2000 pixels, que são transmitidos para outra máquina de fax utilizando a rede de telefonia."
+            },
+            {
+                "type": "screenText",
+                "id": 7,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-7.png",
+                "text": "Quando a outra máquina de fax recebe a mensagem, ela imprime os pixels em uma página."
+            },
+            {
+                "type": "screenExercice",
+                "id": 8,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-8.png",
+                "text": "Como você acha que eram codificadas as mensagens enviadas através de uma máquina de fax?",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "Com representação que economize a quantidade de dados enviada",
+                        "Usando pontos pretos como 0 e brancos como 1"
+                    ],
+                    "correctAnswer": "Com representação que economize a quantidade de dados enviada"
+                }
+            },
+            {
+                "type": "screenText",
+                "id": 9,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-9.png",
+                "text": "Para economizar no armazenamento e transmissão de dados, é mais interessante ultilizar uma representação dos dados que economize a quantidade de informação transmitida ou armazenada."
+            },
+            {
+                "type": "screenExercice",
+                "id": 10,
+                "title": "Fase 1",
+                "imgUrl": "../../../../assets/images/level-1/img-10.png",
+                "text": "Considerando o que foi apresentado, responda: O que as máquinas de fax fazem?",
+                "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "Transmitem mensagens de áudio",
+                        "Editam imagens",
+                        "Imprimem pixels",
+                        "Realizam operações matemáticas"
+                    ],
+                    "correctAnswer": "Imprimem pixels"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 11,
+                "title": "Fase 1",
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-1"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continuar",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-2"
+                    }
+                ]
+            }
+        ]
+    },
+    "level2": {
+        "title": "FASE 2",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Fase 2",
+                "imgUrl": "../../../../assets/images/level-2/img-1.png",
+                "text": "Você aprendeu que para armazenar uma imagem em preto e branco o computador apenas precisa armazenar quais pixels são pretos e quais são brancos."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Fase 2",
+                "imgUrl": "../../../../assets/images/level-2/img-2.png",
+                "text": "Por exemplo, se quisermos exibir uma imagem correspondente à letra C, precisamos pensar na tela com uma grade com vários quadrados pretos ou brancos. Ao ampliarmos uma imagem mais e mais, podemos ver uma grade de pixels semelhantes a estes."
+            },
+            {
+                "type": "screenExercice",
+                "id": 3,
+                "title": "Fase 2",
+                "text": "Agora vamos praticar? Pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. Lembre-se de que o 1 é branco e o 0 é preto.",
+                "idMatriz": "2-1",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "P",
+                        "T",
+                        "L",
+                        "C"
+                    ],
+                    "correctAnswer": "P"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 4,
+                "title": "Fase 2",
+                "text": "Vamos praticar? Pinte os quadrados correspondentes aos códigos binários indicados e escolha a letra que será exibida.",
+                "idMatriz": "2-2",
+                "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "W",
+                        "G",
+                        "M",
+                        "Q"
+                    ],
+                    "correctAnswer": "G"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 4,
+                "title": "Fase 2",
+                "text": "Agora tente descobrir qual o código correspondente à última linha e que está faltando neste desenho da letra W.",
+                "idMatriz": "2-3",
+                "exercice": {
+                    "numberExercice": "3",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "1,1,1,0,1",
+                        "1,1,0,1,0",
+                        "1,1,0,0,1",
+                        "0,1,1,1,0"
+                    ],
+                    "correctAnswer": "0,1,1,1,0"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 11,
+                "title": "Fase 2",
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-2"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continuar",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-3"
+                    }
+                ]
+            }
+        ]
+    },
+    "level3": {
+        "title": "FASE 3",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Fase 3",
+                "imgUrl": "../../../../assets/images/level-3/img-1.png",
+                "text": "Você aprendeu que podemos representar uma imagem através de pontos pretos e brancos, representados por 0 e 1 respectivamente."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Fase 3",
+                "imgUrl": "../../../../assets/images/level-3/img-2.png",
+                "text": "Podemos, porém, utilizar uma representação comprimida, chamada de 'run-length coding', gastando menos espaço e menos tempo de transmissão."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Fase 3",
+                "imgUrl": "../../../../assets/images/level-3/img-3.png",
+                "text": "Para armazenar uma imagem no computador economizando espaço, basta armazenar quantos pontos são pretos e quantos pontos são brancos. Por exemplo, a primeira linha da imagem acima pode ser representada por 1,1,3,1,1 indicando a sequência de 1 pixel branco, 1 preto, 3 brancos, 1 preto e 1 branco."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Fase 3",
+                "imgUrl": "../../../../assets/images/level-3/img-4.png",
+                "text": "Note que o primeiro código representa a quantidade de pixels brancos e o segundo a quantidade de pixels pretos, e assim sucessivamente. Quando o primeiro código é 0 (zero), o primeiro pixel será preto, pois o 0 (zero) representa a ausência de pixels brancos."
+            },
+            {
+                "type": "screenText",
+                "id": 5,
+                "title": "Fase 3",
+                "imgUrl": "../../../../assets/images/level-3/img-5.png",
+                "text": "Veja acima como representar a letra T. A primeira linha consiste de 0 pixels brancos, seguindos de 5 pixels pretos e as linhas seguintes de 2 pixels brancos, 1 preto e 2 brancos."
+            },
+            {
+                "type": "screenExercice",
+                "id": 6,
+                "title": "Fase 3",
+                "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles.",
+                "idMatriz": "3-1",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "L",
+                        "K",
+                        "I",
+                        "J"
+                    ],
+                    "correctAnswer": "L"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 7,
+                "title": "Fase 3",
+                "text": "Ajuste os pixels da imagem acima de acordo com os códigos indicados. Qual a letra que está sendo representada?",
+                "idMatriz": "3-2",
+                "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "Q",
+                        "G",
+                        "P",
+                        "D"
+                    ],
+                    "correctAnswer": "D"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 8,
+                "title": "Fase 3",
+                "text": "Pinte os quadrados que faltam considerando o código de cada linha e responda: Qual a letra representada?",
+                "idMatriz": "3-3",
+                "exercice": {
+                    "numberExercice": "3",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "R",
+                        "H",
+                        "Q",
+                        "A"
+                    ],
+                    "correctAnswer": "R"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 9,
+                "title": "Fase 3",
+                "text": "Como você representaria a última linha da imagem acima?",
+                "idMatriz": "3-4",
+                "exercice": {
+                    "numberExercice": "4",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "1,1,1,2",
+                        "0,1,2,1,1",
+                        "0,2,1,2",
+                        "0,3,2"
+                    ],
+                    "correctAnswer": "0,3,2"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 10,
+                "title": "Fase 3",
+                "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles.",
+                "idMatriz": "3-5",
+                "exercice": {
+                    "numberExercice": "5",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "I",
+                        "K",
+                        "L",
+                        "J"
+                    ],
+                    "correctAnswer": "K"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 11,
+                "title": "Fase 3",
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-3"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continuar",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-4"
+                    }
+                ]
+            }
+        ]
+    },
+    "level4": {
+        "title": "FASE 4",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Fase 4",
+                "imgUrl": "../../../../assets/images/level-4/img-1.png",
+                "text": "Como vimos antes, uma máquina de fax é capaz de transmitir imagens para uma outra máquina. Imagens impressas por máquinas de fax geralmente têm grandes blocos de pixels brancos (por exemplo, as margens) ou pretos (por exemplo, uma linha horizontal)."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Fase 4",
+                "imgUrl": "../../../../assets/images/level-4/img-2.png",
+                "text": "Imagens coloridas também possuem áreas repetidas. A fim de economizar o espaço de armazenamento, os programadores podem usar diversas técnicas de compressão."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Fase 4",
+                "imgUrl": "../../../../assets/images/level-4/img-3.png",
+                "text": "O método visto na Fase 3, que permite comprimir imagens, foi o 'run-length coding'. Se elas não fossem comprimidas, levariam muito mais tempo para serem transmitidas e isso exigiria muito mais espaço para armazenamento, inviabilizando o envio de páginas de fax ou que fosse possível colocar fotos em uma páginas da Internet."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Fase 4",
+                "imgUrl": "../../../../assets/images/level-4/img-4.png",
+                "text": "Por exemplo, imagens de fax eram geralmente comprimidas para aproximadamente um sétimo do seu tamanho original. Sem a compressão, estas demorariam sete vezes mais para serem transmitidas! Lembre-se de que as velocidades de transmissão não eram tão boas antigamente como as que temos hoje."
+            },
+            {
+                "type": "screenText",
+                "id": 7,
+                "title": "Fase 4",
+                "imgUrl": "../../../../assets/images/level-4/img-5.png",
+                "text": "Fotos e imagens são frequentemente comprimidas para um décimo ou até um centésimo de seu tamanho (usando uma técnica diferente). Isto permite que um número maior de imagens sejam armazenadas nos dispositivos e que possam ser baixadas mais rapidamente da internet."
+            },
+            {
+                "type": "screenText",
+                "id": 8,
+                "title": "Fase 4",
+                "imgUrl": "../../../../assets/images/level-4/img-6.png",
+                "text": "Uma pessoa que cria um aplicativo para transmitir fotos, por exemplo, pode escolher a técnica mais adequada para compressão das imagens que está transmitindo."
+            },
+            {
+                "type": "screenSave",
+                "id": 8,
+                "title": "Fase 4",
+                "text": "Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir."
+            },
+            {
+                "type": "screenMatrizColor",
+                "id": 8,
+                "title": "Fase 4",
+                "text": "Selecione a sequência que representa a primeira linha de sua imagem. Note que o código tem o formato: quantidade-código da cor."
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 17,
+                "title": "Fase 4",
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-4"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continuar",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-5"
+                    }
+                ]
+            }
+        ],
+        "exercises": {
+            "exercice1": {
+                "text": "Que tal desenhar você mesmo e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir.",
+                "alternatives": [
+                    "Concluir"
+                ]
+            },
+            "exercice2": {
+                "text": "Selecione a sequência que representa a primeira linha de sua imagem."
+            }
+        }
+    },
+    "level5": {
+        "title": "FASE 5",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-1.png",
+                "text": "Você sabe o que são QR Codes? São quadrados como esse ilustrado na figura acima e que estão inseridos no nosso dia a dia. A sigla QR significa 'Quick Response' ou 'Resposta Rápida'. Sua principal função é permitir que você acesse um link, um vídeo, ou informação, instantaneamente apenas apontando a câmera do celular, sem precisar digitar nada."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-2.png",
+                "text": "Você já deve ter usado várias vezes QR Codes, mesmo sem saber o que eram. Por exemplo, você já deve ter escaneado algum QR Code de alguma maquininha de pagamento ou pode ter usado um QR Code para entrar no WhatsApp pelo seu computador ou para se conectar em uma rede Wi-Fi."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-3.png",
+                "text": "Sabe como isso acontece? Um QR Code gerado é formado por vários quadrados pretos ou brancos (pixels) que representam uma informação, como os dados de pagamento, um link para um site ou uma senha."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-4.png",
+                "text": "No QR Code há também 3 quadrados maiores que podem ser vistos nos cantos e que são chamados de marcadores de posição. Eles indicam onde começa e onde termina o código QR Code, a sua orientação (se está de pé, de lado ou de cabeça para baixo)."
+            },
+            {
+                "type": "screenExercice",
+                "id": 13,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-11.png",
+                "text": "Agora que você sabe o que são QR Codes, escolha dentre as opções a seguir, um exemplo de cenário onde podemos usar estes códigos.",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "Um QR Code que aumenta a velocidade da sua internet",
+                        "Um QR Code que bloqueia anúncios em sites",
+                        "Um código para receber um pagamento por pix",
+                        "Um QR Code que funciona como um antivírus para o celular"
+                    ],
+                    "correctAnswer": "Um código para receber um pagamento por pix"
+                }
+            },
+            {
+                "type": "screenText",
+                "id": 6,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-5.png",
+                "text": "É importante destacar também que o QR Code é projetado para ser 'autocorrigível', ou seja, para que possa ser identificado mesmo que esteja com alguns riscos ou pequenas partes faltando."
+            },
+            {
+                "type": "screenText",
+                "id": 7,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-6.png",
+                "text": "A mesma praticidade que torna o QR Code tão útil também pode ser explorada por pessoas mal-intencionadas. Por exemplo, ao acessar um link através de um  QR Code, você pode ir para um site falso que imita o site oficial de um banco ou rede social e pode estar oferecendo informações pessoais, como suas senhas, para essas pessoas, o que é muito perigoso."
+            },
+            {
+                "type": "screenText",
+                "id": 8,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-7.png",
+                "text": "Outro risco é que ao acessar um QR Code você baixe e instale algum aplicativo malicioso, que pode também danificar seu dispositivo ou coletar dados indevidamente."
+            },
+            {
+                "type": "screenText",
+                "id": 9,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-8.png",
+                "text": "Para se proteger desses ataques e evitar problemas, desconfie de uma mega promoção ou desconto disponível em um QRCode em um lugar público."
+            },
+            {
+                "type": "screenExercice",
+                "id": 14,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-12.png",
+                "text": "Discutimos sobre o perigo de Acessar links a partir de QR Codes não confiáveis. O que pode acontecer nesse tipo de golpe? (marque a opção INCORRETA)",
+                "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "Podemos compartilhar fotos pessoais sem perceber",
+                        "Acessamos um site que imita um site verdadeiro e rouba nossos dados",
+                        "Podemos nos cadastrar em uma campanha que de fato não existe",
+                        "Ganhamos um prêmio em dinheiro"
+                    ],
+                    "correctAnswer": "Ganhamos um prêmio em dinheiro"
+                }
+            },
+            {
+                "type": "screenText",
+                "id": 10,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-9.png",
+                "text": "Se estiver acessando um QR Code para pagamento, sempre confira os dados de quem está recebendo e veja se o nome da pessoa ou loja é o correto antes de confirmar."
+            },
+            {
+                "type": "screenText",
+                "id": 11,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-10.png",
+                "text": "Você também deve ter cuidado ao usar um QR Code para abrir um link. Sempre preste atenção à URL do link, que é o endereço do site sendo acessado. Veja se não há alguma letrinha a mais ou a menos, por exemplo"
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Fase 5",
+                "qrCode": "https://…",
+                "text": "Que tal gerar um QR Code para algum site? Digite na caixa de texto abaixo o endereço (URL) de algum site ou serviço na Internet (ex: https://cppixel.a4s.dev.br). Depois, veja o QRCode gerado."
+            },
+            {
+                "type": "screenExercice",
+                "id": 15,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-13.png",
+                "text": "Uma das características inteligentes de um QR Code é a Autocorreção. O que isso significa na prática?",
+                "exercice": {
+                    "numberExercice": "3",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "Que ele corrige erros de digitação no link para o qual aponta",
+                        "Que o código consegue ser lido mesmo que esteja um pouco riscado ou sujo",
+                        "Que ele se atualiza automaticamente com novas informações",
+                        "Que ele aponta para sites alternativos se o original estiver fora do ar"
+                    ],
+                    "correctAnswer": "Que o código consegue ser lido mesmo que esteja um pouco riscado ou sujo"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 16,
+                "title": "Fase 5",
+                "imgUrl": "../../../../assets/images/level-5/img-14.png",
+                "text": "Falamos sobre verificar a URL do link antes de abrir. Mas o que é uma URL?",
+                "exercice": {
+                    "numberExercice": "4",
+                    "type": "MULTIPLA ESCOLHA",
+                    "answers": [
+                        "É o nome de um aplicativo que precisa ser instalado",
+                        "É um código secreto para se conectar ao Wi-Fi",
+                        "É o endereço único de um site ou página na internet, como https://www.google.com",
+                        "É o nome de usuário de uma pessoa em uma rede social"
+                    ],
+                    "correctAnswer": "É o endereço único de um site ou página na internet, como https://www.google.com"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 17,
+                "title": "Fase 5",
+                "text": "Parabéns por concluir todas as atividades. Nos dê seu feedback sobre este sistema respondendo o Formulário de avaliação disponível no botão abaixo:",
+                "footers": [
+                    {
+                        "title": "Refazer",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-5"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    }
+                ]
+            }
+        ]
+    },
+    "congratulationsScreen": {
+        "title": "PARABÉNS!",
+        "motivationalMessages": [
+            "Incrível! Você acertou tudo!",
+            "Muito bom! Quase perfeito!",
+            "Bom trabalho! Continue praticando!",
+            "Você está no caminho certo! Vamos melhorar!",
+            "Tudo é aprendizagem! Tente novamente!"
+        ],
+        "remakeButton": "Refazer",
+        "homeButton": "Home",
+        "nextButton": "Continuar"
+    },
+    "notifications": [
+        "Você acertou!",
+        "Tente outra vez."
+    ],
+    "notFound": {
+        "title": "Ops... por favor, volte para a tela inicial clicando no botão abaixo."
+    },
+    "form": {
+        "text": "Parabéns por concluir todas as atividades. Nos dê seu feedback sobre este sistema respondendo o Formulário de avaliação disponível no botão abaixo:",
+        "button": "Formulário de Avaliação"
+    }
+}

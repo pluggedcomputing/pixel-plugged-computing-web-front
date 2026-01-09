@@ -1,0 +1,19 @@
+@use "../../../assets/styles/variables.scss" as *;
+
+div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 250px;
+  height: 250px;
+  background-color: $primary-color;
+  border-radius: 12px;
+}
+
+@media (min-width: 1024px) {
+  div {
+    width: 350px;
+    height: 350px;
+  }
+}

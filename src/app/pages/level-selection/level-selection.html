@@ -1,0 +1,17 @@
+<div>
+  <h1>{{'levelSelection.title' | translate}}</h1>
+
+  @for (level of buttonLevelList; track level) {
+  <app-level-button
+    [title]="level.title"
+    [subtitle]="level.subtitle"
+    [imgUrl]="level.imgUrl"
+    [route]="level.route"
+  >
+  </app-level-button>
+  }
+
+  <app-footer-selection-level [footers]="footers"></app-footer-selection-level>
+  <app-language-selection></app-language-selection>
+  <app-matriz></app-matriz>
+</div>

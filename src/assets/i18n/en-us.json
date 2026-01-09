@@ -1,0 +1,758 @@
+{
+    "application": {
+        "name": "Pixel Web Plugged Computing"
+    },
+    "homeScreen": {
+        "title": "COLOR BY NUMBERS",
+        "subtitle": "Image Representation",
+        "startButton": "START"
+    },
+    "languageSelection": {
+        "title": "Select language:"
+    },
+    "userIdentification": {
+        "title": "Enter your email, user code, or just your name:",
+        "submitButton": "Submit",
+        "anonymousButton": "Continue as guest",
+        "exception": "Please enter your email or code."
+    },
+    "levelSelection": {
+        "title": "LEVEL SELECTION",
+        "buttonsLevels": [
+            {
+                "title": "LEVEL 1",
+                "subtitle": "Images and pixels",
+                "imgUrl": "../../../assets/images/selection-levels/level1.png",
+                "route": "/level-1"
+            },
+            {
+                "title": "LEVEL 2",
+                "subtitle": "Encoding images with 0s and 1s",
+                "imgUrl": "../../../assets/images/selection-levels/level2.png",
+                "route": "/level-2"
+            },
+            {
+                "title": "LEVEL 3",
+                "subtitle": "Compressed images",
+                "imgUrl": "../../../assets/images/selection-levels/level3.png",
+                "route": "/level-3"
+            },
+            {
+                "title": "LEVEL 4",
+                "subtitle": "Using run-length encoding",
+                "imgUrl": "../../../assets/images/selection-levels/level4.png",
+                "route": "/level-4"
+            },
+            {
+                "title": "LEVEL 5",
+                "subtitle": "QR Code",
+                "imgUrl": "../../../assets/images/selection-levels/level5.png",
+                "route": "/level-5"
+            }
+        ],
+        "footer": [
+            {
+                "title": "Help",
+                "imgUrl": "../../../assets/icons/buttons/help.png",
+                "route": "/help"
+            },
+            {
+                "title": "About",
+                "imgUrl": "../../../assets/icons/buttons/about.png",
+                "route": "/about"
+            }
+        ]
+    },
+    "help": {
+        "title": "HELP",
+        "paragraph1": "Pixel Web Plugged Computing is based on the 'Image Representation' activity from the book 'Computer Science Unplugged - Teaching Computer Science without the use of a computer' by Bell, T., Witten, I., and Fellows, M. (2011).",
+        "paragraph2": "In each level, you will find screens with informative content as well as screens with exercises.",
+        "paragraph3": "We suggest starting with Level 1 and then following the levels in order: Level 2, Level 3, and Level 4.",
+        "paragraph4": "You can repeat the activities at any time to improve your performance in each level.",
+        "paragraph5": "For more information, please contact us via email:",
+        "paragraph6": "We are continuously working to improve our users' experience. Your feedback is very important. Help us by filling out the evaluation forms available on the project's website:"
+    },
+    "about": {
+        "title": "ABOUT",
+        "paragraph1": "Pixel Web Plugged Computing is based on the 'Image Representation' activity from the book 'Computer Science Unplugged - Teaching Computer Science without the use of a computer' by Bell, T., Witten, I., and Fellows, M. (2011).",
+        "paragraph2": "This book presents practical, fun, and accessible activities on various computer science topics. It is designed to be easy to use both inside and outside the classroom, being easily administered by teachers and understood by children.",
+        "paragraph3": "The Pixel Web Plugged Computing presented here aims to further simplify the application of these proposals without the need for additional physical materials. It presents topics often considered complex in a simple way for various audiences.",
+        "paragraph4": "Pixel Plugged Computing is part of a family of several other educational resources for teaching computing. Learn more about them by visiting our website:"
+    },
+    "level1": {
+        "title": "LEVEL 1",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-1.png",
+                "text": "Did you know that computers store drawings, photographs, and other images using only numbers? Let's take a closer look."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-2.png",
+                "text": "Computer screens are divided into a grid of small squares, each having a specific color. We call these squares picture elements or pixels."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-3.png",
+                "text": "In a black and white image, each pixel can be either black or white, so all the computer needs to store is which points are black and which are white."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-4.png",
+                "text": "An image corresponding to the letter C, for example, could be represented with binary numbers (bits). If 1 represents a white square and 0 represents a black square, then we could have a 5 x 6 pixel grid like the one illustrated above."
+            },
+            {
+                "type": "screenExample",
+                "id": 5,
+                "title": "Level 1",
+                "text": "Paint the pixels above black or white by clicking on each one and see the corresponding bit code (sequences of 0s and 1s)."
+            },
+            {
+                "type": "screenExercice",
+                "id": 3,
+                "title": "Level 1",
+                "text": "Which code represents the pixel sequence above?",
+                "idMatriz": "1-1",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "1,0,0,0,0",
+                        "1,0,1,0,1",
+                        "0,1,0,1,1",
+                        "1,0,1,1,1",
+                        "1,1,1,1,1"
+                    ],
+                    "correctAnswer": "1,0,1,0,1"
+                }
+            },
+            {
+                "type": "screenText",
+                "id": 5,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-5.png",
+                "text": "Have you ever seen a facsimile (fax) machine? These machines were widely used in the past to send black and white documents."
+            },
+            {
+                "type": "screenText",
+                "id": 6,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-6.png",
+                "text": "A fax machine is basically a simple computer that scans a sheet of paper, identifies which points are white or not, and stores this information as approximately 1000 x 2000 pixels, which are then transmitted to another fax machine over the telephone network."
+            },
+            {
+                "type": "screenText",
+                "id": 7,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-7.png",
+                "text": "When the other fax machine receives the message, it prints the pixels onto a page."
+            },
+            {
+                "type": "screenExercice",
+                "id": 8,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-8.png",
+                "text": "How do you think the messages sent through a fax machine were encoded?",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "With a representation that saves the amount of data sent",
+                        "Using black dots as 0 and white dots as 1"
+                    ],
+                    "correctAnswer": "With a representation that saves the amount of data sent"
+                }
+            },
+            {
+                "type": "screenText",
+                "id": 9,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-9.png",
+                "text": "To save on data storage and transmission, it is more efficient to use a data representation that reduces the amount of information transmitted or stored."
+            },
+            {
+                "type": "screenExercice",
+                "id": 10,
+                "title": "Level 1",
+                "imgUrl": "../../../../assets/images/level-1/img-10.png",
+                "text": "Based on what has been presented, answer: What do fax machines do?",
+                "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "Transmit audio messages",
+                        "Edit images",
+                        "Print pixels",
+                        "Perform mathematical operations"
+                    ],
+                    "correctAnswer": "Print pixels"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 11,
+                "title": "Level 1",
+                "footers": [
+                    {
+                        "title": "Retry",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-1"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continue",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-2"
+                    }
+                ]
+            }
+        ]
+    },
+    "level2": {
+        "title": "LEVEL 2",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Level 2",
+                "imgUrl": "../../../../assets/images/level-2/img-1.png",
+                "text": "You've learned that to store a black and white image, the computer only needs to store which pixels are black and which are white."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 2",
+                "imgUrl": "../../../../assets/images/level-2/img-2.png",
+                "text": "For example, if we want to display an image of the letter C, we need to think of the screen as a grid with several black and white squares. When we zoom into an image more and more, we can see a grid of pixels similar to these."
+            },
+            {
+                "type": "screenExercice",
+                "id": 3,
+                "title": "Level 2",
+                "text": "Ready to practice? Paint the image represented by the codes above and identify the letter. Remember: 1 is white and 0 is black.",
+                "idMatriz": "2-1",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "P",
+                        "T",
+                        "L",
+                        "C"
+                    ],
+                    "correctAnswer": "P"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 4,
+                "title": "Level 2",
+                "text": "Let's practice! Paint the squares according to the given binary codes and choose the letter that will be displayed.",
+                "idMatriz": "2-2",
+                "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "W",
+                        "G",
+                        "M",
+                        "Q"
+                    ],
+                    "correctAnswer": "G"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 4,
+                "title": "Level 2",
+                "text": "Now, try to find the missing code for the last line of this drawing of the letter W.",
+                "idMatriz": "2-3",
+                "exercice": {
+                    "numberExercice": "3",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "1,1,1,0,1",
+                        "1,1,0,1,0",
+                        "1,1,0,0,1",
+                        "0,1,1,1,0"
+                    ],
+                    "correctAnswer": "0,1,1,1,0"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 11,
+                "title": "Level 2",
+                "footers": [
+                    {
+                        "title": "Retry",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-2"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continue",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-3"
+                    }
+                ]
+            }
+        ]
+    },
+    "level3": {
+        "title": "LEVEL 3",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-1.png",
+                "text": "You've learned that we can represent an image using black and white dots, represented by 0 and 1 respectively."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-2.png",
+                "text": "However, we can use a compressed representation called 'run-length coding', which uses less space and reduces transmission time."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-3.png",
+                "text": "To store an image on a computer while saving space, you just need to store how many pixels are black and how many are white. For example, the first row of the image above can be represented as 1,1,3,1,1, indicating a sequence of 1 white pixel, 1 black, 3 white, 1 black, and 1 white."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-4.png",
+                "text": "Note that the first code represents the number of white pixels, the second represents the black pixels, and so on. When the first code is 0 (zero), the first pixel will be black, as 0 (zero) represents the absence of white pixels."
+            },
+            {
+                "type": "screenText",
+                "id": 5,
+                "title": "Level 3",
+                "imgUrl": "../../../../assets/images/level-3/img-5.png",
+                "text": "See above how to represent the letter T. The first row consists of 0 white pixels followed by 5 black pixels, and the following rows consist of 2 white pixels, 1 black, and 2 white."
+            },
+            {
+                "type": "screenExercice",
+                "id": 6,
+                "title": "Level 3",
+                "text": "Which letter is represented by the code above, considering the new encoding we've learned? You can paint the squares black or white by clicking on them.",
+                "idMatriz": "3-1",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "L",
+                        "K",
+                        "I",
+                        "J"
+                    ],
+                    "correctAnswer": "L"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 7,
+                "title": "Level 3",
+                "text": "Adjust the pixels in the image above according to the given codes. Which letter is being represented?",
+                "idMatriz": "3-2",
+                "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "Q",
+                        "G",
+                        "P",
+                        "D"
+                    ],
+                    "correctAnswer": "D"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 8,
+                "title": "Level 3",
+                "text": "Paint the missing squares according to the code for each row and answer: Which letter is represented?",
+                "idMatriz": "3-3",
+                "exercice": {
+                    "numberExercice": "3",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "R",
+                        "H",
+                        "Q",
+                        "A"
+                    ],
+                    "correctAnswer": "R"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 9,
+                "title": "Level 3",
+                "text": "How would you represent the last row of the image above?",
+                "idMatriz": "3-4",
+                "exercice": {
+                    "numberExercice": "4",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "1,1,1,2",
+                        "0,1,2,1,1",
+                        "0,2,1,2",
+                        "0,3,2"
+                    ],
+                    "correctAnswer": "0,3,2"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 10,
+                "title": "Level 3",
+                "text": "Which letter is represented by the code above, considering the new encoding we've learned? You can paint the squares black or white by clicking on them.",
+                "idMatriz": "3-5",
+                "exercice": {
+                    "numberExercice": "5",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "I",
+                        "K",
+                        "L",
+                        "J"
+                    ],
+                    "correctAnswer": "K"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 11,
+                "title": "Level 3",
+                "footers": [
+                    {
+                        "title": "Retry",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-3"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continue",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-4"
+                    }
+                ]
+            }
+        ]
+    },
+    "level4": {
+        "title": "LEVEL 4",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-1.png",
+                "text": "As we saw before, a fax machine is capable of transmitting images to another machine. Images printed by fax machines usually have large blocks of white pixels (for example, margins) or black pixels (for example, a horizontal line)."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-2.png",
+                "text": "Color images also have repeating areas. To save storage space, programmers use various compression techniques."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-3.png",
+                "text": "The method we saw in Level 3 for compressing images was 'run-length encoding'. Without compression, they would take much longer to transmit and would require much more storage space, making it impractical to send fax pages or include photos on websites."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-4.png",
+                "text": "For example, fax images were usually compressed to about one-seventh of their original size. Without compression, they would take seven times longer to transmit! Remember that transmission speeds in the past weren't as fast as the ones we have today."
+            },
+            {
+                "type": "screenText",
+                "id": 7,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-5.png",
+                "text": "Photos and images are often compressed to one-tenth or even one-hundredth of their size (using a different technique). This allows more images to be stored on devices and downloaded faster from the internet."
+            },
+            {
+                "type": "screenText",
+                "id": 8,
+                "title": "Level 4",
+                "imgUrl": "../../../../assets/images/level-4/img-6.png",
+                "text": "A developer creating an app to transmit photos, for example, can choose the most suitable technique for compressing the images being sent."
+            },
+            {
+                "type": "screenSave",
+                "id": 8,
+                "title": "Level 4",
+                "text": "How about drawing in color and trying to figure out the code that represents that image? Paint your image in the grid above and click 'Finish'."
+            },
+            {
+                "type": "screenMatrizColor",
+                "id": 8,
+                "title": "Level 4",
+                "text": "Select the sequence that represents the first row of your image. Note that the code follows the format: quantity-color code."
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 17,
+                "title": "Level 4",
+                "footers": [
+                    {
+                        "title": "Retry",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-4"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    },
+                    {
+                        "title": "Continue",
+                        "imgUrl": "../../../assets/icons/buttons/next.png",
+                        "route": "/level-5"
+                    }
+                ]
+            }
+        ],
+        "exercises": {
+            "exercice1": {
+                "text": "How about drawing it yourself and trying to figure out the code that represents that image? Paint your image in the grid above and click 'Finish'.",
+                "alternatives": [
+                    "Finish"
+                ]
+            },
+            "exercice2": {
+                "text": "Select the sequence that represents the first row of your image."
+            }
+        }
+    },
+    "level5": {
+        "title": "LEVEL 5",
+        "screens": [
+            {
+                "type": "screenText",
+                "id": 1,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-1.png",
+                "text": "Do you know what QR Codes are? They are squares like the one shown above that are part of our daily lives. The acronym QR stands for 'Quick Response'. Its main purpose is to allow you to access a link, a video, or information instantly just by pointing your phone's camera, without having to type anything."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-2.png",
+                "text": "You've probably used QR Codes many times without even knowing it. For example, you might have scanned a QR Code on a payment terminal, used one to log into WhatsApp on your computer, or to connect to a Wi-Fi network."
+            },
+            {
+                "type": "screenText",
+                "id": 3,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-3.png",
+                "text": "Do you know how it works? A generated QR Code is made up of several black and white squares (pixels) that represent information, such as payment data, a website link, or a password."
+            },
+            {
+                "type": "screenText",
+                "id": 4,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-4.png",
+                "text": "In a QR Code, there are also 3 larger squares in the corners called position markers. They indicate where the QR Code begins and ends, as well as its orientation (whether it's upright, sideways, or upside down)."
+            },
+            {
+                "type": "screenExercice",
+                "id": 13,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-11.png",
+                "text": "Now that you know what QR Codes are, choose an example of a scenario where we can use these codes from the options below.",
+                "exercice": {
+                    "numberExercice": "1",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "A QR Code that increases your internet speed",
+                        "A QR Code that blocks ads on websites",
+                        "A code to receive an instant payment",
+                        "A QR Code that works as an antivirus for your phone"
+                    ],
+                    "correctAnswer": "A code to receive an instant payment"
+                }
+            },
+            {
+                "type": "screenText",
+                "id": 6,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-5.png",
+                "text": "It's also important to note that QR Codes are designed to be 'self-correcting,' meaning they can still be identified even if they have some scratches or small parts missing."
+            },
+            {
+                "type": "screenText",
+                "id": 7,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-6.png",
+                "text": "The same convenience that makes QR Codes so useful can also be exploited by malicious people. For example, by accessing a link via a QR Code, you could be directed to a fake website that mimics an official bank or social media site, where you might accidentally give away personal information, such as passwords, which is very dangerous."
+            },
+            {
+                "type": "screenText",
+                "id": 8,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-7.png",
+                "text": "Another risk is that by scanning a QR Code, you might download and install a malicious app, which could damage your device or improperly collect your data."
+            },
+            {
+                "type": "screenText",
+                "id": 9,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-8.png",
+                "text": "To protect yourself from these attacks and avoid problems, be suspicious of 'mega promotions' or discounts available via QR Codes in public places."
+            },
+            {
+                "type": "screenExercice",
+                "id": 14,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-12.png",
+                "text": "We discussed the dangers of accessing links from untrusted QR Codes. What can happen in this type of scam? (Mark the INCORRECT option)",
+                "exercice": {
+                    "numberExercice": "2",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "We might share personal photos without realizing it",
+                        "We access a site that mimics a real one and steals our data",
+                        "We might sign up for a campaign that doesn't actually exist",
+                        "We win a cash prize"
+                    ],
+                    "correctAnswer": "We win a cash prize"
+                }
+            },
+            {
+                "type": "screenText",
+                "id": 10,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-9.png",
+                "text": "If you are using a QR Code for payment, always check the recipient's details and see if the person's or store's name is correct before confirming."
+            },
+            {
+                "type": "screenText",
+                "id": 11,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-10.png",
+                "text": "You should also be careful when using a QR Code to open a link. Always pay attention to the URL, which is the website address being accessed. Check if there are any extra or missing letters, for example."
+            },
+            {
+                "type": "screenText",
+                "id": 2,
+                "title": "Level 5",
+                "qrCode": "https://…",
+                "text": "How about generating a QR Code for a website? Type a website address (URL) or internet service in the text box below (e.g., https://cppixel.a4s.dev.br). Then, see the generated QR Code."
+            },
+            {
+                "type": "screenExercice",
+                "id": 15,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-13.png",
+                "text": "One of the smart features of a QR Code is error correction. What does this mean in practice?",
+                "exercice": {
+                    "numberExercice": "3",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "It corrects typos in the link it points to",
+                        "The code can be read even if it's slightly scratched or dirty",
+                        "It automatically updates itself with new information",
+                        "It points to alternative sites if the original one is down"
+                    ],
+                    "correctAnswer": "The code can be read even if it's slightly scratched or dirty"
+                }
+            },
+            {
+                "type": "screenExercice",
+                "id": 16,
+                "title": "Level 5",
+                "imgUrl": "../../../../assets/images/level-5/img-14.png",
+                "text": "We talked about checking the link's URL before opening it. But what is a URL?",
+                "exercice": {
+                    "numberExercice": "4",
+                    "type": "MULTIPLE CHOICE",
+                    "answers": [
+                        "It's the name of an app that needs to be installed",
+                        "It's a secret code to connect to Wi-Fi",
+                        "It's the unique address of a website or webpage, like https://www.google.com",
+                        "It's a person's username on a social network"
+                    ],
+                    "correctAnswer": "It's the unique address of a website or webpage, like https://www.google.com"
+                }
+            },
+            {
+                "type": "screenCongratulations",
+                "id": 17,
+                "title": "Level 5",
+                "footers": [
+                    {
+                        "title": "Retry",
+                        "imgUrl": "../../../assets/icons/buttons/restart.png",
+                        "route": "/level-5"
+                    },
+                    {
+                        "title": "Home",
+                        "imgUrl": "../../../assets/icons/buttons/home-white.png",
+                        "route": "/level-selection"
+                    }
+                ]
+            }
+        ]
+    },
+    "congratulationsScreen": {
+        "title": "CONGRATULATIONS!",
+        "motivationalMessages": [
+            "Amazing! You got everything right!",
+            "Great job! Almost perfect!",
+            "Well done! Keep practicing!",
+            "You're on the right track! Let's keep improving!",
+            "Every step is a lesson! Try again!"
+        ],
+        "remakeButton": "Retry",
+        "homeButton": "Home",
+        "nextButton": "Continue"
+    },
+    "notifications": [
+        "Correct!",
+        "Try again."
+    ],
+    "notFound": {
+        "title": "Oops... please return to the home screen by clicking the button below."
+    },
+    "form": {
+        "text": "Congratulations on completing all the activities! Please give us your feedback on this application by filling out the evaluation form using the button below:",
+        "button": "Evaluation Form"
+    }
+}

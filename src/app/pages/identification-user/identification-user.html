@@ -1,0 +1,23 @@
+<div class="container-page">
+  <div class="container-user">
+    <h2>{{ 'userIdentification.title' | translate}}</h2>
+    <form (ngSubmit)="submitUserID()">
+      <input
+        type="userID"
+        id="userID"
+        name="userID"
+        [(ngModel)]="userID"
+        required
+      />
+      <button type="submit">
+        {{ 'userIdentification.submitButton' | translate}}
+      </button>
+    </form>
+    <a (click)="submitUserAnonymous()"
+      >{{ 'userIdentification.anonymousButton' | translate}}</a
+    >
+    <span *ngIf="!userID && submitted" class="error-message"
+      >{{ 'userIdentification.exception' | translate}}</span
+    >
+  </div>
+</div>

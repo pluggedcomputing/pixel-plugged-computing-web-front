@@ -1,0 +1,12 @@
+<div>
+  @for (button of footers; track button) {
+  <app-footer-button
+    [title]="button.title"
+    [imgUrl]="button.imgUrl"
+    [route]="button.route"
+    [type]="typeButton"
+    (isRemake)="onIsRemake($event)"
+  >
+  </app-footer-button>
+  }
+</div>

@@ -1,0 +1,39 @@
+@use '../../../../assets/styles/variables.scss' as *;
+
+button {
+    width: 50px;
+    height: 50px;
+    max-width: 100%;
+    background-color: $primary-color;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    position: fixed;
+    right: 20px;
+    top: 10px;
+}
+
+button:hover{
+    background-color: $hover-primary;
+}
+
+img {
+    width: 50px;
+    height: auto;
+    padding: 10px;
+    max-width: 100%;
+}
+
+// desktop
+@media(min-width: 1024px) {
+
+    button{
+        width: 90px;
+        height: 90px;
+    }
+
+    img {
+        width: 80px;
+    }
+
+}
