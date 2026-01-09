@@ -11,7 +11,7 @@ import { MessagesService } from '../../services/messages/messages-service';
 import { TranslateModule } from '@ngx-translate/core';
 import { Footer } from '../../models/button-footer.model';
 import { FooterSelectionLevelComponent } from '../footer-selection-level/footer-selection-level';
-import { ButtonForm } from "../buttons/button-form/button-form";
+import { ButtonForm } from '../buttons/button-form/button-form';
 
 @Component({
   selector: 'app-congratulations',
@@ -58,6 +58,11 @@ export class Congratulations implements OnInit, OnDestroy {
         this.messagesCongratulationsList = messages;
       });
     this.setFinalMessage();
+
+    // verifica se é o ultimo nível
+    if (this.isLastLevel()) {
+      this.messageForUser = '';
+    }
   }
 
   setStarsUser() {
@@ -94,5 +99,13 @@ export class Congratulations implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     localStorage.removeItem('responsesUser');
+  }
+
+  isLastLevel(): boolean {
+    if (this.level == 'Fase 5' || this.level == 'Level 5') {
+      return true;
+    } else {
+      return false;
+    }
   }
 }

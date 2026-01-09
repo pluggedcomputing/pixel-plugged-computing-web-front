@@ -751,7 +751,8 @@
     "notFound": {
         "title": "Oops... please return to the home screen by clicking the button below."
     },
-    "buttons": {
-        "form": "Evaluation Form"
+    "form": {
+        "text": "Congratulations on completing all the activities! Please give us your feedback on this application by filling out the evaluation form using the button below:",
+        "button": "Evaluation Form"
     }
 }

@@ -22,11 +22,18 @@
     }
   </div>
   <p>{{messageForUser}}</p>
+
   <app-footer-selection-level
     [footers]="footers"
     [typeButton]="type"
     (isRemake)="onIsRemake($event)"
   ></app-footer-selection-level>
+
+  <!-- caso seja o ultimo nivel -->
+
+  @if (isLastLevel()) {
+  <p class="form">{{'form.text' | translate}}</p>
+  }
 
   <app-button-form></app-button-form>
 </div>
