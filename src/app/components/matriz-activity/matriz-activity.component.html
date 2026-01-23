@@ -1,0 +1,33 @@
+<div class="container-page">
+  <div class="container-matriz">
+    <div class="matriz">
+      @for (linha of pixels; track $index; let indexLinha = $index) {
+        <div class="linha">
+          @for (pixel of linha; track $index; let indexPixel = $index) {
+            <button
+              class="pixel"
+              [ngClass]="{
+                black: pixel === 0,
+                white: pixel === 1,
+              }"
+            ></button>
+          }
+        </div>
+      }
+    </div>
+    <div class="rows">
+      @for (row of rows; track $index) {
+        <div class="container-row">
+          <p>{{ row }}</p>
+        </div>
+      }
+    </div>
+  </div>
+
+  <app-answer-host
+    [answerList]="answers"
+    [correctAnswer]="correct"
+    (buttonClicked)="onButtonClicked($event)"
+  >
+  </app-answer-host>
+</div>

@@ -95,15 +95,18 @@ export class CardHostComponent implements OnInit {
   verifyAnswer(value: string) {
     const current = this.cards[this.index];
 
-    if (current.type === 'screenSave') {
+    if (current.type === 'screenSave' || current.type === 'screenSaveColor') {
       setTimeout(() => {
         this.index++;
-      }, 1000);
+      }, 500);
 
       return;
     }
 
-    if (current.type === 'screenMatrizColor') {
+    if (
+      current.type === 'screenMatrizColor' ||
+      current.type === 'screenMatriz'
+    ) {
       const correct = this.matrizService.getLinhaMatrizColor(1);
 
       const isCorrect = value === correct;
@@ -155,7 +158,7 @@ export class CardHostComponent implements OnInit {
       expectedResponse,
       isCorrect,
       dateResponse,
-      typeOfQuestion
+      typeOfQuestion,
     );
 
     this.questionService.saveResponseQuestion(question).subscribe({

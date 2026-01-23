@@ -517,6 +517,18 @@
                 "type": "screenSave",
                 "id": 8,
                 "title": "Level 4",
+                "text": "How about drawing yourself and trying to figure out the code that represents this image? Color your image in the box above and click finish."
+            },
+            {
+                "type": "screenMatriz",
+                "id": 8,
+                "title": "Level 4",
+                "text": "Select the sequence that represents the first line of your image."
+            },
+            {
+                "type": "screenSaveColor",
+                "id": 8,
+                "title": "Level 4",
                 "text": "How about drawing in color and trying to figure out the code that represents that image? Paint your image in the grid above and click 'Finish'."
             },
             {
@@ -754,5 +766,8 @@
     "form": {
         "text": "Congratulations on completing all the activities! Please give us your feedback on this application by filling out the evaluation form using the button below:",
         "button": "Evaluation Form"
+    },
+    "buttons": {
+        "finish": "Finish"
     }
 }

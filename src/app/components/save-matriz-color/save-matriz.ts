@@ -3,7 +3,7 @@ import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { MatrizService } from '../../services/matriz/matriz-service';
 
 @Component({
-  selector: 'app-save-matriz',
+  selector: 'app-save-matriz-color',
   standalone: true,
   imports: [NgClass],
   templateUrl: './save-matriz.html',

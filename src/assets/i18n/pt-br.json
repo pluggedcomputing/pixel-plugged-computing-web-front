@@ -517,6 +517,18 @@
                 "type": "screenSave",
                 "id": 8,
                 "title": "Fase 4",
+                "text": "Que tal desenhar você mesmo e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir."
+            },
+            {
+                "type": "screenMatriz",
+                "id": 8,
+                "title": "Fase 4",
+                "text": "Selecione a sequência que representa a primeira linha de sua imagem."
+            },
+            {
+                "type": "screenSaveColor",
+                "id": 8,
+                "title": "Fase 4",
                 "text": "Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir."
             },
             {
@@ -755,5 +767,8 @@
     "form": {
         "text": "Parabéns por concluir todas as atividades. Nos dê seu feedback sobre este sistema respondendo o Formulário de avaliação disponível no botão abaixo:",
         "button": "Formulário de Avaliação"
+    },
+    "buttons": {
+        "finish": "Concluir"
     }
 }

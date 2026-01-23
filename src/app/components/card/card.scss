@@ -28,10 +28,15 @@ p {
   font-size: 1rem;
 }
 
-.screenCongratulations, .screenExercice, .screenExample, .screenSave, .screenMatrizColor {
+.screenCongratulations,
+.screenExercice,
+.screenExample,
+.screenSave,
+.screenMatrizColor,
+.screenSaveColor,
+.screenMatriz {
   background-color: $primary-color;
 }
-
 
 // desktop
 @media (min-width: 1024px) {

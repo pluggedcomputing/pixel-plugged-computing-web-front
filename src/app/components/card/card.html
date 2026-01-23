@@ -5,6 +5,8 @@
   screenCongratulations: type === 'screenCongratulations',
   screenExample: type === 'screenExample',
   screenMatrizColor: type === 'screenMatrizColor',
+  screenSaveColor: type === 'screenSaveColor',
+  screenMatriz: type === 'screenMatriz',
   screenSave: type === 'screenSave',
 }"
 >
@@ -13,8 +15,27 @@
   <img src="{{imgUrl}}" alt="" />
 
   @if (matriz) {
-  <app-matriz [pixels]="matriz.pixels" [rows]="matriz.rows"></app-matriz>
-  } @if (type === 'screenSave') {
+  <app-matriz [pixels]="matriz.pixels" [rows]="matriz.rows"></app-matriz>}
+  
+  
+  @switch (type) { @case ('screenSaveColor') {
+  <app-save-matriz-color
+    (buttonClicked)="onButtonClicked($event)"
+  ></app-save-matriz-color>
+  } @case ('screenMatrizColor') {
+  <app-matriz-color-activity
+    (buttonClicked)="onButtonClicked($event)"
+  ></app-matriz-color-activity>
+  } @case ('screenExample') {
+  <app-pixels-example></app-pixels-example>
+  } @case ('screenSave') {
+  <app-save-matriz (buttonClicked)="onButtonClicked($event)"></app-save-matriz>
+  } @case ('screenMatriz') {
+  <app-matriz-activity (buttonClicked)="onButtonClicked($event)"></app-matriz-activity>
+  } } 
+  
+  
+  <!-- @if (type === 'screenSave') {
   <app-save-matriz (buttonClicked)="onButtonClicked($event)"> </app-save-matriz>
   } @if(type === 'screenMatrizColor'){
   <app-matriz-colorida-user
@@ -22,7 +43,7 @@
   ></app-matriz-colorida-user>
   } @if (type === 'screenExample') {
   <app-pixels-example></app-pixels-example>
-  }
+  } -->
 
   <p>{{text}}</p>
 
