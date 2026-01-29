@@ -15,12 +15,17 @@ describe('IdentificationUser', () => {
     cy.getByData('identification-input').type(nameUser);
     cy.getByData('identification-btn').click();
 
-    cy.window().should((win) => {
-      const userIDStorage = win.sessionStorage.getItem('userID');
-      expect(userIDStorage).to.equal(nameUser);
-    });
+    cy.window()
+      .its('sessionStorage')
+      .invoke('getItem', 'userID')
+      .should('equal', JSON.stringify(nameUser));
 
     cy.clearLocalStorage();
     cy.clearAllSessionStorage();
+  });
+
+  it('Ir para selecao de fase', () => {
+    cy.getByData('identification-anonymous').click();
+    cy.getByData('levelSelection-title');
   });
 });
