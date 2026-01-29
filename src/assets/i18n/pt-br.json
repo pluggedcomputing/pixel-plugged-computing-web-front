@@ -118,7 +118,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 3,
+                "id": 6,
                 "title": "Fase 1",
                 "text": "A sequência de pixels acima pode ser representada por qual código?",
                 "idMatriz": "1-1",
@@ -137,28 +137,28 @@
             },
             {
                 "type": "screenText",
-                "id": 5,
+                "id": 7,
                 "title": "Fase 1",
                 "imgUrl": "../../../../assets/images/level-1/img-5.png",
                 "text": "Você já viu um aparelho de fac-símile (fax)? Esse aparelho era muito utilizado antigamente para o envio de documentos em preto e branco."
             },
             {
                 "type": "screenText",
-                "id": 6,
+                "id": 8,
                 "title": "Fase 1",
                 "imgUrl": "../../../../assets/images/level-1/img-6.png",
                 "text": "Uma máquina de fax é basicamente um computador simples que efetua uma varredura sobre uma folha e identifica os pontos brancos ou não e armazena essa informação em aproximadamente 1000 x 2000 pixels, que são transmitidos para outra máquina de fax utilizando a rede de telefonia."
             },
             {
                 "type": "screenText",
-                "id": 7,
+                "id": 9,
                 "title": "Fase 1",
                 "imgUrl": "../../../../assets/images/level-1/img-7.png",
                 "text": "Quando a outra máquina de fax recebe a mensagem, ela imprime os pixels em uma página."
             },
             {
                 "type": "screenExercice",
-                "id": 8,
+                "id": 10,
                 "title": "Fase 1",
                 "imgUrl": "../../../../assets/images/level-1/img-8.png",
                 "text": "Como você acha que eram codificadas as mensagens enviadas através de uma máquina de fax?",
@@ -174,14 +174,14 @@
             },
             {
                 "type": "screenText",
-                "id": 9,
+                "id": 11,
                 "title": "Fase 1",
                 "imgUrl": "../../../../assets/images/level-1/img-9.png",
                 "text": "Para economizar no armazenamento e transmissão de dados, é mais interessante ultilizar uma representação dos dados que economize a quantidade de informação transmitida ou armazenada."
             },
             {
                 "type": "screenExercice",
-                "id": 10,
+                "id": 12,
                 "title": "Fase 1",
                 "imgUrl": "../../../../assets/images/level-1/img-10.png",
                 "text": "Considerando o que foi apresentado, responda: O que as máquinas de fax fazem?",
@@ -199,7 +199,7 @@
             },
             {
                 "type": "screenCongratulations",
-                "id": 11,
+                "id": 13,
                 "title": "Fase 1",
                 "footers": [
                     {
@@ -276,7 +276,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 4,
+                "id": 5,
                 "title": "Fase 2",
                 "text": "Agora tente descobrir qual o código correspondente à última linha e que está faltando neste desenho da letra W.",
                 "idMatriz": "2-3",
@@ -294,7 +294,7 @@
             },
             {
                 "type": "screenCongratulations",
-                "id": 11,
+                "id": 6,
                 "title": "Fase 2",
                 "footers": [
                     {
@@ -501,21 +501,21 @@
             },
             {
                 "type": "screenText",
-                "id": 7,
+                "id": 5,
                 "title": "Fase 4",
                 "imgUrl": "../../../../assets/images/level-4/img-5.png",
                 "text": "Fotos e imagens são frequentemente comprimidas para um décimo ou até um centésimo de seu tamanho (usando uma técnica diferente). Isto permite que um número maior de imagens sejam armazenadas nos dispositivos e que possam ser baixadas mais rapidamente da internet."
             },
             {
                 "type": "screenText",
-                "id": 8,
+                "id": 6,
                 "title": "Fase 4",
                 "imgUrl": "../../../../assets/images/level-4/img-6.png",
                 "text": "Uma pessoa que cria um aplicativo para transmitir fotos, por exemplo, pode escolher a técnica mais adequada para compressão das imagens que está transmitindo."
             },
             {
                 "type": "screenSave",
-                "id": 8,
+                "id": 7,
                 "title": "Fase 4",
                 "text": "Que tal desenhar você mesmo e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir."
             },
@@ -527,19 +527,19 @@
             },
             {
                 "type": "screenSaveColor",
-                "id": 8,
+                "id": 9,
                 "title": "Fase 4",
                 "text": "Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir."
             },
             {
                 "type": "screenMatrizColor",
-                "id": 8,
+                "id": 10,
                 "title": "Fase 4",
                 "text": "Selecione a sequência que representa a primeira linha de sua imagem. Note que o código tem o formato: quantidade-código da cor."
             },
             {
                 "type": "screenCongratulations",
-                "id": 17,
+                "id": 11,
                 "title": "Fase 4",
                 "footers": [
                     {
@@ -605,7 +605,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 13,
+                "id": 5,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-11.png",
                 "text": "Agora que você sabe o que são QR Codes, escolha dentre as opções a seguir, um exemplo de cenário onde podemos usar estes códigos.",
@@ -651,7 +651,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 14,
+                "id": 10,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-12.png",
                 "text": "Discutimos sobre o perigo de Acessar links a partir de QR Codes não confiáveis. O que pode acontecer nesse tipo de golpe? (marque a opção INCORRETA)",
@@ -669,28 +669,28 @@
             },
             {
                 "type": "screenText",
-                "id": 10,
+                "id": 11,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-9.png",
                 "text": "Se estiver acessando um QR Code para pagamento, sempre confira os dados de quem está recebendo e veja se o nome da pessoa ou loja é o correto antes de confirmar."
             },
             {
                 "type": "screenText",
-                "id": 11,
+                "id": 12,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-10.png",
                 "text": "Você também deve ter cuidado ao usar um QR Code para abrir um link. Sempre preste atenção à URL do link, que é o endereço do site sendo acessado. Veja se não há alguma letrinha a mais ou a menos, por exemplo"
             },
             {
                 "type": "screenText",
-                "id": 2,
+                "id": 13,
                 "title": "Fase 5",
                 "qrCode": "https://…",
                 "text": "Que tal gerar um QR Code para algum site? Digite na caixa de texto abaixo o endereço (URL) de algum site ou serviço na Internet (ex: https://cppixel.a4s.dev.br). Depois, veja o QRCode gerado."
             },
             {
                 "type": "screenExercice",
-                "id": 15,
+                "id": 14,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-13.png",
                 "text": "Uma das características inteligentes de um QR Code é a Autocorreção. O que isso significa na prática?",
@@ -708,7 +708,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 16,
+                "id": 15,
                 "title": "Fase 5",
                 "imgUrl": "../../../../assets/images/level-5/img-14.png",
                 "text": "Falamos sobre verificar a URL do link antes de abrir. Mas o que é uma URL?",
@@ -726,7 +726,7 @@
             },
             {
                 "type": "screenCongratulations",
-                "id": 17,
+                "id": 16,
                 "title": "Fase 5",
                 "text": "Parabéns por concluir todas as atividades. Nos dê seu feedback sobre este sistema respondendo o Formulário de avaliação disponível no botão abaixo:",
                 "footers": [

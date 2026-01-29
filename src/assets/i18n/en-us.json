@@ -118,7 +118,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 3,
+                "id": 6,
                 "title": "Level 1",
                 "text": "Which code represents the pixel sequence above?",
                 "idMatriz": "1-1",
@@ -137,28 +137,28 @@
             },
             {
                 "type": "screenText",
-                "id": 5,
+                "id": 7,
                 "title": "Level 1",
                 "imgUrl": "../../../../assets/images/level-1/img-5.png",
                 "text": "Have you ever seen a facsimile (fax) machine? These machines were widely used in the past to send black and white documents."
             },
             {
                 "type": "screenText",
-                "id": 6,
+                "id": 8,
                 "title": "Level 1",
                 "imgUrl": "../../../../assets/images/level-1/img-6.png",
                 "text": "A fax machine is basically a simple computer that scans a sheet of paper, identifies which points are white or not, and stores this information as approximately 1000 x 2000 pixels, which are then transmitted to another fax machine over the telephone network."
             },
             {
                 "type": "screenText",
-                "id": 7,
+                "id": 9,
                 "title": "Level 1",
                 "imgUrl": "../../../../assets/images/level-1/img-7.png",
                 "text": "When the other fax machine receives the message, it prints the pixels onto a page."
             },
             {
                 "type": "screenExercice",
-                "id": 8,
+                "id": 10,
                 "title": "Level 1",
                 "imgUrl": "../../../../assets/images/level-1/img-8.png",
                 "text": "How do you think the messages sent through a fax machine were encoded?",
@@ -174,14 +174,14 @@
             },
             {
                 "type": "screenText",
-                "id": 9,
+                "id": 11,
                 "title": "Level 1",
                 "imgUrl": "../../../../assets/images/level-1/img-9.png",
                 "text": "To save on data storage and transmission, it is more efficient to use a data representation that reduces the amount of information transmitted or stored."
             },
             {
                 "type": "screenExercice",
-                "id": 10,
+                "id": 12,
                 "title": "Level 1",
                 "imgUrl": "../../../../assets/images/level-1/img-10.png",
                 "text": "Based on what has been presented, answer: What do fax machines do?",
@@ -199,7 +199,7 @@
             },
             {
                 "type": "screenCongratulations",
-                "id": 11,
+                "id": 13,
                 "title": "Level 1",
                 "footers": [
                     {
@@ -276,7 +276,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 4,
+                "id": 5,
                 "title": "Level 2",
                 "text": "Now, try to find the missing code for the last line of this drawing of the letter W.",
                 "idMatriz": "2-3",
@@ -294,7 +294,7 @@
             },
             {
                 "type": "screenCongratulations",
-                "id": 11,
+                "id": 6,
                 "title": "Level 2",
                 "footers": [
                     {
@@ -501,21 +501,21 @@
             },
             {
                 "type": "screenText",
-                "id": 7,
+                "id": 5,
                 "title": "Level 4",
                 "imgUrl": "../../../../assets/images/level-4/img-5.png",
                 "text": "Photos and images are often compressed to one-tenth or even one-hundredth of their size (using a different technique). This allows more images to be stored on devices and downloaded faster from the internet."
             },
             {
                 "type": "screenText",
-                "id": 8,
+                "id": 6,
                 "title": "Level 4",
                 "imgUrl": "../../../../assets/images/level-4/img-6.png",
                 "text": "A developer creating an app to transmit photos, for example, can choose the most suitable technique for compressing the images being sent."
             },
             {
                 "type": "screenSave",
-                "id": 8,
+                "id": 7,
                 "title": "Level 4",
                 "text": "How about drawing yourself and trying to figure out the code that represents this image? Color your image in the box above and click finish."
             },
@@ -527,19 +527,19 @@
             },
             {
                 "type": "screenSaveColor",
-                "id": 8,
+                "id": 9,
                 "title": "Level 4",
                 "text": "How about drawing in color and trying to figure out the code that represents that image? Paint your image in the grid above and click 'Finish'."
             },
             {
                 "type": "screenMatrizColor",
-                "id": 8,
+                "id": 10,
                 "title": "Level 4",
                 "text": "Select the sequence that represents the first row of your image. Note that the code follows the format: quantity-color code."
             },
             {
                 "type": "screenCongratulations",
-                "id": 17,
+                "id": 11,
                 "title": "Level 4",
                 "footers": [
                     {
@@ -605,7 +605,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 13,
+                "id": 5,
                 "title": "Level 5",
                 "imgUrl": "../../../../assets/images/level-5/img-11.png",
                 "text": "Now that you know what QR Codes are, choose an example of a scenario where we can use these codes from the options below.",
@@ -651,7 +651,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 14,
+                "id": 10,
                 "title": "Level 5",
                 "imgUrl": "../../../../assets/images/level-5/img-12.png",
                 "text": "We discussed the dangers of accessing links from untrusted QR Codes. What can happen in this type of scam? (Mark the INCORRECT option)",
@@ -669,28 +669,28 @@
             },
             {
                 "type": "screenText",
-                "id": 10,
+                "id": 11,
                 "title": "Level 5",
                 "imgUrl": "../../../../assets/images/level-5/img-9.png",
                 "text": "If you are using a QR Code for payment, always check the recipient's details and see if the person's or store's name is correct before confirming."
             },
             {
                 "type": "screenText",
-                "id": 11,
+                "id": 12,
                 "title": "Level 5",
                 "imgUrl": "../../../../assets/images/level-5/img-10.png",
                 "text": "You should also be careful when using a QR Code to open a link. Always pay attention to the URL, which is the website address being accessed. Check if there are any extra or missing letters, for example."
             },
             {
                 "type": "screenText",
-                "id": 2,
+                "id": 13,
                 "title": "Level 5",
                 "qrCode": "https://…",
                 "text": "How about generating a QR Code for a website? Type a website address (URL) or internet service in the text box below (e.g., https://cppixel.a4s.dev.br). Then, see the generated QR Code."
             },
             {
                 "type": "screenExercice",
-                "id": 15,
+                "id": 14,
                 "title": "Level 5",
                 "imgUrl": "../../../../assets/images/level-5/img-13.png",
                 "text": "One of the smart features of a QR Code is error correction. What does this mean in practice?",
@@ -708,7 +708,7 @@
             },
             {
                 "type": "screenExercice",
-                "id": 16,
+                "id": 15,
                 "title": "Level 5",
                 "imgUrl": "../../../../assets/images/level-5/img-14.png",
                 "text": "We talked about checking the link's URL before opening it. But what is a URL?",
@@ -726,7 +726,7 @@
             },
             {
                 "type": "screenCongratulations",
-                "id": 17,
+                "id": 16,
                 "title": "Level 5",
                 "footers": [
                     {
