@@ -1,6 +1,8 @@
 <div class="container-page">
   <div class="container-user">
-    <h2>{{ 'userIdentification.title' | translate}}</h2>
+    <h2 data-cy="identification-title">
+      {{ 'userIdentification.title' | translate}}
+    </h2>
     <form (ngSubmit)="submitUserID()">
       <input
         type="userID"
@@ -8,12 +10,13 @@
         name="userID"
         [(ngModel)]="userID"
         required
+        data-cy="identification-input"
       />
-      <button type="submit">
+      <button type="submit" data-cy="identification-btn">
         {{ 'userIdentification.submitButton' | translate}}
       </button>
     </form>
-    <a (click)="submitUserAnonymous()"
+    <a (click)="submitUserAnonymous()" data-cy="identification-anonymous"
       >{{ 'userIdentification.anonymousButton' | translate}}</a
     >
     <span *ngIf="!userID && submitted" class="error-message"

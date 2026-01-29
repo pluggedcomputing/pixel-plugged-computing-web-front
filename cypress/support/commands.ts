@@ -1,3 +1,7 @@
+Cypress.Commands.add('getByData', (name) => {
+  return cy.get(`[data-cy=${name}]`);
+});
+
 // ***********************************************
 // This example namespace declaration will help
 // with Intellisense and code completion in your
@@ -30,6 +34,7 @@
 // -- This is a parent command --
 // Cypress.Commands.add("login", (email, password) => { ... })
 //
+// O 'name' dentro do parêntese é o parâmetro (o nome que você vai dar depois)
 //
 // -- This is a child command --
 // Cypress.Commands.add("drag", { prevSubject: 'element'}, (subject, options) => { ... })

@@ -3,5 +3,5 @@
   "compilerOptions": {
     "types": ["cypress", "mocha", "chai"]
   },
-  "include": ["**/*.ts"]
+  "include": ["**/*.ts","../support/index.d.ts"]
 }

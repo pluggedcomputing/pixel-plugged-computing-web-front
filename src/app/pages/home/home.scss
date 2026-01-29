@@ -16,6 +16,7 @@ h2 {
 
 h3 {
   color: $secundary-color;
+  font-weight: normal;
 }
 
 img {
@@ -29,7 +30,7 @@ button {
   height: 50px;
   background-color: $secundary-color;
   color: $white;
-  font-weight: bold;
+  font-weight: normal;
   border: none;
   border-radius: 25px;
   cursor: pointer;
