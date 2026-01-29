@@ -17,7 +17,7 @@
         "exception": "Please enter your email or code."
     },
     "levelSelection": {
-        "title": "LEVEL SELECTION",
+        "title": "Level Selection",
         "buttonsLevels": [
             {
                 "title": "LEVEL 1",
