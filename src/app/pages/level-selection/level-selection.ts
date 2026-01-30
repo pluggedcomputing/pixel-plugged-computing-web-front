@@ -7,7 +7,6 @@ import { CommonModule } from '@angular/common';
 import { FooterSelectionLevelComponent } from '../../components/footer-selection-level/footer-selection-level';
 import { ButtonLevel } from '../../models/button-level.model';
 import { Footer } from '../../models/button-footer.model';
-import { MatrizComponent } from '../../components/matriz/matriz';
 
 @Component({
   selector: 'app-level-selection',
@@ -18,8 +17,7 @@ import { MatrizComponent } from '../../components/matriz/matriz';
     LevelButtonComponent,
     CommonModule,
     FooterSelectionLevelComponent,
-    MatrizComponent
-],
+  ],
   templateUrl: './level-selection.html',
   styleUrl: './level-selection.scss',
 })
