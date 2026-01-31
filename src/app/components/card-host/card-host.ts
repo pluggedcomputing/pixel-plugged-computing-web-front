@@ -107,7 +107,7 @@ export class CardHostComponent implements OnInit {
       current.type === 'screenMatrizColor' ||
       current.type === 'screenMatriz'
     ) {
-      const correct = this.matrizService.getLinhaMatrizColor(1);
+      const correct = this.matrizService.getLinhaMatriz(1);
 
       const isCorrect = value === correct;
 

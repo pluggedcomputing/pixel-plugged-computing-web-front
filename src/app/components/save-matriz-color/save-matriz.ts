@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Output } from '@angular/core';
 import { MatrizService } from '../../services/matriz/matriz-service';
 
 @Component({
@@ -41,7 +41,7 @@ export class SaveMatrizColor {
   }
 
   save(): void {
-    this.matrizService.setMatrizColor(this.pixels);
+    this.matrizService.setMatriz(this.pixels);
   }
 
   onButtonClicked() {

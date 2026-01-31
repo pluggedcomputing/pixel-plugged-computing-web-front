@@ -5,7 +5,8 @@ import { Injectable } from '@angular/core';
 })
 export class MatrizService {
   private matriz: number[][] = [];
-  private matrizColor: number[][] = [];
+  private rows: string[] = [];
+  private response: string = '';
 
   setMatriz(matriz: number[][]) {
     this.matriz = matriz;
@@ -15,49 +16,28 @@ export class MatrizService {
     return this.matriz;
   }
 
+  setRows(rows: string[]) {
+    this.rows = rows;
+  }
+
+  getRows(): string[] {
+    return this.rows;
+  }
+
+  setResponse(response: string) {
+    this.response = response;
+  }
+
+  getResponse(): string {
+    return this.response;
+  }
+
   getLinhaMatriz(numero_linha: number): string {
     const linha = this.matriz[numero_linha - 1];
-    return this.getLinhaMatrizColorToString(linha);
+    return this.toString(linha);
   }
 
-  getLinhaMatrizToString(linha: string) {
-    const pixels = linha.split(',').map(Number);
-
-    let result = '';
-    let count = 1;
-
-    for (let i = 0; i < pixels.length; i++) {
-      if (pixels[i] === pixels[i + 1]) {
-        count++;
-      } else {
-        result += `${count},`;
-        count = 1;
-      }
-    }
-
-    if (pixels[0] == 0) {
-      result = '0,' + result;
-    }
-
-    return result.slice(0, -1);
-  }
-
-  // Matriz colorida
-
-  getMatrizColor(): number[][] {
-    return this.matrizColor;
-  }
-
-  setMatrizColor(matriz: number[][]) {
-    this.matrizColor = matriz;
-  }
-
-  getLinhaMatrizColor(numero_linha: number): string {
-    const linha = this.matrizColor[numero_linha - 1];
-    return this.getLinhaMatrizColorToString(linha);
-  }
-
-  getLinhaMatrizColorToString(input: number[]): string {
+  toString(input: number[]): string {
     let result = '';
     let count = 1;
 

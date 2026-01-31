@@ -22,14 +22,14 @@ export class MatrizColorActivityComponent {
   matrizService = inject(MatrizService);
 
   ngOnInit() {
-    this.pixels = this.matrizService.getMatrizColor();
-    this.correct = this.matrizService.getLinhaMatrizColor(1);
+    this.pixels = this.matrizService.getMatriz();
+    this.correct = this.matrizService.getLinhaMatriz(1);
     this.rows = [
       '?',
-      this.matrizService.getLinhaMatrizColor(2),
-      this.matrizService.getLinhaMatrizColor(3),
-      this.matrizService.getLinhaMatrizColor(4),
-      this.matrizService.getLinhaMatrizColor(5),
+      this.matrizService.getLinhaMatriz(2),
+      this.matrizService.getLinhaMatriz(3),
+      this.matrizService.getLinhaMatriz(4),
+      this.matrizService.getLinhaMatriz(5),
     ];
     this.answers = ['1-2,3-3,1-1', '4-4,1-3', '1-2,2-0,2-4'];
 

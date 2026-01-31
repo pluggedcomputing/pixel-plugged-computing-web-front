@@ -31,7 +31,7 @@ export class SaveMatrizComponent {
   }
 
   save(): void {
-    this.matrizService.setMatrizColor(this.pixels);
+    this.matrizService.setMatriz(this.pixels);
   }
 
   onButtonClicked() {
