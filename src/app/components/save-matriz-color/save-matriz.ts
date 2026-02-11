@@ -41,8 +41,16 @@ export class SaveMatrizColor {
   }
 
   save(): void {
+    let response: string = '';
+    let answers: string[] = ['1-2,3-3,1-1', '4-4,1-3', '1-2,2-0,2-4'];
+
     this.matrizService.setMatriz(this.pixels);
-  }
+    response = this.matrizService.getLinhaMatriz(1);
+
+    // verifica se já existe a alternativa correta
+    answers.push(answers.includes(response) ? '3-1,2-2' : response);
+    this.matrizService.setResponse(response);
+    this.matrizService.setAnwers(answers);  }
 
   onButtonClicked() {
     this.save();

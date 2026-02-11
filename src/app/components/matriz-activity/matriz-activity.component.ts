@@ -6,7 +6,7 @@ import { NgClass } from '@angular/common';
 @Component({
   selector: 'app-matriz-activity',
   standalone: true,
-  imports: [AnswerHostComponent, NgClass],
+  imports: [NgClass],
   templateUrl: './matriz-activity.component.html',
   styleUrl: './matriz-activity.component.scss',
 })
@@ -23,7 +23,7 @@ export class MatrizActivityComponent {
 
   ngOnInit() {
     this.pixels = this.matrizService.getMatriz();
-    this.correct = this.matrizService.getLinhaMatriz(1);
+    this.correct = this.matrizService.getResponse();
     this.rows = [
       '?',
       this.matrizService.getLinhaMatriz(2),
@@ -31,12 +31,6 @@ export class MatrizActivityComponent {
       this.matrizService.getLinhaMatriz(4),
       this.matrizService.getLinhaMatriz(5),
     ];
-    this.answers = ['4-1,1-0', '1-1,1-0,3-1', '1-0,2-1,2-0'];
-
-    // verifica se já existe a alternativa correta
-    this.answers.push(
-      this.answers.includes(this.correct) ? '3-1,2-0' : this.correct,
-    );
   }
 
   onButtonClicked(value: string) {

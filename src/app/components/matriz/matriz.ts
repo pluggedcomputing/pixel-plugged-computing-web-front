@@ -12,10 +12,13 @@ import { NgClass } from '@angular/common';
 export class MatrizComponent {
   @Input() rows: string[] | undefined;
   @Input() pixels: number[][] | undefined;
+  @Input() isPaint: boolean | undefined;
 
   setColorPixel(indexLinha: number, indexPixel: number): void {
     if (!this.pixels || !this.pixels[indexLinha]) return;
-    this.pixels[indexLinha][indexPixel] =
-      this.pixels[indexLinha][indexPixel] === 0 ? 1 : 0;
+    if (this.isPaint) {
+      this.pixels[indexLinha][indexPixel] =
+        this.pixels[indexLinha][indexPixel] === 0 ? 1 : 0;
+    }
   }
 }

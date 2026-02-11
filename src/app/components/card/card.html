@@ -15,10 +15,8 @@
   <img src="{{imgUrl}}" alt="" />
 
   @if (matriz) {
-  <app-matriz [pixels]="matriz.pixels" [rows]="matriz.rows"></app-matriz>}
-  
-  
-  @switch (type) { @case ('screenSaveColor') {
+  <app-matriz [pixels]="matriz.pixels" [rows]="matriz.rows" [isPaint]="matriz.ispaint"></app-matriz>
+  } @switch (type) { @case ('screenSaveColor') {
   <app-save-matriz-color
     (buttonClicked)="onButtonClicked($event)"
   ></app-save-matriz-color>
@@ -31,19 +29,30 @@
   } @case ('screenSave') {
   <app-save-matriz (buttonClicked)="onButtonClicked($event)"></app-save-matriz>
   } @case ('screenMatriz') {
-  <app-matriz-activity (buttonClicked)="onButtonClicked($event)"></app-matriz-activity>
-  } } 
+  <app-matriz-activity
+    (buttonClicked)="onButtonClicked($event)"
+  ></app-matriz-activity>
+  } }
 
   <p>{{text}}</p>
 
   @if(qrCode){
   <app-qr-code-activity [placeHolder]="qrCode"></app-qr-code-activity>
-  }
-
+  } 
+  
+  @switch (true) { @case (type?.startsWith('screenMatriz')) {
+  <app-answer-host
+    [answerList]="matrizService.getAnwers()"
+    [correctAnswer]="matrizService.getResponse()"
+    (buttonClicked)="onButtonClicked($event)"
+  >
+  </app-answer-host>
+  } @default {
   <app-answer-host
     [answerList]="exercice?.answers"
     [correctAnswer]="exercice?.correctAnswer"
     (buttonClicked)="onButtonClicked($event)"
-  >
-  </app-answer-host>
+  ></app-answer-host>
+
+  } }
 </div>

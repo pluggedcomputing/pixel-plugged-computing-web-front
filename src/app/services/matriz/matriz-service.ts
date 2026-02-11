@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class MatrizService {
   private matriz: number[][] = [];
-  private rows: string[] = [];
+  private anwers: string[] = [];
   private response: string = '';
 
   setMatriz(matriz: number[][]) {
@@ -16,12 +16,12 @@ export class MatrizService {
     return this.matriz;
   }
 
-  setRows(rows: string[]) {
-    this.rows = rows;
+  setAnwers(anwers: string[]) {
+    this.anwers = anwers;
   }
 
-  getRows(): string[] {
-    return this.rows;
+  getAnwers(): string[] {
+    return this.anwers;
   }
 
   setResponse(response: string) {

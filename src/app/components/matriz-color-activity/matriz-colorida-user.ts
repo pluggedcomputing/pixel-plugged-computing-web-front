@@ -1,12 +1,11 @@
 import { NgClass } from '@angular/common';
 import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { MatrizService } from '../../services/matriz/matriz-service';
-import { AnswerHostComponent } from '../answer-host/answer-host';
 
 @Component({
   selector: 'app-matriz-color-activity',
   standalone: true,
-  imports: [NgClass, AnswerHostComponent],
+  imports: [NgClass],
   templateUrl: './matriz-colorida-user.html',
   styleUrl: './matriz-colorida-user.scss',
 })
@@ -23,7 +22,7 @@ export class MatrizColorActivityComponent {
 
   ngOnInit() {
     this.pixels = this.matrizService.getMatriz();
-    this.correct = this.matrizService.getLinhaMatriz(1);
+    this.correct = this.matrizService.getResponse();
     this.rows = [
       '?',
       this.matrizService.getLinhaMatriz(2),
@@ -31,12 +30,6 @@ export class MatrizColorActivityComponent {
       this.matrizService.getLinhaMatriz(4),
       this.matrizService.getLinhaMatriz(5),
     ];
-    this.answers = ['1-2,3-3,1-1', '4-4,1-3', '1-2,2-0,2-4'];
-
-    // verifica se já existe a alternativa correta
-    this.answers.push(
-      this.answers.includes(this.correct) ? '3-1,2-2' : this.correct
-    );
   }
 
   black: number = 0;

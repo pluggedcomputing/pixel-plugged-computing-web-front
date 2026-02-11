@@ -31,7 +31,16 @@ export class SaveMatrizComponent {
   }
 
   save(): void {
+    let response: string = '';
+    let answers: string[] = ['4-1,1-0', '1-1,1-0,3-1', '1-0,2-1,2-0'];
+
     this.matrizService.setMatriz(this.pixels);
+    response = this.matrizService.getLinhaMatriz(1);
+
+    // verifica se já existe a alternativa correta
+    answers.push(answers.includes(response) ? '3-1,2-0' : response);
+    this.matrizService.setResponse(response);
+    this.matrizService.setAnwers(answers);
   }
 
   onButtonClicked() {
