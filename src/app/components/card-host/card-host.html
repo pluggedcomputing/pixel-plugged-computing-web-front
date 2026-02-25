@@ -20,6 +20,7 @@
   }
 
   <button
+    data-cy="btn-prev"
     [ngClass]="{
   screenText: cards[index].type === 'screenText',
   screenExercice: cards[index].type === 'screenExercice',
@@ -48,6 +49,7 @@
   </app-card>
 
   <button
+    data-cy="btn-next"
     [ngClass]="{
   screenText: cards[index].type === 'screenText',
   screenExercice: cards[index].type === 'screenExercice',

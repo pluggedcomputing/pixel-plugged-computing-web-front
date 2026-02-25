@@ -10,9 +10,9 @@
   screenSave: type === 'screenSave',
 }"
 >
-  <h2>{{title}}</h2>
+  <h2 data-cy="card-title">{{title}}</h2>
 
-  <img src="{{imgUrl}}" alt="" />
+  <img src="{{imgUrl}}" alt="" data-cy="card-main-img" />
 
   @if (matriz) {
   <app-matriz [pixels]="matriz.pixels" [rows]="matriz.rows" [isPaint]="matriz.ispaint"></app-matriz>
@@ -34,7 +34,7 @@
   ></app-matriz-activity>
   } }
 
-  <p>{{text}}</p>
+  <p data-cy="card-text">{{text}}</p>
 
   @if(qrCode){
   <app-qr-code-activity [placeHolder]="qrCode"></app-qr-code-activity>
