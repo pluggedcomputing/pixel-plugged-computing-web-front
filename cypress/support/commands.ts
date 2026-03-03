@@ -2,6 +2,26 @@ Cypress.Commands.add('getByData', (name) => {
   return cy.get(`[data-cy=${name}]`);
 });
 
+Cypress.Commands.add('advanceScreens', (steps: number) => {
+  for (let i = 0; i < steps; i++) {
+    cy.getByData('btn-next').click();
+  }
+});
+
+Cypress.Commands.add('answerAndVerify', (answer: string) => {
+  cy.contains('app-button-answer button', answer).should('be.visible').click();
+  cy.contains('app-button-answer button', answer).should(
+    'have.class',
+    'correct',
+  );
+});
+
+Cypress.Commands.add('nextLevel', () => {
+  cy.contains('app-footer-selection-level div', 'Continuar')
+    .should('be.visible')
+    .click();
+});
+
 // ***********************************************
 // This example namespace declaration will help
 // with Intellisense and code completion in your
