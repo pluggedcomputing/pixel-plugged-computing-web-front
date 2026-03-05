@@ -46,13 +46,24 @@ export class CardHostComponent implements OnInit {
     this.matrizes = m.getAll();
   }
 
-  ngOnInit(): void {
-    this.messagesService
-      .getMessages('level' + this.level + '.screens')
-      .subscribe((messages) => {
-        this.cards = messages;
-      });
-  }
+ngOnInit(): void {
+  this.messagesService
+    .getMessages('level' + this.level + '.screens')
+    .subscribe((messages) => {
+      this.cards = messages;
+      this.preloadImages(this.cards);
+    });
+}
+
+preloadImages(cards: any[]): void {
+  cards.forEach(card => {
+    if (card.imgUrl) {
+      const img = new Image();
+      img.src = card.imgUrl;
+      console.log('Preloading:', card.imgUrl);
+    }
+  });
+}
 
   getMatrizById(): Matriz | undefined {
     return this.matrizes.find((m) => m.id === this.cards[this.index].idMatriz);
@@ -166,4 +177,5 @@ export class CardHostComponent implements OnInit {
       error: (err) => console.error('Erro ao enviar resposta:', err),
     });
   }
+
 }

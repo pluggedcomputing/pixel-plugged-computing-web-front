@@ -38,7 +38,6 @@ export class CardComponent {
   @Input() qrCode?: string | undefined;
   @Input() matriz?: Matriz | undefined;
   @Output() buttonClickedCard = new EventEmitter<string>();
- 
   
   matrizService = inject(MatrizService);
 
