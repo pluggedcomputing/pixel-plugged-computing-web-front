@@ -33,11 +33,23 @@ export class LevelSelectionComponent implements OnInit {
       .getMessages('levelSelection.buttonsLevels')
       .subscribe((messages) => {
         this.buttonLevelList = messages;
+        // this.preloadImages(this.buttonLevelList);
       });
     this.messagesService
       .getMessages('levelSelection.footer')
       .subscribe((footer) => {
         this.footers = footer;
+        // this.preloadImages(this.footers);
       });
   }
+
+  // preloadImages(input: any[]): void {
+  //   input.forEach((card) => {
+  //     if (card.imgUrl) {
+  //       const img = new Image();
+  //       img.src = card.imgUrl;
+  //       console.log('Preloading:', card.imgUrl);
+  //     }
+  //   });
+  // }
 }

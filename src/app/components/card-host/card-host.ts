@@ -51,19 +51,19 @@ ngOnInit(): void {
     .getMessages('level' + this.level + '.screens')
     .subscribe((messages) => {
       this.cards = messages;
-      this.preloadImages(this.cards);
+      // this.preloadImages(this.cards);
     });
 }
 
-preloadImages(cards: any[]): void {
-  cards.forEach(card => {
-    if (card.imgUrl) {
-      const img = new Image();
-      img.src = card.imgUrl;
-      console.log('Preloading:', card.imgUrl);
-    }
-  });
-}
+// preloadImages(cards: any[]): void {
+//   cards.forEach(card => {
+//     if (card.imgUrl) {
+//       const img = new Image();
+//       img.src = card.imgUrl;
+//       console.log('Preloading:', card.imgUrl);
+//     }
+//   });
+// }
 
   getMatrizById(): Matriz | undefined {
     return this.matrizes.find((m) => m.id === this.cards[this.index].idMatriz);

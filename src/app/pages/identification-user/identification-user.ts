@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { UserInputService } from '../../services/user/user-input-service';
 import { Router } from '@angular/router';
 import { SessionStorageService } from '../../services/session-storage/session-storage-service';
@@ -7,6 +7,7 @@ import { User } from '../../models/user.model';
 import { CommonModule } from '@angular/common';
 import { TranslateModule } from '@ngx-translate/core';
 import { FormsModule } from '@angular/forms';
+import { LoadImagesService } from '../../services/load-images/load-images-service';
 
 @Component({
   selector: 'app-identification-user',
@@ -15,15 +16,21 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './identification-user.html',
   styleUrl: './identification-user.scss',
 })
-export class IdentificationUserComponent {
+export class IdentificationUserComponent implements OnInit {
   userID: string = '';
   submitted: boolean = false;
+
+  private imgLoader = inject(LoadImagesService);
+
+  ngOnInit(): void {
+    this.imgLoader.preloadImgComponents();
+  }
 
   constructor(
     private userInputService: UserInputService,
     private router: Router,
     private sessionStorageService: SessionStorageService,
-    private messagesService: MessagesService
+    private messagesService: MessagesService,
   ) {}
 
   submitUserID() {
@@ -41,9 +48,9 @@ export class IdentificationUserComponent {
       (error) => {
         console.error('Error saving user:', error);
         alert(
-          'Houve um erro ao se conectar, você está usando o sistema offline!'
+          'Houve um erro ao se conectar, você está usando o sistema offline!',
         );
-      }
+      },
     );
     console.log(this.userID);
     this.router.navigate(['/level-selection']);
@@ -60,9 +67,9 @@ export class IdentificationUserComponent {
       (error) => {
         console.error('Error saving user:', error);
         alert(
-          'Houve um erro ao se conectar, você está usando o sistema offline!'
+          'Houve um erro ao se conectar, você está usando o sistema offline!',
         );
-      }
+      },
     );
     console.log('Anonymous');
     this.router.navigate(['/level-selection']);

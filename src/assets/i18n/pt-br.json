@@ -770,5 +770,85 @@
     },
     "buttons": {
         "finish": "Concluir"
-    }
+    },
+    "moreImgUrl": [
+        {
+            "name": "logo-blue",
+            "imgUrl": "../../../assets/images/logos/logo-cp.png"
+        },
+        {
+            "name": "logo-white",
+            "imgUrl": "../../../assets/images/logos/logo-white.png"
+        },
+        {
+            "name": "congratulations",
+            "imgUrl": "../../../assets/images/congratulations/logo.png"
+        },
+        {
+            "name": "star-blue",
+            "imgUrl": "../../../assets/images/congratulations/star-blue.png"
+        },
+        {
+            "name": "star-white",
+            "imgUrl": "../../../assets/images/congratulations/star-white.png"
+        },
+        {
+            "name": "help",
+            "imgUrl": "../../../assets/images/banners/help.png"
+        },
+        {
+            "name": "banner-name",
+            "imgUrl": "../../../assets/images/banners/banner-name.png"
+        },
+        {
+            "name": "cs-unpluged",
+            "imgUrl": "../../../assets/images/banners/cs-unpluged.png"
+        },
+        {
+            "name": "banner-pixel",
+            "imgUrl": "../../../assets/images/banners/banner-pixel.png"
+        }
+    ],
+    "moreButtonUrl": [
+        {
+            "name": "en",
+            "imgUrl": "../../../assets/icons/language-flags/en-us.png"
+        },
+        {
+            "name": "pt",
+            "imgUrl": "../../../assets/icons/language-flags/pt-br.png"
+        },
+        {
+            "name": "about",
+            "imgUrl": "../../../assets/icons/buttons/about.png"
+        },
+        {
+            "name": "form",
+            "imgUrl": "../../../assets/icons/buttons/form.png"
+        },
+        {
+            "name": "help",
+            "imgUrl": "../../../assets/icons/buttons/help.png"
+        },
+        {
+            "name": "home-blue",
+            "imgUrl": "../../../assets/icons/buttons/home-blue.png"
+        },
+        {
+            "name": "home-white",
+            "imgUrl": "../../../assets/icons/buttons/home-white.png"
+        },
+        {
+            "name": "logo-blue",
+            "imgUrl": "../../../assets/icons/buttons/logo-blue.png"
+        },
+        {
+            "name": "next",
+            "imgUrl": "../../../assets/icons/buttons/next.png"
+        },
+        {
+            "name": "restart",
+            "imgUrl": "../../../assets/icons/buttons/restart.png"
+        }
+    ]
 }
