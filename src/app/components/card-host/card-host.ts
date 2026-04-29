@@ -34,8 +34,12 @@ export class CardHostComponent implements OnInit {
   private sessionStorageService = inject(SessionStorageService);
   private messagesService = inject(MessagesService);
   private matrizService = inject(MatrizService);
+
   cards: Card[] = [];
+  currentMatriz?: Matriz;
+  currentCard?: Card;
   index = 0;
+  loading: boolean = false;
 
   @Input() level: string | undefined;
 
@@ -46,39 +50,46 @@ export class CardHostComponent implements OnInit {
     this.matrizes = m.getAll();
   }
 
-ngOnInit(): void {
-  this.messagesService
-    .getMessages('level' + this.level + '.screens')
-    .subscribe((messages) => {
-      this.cards = messages;
-      // this.preloadImages(this.cards);
-    });
-}
+  ngOnInit(): void {
+    this.messagesService
+      .getMessages('level' + this.level + '.screens')
+      .subscribe((messages) => {
+        this.cards = messages;
+        this.updateCurrentCard();
+      });
+  }
 
-// preloadImages(cards: any[]): void {
-//   cards.forEach(card => {
-//     if (card.imgUrl) {
-//       const img = new Image();
-//       img.src = card.imgUrl;
-//       console.log('Preloading:', card.imgUrl);
-//     }
-//   });
-// }
-
-  getMatrizById(): Matriz | undefined {
-    return this.matrizes.find((m) => m.id === this.cards[this.index].idMatriz);
+  updateCurrentCard() {
+    this.currentCard = this.cards[this.index];
+    this.currentMatriz = this.matrizes.find(
+      (m) => m.id === this.currentCard?.idMatriz,
+    );
   }
 
   prevCard() {
+    if (this.loading) return;
+
+    this.loading = true;
+
     if (this.isNotFirstScreen()) {
-      this.index = this.index - 1;
+      this.index--;
+      this.updateCurrentCard();
     }
+
+    setTimeout(() => (this.loading = false), 500);
   }
 
   nextCard() {
+    if (this.loading) return;
+
+    this.loading = true;
+
     if (this.isNotLastScreen() && this.isNotScreenExercice()) {
-      this.index = this.index + 1;
+      this.index++;
+      this.updateCurrentCard();
     }
+
+    setTimeout(() => (this.loading = false), 500);
   }
 
   private isNotFirstScreen() {
@@ -90,13 +101,18 @@ ngOnInit(): void {
   }
 
   private isNotScreenExercice() {
-    const cardType = this.cards[this.index].type;
-    switch (cardType) {
+    switch (this.currentCard?.type) {
       case 'screenExercice':
         return false;
-      case 'screenSave':
+      case 'screenMatrizExercice':
         return false;
-      case 'screenMatrizColor':
+      case 'screenSaveMatriz':
+        return false;
+      case 'screenSaveMatrizColor':
+        return false;
+      case 'screenPaintExercice':
+        return false;
+      case 'screenPaintColorExercice':
         return false;
       default:
         return true;
@@ -104,19 +120,21 @@ ngOnInit(): void {
   }
 
   verifyAnswer(value: string) {
-    const current = this.cards[this.index];
-
-    if (current.type === 'screenSave' || current.type === 'screenSaveColor') {
+    if (
+      this.currentCard?.type === 'screenSaveMatriz' ||
+      this.currentCard?.type === 'screenSaveMatrizColor'
+    ) {
       setTimeout(() => {
         this.index++;
+        this.updateCurrentCard();
       }, 500);
 
       return;
     }
 
     if (
-      current.type === 'screenMatrizColor' ||
-      current.type === 'screenMatriz'
+      this.currentCard?.type === 'screenPaintColorExercice' ||
+      this.currentCard?.type === 'screenPaintExercice'
     ) {
       const correct = this.matrizService.getLinhaMatriz(1);
 
@@ -125,16 +143,23 @@ ngOnInit(): void {
       this.sendResponseToActivies(value, isCorrect);
 
       if (isCorrect && this.isNotLastScreen()) {
-        setTimeout(() => this.index++, 1000);
+        setTimeout(() => {
+          (this.index++, this.updateCurrentCard());
+        }, 1000);
       }
 
       return;
     }
 
-    if (value === current.exercice?.correctAnswer && this.isNotLastScreen()) {
+    if (
+      value === this.currentCard?.exercice?.correctAnswer &&
+      this.isNotLastScreen()
+    ) {
       this.sendResponseToActivies(value, true);
       setTimeout(() => {
-        this.index++;
+        {
+          (this.index++, this.updateCurrentCard());
+        }
       }, 1000);
     } else {
       this.sendResponseToActivies(value, false);
@@ -144,6 +169,7 @@ ngOnInit(): void {
   remakeLevel(value: string) {
     if (value === 'Remake' || value === 'Refazer') {
       this.index = 0;
+      this.updateCurrentCard();
     }
   }
 
@@ -177,5 +203,4 @@ ngOnInit(): void {
       error: (err) => console.error('Erro ao enviar resposta:', err),
     });
   }
-
 }

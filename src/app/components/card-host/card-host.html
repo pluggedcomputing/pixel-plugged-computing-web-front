@@ -1,19 +1,20 @@
-@if (cards[index].type != 'screenCongratulations') {
+@if (currentCard?.type != 'screenCongratulations') {
 
 <div
   [ngClass]="{
-  screenText: cards[index].type === 'screenText',
-  screenExercice: cards[index].type === 'screenExercice',
-  screenCongratulations: cards[index].type === 'screenCongratulations',
-  screenExample: cards[index].type === 'screenExample',
-  screenSave: cards[index].type === 'screenSave',
-  screenMatriz: cards[index].type === 'screenMatriz',
-  screenSaveColor: cards[index].type === 'screenSaveColor',
-  screenMatrizColor: cards[index].type === 'screenMatrizColor'
-
+  screenText: currentCard?.type === 'screenText',
+  screenExercice: currentCard?.type === 'screenExercice',
+  screenCongratulations: currentCard?.type === 'screenCongratulations',
+  screenExample: currentCard?.type === 'screenExample',
+  screenSaveMatriz: currentCard?.type === 'screenSaveMatriz',
+  screenPaintColorExercice: currentCard?.type === 'screenPaintColorExercice',
+  screenSaveMatrizColor: currentCard?.type === 'screenSaveMatrizColor',
+  screenPaintExercice: currentCard?.type === 'screenPaintExercice',
+  screenMatrizExercice: currentCard?.type === 'screenMatrizExercice'
+  
 }"
 >
-  @if (cards[index].type === 'screenText') {
+  @if (currentCard?.type === 'screenText') {
   <app-exit-button></app-exit-button>
   }@else{
   <app-exit-button-blue></app-exit-button-blue>
@@ -22,14 +23,16 @@
   <button
     data-cy="btn-prev"
     [ngClass]="{
-  screenText: cards[index].type === 'screenText',
-  screenExercice: cards[index].type === 'screenExercice',
-  screenCongratulations: cards[index].type === 'screenCongratulations',
-  screenExample: cards[index].type === 'screenExample',
-  screenSave: cards[index].type === 'screenSave',
-  screenMatriz: cards[index].type === 'screenMatriz',
-  screenSaveColor: cards[index].type === 'screenSaveColor',
-  screenMatrizColor: cards[index].type === 'screenMatrizColor'
+  screenText: currentCard?.type === 'screenText',
+  screenExercice: currentCard?.type === 'screenExercice',
+  screenCongratulations: currentCard?.type === 'screenCongratulations',
+  screenExample: currentCard?.type === 'screenExample',
+  screenSaveMatriz: currentCard?.type === 'screenSaveMatriz',
+  screenPaintColorExercice: currentCard?.type === 'screenPaintColorExercice',
+  screenSaveMatrizColor: currentCard?.type === 'screenSaveMatrizColor',
+  screenPaintExercice: currentCard?.type === 'screenPaintExercice',
+  screenMatrizExercice: currentCard?.type === 'screenMatrizExercice'
+
 }"
     (click)="prevCard()"
   >
@@ -37,13 +40,13 @@
   </button>
 
   <app-card
-    [type]="cards[index].type"
-    [title]="cards[index].title"
-    [imgUrl]="cards[index].imgUrl"
-    [text]="cards[index].text"
-    [exercice]="cards[index].exercice"
-    [qrCode]="cards[index].qrCode"
-    [matriz]="getMatrizById()"
+    [type]="currentCard?.type"
+    [title]="currentCard?.title"
+    [imgUrl]="currentCard?.imgUrl"
+    [text]="currentCard?.text"
+    [exercice]="currentCard?.exercice"
+    [qrCode]="currentCard?.qrCode"
+    [matriz]="currentMatriz"
     (buttonClickedCard)="verifyAnswer($event)"
   >
   </app-card>
@@ -51,14 +54,16 @@
   <button
     data-cy="btn-next"
     [ngClass]="{
-  screenText: cards[index].type === 'screenText',
-  screenExercice: cards[index].type === 'screenExercice',
-  screenCongratulations: cards[index].type === 'screenCongratulations',
-  screenExample: cards[index].type === 'screenExample',
-  screenSave: cards[index].type === 'screenSave',
-  screenMatriz: cards[index].type === 'screenMatriz',
-  screenSaveColor: cards[index].type === 'screenSaveColor',
-  screenMatrizColor: cards[index].type === 'screenMatrizColor'
+  screenText: currentCard?.type === 'screenText',
+  screenExercice: currentCard?.type === 'screenExercice',
+  screenCongratulations: currentCard?.type === 'screenCongratulations',
+  screenExample: currentCard?.type === 'screenExample',
+  screenSaveMatriz: currentCard?.type === 'screenSaveMatriz',
+  screenPaintColorExercice: currentCard?.type === 'screenPaintColorExercice',
+  screenSaveMatrizColor: currentCard?.type === 'screenSaveMatrizColor',
+  screenPaintExercice: currentCard?.type === 'screenPaintExercice',
+  screenMatrizExercice: currentCard?.type === 'screenMatrizExercice'
+
 
 }"
     (click)="nextCard()"
@@ -70,8 +75,8 @@
 }@else {
 <div class="screenCongratulations">
   <app-congratulations
-    [footers]="cards[index].footers"
-    [level]="cards[index].title"
+    [footers]="currentCard?.footers"
+    [level]="currentCard?.title"
     (isRemake)="remakeLevel($event)"
   ></app-congratulations>
 </div>

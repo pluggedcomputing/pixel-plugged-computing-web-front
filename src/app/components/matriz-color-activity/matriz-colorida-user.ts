@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatrizService } from '../../services/matriz/matriz-service';
 
 @Component({
@@ -10,8 +10,6 @@ import { MatrizService } from '../../services/matriz/matriz-service';
   styleUrl: './matriz-colorida-user.scss',
 })
 export class MatrizColorActivityComponent {
-  @Output() buttonClicked = new EventEmitter<string>();
-  @Input() text: string | undefined;
 
   correct!: string;
   answers!: string[];
@@ -41,8 +39,4 @@ export class MatrizColorActivityComponent {
   pallet: number[] = [0, 1, 2, 3, 4];
 
   color: number = 0;
-
-  onButtonClicked(value: string) {
-    this.buttonClicked.emit(value);
-  }
 }

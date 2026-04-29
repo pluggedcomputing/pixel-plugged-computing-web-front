@@ -11,6 +11,7 @@ h2 {
 h3 {
   color: $secundary-color;
   font-weight: normal;
+  font-size: 0.8rem;
 }
 
 button {
@@ -47,6 +48,7 @@ img {
     color: $secundary-color;
   }
 
+//style for desktop
 @media (min-width: 1024px) {
   button {
     width: 450px;
@@ -55,6 +57,10 @@ img {
 
   div {
     width: 250px;
+  }
+
+  h3{
+    font-size: 1rem;
   }
 
   img {

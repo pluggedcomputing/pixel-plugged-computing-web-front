@@ -514,25 +514,25 @@
                 "text": "A developer creating an app to transmit photos, for example, can choose the most suitable technique for compressing the images being sent."
             },
             {
-                "type": "screenSave",
+                "type": "screenSaveMatriz",
                 "id": 7,
                 "title": "Level 4",
                 "text": "How about drawing yourself and trying to figure out the code that represents this image? Color your image in the box above and click finish."
             },
             {
-                "type": "screenMatriz",
+                "type": "screenPaintExercice",
                 "id": 8,
                 "title": "Level 4",
                 "text": "Select the sequence that represents the first line of your image."
             },
             {
-                "type": "screenSaveColor",
+                "type": "screenSaveMatrizColor",
                 "id": 9,
                 "title": "Level 4",
                 "text": "How about drawing in color and trying to figure out the code that represents that image? Paint your image in the grid above and click 'Finish'."
             },
             {
-                "type": "screenMatrizColor",
+                "type": "screenPaintColorExercice",
                 "id": 10,
                 "title": "Level 4",
                 "text": "Select the sequence that represents the first row of your image. Note that the code follows the format: quantity-color code."

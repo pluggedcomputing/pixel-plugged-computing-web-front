@@ -1,58 +1,64 @@
-<div
-  [ngClass]="{
-  screenText: type === 'screenText',
-  screenExercice: type === 'screenExercice',
-  screenCongratulations: type === 'screenCongratulations',
-  screenExample: type === 'screenExample',
-  screenMatrizColor: type === 'screenMatrizColor',
-  screenSaveColor: type === 'screenSaveColor',
-  screenMatriz: type === 'screenMatriz',
-  screenSave: type === 'screenSave',
-}"
->
-  <h2 data-cy="card-title">{{title}}</h2>
-
-  <img src="{{imgUrl}}" alt="" data-cy="card-main-img" />
-
-  @if (matriz) {
-  <app-matriz [pixels]="matriz.pixels" [rows]="matriz.rows" [isPaint]="matriz.ispaint"></app-matriz>
-  } @switch (type) { @case ('screenSaveColor') {
-  <app-save-matriz-color
-    (buttonClicked)="onButtonClicked($event)"
-  ></app-save-matriz-color>
-  } @case ('screenMatrizColor') {
-  <app-matriz-color-activity
-    (buttonClicked)="onButtonClicked($event)"
-  ></app-matriz-color-activity>
+<div [class]="containerClass">
+  @switch (type) { @case ('screenText') {
+  <app-card-text
+    [title]="title"
+    [imgUrl]="imgUrl"
+    [text]="text"
+  ></app-card-text>
   } @case ('screenExample') {
-  <app-pixels-example></app-pixels-example>
-  } @case ('screenSave') {
-  <app-save-matriz (buttonClicked)="onButtonClicked($event)"></app-save-matriz>
-  } @case ('screenMatriz') {
-  <app-matriz-activity
-    (buttonClicked)="onButtonClicked($event)"
-  ></app-matriz-activity>
-  } }
-
-  <p data-cy="card-text">{{text}}</p>
-
-  @if(qrCode){
-  <app-qr-code-activity [placeHolder]="qrCode"></app-qr-code-activity>
-  } 
-  
-  @switch (true) { @case (type?.startsWith('screenMatriz')) {
-  <app-answer-host
-    [answerList]="matrizService.getAnwers()"
-    [correctAnswer]="matrizService.getResponse()"
-    (buttonClicked)="onButtonClicked($event)"
-  >
-  </app-answer-host>
-  } @default {
-  <app-answer-host
-    [answerList]="exercice?.answers"
-    [correctAnswer]="exercice?.correctAnswer"
-    (buttonClicked)="onButtonClicked($event)"
-  ></app-answer-host>
-
+  <app-card-example-matriz
+    [title]="title"
+    [text]="text"
+  ></app-card-example-matriz>
+  } @case ('screenQrCode') {
+  <app-card-qrcode
+    [title]="title"
+    [qrCode]="qrCode"
+    [text]="text"
+  ></app-card-qrcode>
+  } @case ('screenExercice') {
+  <app-card-exercice
+    [title]="title"
+    [imgUrl]="imgUrl"
+    [text]="text"
+    [exercice]="exercice"
+    (buttonClickedCard)="onButtonClicked($event)"
+  ></app-card-exercice>
+  } @case ('screenMatrizExercice') {
+  <app-card-matriz
+    [title]="title"
+    [matriz]="matriz"
+    [text]="text"
+    [exercice]="exercice"
+    (buttonClickedCard)="onButtonClicked($event)"
+  ></app-card-matriz>
+  } @case ('screenSaveMatriz') {
+  <app-card-matriz-save
+    [title]="title"
+    [text]="text"
+    (buttonClickedCard)="onButtonClicked($event)"
+  ></app-card-matriz-save>
+  } @case ('screenPaintExercice') {
+  <app-card-paint-exercice
+    [title]="title"
+    [text]="text"
+    [answers]="answers"
+    [correctAnswer]="correctAnswer"
+    (buttonClickedCard)="onButtonClicked($event)"
+  ></app-card-paint-exercice>
+  } @case ('screenSaveMatrizColor') {
+  <app-card-matriz-save-color
+    [title]="title"
+    [text]="text"
+    (buttonClickedCard)="onButtonClicked($event)"
+  ></app-card-matriz-save-color>
+  } @case ('screenPaintColorExercice') {
+  <app-card-paint-color-exercice
+    [title]="title"
+    [text]="text"
+    [answers]="answers"
+    [correctAnswer]="correctAnswer"
+    (buttonClickedCard)="onButtonClicked($event)"
+  ></app-card-paint-color-exercice>
   } }
 </div>

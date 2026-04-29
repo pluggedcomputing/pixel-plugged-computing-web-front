@@ -1,47 +1,74 @@
-import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  inject,
+  Input,
+  OnChanges,
+  Output,
+} from '@angular/core';
 import { Exercice } from '../../models/exercice.model';
-import { AnswerHostComponent } from '../answer-host/answer-host';
-import { NgClass } from '@angular/common';
-import { MatrizComponent } from '../matriz/matriz';
-import { QrCodeActivityComponent } from '../qr-code-activity/qr-code-activity';
-import { PixelsExample } from '../pixels-example/pixels-example';
 import { Matriz } from '../../models/matriz.model';
-import { SaveMatrizColor } from '../save-matriz-color/save-matriz';
-import { MatrizColorActivityComponent } from '../matriz-color-activity/matriz-colorida-user';
-import { SaveMatrizComponent } from '../save-matriz/save-matriz.component';
-import { MatrizActivityComponent } from '../matriz-activity/matriz-activity.component';
 import { MatrizService } from '../../services/matriz/matriz-service';
+import { CardTextComponent } from '../cards-types/card-text/card-text.component';
+import { CardExerciceComponent } from '../cards-types/card-exercice/card-exercice.component';
+import { CardExampleMatrizComponent } from '../cards-types/card-example-matriz/card-example-matriz.component';
+import { CardQrcodeComponent } from '../cards-types/card-qrcode/card-qrcode.component';
+import { CardMatrizComponent } from '../cards-types/card-matriz/card-matriz.component';
+import { CardMatrizSaveComponent } from '../cards-types/card-matriz-save/card-matriz-save.component';
+import { CardMatrizSaveColorComponent } from '../cards-types/card-matriz-save-color/card-matriz-save-color.component';
+import { CardPaintColorExerciceComponent } from '../cards-types/card-paint-color-exercice/card-paint-color-exercice.component';
+import { CardPaintExerciceComponent } from '../cards-types/card-paint-exercice/card-paint-exercice.component';
 
 @Component({
   selector: 'app-card',
   standalone: true,
   imports: [
-    AnswerHostComponent,
-    NgClass,
-    MatrizComponent,
-    QrCodeActivityComponent,
-    PixelsExample,
-    SaveMatrizColor,
-    MatrizColorActivityComponent,
-    SaveMatrizComponent,
-    MatrizActivityComponent,
+    CardTextComponent,
+    CardExerciceComponent,
+    CardExampleMatrizComponent,
+    CardQrcodeComponent,
+    CardMatrizComponent,
+    CardMatrizSaveComponent,
+    CardMatrizSaveColorComponent,
+    CardPaintColorExerciceComponent,
+    CardPaintExerciceComponent,
   ],
   templateUrl: './card.html',
   styleUrl: './card.scss',
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class CardComponent {
+export class CardComponent implements OnChanges {
   @Input() type: string | undefined;
   @Input() title: string | undefined;
   @Input() imgUrl?: string | undefined;
   @Input() text: string | undefined;
-  @Input() exercice: Exercice | undefined;
+  @Input() exercice?: Exercice | undefined;
   @Input() qrCode?: string | undefined;
   @Input() matriz?: Matriz | undefined;
   @Output() buttonClickedCard = new EventEmitter<string>();
-  
+
   matrizService = inject(MatrizService);
+  containerClass = '';
+  answers: string[] = [];
+  correctAnswer: string = '';
+
+  ngOnChanges() {
+    this.updateAnswers();
+    this.containerClass = this.type ?? '';
+  }
 
   onButtonClicked(value: string) {
     this.buttonClickedCard.emit(value);
+  }
+
+  updateAnswers() {
+    if (this.type?.startsWith('screenPaint')) {
+      this.answers = [...this.matrizService.getAnwers()];
+      this.correctAnswer = this.matrizService.getResponse();
+    } else {
+      this.answers = this.exercice?.answers ?? [];
+      this.correctAnswer = this.exercice?.correctAnswer ?? '';
+    }
   }
 }

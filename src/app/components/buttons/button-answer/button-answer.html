@@ -1,10 +1,2 @@
-<button
-  [ngClass]="{
-    correct: type === 'correct',
-    incorrect: type === 'incorrect'
-}"
-  (click)="response()"
->
-  {{answer}}
-</button>
+<button [class]="type" (click)="response()">{{answer}}</button>
 <app-notification></app-notification>

@@ -1,0 +1,10 @@
+<div>
+  <h2 data-cy="card-title">{{ title }}</h2>
+  <img [src]="imgUrl" loading="lazy" decoding="async" data-cy="card-main-img" />
+  <p data-cy="card-text">{{ text }}</p>
+  <app-answer-host
+    [answerList]="exercice?.answers"
+    [correctAnswer]="exercice?.correctAnswer"
+    (buttonClicked)="onButtonClicked($event)"
+  ></app-answer-host>
+</div>

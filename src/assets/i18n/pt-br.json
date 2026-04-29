@@ -117,7 +117,7 @@
                 "text": "Pinte os pixels acima de preto ou branco clicando em cada um deles e veja o código em bits (sequências de 0s e 1s) correspondente."
             },
             {
-                "type": "screenExercice",
+                "type": "screenMatrizExercice",
                 "id": 6,
                 "title": "Fase 1",
                 "text": "A sequência de pixels acima pode ser representada por qual código?",
@@ -239,7 +239,7 @@
                 "text": "Por exemplo, se quisermos exibir uma imagem correspondente à letra C, precisamos pensar na tela com uma grade com vários quadrados pretos ou brancos. Ao ampliarmos uma imagem mais e mais, podemos ver uma grade de pixels semelhantes a estes."
             },
             {
-                "type": "screenExercice",
+                "type": "screenMatrizExercice",
                 "id": 3,
                 "title": "Fase 2",
                 "text": "Agora vamos praticar? Pinte a imagem representada pelos códigos acima e escolha a letra representada pelo código. Lembre-se de que o 1 é branco e o 0 é preto.",
@@ -257,7 +257,7 @@
                 }
             },
             {
-                "type": "screenExercice",
+                "type": "screenMatrizExercice",
                 "id": 4,
                 "title": "Fase 2",
                 "text": "Vamos praticar? Pinte os quadrados correspondentes aos códigos binários indicados e escolha a letra que será exibida.",
@@ -275,7 +275,7 @@
                 }
             },
             {
-                "type": "screenExercice",
+                "type": "screenMatrizExercice",
                 "id": 5,
                 "title": "Fase 2",
                 "text": "Agora tente descobrir qual o código correspondente à última linha e que está faltando neste desenho da letra W.",
@@ -355,7 +355,7 @@
                 "text": "Veja acima como representar a letra T. A primeira linha consiste de 0 pixels brancos, seguindos de 5 pixels pretos e as linhas seguintes de 2 pixels brancos, 1 preto e 2 brancos."
             },
             {
-                "type": "screenExercice",
+                "type": "screenMatrizExercice",
                 "id": 6,
                 "title": "Fase 3",
                 "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles.",
@@ -373,7 +373,7 @@
                 }
             },
             {
-                "type": "screenExercice",
+                "type": "screenMatrizExercice",
                 "id": 7,
                 "title": "Fase 3",
                 "text": "Ajuste os pixels da imagem acima de acordo com os códigos indicados. Qual a letra que está sendo representada?",
@@ -391,7 +391,7 @@
                 }
             },
             {
-                "type": "screenExercice",
+                "type": "screenMatrizExercice",
                 "id": 8,
                 "title": "Fase 3",
                 "text": "Pinte os quadrados que faltam considerando o código de cada linha e responda: Qual a letra representada?",
@@ -409,7 +409,7 @@
                 }
             },
             {
-                "type": "screenExercice",
+                "type": "screenMatrizExercice",
                 "id": 9,
                 "title": "Fase 3",
                 "text": "Como você representaria a última linha da imagem acima?",
@@ -427,7 +427,7 @@
                 }
             },
             {
-                "type": "screenExercice",
+                "type": "screenMatrizExercice",
                 "id": 10,
                 "title": "Fase 3",
                 "text": "Que letra está sendo representada no código acima considerando a nova codificação aprendida? Você pode pintar os quadrados na cor preta ou branca clicando neles.",
@@ -514,25 +514,25 @@
                 "text": "Uma pessoa que cria um aplicativo para transmitir fotos, por exemplo, pode escolher a técnica mais adequada para compressão das imagens que está transmitindo."
             },
             {
-                "type": "screenSave",
+                "type": "screenSaveMatriz",
                 "id": 7,
                 "title": "Fase 4",
                 "text": "Que tal desenhar você mesmo e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir."
             },
             {
-                "type": "screenMatriz",
+                "type": "screenPaintExercice",
                 "id": 8,
                 "title": "Fase 4",
                 "text": "Selecione a sequência que representa a primeira linha de sua imagem."
             },
             {
-                "type": "screenSaveColor",
+                "type": "screenSaveMatrizColor",
                 "id": 9,
                 "title": "Fase 4",
                 "text": "Que tal agora desenhar com cores e tentar descobrir o código que representa essa imagem? Pinte no quadro acima sua imagem e clique em concluir."
             },
             {
-                "type": "screenMatrizColor",
+                "type": "screenPaintColorExercice",
                 "id": 10,
                 "title": "Fase 4",
                 "text": "Selecione a sequência que representa a primeira linha de sua imagem. Note que o código tem o formato: quantidade-código da cor."
@@ -682,11 +682,11 @@
                 "text": "Você também deve ter cuidado ao usar um QR Code para abrir um link. Sempre preste atenção à URL do link, que é o endereço do site sendo acessado. Veja se não há alguma letrinha a mais ou a menos, por exemplo"
             },
             {
-                "type": "screenText",
+                "type": "screenQrCode",
                 "id": 13,
                 "title": "Fase 5",
                 "qrCode": "https://…",
-                "text": "Que tal gerar um QR Code para algum site? Digite na caixa de texto abaixo o endereço (URL) de algum site ou serviço na Internet (ex: https://cppixel.a4s.dev.br). Depois, veja o QRCode gerado."
+                "text": "Que tal gerar um QR Code para algum site? Digite na caixa de texto acima o endereço (URL) de algum site ou serviço na Internet (ex: https://cppixel.a4s.dev.br). Depois, veja o QRCode gerado."
             },
             {
                 "type": "screenExercice",

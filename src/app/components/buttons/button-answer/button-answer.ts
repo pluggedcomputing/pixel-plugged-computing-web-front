@@ -6,12 +6,11 @@ import {
   ViewChild,
 } from '@angular/core';
 import { NotificationComponent } from '../../notification/notification';
-import { NgClass } from '@angular/common';
 
 @Component({
   selector: 'app-button-answer',
   standalone: true,
-  imports: [NotificationComponent, NgClass],
+  imports: [NotificationComponent],
   templateUrl: './button-answer.html',
   styleUrl: './button-answer.scss',
 })

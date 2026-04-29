@@ -1,4 +1,4 @@
-import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { MatrizService } from '../../services/matriz/matriz-service';
 import { NgClass } from '@angular/common';
 import { MessagesService } from '../../services/messages/messages-service';
@@ -15,6 +15,7 @@ export class SaveMatrizComponent {
   matrizService = inject(MatrizService);
   messagesService = inject(MessagesService);
 
+  @Input() text: string | undefined;
   @Output() buttonClicked = new EventEmitter<string>();
 
   pixels: number[][] = [

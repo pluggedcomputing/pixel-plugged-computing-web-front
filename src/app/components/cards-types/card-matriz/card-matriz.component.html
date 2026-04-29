@@ -1,0 +1,14 @@
+<div>
+  <h2 data-cy="card-title">{{ title }}</h2>
+  <app-matriz
+    [pixels]="matriz?.pixels"
+    [rows]="matriz?.rows"
+    [isPaint]="matriz?.ispaint"
+  ></app-matriz>
+  <p data-cy="card-text">{{ text }}</p>
+  <app-answer-host
+    [answerList]="exercice?.answers"
+    [correctAnswer]="exercice?.correctAnswer"
+    (buttonClicked)="onButtonClicked($event)"
+  ></app-answer-host>
+</div>

@@ -108,7 +108,6 @@ describe('Fase 3 - Exercícios', () => {
 
     cy.wait(1000);
 
-
     //congratulations
 
     cy.get('h3').should('contain', 'PARABÉNS!');

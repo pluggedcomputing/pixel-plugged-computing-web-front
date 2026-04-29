@@ -1,6 +1,5 @@
-import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { MatrizService } from '../../services/matriz/matriz-service';
-import { AnswerHostComponent } from "../answer-host/answer-host";
 import { NgClass } from '@angular/common';
 
 @Component({
@@ -11,9 +10,6 @@ import { NgClass } from '@angular/common';
   styleUrl: './matriz-activity.component.scss',
 })
 export class MatrizActivityComponent {
-  @Output() buttonClicked = new EventEmitter<string>();
-  @Input() text: string | undefined;
-
   correct!: string;
   answers!: string[];
   rows!: string[];
@@ -31,9 +27,5 @@ export class MatrizActivityComponent {
       this.matrizService.getLinhaMatriz(4),
       this.matrizService.getLinhaMatriz(5),
     ];
-  }
-
-  onButtonClicked(value: string) {
-    this.buttonClicked.emit(value);
   }
 }

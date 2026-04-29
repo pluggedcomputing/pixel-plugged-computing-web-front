@@ -2,6 +2,7 @@ import {
   Component,
   EventEmitter,
   Input,
+  OnChanges,
   Output,
   SimpleChanges,
 } from '@angular/core';
@@ -14,7 +15,7 @@ import { ButtonAnswerComponent } from '../buttons/button-answer/button-answer';
   templateUrl: './answer-host.html',
   styleUrl: './answer-host.scss',
 })
-export class AnswerHostComponent {
+export class AnswerHostComponent implements OnChanges{
   @Input() answerList: string[] | undefined;
   @Input() correctAnswer: string | undefined;
   @Output() buttonClicked = new EventEmitter<string>();

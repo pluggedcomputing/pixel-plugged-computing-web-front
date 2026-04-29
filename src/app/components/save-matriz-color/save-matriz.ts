@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, EventEmitter, inject, Output } from '@angular/core';
+import { Component, EventEmitter, inject, Input, Output } from '@angular/core';
 import { MatrizService } from '../../services/matriz/matriz-service';
 
 @Component({
@@ -13,6 +13,7 @@ export class SaveMatrizColor {
   matrizService = inject(MatrizService);
 
   @Output() buttonClicked = new EventEmitter<string>();
+  @Input() text: string | undefined;
 
   black: number = 0;
   white: number = 1;
@@ -50,7 +51,8 @@ export class SaveMatrizColor {
     // verifica se já existe a alternativa correta
     answers.push(answers.includes(response) ? '3-1,2-2' : response);
     this.matrizService.setResponse(response);
-    this.matrizService.setAnwers(answers);  }
+    this.matrizService.setAnwers(answers);
+  }
 
   onButtonClicked() {
     this.save();
